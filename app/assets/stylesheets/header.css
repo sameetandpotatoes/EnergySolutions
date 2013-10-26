@@ -1,0 +1,18 @@
+header{
+	background-color: #232323;
+	padding: 15px;
+	color: white;
+	font: 25px Verdana;
+}
+footer{
+	background-color: #232323;
+	padding: 15px;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+#carousel{
+	width: 600px;
+	height: 300px;
+}
