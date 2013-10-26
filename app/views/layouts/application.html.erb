@@ -37,8 +37,12 @@
 			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 		</div>
 	</div>
-	<script>
-		$('#myCarousel').carousel();
+	<script type="text/javascript">
+	$(document).ready(function() {
+	  $('.carousel').carousel({
+	    interval: 1200
+	  })
+	});
 	</script>
 	<%= yield %>
 	<footer>
