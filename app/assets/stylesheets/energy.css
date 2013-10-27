@@ -1,0 +1,38 @@
+#procon{
+	margin-top: 40px;
+}
+table{
+	margin: 0 auto;
+	top:50%;
+	left:50%;
+}
+th{
+	font-size: 150%;
+	border-bottom: 5px solid black;
+}
+td{
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-left: 10px;
+	text-align: center;
+}
+td p{
+	display: inline-block;
+	padding-left: 40px;
+	padding-right: 70px;
+}
+td:nth-child(odd){
+	border-right: 5px solid black;
+}
+.grants{
+	margin: 20px;
+}
+.grants p{
+	text-indent: 20px;
+	font-size: 16px;
+	line-height: 25px;
+}
+h2{
+	font-family: 'Oldenburg';
+	border-bottom: 4px solid #B2CCCC;
+}

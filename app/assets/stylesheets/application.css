@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+body{
+	background-image: url("beige_paper.png");
+}
+p{
+	font-family: 'Lato';
+}
+#content{
+	margin-bottom: 50px;
+}

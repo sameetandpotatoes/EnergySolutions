@@ -15,3 +15,22 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+$(document).ready(function()
+{
+  $('.carousel').carousel({
+    interval: 5000
+  });
+	var $test2 = $(".test2");
+	$(window).scroll(function ()
+	{
+	  if ($(this).scrollTop() > 300)
+	  {
+	  		$test2.css("display", "inline");
+	      $test2.stop().animate({left: "200px"}, 300);
+	  }
+	  else
+	  {
+	      $test2.stop().animate({left: "-90px"}, 300);
+	  }
+	});
+});

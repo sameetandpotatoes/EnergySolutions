@@ -1,7 +1,6 @@
 development:
   adapter: postgresql
-  encoding: utf8
-  database: myapp
-  pool: 5
+  database: ssapra
   username:
   password:
+  host:

@@ -1,18 +1,31 @@
 header{
 	background-color: #232323;
-	padding: 15px;
+	padding: 15px 0px 0px 15px;
 	color: white;
 	font: 25px Verdana;
 }
 footer{
 	background-color: #232323;
-	padding: 15px;
-	color: white;
-	position: absolute;
 	bottom: 0;
+	padding: 5px;
+	clear: both;
+	height: 30px;
+	position: relative;
 	width: 100%;
+	color: white;
 }
 #carousel{
 	width: 600px;
 	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+}
+.location{
+	position: absolute;
+	top: 25%;
+	right: 5%;
+	padding: 5px;
+	border: 4px groove black;
+	text-align: center;
 }
