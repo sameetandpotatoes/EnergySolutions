@@ -14,15 +14,20 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
-//= require_tree .
+
 $(document).ready(function()
 {
   $('.carousel').carousel({
     interval: 5000
   });
-	$.fn.fullpage({
-				slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
-				menu: '#menu'
+
+	$(".smoothScroll").on("click", function(e) {
+	  var $target, target;
+	  e.preventDefault();
+	  target = this.hash;
+	  $target = $(target);
+	  return $("html, body").stop().animate({
+	    scrollTop: $target.offset().top
+	  }, 1000, "swing");
 	});
 });
