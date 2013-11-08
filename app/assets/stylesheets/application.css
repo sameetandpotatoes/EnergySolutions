@@ -13,6 +13,7 @@
  */
 body{
 	background-image: url("beige_paper.png");
+	overflow-x: hidden;
 }
 p{
 	font-family: 'Lato';

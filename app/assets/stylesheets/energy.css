@@ -73,3 +73,19 @@ th {
 	position: fixed;
 	right: 15px;
 }
+.section{
+	margin: -75px -40px 75px;
+	padding: 30px;
+}
+#firstPage{
+	background-color: #1BBC9B;
+}
+#secondPage{
+	background-color: #4BBFC3;
+}
+#thirdPage{
+	background-color: white;
+}
+#fourthPage{
+	background-color: #7BAABE;
+}
