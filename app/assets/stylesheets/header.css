@@ -1,8 +1,9 @@
 header{
 	background-color: #232323;
 	padding: 15px 0px 0px 15px;
+	margin: 0;
 	color: white;
-	font: 25px Verdana;
+	font: 25px 'Lato';
 }
 footer{
 	background-color: #232323;
