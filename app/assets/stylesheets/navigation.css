@@ -1,6 +1,7 @@
 #cssmenu ul {
   margin: 0;
   padding: 0;
+  z-index: 999;
 }
 #cssmenu li {
   margin: 0;
@@ -21,6 +22,7 @@
   background-color: #232323;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   width: auto;
+  z-index: 999;
 }
 #cssmenu > ul > li {
   float: left;

@@ -20,17 +20,9 @@ $(document).ready(function()
   $('.carousel').carousel({
     interval: 5000
   });
-	var $test2 = $(".test2");
-	$(window).scroll(function ()
-	{
-	  if ($(this).scrollTop() > 300)
-	  {
-	  		$test2.css("display", "inline");
-	      $test2.stop().animate({left: "200px"}, 300);
-	  }
-	  else
-	  {
-	      $test2.stop().animate({left: "-90px"}, 300);
-	  }
+	$.fn.fullpage({
+				slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+				menu: '#menu'
 	});
 });

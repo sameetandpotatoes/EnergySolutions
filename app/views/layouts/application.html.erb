@@ -2,15 +2,13 @@
 <html>
 <head>
   <title>Energy Solutions</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Oldenburg|Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<header>
-		Energy Solutions
-	</header>
+	<header>Energy Solutions</header>
 	<div id='cssmenu'>
 	<ul>
 	   <li class='active'><a href='/'><span>Home</span></a></li>
@@ -27,12 +25,9 @@
 	   <li class='last'><a href='/contact/'><span>Contact</span></a></li>
 	</ul>
 	</div>
-	</script>
 	<div id="content">
 		<%= yield %>
 	</div>
-	<footer>
-		Copyright © 2013. All Rights Reserved.
-	</footer>
+	<footer>Copyright © 2013. All Rights Reserved.</footer>
 </body>
 </html>
