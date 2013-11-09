@@ -53,7 +53,7 @@
 </div>
 <div class="section" id="secondPage">
 	<div class="text"><h1 class="header">Grants</h1>
-		<h2>USDA REAP Grants</h2>
+		<h2><a class="headerlink" href="http://www.rurdev.usda.gov/ORreap_renew_grants.html">USDA REAP Grants</a></h2>
 		<p>
 			The Department of Agriculture provides homeowners in rural areas with grants to buy and install solar energy systems. The grants can cover up to 25 percent of a project's total cost and are limited to $500,000 for solar energy systems. To qualify, you must own the home and be a farmer or a rancher in a rural area.
 		</p>
@@ -75,13 +75,14 @@
 	<div class="intro"><h1 class="header">Pictures and Diagrams</h1>
 		<%= image_tag("solar.png", :class=>"displayimage")%>
 		<%= image_tag("solar_picture.jpg", :class=>"displayimage")%>
-		<%= image_tag("solarmap.gif", :class => "displayimage") %>
-		<iframe width="900" height="720" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
+		<%= image_tag("solarmap.png", :class => "displayimage") %>
+		<iframe width="100%" height="500" class= "video" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 
 </div>
-<div class="section" id="fourthPage">
-	<div class="intro"><h1 class="header">Best Places for Solar Energy</h1>
-			<p>Netherlands, France, Australia, Italy, South Korea, China, US, Japan, Spain, Germany, Arizona</p>
+<div class="section" id="fourthPage" style='background-image: url("/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png");'>
+	<div class="intro"><h1 class="header">Installation Cost</h1>
+			<%= image_tag("solar_infographic.png" , :class => "displayimage") %>
 	</div>
 </div>
+<%= render "scrolltotop" %>

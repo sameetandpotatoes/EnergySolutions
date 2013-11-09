@@ -40,4 +40,16 @@ $(document).ready(function()
 	  	$('#top').fadeOut("fast");
 	  }
 	 });
+	 $('.section').scroll(function()
+	 {
+  	if(isScrollBottom()){
+
+  	}
+	});
+
+	function isScrollBottom(){
+	  var elementHeight = $(element).height();
+	  var scrollPosition = $('.section').height() + $('.section').scrollTop();
+	  return (elementHeight == scrollPosition);
+	}
 })

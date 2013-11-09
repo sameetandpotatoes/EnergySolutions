@@ -36,3 +36,22 @@ h6{
 	font-size: 120%;
 	padding-bottom: 20px;
 }
+.headerlink, .headerlink:hover{
+	color: inherit;
+	text-decoration: underline;
+}
+.search{
+	width: 100%;
+	text-align: center;
+	display: inline;
+	margin-left: 20%;
+}
+.searchbar{
+	display: inline;
+	width: 180px;
+	height: 20px;
+}
+.searchbutton{
+	display: inline;
+	margin-left: 0px;
+}

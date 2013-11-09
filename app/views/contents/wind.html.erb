@@ -15,7 +15,7 @@
 				</td>
 				<td>
 					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-					<p class="inline">Strength of wind is dependent.</p>
+					<p class="inline">Strength of wind is dependent</p>
 				</td>
 			</tr>
 			<tr>
@@ -35,7 +35,7 @@
 				</td>
 				<td>
 					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>,
-					<p class="inline">Wind power does produce some pollution.</p>
+					<p class="inline">Wind power does produce some pollution</p>
 				</td>
 			</tr>
 			<tr>
@@ -77,8 +77,14 @@
 	</div>
 
 </div>
-<div class="section" id="fourthPage">
-	<div class="intro"><h1 class="header">Best Places for Solar Energy</h1>
-			<p>Netherlands, France, Australia, Italy, South Korea, China, US, Japan, Spain, Germany, Arizona</p>
+<div class="section" id="fourthPage" style="background-color: #93D6CF;">
+	<div class="intro"><h1 class="header">Infographic</h1>
+			<%= image_tag("wind_infographic_1.png", :class => "displayimage") %>
+			<%= image_tag("wind_infographic_2.png", :class => "displayimage") %>
+			<%= image_tag("wind_infographic_3.png", :class => "displayimage") %>
+			<%= image_tag("wind_infographic_4.png", :class => "displayimage") %>
+			<%= image_tag("wind_infographic_5.png", :class => "displayimage") %>
+			<%= image_tag("wind_infographic_6.png", :class => "displayimage") %>
 	</div>
 </div>
+<%= render "scrolltotop" %>

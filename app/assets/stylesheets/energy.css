@@ -21,46 +21,45 @@ h2{
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	text-align: center;
-	font-size: 110%;
 	font-family: 'Lato';
 }
 #menu li.active{
-        background: none repeat scroll 0 0 #7d7d7d;
+	background: none repeat scroll 0 0 #7d7d7d;
 }
 #menu li a{
-        text-decoration:none;
-        color: #000;
+	text-decoration:none;
+	color: #000;
 }
 #menu li.active a:hover{
-        color: #000;
+	color: #000;
 }
 #menu li:hover{
-        background: none repeat scroll 0 0 #7d7d7d;
+	background: none repeat scroll 0 0 #7d7d7d;
 }
 #menu li a,
 #menu li.active a{
-        padding: 9px 18px;
-        display:block;
+	padding: 9px 18px;
+	display:block;
 }
 #menu li.active a{
-        color: #fff;
+	color: #fff;
 }
 
 td:nth-child(2n+1) {
-    border-right: 5px solid #000000;
+	border-right: 5px solid #000000;
 }
 table{
 	width: 100%;
 }
 td {
-    padding-left: 10px;
-    padding-right: 30px;
-    padding-top: 30px;
-    text-align: center;
+	padding-left: 10px;
+	padding-right: 30px;
+	padding-top: 30px;
+	text-align: center;
 }
 th {
-    border-bottom: 5px solid #000000;
-    font-size: 150%;
+	border-bottom: 5px solid #000000;
+	font-size: 150%;
 }
 .inline{
 	display: inline;
@@ -82,7 +81,10 @@ th {
 	padding: 30px;
 }
 #firstPage{
-	background-color: #1BBC9B;
+	/*#1BBC9B;*/
+	background-color: #6AB29F;
+	/*#D5D7DD*/
+	/*#1BABB7*/
 }
 #secondPage{
 	background-color: #4BBFC3;
@@ -91,7 +93,8 @@ th {
 	background-color: white;
 }
 #fourthPage{
-	background-color: #7BAABE;
+	/*background-color: #7BAABE;*/
+	/*background-color: #D0482B;*/
 }
 .displayimage{
 	width: 100%;

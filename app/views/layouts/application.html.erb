@@ -8,7 +8,13 @@
   <link href='http://fonts.googleapis.com/css?family=Oldenburg|Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<header>Energy Solutions</header>
+	<header>
+	Energy Solutions
+	<p class="search">
+		<%= text_field_tag :search, params[:search], :class => "searchbar" %>
+		<%= submit_tag "Search", :class => "button blue", :style => "float: none; vertical-align: middle;" %>
+	</p>
+	</header>
 	<div id='cssmenu'>
 	<ul>
 	   <li class='active'><a href='/'><span>Home</span></a></li>

@@ -3,7 +3,9 @@
 	background-image: url("/assets/top.png") no-repeat;
 }
 #top{
-	 display: none;
-	 position: absolute;
-	 top: -60%;
+	display: none;
+	position: fixed;
+	right: 1%;
+	top: 5%;
+	z-index: 999;
 }
