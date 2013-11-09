@@ -32,11 +32,11 @@
 	</ul>
 	</div>
 	<div id="content">
-		<% if !(current_page?(root_path)) %>
+		<% if !(current_page?(root_path)) and !(current_page?('contents#contact')) and !(current_page?('contents#about'))%>
 			<%= render "menu" %>
 		<% end %>
 		<%= yield %>
 	</div>
-	<footer>Copyright © 2013. All Rights Reserved.</footer>
+	<footer>Copyright © Energy Solutions 2013. All Rights Reserved.</footer>
 </body>
 </html>

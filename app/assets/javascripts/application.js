@@ -46,7 +46,10 @@ $(document).ready(function()
 
   	}
 	});
-
+	if (window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/")
+	{
+		$('.menu').css("display", "none");
+	}
 	function isScrollBottom(){
 	  var elementHeight = $(element).height();
 	  var scrollPosition = $('.section').height() + $('.section').scrollTop();

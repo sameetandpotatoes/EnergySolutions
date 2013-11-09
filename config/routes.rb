@@ -7,5 +7,5 @@ HomeOwner::Application.routes.draw do
   get 'about', to: 'contents#about'
   get 'contact', to: 'contents#contact'
   get 'compare', to: 'contents#compare'
-  get '/search' => 'contents#search'
+  get 'search' => 'contents#search'
 end
