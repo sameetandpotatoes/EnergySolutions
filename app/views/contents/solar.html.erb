@@ -4,10 +4,14 @@
 		<li><a class="smoothScroll" href="#secondPage">Grants</a></li>
 		<li><a class="smoothScroll" href="#thirdPage">Pictures</a></li>
 		<li><a class="smoothScroll" href="#fourthpage">Installation Costs</a></li>
+		<li><a class="smoothScroll" href="#first" id="top"><img src="/assets/top.png"></img></a></li>
 	</ul>
 </div>
+<div class="section" id="first">
+	<h1>Solar Energy</h1>
+</div>
 <div class="section active" id="firstPage">
-	<div class="procon">
+	<div class="procon"><h1 class="header">Advantages and Disadvantages</h1>
 		<table>
 			<tr>
 				<th>Pros</th>
@@ -16,41 +20,41 @@
 			<tr>
 				<td>
 					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-					<p class="inline">Cut your electricity bills</p>
+					<p class="inline">Silent</p>
 				</td>
 				<td>
 					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-					<p class="inline">Solar energy is only available when the sun is shining.</p>
+					<p class="inline">Initial Cost.</p>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-					<p class="inline">Get paid for the electricity you generate</p>
+					<p class="inline">Non-Polluting</p>
 				</td>
 				<td>
 					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>,
-					<p class="inline">Its low efficiency. It requires large areas of land.</p>
+					<p class="inline">Air Pollution can decrease efficiency</p>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-					<p class="inline">Sell electricity back to the grid</p>
+					<p class="inline"></p>
 				</td>
 				<td>
 					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>,
-					<p class="inline">Its not completely free of environmental impact.</p>
+					<p class="inline">Daytime Only</p>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-					<p class="inline">Cut your carbon footprint</p>
+					<p class="inline"></p>
 				</td>
 				<td>
 					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>,
-					<p class="inline">High cost.</p>
+					<p class="inline"></p>
 				</td>
 			</tr>
 		</table>
@@ -74,16 +78,16 @@
 		<p>
 			The federal government allows you to claim a tax credit of up to 30 percent of your costs toward solar electric systems. To qualify, fuel cells must have a minimum of 0.5 kW, an electricity generation efficiency of at least 30 percent, and at least 50 percent of the home's heating energy must come from solar energy.
 		</p>
-
-		<!-- <h1>Looping!</h1> -->
-		<!-- <p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p> -->
 	</div>
 </div>
 <div class="section" id="thirdPage">
 	<div class="intro"><h1 class="header">Pictures and Diagrams</h1>
-		<%= image_tag("solar.png", :class=>"image")%>
-		<%= image_tag("solar_diagram.jpg", :class=>"image")%>
+		<%= image_tag("solar.png", :class=>"displayimage")%>
+		<%= image_tag("solar_picture.jpg", :class=>"displayimage")%>
+		<%= image_tag("solarmap.gif", :class => "displayimage") %>
+		<iframe width="900" height="720" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
 	</div>
+
 </div>
 <div class="section" id="fourthPage">
 	<div class="intro"><h1 class="header">Best Places for Solar Energy</h1>

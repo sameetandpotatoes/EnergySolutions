@@ -6,4 +6,5 @@ HomeOwner::Application.routes.draw do
   get 'geothermal', to: 'contents#geothermal'
   get 'about', to: 'contents#about'
   get 'contact', to: 'contents#contact'
+  get 'compare', to: 'contents#compare'
 end

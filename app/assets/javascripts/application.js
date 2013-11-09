@@ -29,4 +29,15 @@ $(document).ready(function()
 	    scrollTop: $target.offset().top
 	  }, 1000, "swing");
 	});
-});
+	 $(window).scroll(function(){
+	  // get the height of #wrap
+	  var y = $(window).scrollTop();
+	  if( y > 750)
+	  {
+	   //$('#top').css("display", "block");
+	   $('#top').fadeIn("slow");
+	  } else{
+	  	$('#top').fadeOut("fast");
+	  }
+	 });
+})

@@ -1,28 +1,47 @@
+<div style="display: inline-block;">
 <div class="location">
 	<h6>Find energy sources near you</h6>
 	<%=text_field_tag 'zip', nil, maxlength: 5%>
+	<%= submit_tag "Search", :name => nil, :class => "button blue" %>
 	<div>
-		<p>Allow us to determine your location</p>
+		<p id="demo">Allow us to determine your location</p>
+		<button class="button green" onclick="getLocation()">Click</button>
+		<script>
+		var x=document.getElementById("demo");
+		function getLocation()
+		  {
+		  if (navigator.geolocation)
+		    {
+		    navigator.geolocation.getCurrentPosition(showPosition);
+		    }
+		  else{x.innerHTML="Geolocation is not supported by this browser.";}
+		  }
+		function showPosition(position)
+		  {
+		  x.innerHTML="Latitude: " + position.coords.latitude +
+		  "<br>Longitude: " + position.coords.longitude;
+		  }
+		</script>
 	</div>
 </div>
 <div id="carousel">
 		<div id="myCarousel" class="carousel slide">
 			<div class="carousel-inner">
 				<div class="item active img">
-					<%=  image_tag("solar.jpg", :width => 700, :height => 400)%>
+					<%=  image_tag("solar.jpg", :width => 800, :height => 400)%>
 				</div>
 				<div class="item img">
-					<%=  image_tag("tidal.jpg", :width => 700, :height => 400)%>
+					<%=  image_tag("tidal.jpg", :width => 800, :height => 400)%>
 				</div>
 				<div class="item img">
-					<%=  image_tag("wind.jpg", :width => 700, :height => 400)%>
+					<%=  image_tag("wind.jpg", :width => 800, :height => 400)%>
 				</div>
 				<div class="item img">
-					<%=  image_tag("geothermal.jpg", :width => 700, :height => 400)%>
+					<%=  image_tag("geothermal.jpg", :width => 800, :height => 400)%>
 				</div>
 			</div>
 			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 		</div>
 </div>
-<p>Other text to put here</p>
+</div>

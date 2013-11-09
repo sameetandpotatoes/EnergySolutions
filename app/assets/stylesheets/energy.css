@@ -9,6 +9,7 @@ h2{
 }
 .header{
 	text-align: center;
+	padding-bottom: 20px;
 }
 .section{
 	padding-bottom: 50px;
@@ -71,7 +72,8 @@ th {
 }
 .menu{
 	position: fixed;
-	right: 15px;
+	top: 30%;
+	right: 5px;
 }
 .section{
 	margin: -75px -40px 75px;
@@ -88,4 +90,11 @@ th {
 }
 #fourthPage{
 	background-color: #7BAABE;
+}
+.displayimage{
+	width: 100%;
+}
+#first{
+	text-align: center;
+	width: 100%;
 }

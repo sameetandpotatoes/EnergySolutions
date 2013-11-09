@@ -1,30 +1,93 @@
-<h1>Water Energy</h1>
-<div id="procon">
-	<table>
-		<tr>
-			<th>Pros</th>
-			<th>Cons</th>
-		</tr>
-		<tr>
-			<td>
-				<%=link_to image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-				<p>Pro 1</p>
-			</td>
-			<td>
-				<%=link_to image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-				<p>Con 1</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<%=link_to image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
-				<p>Pro 2</p>
-			</td>
-			<td>
-				<%=link_to image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>,
-				<p>Con 2</p>
-			</td>
-		</tr>
-	</table>
+<div class="menu">
+	<ul id="menu">
+		<li><a class="smoothScroll" href="#firstPage">Pros and Cons</a></li>
+		<li><a class="smoothScroll" href="#secondPage">Grants</a></li>
+		<li><a class="smoothScroll" href="#thirdPage">Pictures</a></li>
+		<li><a class="smoothScroll" href="#fourthpage">Installation Costs</a></li>
+	</ul>
 </div>
+<div class="section" id="first">
+	<h1>Water Energy</h1>
+</div>
+<div class="section active" id="firstPage">
+	<div class="procon"><h1 class="header">Advantages and Disadvantages</h1>
+		<table>
+			<tr>
+				<th>Pros</th>
+				<th>Cons</th>
+			</tr>
+			<tr>
+				<td>
+					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<p class="inline"></p>
+				</td>
+				<td>
+					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<p class="inline">Noisy</p>
+					<p>The reliance on turbines causes water power to be noisier than solar energy.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<p class="inline"></p>
+				</td>
+				<td>
+					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>,
+					<p class="inline">Expensive</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<p class="inline"></p>
+				</td>
+				<td>
+					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>,
+					<p class="inline">Liable to Breaking Down</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<p class="inline"></p>
+				</td>
+				<td>
+					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>,
+					<p class="inline"></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="section" id="secondPage">
+	<div class="text"><h1 class="header">Grants</h1>
+		<h2>USDA REAP Grants</h2>
+		<p>
+			The Department of Agriculture provides homeowners in rural areas with grants to buy and install solar energy systems. The grants can cover up to 25 percent of a project's total cost and are limited to $500,000 for solar energy systems. To qualify, you must own the home and be a farmer or a rancher in a rural area.
+		</p>
+		<h2>Green Retrofit Grants</h2>
+		<p>
+			HUD's Office of Affordable Housing Preservation pays eligible homeowners to install and maintain alternative energy technology such as solar energy systems. The program has total funding of $250 million and is sponsored by the Housing Recovery Act. You must spend grant funds within two years of receiving the money.
+		</p>
+		<h2>Federal Grant Program</h2>
+		<p>
+			The Department of Energy's Tribal Energy Program helps homeowners in tribal lands reach energy sufficiency through the use of renewable energy such as solar energy. The program helps you pay for the education, training, evaluation and development of solar energy resources.
+		</p>
+		<h2>Residential Renewable Energy Credit</h2>
+		<p>
+			The federal government allows you to claim a tax credit of up to 30 percent of your costs toward solar electric systems. To qualify, fuel cells must have a minimum of 0.5 kW, an electricity generation efficiency of at least 30 percent, and at least 50 percent of the home's heating energy must come from solar energy.
+		</p>
+	</div>
+</div>
+<div class="section" id="thirdPage">
+	<div class="intro"><h1 class="header">Pictures and Diagrams</h1>
 
+	</div>
+
+</div>
+<div class="section" id="fourthPage">
+	<div class="intro"><h1 class="header">Best Places for Water Energy</h1>
+			<p>Netherlands, France, Australia, Italy, South Korea, China, US, Japan, Spain, Germany, Arizona</p>
+	</div>
+</div>

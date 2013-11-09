@@ -3,9 +3,10 @@ header{
 	padding: 15px 0px 0px 15px;
 	margin: 0;
 	color: white;
-	font: 25px 'Lato';
+	font: 30px 'Lato';
 }
 footer{
+	font-family: 'Lato';
 	background-color: #232323;
 	bottom: 0;
 	padding: 5px;
@@ -16,17 +17,19 @@ footer{
 	color: white;
 }
 #carousel{
-	width: 600px;
-	height: 300px;
+	width: 800px;
+	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 200px;
+	display: inline-block;
 }
 .location{
-	position: absolute;
-	top: 25%;
-	right: 5%;
 	padding: 5px;
 	border: 4px groove black;
 	text-align: center;
+	display: inline-block;
+	margin-top: 10px;
+}
+h6{
+	font-size: 120%;
 }
