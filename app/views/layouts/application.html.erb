@@ -26,6 +26,9 @@
 	</ul>
 	</div>
 	<div id="content">
+		<% if !(current_page?(root_path)) %>
+			<%= render "menu" %>
+		<% end %>
 		<%= yield %>
 	</div>
 	<footer>Copyright © 2013. All Rights Reserved.</footer>
