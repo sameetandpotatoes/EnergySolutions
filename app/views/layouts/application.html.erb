@@ -5,11 +5,13 @@
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta content = "yes" name = "apple-mobile-web-app-capable"/>
+	<meta content = "initial-scale=1" user-scalable="no" name = "viewport"/>
+	<meta content = "black" name = "apple-mobile-web-app-status-bar-style"/>
   <link href='http://fonts.googleapis.com/css?family=Oldenburg|Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<header>
-	Energy Solutions
+	<header>Energy Solutions
 	<p class="search">
 		<%= text_field_tag :search, params[:search], :class => "searchbar" %>
 		<%= submit_tag "Search", :class => "button blue", :style => "float: none; vertical-align: middle;" %>

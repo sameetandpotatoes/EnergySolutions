@@ -1,10 +1,10 @@
 <div style="display: inline-block; width: 100%;">
 <div class="location">
-	<h6>Find energy sources near you</h6>
+	<h6>Find the best energy sources</h6>
 	<%=text_field_tag 'zip', nil, maxlength: 5%>
 	<%= submit_tag "Search", :name => nil, :class => "button blue" %>
 	<div>
-		<p id="demo">Allow us to determine your location</p>
+		<p id="getlocation">Allow us to determine your location:</p>
 		<button class="button green" onclick="getLocation()">Click</button>
 		<script>
 		var x=document.getElementById("demo");

@@ -55,9 +55,8 @@ table{
 	width: 100%;
 }
 td {
-	padding-left: 10px;
-	padding-right: 30px;
-	padding-top: 30px;
+	padding-left: 20px;
+	padding-top: 15px;
 	text-align: center;
 }
 th {
@@ -67,7 +66,7 @@ th {
 .inline{
 	display: inline;
 	vertical-align: middle;
-	font-size: 150%;
+	font-size: 130%;
 	font-weight: bold;
 }
 .menu{
@@ -76,7 +75,7 @@ th {
 	right: 5px;
 	max-width: 150px;
 }
-#demo
+#getlocation
 {
 	float: left;
 }
@@ -105,7 +104,7 @@ th {
 }
 #first{
 	text-align: center;
-	width: 120%;
+	width: 100%;
 }
 .word-wrap{
 	display: inline-table;
@@ -126,7 +125,25 @@ th {
 	.menu{
 		display: none;
 	}
-	#first{
-		width: 100%;
+	.inline{
+		display: inline-block;
+		text-align: left;
+	}
+	table, td, tr{
+		display: block;
+	}
+	th{
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	td:nth-child(2n+1){
+		border: none;
+	}
+	td:nth-child(2){
+		padding: 0px;
+	}
+	body{
+		font-size: 90%;
 	}
 }
