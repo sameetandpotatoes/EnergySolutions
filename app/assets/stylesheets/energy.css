@@ -127,7 +127,12 @@ th {
 	}
 	.inline{
 		display: inline-block;
-		text-align: left;
+		text-align: center;
+		width: 100%;
+	}
+	.detailtext{
+		padding: 0px;
+		width: 350px;
 	}
 	table, td, tr{
 		display: block;
@@ -139,9 +144,11 @@ th {
 	}
 	td:nth-child(2n+1){
 		border: none;
+		color: green;
 	}
 	td:nth-child(2){
 		padding: 0px;
+		color: #EB4C42;
 	}
 	body{
 		font-size: 90%;
