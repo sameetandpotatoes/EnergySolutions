@@ -19,8 +19,17 @@ p{
 	font-family: 'Lato';
 }
 #content{
-	margin: 75px 200px 0px 40px;
+	margin: 60px 170px 0px 20px;
 }
 footer{
 	text-align: center;
+}
+@media all and (max-width: 900px) {
+	#content{
+		margin: 60px 0px 0px 0px;
+		padding: 30px;
+	}
+	body{
+		overflow-x: none;
+	}
 }

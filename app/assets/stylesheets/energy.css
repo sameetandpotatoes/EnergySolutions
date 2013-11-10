@@ -44,9 +44,12 @@ h2{
 #menu li.active a{
 	color: #fff;
 }
-
 td:nth-child(2n+1) {
 	border-right: 5px solid #000000;
+	padding-left: 0px;
+}
+td:nth-child(2){
+	padding-left: 30px;
 }
 table{
 	width: 100%;
@@ -71,6 +74,7 @@ th {
 	position: fixed;
 	top: 30%;
 	right: 5px;
+	max-width: 150px;
 }
 #demo
 {
@@ -101,5 +105,28 @@ th {
 }
 #first{
 	text-align: center;
-	width: 100%;
+	width: 120%;
+}
+.word-wrap{
+	display: inline-table;
+	min-height: 30px;
+	overflow: hidden;
+	width: 250px;
+	word-wrap: break-word;
+	text-align: left;
+}
+.detailtext{
+	padding-left: 10px;
+	font-size: 110%;
+}
+@media all and (max-width: 970px) {
+	.image{
+		display: none;
+	}
+	.menu{
+		display: none;
+	}
+	#first{
+		width: 100%;
+	}
 }
