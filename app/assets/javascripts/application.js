@@ -32,7 +32,7 @@ $(document).ready(function()
 	 $(window).scroll(function(){
 	  // get the height of #wrap
 	  var y = $(window).scrollTop();
-	  if( y > 750)
+	  if( y > 500)
 	  {
 	   //$('#top').css("display", "block");
 	   $('#top').fadeIn("slow");
@@ -40,19 +40,28 @@ $(document).ready(function()
 	  	$('#top').fadeOut("fast");
 	  }
 	 });
-	 $('.section').scroll(function()
+	 $(document).scroll(function()
 	 {
-  	if(isScrollBottom()){
+    if ($(this).scrollTop() > $('#firstPage').innerHeight())
+    {
 
-  	}
-	});
+    }
+		});
 	if (window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/")
 	{
 		$('.menu').css("display", "none");
 	}
-	function isScrollBottom(){
-	  var elementHeight = $(element).height();
-	  var scrollPosition = $('.section').height() + $('.section').scrollTop();
-	  return (elementHeight == scrollPosition);
+	function temp(form)
+	{
+		var Energy = parseFloat(form.KWHM.value);
+		var Percentage = parseFloat(form.PercentageSolar.value);
+		var SunHours = parseFloat(form.PeakSunHours.value);
+		var SystemRaw=0;
+		var System = 0;
+		var FirstStep=0
+		FirstStep=((Energy*1000)*(.01*Percentage))/30;
+		SystemRaw = (FirstStep/SunHours);
+		System=parseInt(SystemRaw);
+		form.SystemSize.value = System;
 	}
 })

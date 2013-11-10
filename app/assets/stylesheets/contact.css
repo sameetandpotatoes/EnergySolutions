@@ -1,6 +1,8 @@
 .contact{
 	border-radius: 100%;
 	display: inline;
+	height: auto !important;
+	width: 70%;
 }
 article{
 	display: inline;

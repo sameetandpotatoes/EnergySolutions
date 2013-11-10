@@ -1,7 +1,12 @@
 <div class="section" id="first">
 	<h1>Hydropower</h1>
 </div>
-<div class="section active" id="firstPage">
+<div class="section" id="firstPage">
+	<div class="intro"><h1 class="header">Infographic</h1>
+		<%= image_tag("water_infographic.png", :class => "displayimage", :style => "width: 65%;") %>
+	</div>
+</div>
+<div class="section active" id="secondPage">
 	<div class="procon"><h1 class="header">Advantages and Disadvantages</h1>
 		<table>
 			<tr>
@@ -89,7 +94,7 @@
 		</table>
 	</div>
 </div>
-<div class="section" id="secondPage">
+<div class="section" id="thirdPage">
 	<div class="text"><h1 class="header">Grants</h1>
 		<h2>USDA REAP Grants</h2>
 		<p>
@@ -107,11 +112,6 @@
 		<p>
 			The federal government allows you to claim a tax credit of up to 30 percent of your costs toward solar electric systems. To qualify, fuel cells must have a minimum of 0.5 kW, an electricity generation efficiency of at least 30 percent, and at least 50 percent of the home's heating energy must come from solar energy.
 		</p>
-	</div>
-</div>
-<div class="section" id="thirdPage">
-	<div class="intro"><h1 class="header">Infographic</h1>
-		<%= image_tag("water_infographic.png", :style => "width: 80%;") %>
 	</div>
 </div>
 <%= render "scrolltotop" %>

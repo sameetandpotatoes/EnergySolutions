@@ -17,20 +17,11 @@ footer{
 	color: white;
 }
 #carousel{
-	width: 60%;
+	width: 50%;
 	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
 	float: left;
-}
-.location{
-	padding: 5px;
-	border: 4px groove black;
-	text-align: center;
-	float: right;
-	font-size: 120%;
-	margin-right: -50px;
-	width: 40%;
 }
 h6{
 	font-size: 120%;
@@ -47,8 +38,8 @@ h6{
 	margin-right: auto;
 }
 .searchbar{
-	width: 180px;
-	height: 20px;
+	width: auto;
+	height: auto;
 }
 .searchbutton{
 	display: inline;

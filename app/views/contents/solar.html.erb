@@ -1,7 +1,13 @@
 <div class="section" id="first">
 	<h1>Solar Energy</h1>
 </div>
-<div class="section active" id="firstPage">
+<div class="section" id="firstPage" style="background-color: #F1EEE5;">
+	<div class="intro"><h1 class="header">What Is It</h1>
+		<%= image_tag("solar_infographic2.png", :class=>"displayimage")%>
+		<iframe width="100%" height="500" class= "video" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+<div class="section active" id="secondPage">
 	<div class="procon"><h1 class="header">Advantages and Disadvantages</h1>
 		<table>
 			<tr>
@@ -13,6 +19,11 @@
 					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
 					<div style="display: inline-table;">
 						<p class="inline">Quiet</p>
+						<div class="word-wrap">
+							<p class="detailtext">
+								There are no moving parts involved in most applications of solar power. There is no noise associated with photovoltaics. This compares favorable to certain other green-techs such as wind turbines.
+							</p>
+						</div>
 					</div>
 				</td>
 				<td>
@@ -45,7 +56,7 @@
 						<p class="inline">Daylight Only</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 This means for around half of each day, solar panels are not producing energy for your home.
+							 This means for around half of each day, solar panels are not producing energy for your home. Access to sunlight is limited at certain times (e.g. morning and night). Predicting overcast days can be difficult. This is why solar power is not our first choice when it comes to meeting the base load energy demand. However, solar power has fewer problems than wind power when it comes to intermittence.
 							</p>
 						</div>
 					</div>
@@ -55,10 +66,10 @@
 				<td>
 					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
 					<div style="display: inline-table;">
-						<p class="inline">Reliable and Stable</p>
+						<p class="inline">Low Maintenance</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 Hydropower isn't an intermittent energy source like solar and wind are. In times when demand is not that high it is easy to stop hydroelectric power plants to produce electricity, and "plug it in" once again in times when demand increases as water can be easily saved for future use.
+							 The majority of today`s solar power systems do not required a lot of maintenance. Residential solar panels usually only require cleaning a couple of times a year. Serious solar manufacturers ship 20- or 25-year warranties with their solar panels.
 							</p>
 						</div>
 					</div>
@@ -74,10 +85,26 @@
 						</div>
 					</div>
 				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<div style="display: inline-table;">
+						<p class="inline">Requires Space</p>
+						<div class="word-wrap">
+							<p class="detailtext">
+							 Power density, or watt per square meter (W/m²), is essential when looking at how much power can be derived from a certain area of real estate of an energy source. Low power density indicates that too much real estate is required to provide the power we demand at reasonably prices. The global mean power density for solar radiation is 170 W/m². This is more than any other renewable energy source, but not comparable to oil, gas and nuclear power.
+							</p>
+						</div>
+					</div>
+				</td>
+			</tr>
 		</table>
 	</div>
 </div>
-<div class="section" id="secondPage">
+<div class="section" id="thirdPage">
 	<div class="text"><h1 class="header">Grants</h1>
 		<h2><a class="headerlink" href="http://www.rurdev.usda.gov/ORreap_renew_grants.html">USDA REAP Grants</a></h2>
 		<p>
@@ -97,18 +124,79 @@
 		</p>
 	</div>
 </div>
-<div class="section" id="thirdPage">
-	<div class="intro"><h1 class="header">Pictures and Diagrams</h1>
-		<%= image_tag("solar.png", :class=>"displayimage")%>
-		<%= image_tag("solar_picture.jpg", :class=>"displayimage")%>
-		<%= image_tag("solarmap.png", :class => "displayimage") %>
-		<iframe width="100%" height="500" class= "video" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
+<div class="section" id="fifthPage" style="background-image: url('/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png');">
+	<div class="intro"><h1 class="header">Cost of Installation</h1>
+			<%= image_tag("solar_infographic.png", :class=>"displayimage")%>
+			<div class="cost">
+			<!-- START www.solar-estimate.org MY SOLAR and WIND ESTIMATOR CODE --><a target="_blank" href="http://www.solar-estimate.org/oemestimator?oemid=671"><img src="http://www.solar-estimate.org/images/solar-wind-estimator.gif" border="0"  alt="My Solar estimate estimator solar wind calculator." oncontextmenu="alert('Copying Prohibited by Law - this is a Trademark of www.solar-estimate.org'); return false;"></a><!-- END www.solar-estimate.org CODE -->
+			</div>
+			<div>
+				<p>
+					This Solar & Wind Calculator will compute the size and cost to install an energy system for your home or building. Solar & wind calculator technology options include solar electric (PV), solar water heating, pool or spa heating, space heating & cooling, and wind turbines. The solar & wind calculator's financial analysis is based upon energy bill savings you can expect and the net system cost, after tax credits and other incentives are applied. The solar & wind calculator results are based upon many assumptions and the limited data you will enter. An actual site assessment by a trained professional solar & wind Contractor will be needed to determine the actual costs and benefits of installing a system.
+			</p>
+			</div>
 	</div>
-
+	<!-- <form>
+		<table width="100%" cellspacing="1" cellpadding="8" border="0" bgcolor="#083972">
+			<tbody>
+				<tr bgcolor="#083972">
+					<td bgcolor="#083972" colspan="2">
+						<span class="title3">Off-Grid Energy System Size Calculator</span>
+					</td>
+					</tr>
+					<tr bgcolor="#FFFFFF">
+						<td>
+						<span class="title2">1. How much electricity do you use each month?</span>
+						Look at your electric bills from the past 6 months (or less) and find the average number of Kilowatt Hours (KwH) per month. Put this number in the space to the right.
+						<div align="center">OR</div>
+						Use the Actual Watt Hours per day at the end of your
+						<a href="../../pdf.folder/Download%20folder/Load.evaluation.worksheet.pdf">Load Evaluation Worksheet</a>
+						... multiplied by 30 (for monthly total) and divided by 1000 (to convert to KwHours).
+					</td>
+					<td width="154">
+						<input size="5" maxlength="10" value="0" name="KWHM">KwH/Month
+					</td>
+					</tr>
+					<tr bgcolor="#FFFFFF">
+					<td>
+						<span class="title2">2. What percentage of your house/business power do you want to generate with solar power?</span>
+						If you want to produce 100% of your electricity, put 100.
+					</td>
+					<td width="154">
+						<input type="text" size="5" name="PercentageSolar">
+						%
+					</td>
+					</tr>
+					<tr bgcolor="#FFFFFF">
+						<td>
+							<span class="title2">3. How many Peak Sun Hours do you get per day?</span>
+							Look at the Solar Map below to find this number.
+						</td>
+						<td width="154">
+							<input type="text" size="5" name="PeakSunHours">
+							Hours
+						</td>
+					</tr>
+					<tr bgcolor="#FFFFFF">
+						<td colspan="2">
+							<div align="center">
+								<input type="button" onclick="temp(this.form)" value="Calculate" name="calc">
+								<input type="reset" style="margin-left:20px; padding-left:15px" value="Reset">
+							</div>
+						</td>
+					</tr>
+					<tr bgcolor="#FFFFFF">
+						<td>
+							<div class="title2" align="right">
+							<strong>Minimum System Size:</strong>
+							</div>
+						</td>
+						<td width="154">
+							<input maxlength="8" size="8" name="SystemSize">
+							Watts
+						</td>
+					</tr>
+			</tbody>
+		</table>
+	</form> -->
 </div>
-<div class="section" id="fourthPage" style='background-image: url("/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png");'>
-	<div class="intro"><h1 class="header">Installation Cost</h1>
-			<%= image_tag("solar_infographic.png" , :class => "displayimage") %>
-	</div>
-</div>
-<%= render "scrolltotop" %>

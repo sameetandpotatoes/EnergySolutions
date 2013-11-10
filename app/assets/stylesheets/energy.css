@@ -5,7 +5,7 @@ h2{
 .text{
 	line-height: 25px;
 	font-size: 150%;
-	font-family: 'Lato';
+	padding-left: 20px;
 }
 .header{
 	text-align: center;
@@ -85,22 +85,28 @@ th {
 }
 #firstPage{
 	/*#1BBC9B;*/
-	background-color: #6AB29F;
+	background-color: white;
 	/*#D5D7DD*/
 	/*#1BABB7*/
 }
 #secondPage{
-	background-color: #4BBFC3;
+	background-color: #6AB29F;
 }
 #thirdPage{
-	background-color: white;
+	background-color: #4BBFC3;
 }
 #fourthPage{
 	/*background-color: #7BAABE;*/
 	/*background-color: #D0482B;*/
 }
+#fifthPage{
+	background-color: #1BABB7;
+}
 .displayimage{
-	width: 100%;
+	width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 #first{
 	text-align: center;
@@ -118,6 +124,11 @@ th {
 	padding-left: 10px;
 	font-size: 110%;
 }
+.cost{
+	padding-bottom: 20px;
+	float: left;
+	vertical-align: middle;
+}
 @media all and (max-width: 970px) {
 	.image{
 		display: none;
@@ -132,7 +143,7 @@ th {
 	}
 	.detailtext{
 		padding: 0px;
-		width: 350px;
+		width: 100%;
 	}
 	table, td, tr{
 		display: block;
