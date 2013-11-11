@@ -16,10 +16,9 @@
 
 $(document).ready(function()
 {
-  $('.carousel').carousel({
-    interval: 5000
-  });
-
+	$('.carousel').carousel({
+	  interval: 5000
+	});
 	$(".smoothScroll").on("click", function(e) {
 	  var $target, target;
 	  e.preventDefault();
@@ -29,39 +28,29 @@ $(document).ready(function()
 	    scrollTop: $target.offset().top
 	  }, 1000, "swing");
 	});
-	 $(window).scroll(function(){
-	  // get the height of #wrap
-	  var y = $(window).scrollTop();
-	  if( y > 500)
-	  {
-	   //$('#top').css("display", "block");
-	   $('#top').fadeIn("slow");
-	  } else{
-	  	$('#top').fadeOut("fast");
-	  }
-	 });
-	 $(document).scroll(function()
-	 {
-    if ($(this).scrollTop() > $('#firstPage').innerHeight())
-    {
+	$(window).scroll(function(){
+	// get the height of #wrap
+	var y = $(window).scrollTop();
+	if( y > 500)
+	{
+	 $('#top').fadeIn("slow");
+	}
+	else{
+		$('#top').fadeOut("fast");
+	}
+	});
+	$(document).scroll(function()
+	{
+		if ($(this).scrollTop() > $('#firstPage').innerHeight())
+		{
 
-    }
-		});
+		}
+	});
+	$(window).resize(function(){
+		$('.carouselimg').css("width", $('#myCarousel').width());
+	})
 	if (window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/")
 	{
 		$('.menu').css("display", "none");
-	}
-	function temp(form)
-	{
-		var Energy = parseFloat(form.KWHM.value);
-		var Percentage = parseFloat(form.PercentageSolar.value);
-		var SunHours = parseFloat(form.PeakSunHours.value);
-		var SystemRaw=0;
-		var System = 0;
-		var FirstStep=0
-		FirstStep=((Energy*1000)*(.01*Percentage))/30;
-		SystemRaw = (FirstStep/SunHours);
-		System=parseInt(SystemRaw);
-		form.SystemSize.value = System;
 	}
 })
