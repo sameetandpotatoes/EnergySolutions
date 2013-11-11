@@ -22,6 +22,10 @@ footer{
 	margin-left: auto;
 	margin-right: auto;
 }
+.carousel-control{
+	z-index: 1;
+	position: absolute;
+}
 .home{
 	margin-top: -10px;
 	padding: 0;
