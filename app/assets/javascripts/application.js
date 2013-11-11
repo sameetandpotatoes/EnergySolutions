@@ -16,9 +16,11 @@
 
 $(document).ready(function()
 {
-	$('.carousel').carousel({
-	  interval: 5000
+	$('#carousel').carousel({
+	  interval: 4000
 	});
+	$('.carouselimg').css("width", $(window).width());
+	$('.carouselimg').css("height", $(window).height() - 80);
 	$(".smoothScroll").on("click", function(e) {
 	  var $target, target;
 	  e.preventDefault();
@@ -47,7 +49,8 @@ $(document).ready(function()
 		}
 	});
 	$(window).resize(function(){
-		$('.carouselimg').css("width", $('#myCarousel').width());
+		$('.carouselimg').css("width", $(window).width());
+		$('.carouselimg').css("height", $(window).height() - 80);
 	})
 	if (window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/")
 	{

@@ -28,15 +28,6 @@ footer{
 		color: white;
 		text-decoration: none;
 }
-.location{
-	padding: 5px;
-	border: 4px groove black;
-	text-align: center;
-	float: right;
-	font-size: 120%;
-	margin-right: -50px;
-	width: 40%;
-}
 @media all and (max-width: 970px) {
 	#content{
 		margin: 60px 0px 0px 0px;
@@ -44,12 +35,5 @@ footer{
 	}
 	body{
 		overflow-x: none;
-	}
-	#carousel{
-		display: none;
-	}
-	.location{
-		display: block;
-		float: left;
 	}
 }

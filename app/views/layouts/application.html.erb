@@ -11,7 +11,12 @@
   <link href='http://fonts.googleapis.com/css?family=Oldenburg|Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<header><a href="/" class="link">Energy Solutions</a>
+	<header>
+	<a href="/" class="link">Energy Solutions</a>
+	<p class="search">
+			<%= text_field_tag :search, params[:search], :class => "searchbar" %>
+			<%= submit_tag "Search", :class => "button blue", :style => "float: none; vertical-align: middle;" %>
+	</p>
 	</header>
 	<div id='cssmenu'>
 	<ul>
@@ -29,16 +34,43 @@
 	   <li class='last'><a href='/contact/'><span>Contact</span></a></li>
 	</ul>
 	</div>
-	<p class="search">
-			<%= text_field_tag :search, params[:search], :class => "searchbar" %>
-			<%= submit_tag "Search", :class => "button blue", :style => "float: none; vertical-align: middle;" %>
-		</p>
-	<div id="content">
-		<% if !(current_page?(root_path)) and !(current_page?('contents#contact')) and !(current_page?('contents#about'))%>
-			<%= render "menu" %>
-		<% end %>
-		<%= yield %>
-	</div>
-	<footer>Copyright © Energy Solutions 2013. All Rights Reserved.</footer>
+	<% if (current_page?(root_path)) %>
+		<div class="homepagetext">
+			<h1 class="homepageheader">Renewable Energy</h1>
+			<p class="homepagedescription">The future is in our hands.</p>
+		</div>
+			<div class="specialbutton" onclick="getLocation()">
+				<p>Get Started</p>
+				<script>
+				var x=document.getElementById("demo");
+				function getLocation()
+				  {
+				  if (navigator.geolocation)
+				    {
+				    navigator.geolocation.getCurrentPosition(showPosition);
+				    }
+				  else{x.innerHTML="Geolocation is not supported by this browser.";}
+				  }
+				function showPosition(position)
+				  {
+				  x.innerHTML="Latitude: " + position.coords.latitude +
+				  "<br>Longitude: " + position.coords.longitude;
+				  }
+				</script>
+		</div>
+		<div class="home">
+			<%= yield %>
+		</div>
+	<% else %>
+		<div id="content">
+			<% if !(current_page?(root_path)) and !(current_page?('contents#contact')) and !(current_page?('contents#about'))%>
+				<%= render "menu" %>
+			<% end %>
+			<%= yield %>
+		</div>
+	<% end %>
+	<% if !(current_page?(root_path)) %>
+		<footer>Copyright © Energy Solutions 2013. All Rights Reserved.</footer>
+	<% end %>
 </body>
 </html>

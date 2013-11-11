@@ -1,47 +1,28 @@
-<div style="display: inline-block; width: 100%;">
-<div class="location">
-	<h6>Find the best energy sources</h6>
-	<%=text_field_tag 'zip', nil, maxlength: 5%>
-	<%= submit_tag "Search", :name => nil, :class => "button blue" %>
-	<div>
-		<p id="getlocation">Allow us to determine your location:</p>
-		<button class="button green" onclick="getLocation()">Click</button>
-		<script>
-		var x=document.getElementById("demo");
-		function getLocation()
-		  {
-		  if (navigator.geolocation)
-		    {
-		    navigator.geolocation.getCurrentPosition(showPosition);
-		    }
-		  else{x.innerHTML="Geolocation is not supported by this browser.";}
-		  }
-		function showPosition(position)
-		  {
-		  x.innerHTML="Latitude: " + position.coords.latitude +
-		  "<br>Longitude: " + position.coords.longitude;
-		  }
-		</script>
-	</div>
-</div>
-<div id="carousel">
-		<div id="myCarousel" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="item active img">
-					<%=  image_tag("solar.jpg", :height => 400, :class => "carouselimg")%>
-				</div>
-				<div class="item img">
-					<%=  image_tag("tidal.jpg", :height => 400, :class => "carouselimg")%>
-				</div>
-				<div class="item img">
-					<%=  image_tag("wind.jpg", :height => 400, :class => "carouselimg")%>
-				</div>
-				<div class="item img">
-					<%=  image_tag("geothermal.jpg", :height => 400, :class => "carouselimg")%>
-				</div>
-			</div>
-			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+<div id="carousel" class="carousel slide">
+	<!-- <ol class="carousel-indicators">
+	  <li data-target="#carousel" data-slide-to="0" class="active"></li>
+	  <li data-target="#carousel" data-slide-to="1"></li>
+	  <li data-target="#carousel" data-slide-to="2"></li>
+	  <li data-target="#carousel" data-slide-to="3"></li>
+	</ol> -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<%=  image_tag("solar.jpg", :class => "carouselimg")%>
 		</div>
-</div>
+		<div class="item">
+			<%=  image_tag("tidal.jpg", :class => "carouselimg")%>
+		</div>
+		<div class="item">
+			<%=  image_tag("wind.jpg", :class => "carouselimg")%>
+		</div>
+		<div class="item">
+			<%=  image_tag("geothermal.jpg", :class => "carouselimg")%>
+		</div>
+	</div>
+	<a class="left carousel-control" href="#carousel" data-slide="prev">
+		<span></span>
+	</a>
+	<a class="right carousel-control" href="#carousel" data-slide="next">
+		<span></span>
+	</a>
 </div>
