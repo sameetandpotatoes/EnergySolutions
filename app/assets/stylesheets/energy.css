@@ -30,7 +30,7 @@ h2{
 	text-decoration:none;
 	color: #000;
 }
-#menu li.active a:hover{
+#menu li.active a:hover, a.active{
 	color: #000;
 }
 #menu li:hover{
