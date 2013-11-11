@@ -17,7 +17,8 @@
 $(document).ready(function()
 {
 	$('#carousel').carousel({
-	  interval: 4000
+		interval: 5000,
+		pause: "false"
 	});
 	$('.carouselimg').css("width", $(window).width());
 	$('.carouselimg').css("height", $(window).height() - 80);

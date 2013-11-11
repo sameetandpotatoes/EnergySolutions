@@ -148,6 +148,7 @@ th {
     display: block;
     z-index: 999;
     transition: all 0.3s ease 0s;
+    padding: 10px;
 }
 .specialbutton:hover{
 	opacity: 0.85;

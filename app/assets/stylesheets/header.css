@@ -43,7 +43,7 @@ h6{
 .homepagetext{
 	position: absolute;
 	top: 150px;
-	z-index: 999;
+	z-index: 998;
 	color: black;
 	text-align: center;
 	width: 100%;
@@ -67,11 +67,10 @@ h6{
 	margin-right: auto;
 	position: absolute;
 	right: 10px;
-	top: 0px;
 }
 .searchbar{
 	width: auto;
-	height: auto;
+	height: 25px;
 }
 .searchbutton{
 	display: inline;
