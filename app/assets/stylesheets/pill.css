@@ -5,7 +5,12 @@
 #top{
 	display: none;
 	position: fixed;
-	right: 1%;
+	left: 45px;
 	top: 5%;
 	z-index: 999;
+}
+@media all and (max-width: 970px) {
+	#top{
+		left: 1%;
+	}
 }

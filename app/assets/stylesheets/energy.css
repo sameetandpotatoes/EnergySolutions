@@ -72,7 +72,7 @@ th {
 .menu{
 	position: fixed;
 	top: 30%;
-	right: 5px;
+	left: -2%;
 	max-width: 150px;
 }
 #getlocation
@@ -80,7 +80,7 @@ th {
 	float: left;
 }
 .section{
-	margin: -75px -40px 75px;
+	margin: -75px 0px 75px -30px;
 	padding: 30px;
 }
 #firstPage{
@@ -188,4 +188,5 @@ th {
 	body{
 		font-size: 90%;
 	}
+
 }

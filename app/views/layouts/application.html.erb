@@ -55,6 +55,13 @@
 				  {
 				  x.innerHTML="Latitude: " + position.coords.latitude +
 				  "<br>Longitude: " + position.coords.longitude;
+					$.ajax({ url:'http://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+position.coords.longitude+'&sensor=true',
+						success: function(data)
+						{
+							alert(data.results[0].formatted_address);
+							/*or you could iterate the components for only the city and state*/
+						}
+					});
 				  }
 				</script>
 		</div>
@@ -62,12 +69,16 @@
 			<%= yield %>
 		</div>
 	<% else %>
-		<div id="content">
-			<% if !(current_page?(root_path)) and !(current_page?('contents#contact')) and !(current_page?('contents#about'))%>
+		<% if (current_page?(:controller => "contents", :action => "contact") or current_page?(:controller => "contents", :action => "about"))%>
+			<div class="home">
+				<%= yield %>
+			</div>
+		<% else %>
+			<div id="content">
 				<%= render "menu" %>
-			<% end %>
-			<%= yield %>
-		</div>
+				<%= yield %>
+			</div>
+		<% end %>
 	<% end %>
 	<% if !(current_page?(root_path)) %>
 		<footer>Copyright © Energy Solutions 2013. All Rights Reserved.</footer>
