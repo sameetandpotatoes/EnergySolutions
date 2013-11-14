@@ -65,13 +65,34 @@ h6{
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	position: absolute;
-	right: 10px;
+	float: right;
 }
 .searchbar{
-	width: auto;
+	width: 150px;
 	height: 25px;
 }
 .searchbutton{
 	display: inline;
+}
+@media all and (max-width: 700px) {
+	.specialbutton{
+		width: 25% !important;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.carousel-indicators{
+		display: none;
+	}
+	.search{
+		display: none;
+	}
+	.homepageheader{
+		font-size: 20px;
+	}
+	.homepagedescription{
+		font-size: 15px;
+	}
+	.homepagetext{
+		top: 100px;
+	}
 }

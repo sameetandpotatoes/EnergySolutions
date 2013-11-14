@@ -9,7 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'pg_search'
 gem 'textacular', '~> 3.0', require: 'textacular/rails'
-
+gem 'newrelic_rpm'
 group :doc do
   gem 'sdoc', require: false
 end

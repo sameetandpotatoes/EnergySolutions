@@ -24,6 +24,6 @@ class ContentsController < ApplicationController
 
 	end
 	def search
-
+		page.body.include?("")
 	end
 end

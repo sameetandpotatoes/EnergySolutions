@@ -21,7 +21,7 @@ $(document).ready(function()
 		pause: "false"
 	});
 	$('.carouselimg').css("width", $(window).width());
-	$('.carouselimg').css("height", $(window).height() - 80);
+	$('.carouselimg').css("height", ($(window).height() - $('header').height()) - $('#cssmenu').height());
 	$(".smoothScroll").on("click", function(e) {
 	  var $target, target;
 	  e.preventDefault();
@@ -51,8 +51,12 @@ $(document).ready(function()
 	});
 	$(window).resize(function(){
 		$('.carouselimg').css("width", $(window).width());
-		$('.carouselimg').css("height", $(window).height() - 80);
+		$('.carouselimg').css("height", $(window).height() - $('header').height() - $('#cssmenu').height());
 	})
+	if (window.location.pathname == "/")
+	{
+		$('body').css("overflow", "auto");
+	}
 	if (window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/")
 	{
 		$('.menu').css("display", "none");
