@@ -13,9 +13,9 @@
 <body>
 	<header>
 	<a href="/" class="link">Energy Solutions</a>
-	<p class="search">
+	<p class="searchbox">
 			<%= text_field_tag :search, params[:search], :class => "searchbar" %>
-			<%= submit_tag "Search", :class => "button blue", :style => "float: none; vertical-align: middle;" %>
+			<%= submit_tag "Search", :class => "search button green" %>
 	</p>
 	</header>
 	<div id='cssmenu'>
@@ -27,7 +27,7 @@
 	         <li><a href='/wind/'><span>Wind Energy</span></a></li>
 	         <li><a href='/solar/'><span>Solar Energy</span></a></li>
 	         <li><a href='/geothermal/'><span>Geothermal Energy</span></a></li>
-	         <li class='last'><a href='/compare/'><span>Compare Energy Sources</span></a></li>
+	         <li class='last'><a href='/compare/'><span>Compare All</span></a></li>
 	      </ul>
 	   </li>
 	   <li><a href='/about/'><span>Info</span></a></li>
@@ -39,33 +39,12 @@
 			<h1 class="homepageheader">Renewable Energy</h1>
 			<p class="homepagedescription">The future is in our hands.</p>
 		</div>
-			<div class="specialbutton" onclick="getLocation()">
+		<div class="special button">
 				<p>Get Started</p>
-				<script>
-				var x=document.getElementById("demo");
-				function getLocation()
-				  {
-				  if (navigator.geolocation)
-				    {
-				    navigator.geolocation.getCurrentPosition(showPosition);
-				    }
-				  else{x.innerHTML="Geolocation is not supported by this browser.";}
-				  }
-				function showPosition(position)
-				  {
-				  x.innerHTML="Latitude: " + position.coords.latitude +
-				  "<br>Longitude: " + position.coords.longitude;
-					$.ajax({ url:'http://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+position.coords.longitude+'&sensor=true',
-						success: function(data)
-						{
-							alert(data.results[0].formatted_address);
-							/*or you could iterate the components for only the city and state*/
-						}
-					});
-				  }
-				</script>
 		</div>
 		<div class="home">
+			<div class="gif loader">
+			</div>
 			<%= yield %>
 		</div>
 	<% else %>

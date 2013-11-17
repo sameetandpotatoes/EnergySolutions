@@ -1,0 +1,9 @@
+.sources{
+	max-width: 90%;
+	margin-left: 10%;
+}
+.src_image{
+	max-width: 300px;
+	display: inline-block;
+	width: 30%;
+}

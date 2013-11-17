@@ -24,6 +24,8 @@ class ContentsController < ApplicationController
 
 	end
 	def search
-		page.body.include?("")
+	end
+	def results
+		@location = params[:myLoc]
 	end
 end
