@@ -131,12 +131,25 @@
   background-color: #cc2c24;
   color: #f0f0f0;
 }
-@media all and (max-width: 300px){
-  #cssmenu ul li a span{
-    font-size: 50%;
-  }
-  #cssmenu > ul > li > a {
+@media all and (max-width: 700px){
+  #cssmenu ul li a {
+    font-size: 8px;
     padding: 5px;
+    margin: 0;
+  }
+  #cssmenu{
+    padding: 0;
+    margin-top: -40px;
+  }
+  #cssmenu > ul ul > li
+  {
+    left: 25%;
+  }
+  #cssmenu ul ul ul {
+    width: 100px;
+  }
+  #cssmenu ul ul a{
+    width: 120px;
   }
 }
 

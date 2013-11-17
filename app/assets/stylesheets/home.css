@@ -98,7 +98,7 @@ h6{
 	.carousel-indicators{
 		display: none;
 	}
-	.search{
+	.searchbox{
 		display: none;
 	}
 	.homepageheader{
@@ -109,5 +109,12 @@ h6{
 	}
 	.homepagetext{
 		top: 100px;
+	}
+	header{
+		font-size: 20px;
+		padding-top: 15px;
+	}
+	.home{
+		margin-top: -20px;
 	}
 }

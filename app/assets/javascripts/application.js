@@ -13,11 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min.js
+//= require nprogress.js
+//= require simple-slider.min.js
+
 $(document).ready(function()
 {
-	//Range Slider
-	// $('#slider').editRangeSlider();
-	//End Range Slider
+	NProgress.configure({ showSpinner: false });
+	NProgress.configure({ ease: 'ease', speed: 1000 });
 	//Carousel Scripts
 	$('#carousel').carousel({
 		interval: 5000,
@@ -65,7 +67,9 @@ $(document).ready(function()
 	$('.special').click(function(){
 		var myLoc;
 		$('.home').css('opacity', '0.4');
-		$('.gif').css("display", "block");
+		NProgress.start();
+		NProgress.set(0.5);
+		NProgress.set(0.9);
 		$('.carousel').carousel('pause');
 		var YOUR_KEY = "63bec244efb3cba1a6518814444c0595afca5a68035482dd36d5e68f6d4fa5e7";
 		var theURL = "http://api.ipinfodb.com/v3/ip-city/?key=" + YOUR_KEY + "&format=json&callback=?";
@@ -84,29 +88,35 @@ $(document).ready(function()
 			}
 		});
 		setTimeout(function() {
-				$('.gif').css("display", "none");
 				$('.home').css('opacity', '1.0');
-				var url ='/view_personalized_results/';
-				$.ajax({
-						type: "POST",
-						url: "/view_personalized_results/",
-						data: myLoc,
-				});
-				window.location.href = url;
+				NProgress.done();
+				window.location.href = "/view?state="+myLoc.regionName+"city="+myLoc.cityName+"?zip="+myLoc.zipCode+"?lat="+myLoc.latitude+"?long="+myLoc.longitude;
 			}, 4000);
 	});
 	//End Location Script
 	$(document).scroll(function()
 	{
-		if ($(this).scrollTop() > $('#firstPage').innerHeight())
+		if (isScrolledIntoView('#secondPage'))
 		{
-
+			$('.second').addClass("active");
+			$('.first').removeClass("active");
 		}
 	});
 
 	if (nonEnergyLinks())
 		$('.menu').css("display", "none");
 })
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+
+}
 function nonEnergyLinks()
 {
 	return window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/";
@@ -114,7 +124,7 @@ function nonEnergyLinks()
 function homePageCheck()
 {
 	$('.carouselimg').css("width", $(window).width());
-	var height = $(window).height() - $('header').height() - $('#cssmenu').height();
+	var height = $(window).height() - $('header').height() - $('#cssmenu').height() + 11;
 	if ($(window).height() < 150)
 	{
 		height = $(document).height() + $('header').height();

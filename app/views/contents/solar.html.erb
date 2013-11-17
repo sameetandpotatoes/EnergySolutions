@@ -136,6 +136,15 @@
 			</p>
 			</div>
 	</div>
-	<div id="slider"></div>
+	<span class="costfigure">$/month</span>
+	<input type="text" data-slider="true" class="solar">
+	<script>
+		$(".solar").bind("slider:changed", function (event, data) {
+		// The currently selected value of the slider
+		//$('.costfigure').html() = "" + data.value;
+		// The value as a ratio of the slider (between 0 and 1)
+		data.ratio;
+		});
+	</script>
 </div>
 <%= render "scrolltotop" %>

@@ -9,5 +9,5 @@ HomeOwner::Application.routes.draw do
   get 'contact', to: 'contents#contact'
   get 'compare', to: 'contents#compare'
   get 'search' => 'contents#search'
-  get 'view_personalized_results' => 'contents#results', :via => :post
+  get 'view' => 'contents#results', :via => :post
 end
