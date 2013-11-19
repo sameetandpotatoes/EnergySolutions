@@ -1,0 +1,6 @@
+.applet, #energymap{
+	width: 100%;
+	min-height: 1000px;
+	display: block;
+	margin: 0 auto;
+}

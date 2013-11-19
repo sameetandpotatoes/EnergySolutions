@@ -14,10 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap.min.js
 //= require nprogress.js
-//= require simple-slider.min.js
+//= require bootstrap-slider.js
 
 $(document).ready(function()
 {
+	imageHoverFix();
 	NProgress.configure({ showSpinner: false });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
 	//Carousel Scripts
@@ -98,8 +99,6 @@ $(document).ready(function()
 	{
 		if (isScrolledIntoView('#secondPage'))
 		{
-			$('.second').addClass("active");
-			$('.first').removeClass("active");
 		}
 	});
 
@@ -138,3 +137,34 @@ function homePageCheck()
 		$('body').css("overflow-y", "auto");
 	}
 }
+function imageHoverFix()
+{
+	var image = $('.src_image:hover');
+	// if(navigator.sayswho.indexOf("Firefox") >= 0)
+	// {
+	// 	alert("vero here");
+	// 	image.addClass("firefox");
+	// 	$('.src_image:hover').css("-moz-transform", "scale(2)");
+	// 	$('.src_image:hover').css("-moz-transform-origin", "0 0 ");
+	// }
+	// else if(navigator.sayswho.contains("Safari") or (navigator.sayswho.contains("Chrome"))
+	// {
+	// 	alert("here");
+	// 	image.addClass("safari");
+	// 	$('.src_image:hover').css("-webkit-transform", "scale(2)");
+	// 	$('.src_image:hover').css("-webkit-transform", "0 0 ");
+	// }
+	// else if(navigator.sayswho.contains("Opera"))
+	// {
+	// 	image.addClass("opera");
+	// 	$('.src_image:hover').css("-o-transform", "scale(2)");
+	// 	$('.src_image:hover').css("-o-transform", "0 0 ");
+	// }
+}
+ navigator.sayswho= (function(){
+  var N= navigator.appName, ua= navigator.userAgent, tem;
+  var M= ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+  if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+  M= M? [M[1], M[2]]: [N, navigator.appVersion,'-?'];
+  return M;
+ })();

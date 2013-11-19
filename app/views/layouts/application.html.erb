@@ -35,22 +35,14 @@
 	</ul>
 	</div>
 	<% if (current_page?(root_path)) %>
-		<div class="homepagetext">
-			<h1 class="homepageheader">Renewable Energy</h1>
-			<p class="homepagedescription">The future is in our hands.</p>
-		</div>
 		<div class="special button">
 				<p>Get Started</p>
 		</div>
 		<div class="home">
-			<div class="gif loader">
-				<!-- <canvas class="sonic" height="100" width="100">
-				</canvas> -->
-			</div>
 			<%= yield %>
 		</div>
 	<% else %>
-		<% if (current_page?(:controller => "contents", :action => "contact") or current_page?(:controller => "contents", :action => "about"))%>
+		<% if (current_page?(:controller => "contents", :action => "contact") or current_page?(:controller => "contents", :action => "about") or current_page?(:controller => "contents", :action => "results"))%>
 			<div class="home">
 				<%= yield %>
 			</div>

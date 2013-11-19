@@ -1,9 +1,29 @@
 .sources{
-	max-width: 90%;
+	max-width: 80%;
 	margin-left: 10%;
 }
 .src_image{
 	max-width: 300px;
 	display: inline-block;
-	width: 30%;
+	width: 25%;
+	  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.src_image:hover{
+	/*zoom: 2; /* IE */
+}
+.safari{
+	-webkit-transform: scale(2); Safari And Chrome
+-webkit-transform-origin: 0 0;
+}
+.firefox{
+	-moz-transform: scale(2);
+	-moz-transform-origin: 0 0;
+}
+.opera{
+	-o-transform: scale(2); Opera
+-o-transform-origin: 0 0;
 }

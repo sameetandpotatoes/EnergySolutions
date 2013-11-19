@@ -3,8 +3,8 @@
 </div>
 <div class="section" id="firstPage" style="background-color: #F1EEE5;">
 	<div class="intro"><h1 class="header">What Is It</h1>
-		<%= image_tag("solar_infographic2.png", :class=>"displayimage")%>
-		<iframe width="100%" height="500" class= "video" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
+		<%= image_tag("solar_infographic2.png", :class=>"displayimage", :style=>"width: 95%;")%>
+		<iframe width="640" height="360" class= "video" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>
 <div class="section active" id="secondPage">
@@ -16,7 +16,7 @@
 			</tr>
 			<tr>
 				<td>
-					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<%= image_tag("check.png", :width=>"25px", :height=> "40px", :class=>"image")%>
 					<div style="display: inline-table;">
 						<p class="inline">Quiet</p>
 						<div class="word-wrap">
@@ -27,7 +27,7 @@
 					</div>
 				</td>
 				<td>
-					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<%= image_tag("x.png", :width=>"25px", :height=> "40px", :class=>"image")%>
 					<div style="display: inline-table;">
 						<p class="inline">Initial Cost</p>
 						<div class="word-wrap">
@@ -40,7 +40,7 @@
 			</tr>
 			<tr>
 				<td>
-					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<%= image_tag("check.png", :width=>"25px", :height=> "40px", :class=>"image")%>
 					<div style="display: inline-table;">
 						<p class="inline">No Pollution</p>
 						<div class="word-wrap">
@@ -51,7 +51,7 @@
 					</div>
 				</td>
 				<td>
-					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<%= image_tag("x.png", :width=>"25px", :height=> "40px", :class=>"image")%>
 					<div style="display: inline-table;">
 						<p class="inline">Daylight Only</p>
 						<div class="word-wrap">
@@ -64,7 +64,7 @@
 			</tr>
 			<tr>
 				<td>
-					<%= image_tag("check.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<%= image_tag("check.png", :width=>"25px", :height=> "40px", :class=>"image")%>
 					<div style="display: inline-table;">
 						<p class="inline">Less Service</p>
 						<div class="word-wrap">
@@ -75,7 +75,7 @@
 					</div>
 				</td>
 				<td>
-					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<%= image_tag("x.png", :width=>"25px", :height=> "40px", :class=>"image")%>
 					<div style="display: inline-table;">
 						<p class="inline">Pollution</p>
 						<div class="word-wrap">
@@ -90,7 +90,7 @@
 				<td>
 				</td>
 				<td>
-					<%= image_tag("x.png", :width=>"30px", :height=> "50px", :class=>"image")%>
+					<%= image_tag("x.png", :width=>"25px", :height=> "40px", :class=>"image")%>
 					<div style="display: inline-table;">
 						<p class="inline">Requires Space</p>
 						<div class="word-wrap">
@@ -136,15 +136,18 @@
 			</p>
 			</div>
 	</div>
-	<span class="costfigure">$/month</span>
-	<input type="text" data-slider="true" class="solar">
+	<span class="costfigure"></span>
+	<input type="text" data-slider-min="0" data-slider-max="2000" data-slider-step="10" data-slider-value="940" data-slider-orientation="horizontal" data-slider-selection="after" class="solar">
+	<input type="text" id="bar">
 	<script>
-		$(".solar").bind("slider:changed", function (event, data) {
-		// The currently selected value of the slider
-		//$('.costfigure').html() = "" + data.value;
-		// The value as a ratio of the slider (between 0 and 1)
-		data.ratio;
+    $('.solar').slider().on('slide', function(ev){
+    	var span = document.getElementById('.costfigure');
+			$('#bar').val(ev.value * 0.14);
 		});
 	</script>
+</div>
+<div class="section" id="sixthPage">
+	<div style="display: inline-block; margin-right: 30px; font-size: 11px; width: 167px"><iframe src="http://www.paystolivegreen.com/widget_src/small_kwh_calculator.php?theme=my_theme&amp;size=3" style="width: 167px; height: 234px;" frameborder="0" scrolling="no"></iframe></div>
+	<div style="display: inline-block; margin-right: 30px; font-size: 11px; width: 186px"><iframe src="http://www.paystolivegreen.com/widget_src/shower_calculator.php?theme=blue&amp;size=3" style="width: 186px; height: 245px;" frameborder="0" scrolling="no"></iframe></div>
 </div>
 <%= render "scrolltotop" %>

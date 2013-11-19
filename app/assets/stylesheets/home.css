@@ -42,7 +42,6 @@ h6{
 }
 .homepagetext{
 	position: absolute;
-	top: 150px;
 	z-index: 998;
 	color: black;
 	text-align: center;
