@@ -13,9 +13,13 @@
  */
 body{
 	background-image: url("/assets/beige_paper-069e200b6220364a03288328e39ef2ac.png");
+	overflow-x: hidden;
 }
 p{
 	font-family: 'Lato';
+}
+a:focus, *:focus {
+    noFocusLine: expression(this.onFocus=this.blur());
 }
 #content{
 	margin: 60px 0px 0px 160px;

@@ -653,12 +653,11 @@
 
             this.o.displayInput
                 && this.i.css({
-                        'width' : ((this.w / 2 + 4) >> 0) + 'px'
-                        ,'height' : ((this.w / 3) >> 0) + 'px'
+                        'height' : ((this.w / 3) >> 0) + 'px'
                         ,'position' : 'absolute'
                         ,'vertical-align' : 'middle'
                         ,'margin-top' : ((this.w / 3) >> 0) + 'px'
-                        ,'margin-left' : '-' + ((this.w * 3 / 4 + 2) >> 0) + 'px'
+                        ,'margin-left' : '-' + ((this.w * 3.2 / 4 + 2) >> 0) + 'px'
                         ,'border' : 0
                         ,'background' : 'none'
                         ,'font' : this.o.fontWeight + ' ' + ((this.w / s) >> 0) + 'px ' + this.o.font

@@ -16,9 +16,14 @@
 //= require bootstrap-slider.js
 //= require unslider.js
 //= require knob.js
+//= require xdomainajax.js
 
 $(document).ready(function()
 {
+	$('.home').css("display", "none");
+	$('.home').fadeIn(1500);
+	$('#content').css("display", "none");
+	$('#content').fadeIn(1500);
 	imageHoverFix();
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
@@ -88,7 +93,7 @@ $(document).ready(function()
 		});
 		setTimeout(function() {
 				NProgress.done();
-				window.location.href = "/view?state="+myLoc.regionName+"city="+myLoc.cityName+"?zip="+myLoc.zipCode+"?lat="+myLoc.latitude+"?long="+myLoc.longitude;
+				window.location.href = "/view?state="+myLoc.regionName+"&city="+myLoc.cityName+"&zip="+myLoc.zipCode+"&lat="+myLoc.latitude+"&long="+myLoc.longitude;
 			}, 4000);
 	});
 	//End Location Script

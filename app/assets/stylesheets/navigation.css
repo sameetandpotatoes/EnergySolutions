@@ -36,7 +36,7 @@
   font-family: Verdana, 'Lucida Grande';
   font-size: 15px;
   line-height: 70px;
-  padding: 15px 20px;
+  padding: 15px 20px 0px 20px;
   -webkit-transition: color .15s;
   -moz-transition: color .15s;
   -o-transition: color .15s;

@@ -1,4 +1,22 @@
-<%=@location %>
+<p style="display: hidden" class="state"><%=@state%></p>
+<div id="grants">
+</div>
+<script>
+	$(document).ready(function(){
+		var state=$('.state').text();
+		$("#grants").load("http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state="+state);
+		$.ajax({
+		url: 'http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state='+state,
+		type: 'GET',
+		success: function(res)
+		{
+		  var headline = $(res.responseText).find('#incentivelist').html();
+		  var div = document.getElementById('grants');
+		  div.innerHTML = headline;
+		}
+		});
+	});
+</script>
 <div class="applet">
 	<iframe id="energymap" src="http://renewables-map.nrdcapps.org/?">
 	</iframe>

@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+	include ApplicationHelper
 	def home
 
 	end
@@ -26,6 +27,13 @@ class ContentsController < ApplicationController
 	def search
 	end
 	def results
+		@state = params[:state]
+		@city = params[:city]
+		@lat = params[:lat]
+		@long = params[:long]
+		@state = @state.titlecase
+		@state = us_states(@state.to_s)
+		@state = @state.strip
 		#http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state=CA
 	end
 end

@@ -36,8 +36,12 @@ footer{
 	color: black;
 	font-size: 40px;
 	line-height: 52px;
-	font-family: 'bree-web', 'Bree';
+	font-family: 'Bree Serif';
 	font-weight: 300;
+}
+.imagecarousel p{
+	font-family: 'Droid Sans';
+	font-size: 25px;
 }
 .caption{
 	position: relative;
@@ -108,7 +112,7 @@ h6{
 	font-weight: bold;
 }
 .carouselimg{
-	opacity: 0.50;
+	opacity: 0.40;
 }
 .search{
 	display: inline;

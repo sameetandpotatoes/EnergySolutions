@@ -6,7 +6,7 @@
     left: 45px;
     top: 5%;
 }
-#BackToTop a {
+#BackToTop span {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
     border-radius: 25px;
     color: #FFFFFF;
@@ -19,10 +19,11 @@
     text-align: center;
     top: 0;
     transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
     width: 50px;
     animation: all 150ms ease-in-out 0s;
 }
-#BackToTop:hover a{
+#BackToTop:hover span{
     animation: 0.3s linear 0s normal none infinite nod;
     background: none repeat scroll 0 0 #3C9ADA;
 }

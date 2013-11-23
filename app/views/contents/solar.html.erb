@@ -4,7 +4,6 @@
 <div class="section" id="firstPage" style="background-color: #F1EEE5;">
 	<div class="intro"><h1 class="header">What Is It</h1>
 		<%= image_tag("solar_infographic2.png", :class=>"displayimage", :style=>"width: 95%;")%>
-		<iframe width="640" height="360" class= "video" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>
 <div class="section active" id="secondPage">
@@ -127,24 +126,37 @@
 <div class="section" id="fifthPage" style="background-image: url('/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png');">
 	<div class="intro"><h1 class="header">Cost of Installation</h1>
 			<%= image_tag("solar_infographic.png", :class=>"displayimage")%>
-			<div class="cost">
-			<!-- START www.solar-estimate.org MY SOLAR and WIND ESTIMATOR CODE --><a target="_blank" href="http://www.solar-estimate.org/oemestimator?oemid=671"><img src="http://www.solar-estimate.org/images/solar-wind-estimator.gif" border="0"  alt="My Solar estimate estimator solar wind calculator." oncontextmenu="alert('Copying Prohibited by Law - this is a Trademark of www.solar-estimate.org'); return false;"></a><!-- END www.solar-estimate.org CODE -->
+			<!-- <div class="cost">
+			<a target="_blank" href="http://www.solar-estimate.org/oemestimator?oemid=671"><img src="http://www.solar-estimate.org/images/solar-wind-estimator.gif" border="0"  alt="My Solar estimate estimator solar wind calculator." oncontextmenu="alert('Copying Prohibited by Law - this is a Trademark of www.solar-estimate.org'); return false;"></a><!-- END www.solar-estimate.org CODE
 			</div>
 			<div>
 				<p>
 					This Solar & Wind Calculator will compute the size and cost to install an energy system for your home or building. Solar & wind calculator technology options include solar electric (PV), solar water heating, pool or spa heating, space heating & cooling, and wind turbines. The solar & wind calculator's financial analysis is based upon energy bill savings you can expect and the net system cost, after tax credits and other incentives are applied. The solar & wind calculator results are based upon many assumptions and the limited data you will enter. An actual site assessment by a trained professional solar & wind Contractor will be needed to determine the actual costs and benefits of installing a system.
 			</p>
-			</div>
-	</div>
-	<span id="costfigure">Cost Per Year:</span>
-	<input type="text" class="dial" data-min="0" data-max="10000" data-step="100" data-width="150" data-angleOffset="180" data-fgColor="black" data-skin="tron" data-thickness=".1" value="35">
+			</div> -->
+	<span id="costfigure">Cost Per Year: $0</span>
+	<input type="text" class="dial">
 	<script>
 	$(".dial").knob({
-	  'release' : function (v) {
+	  'min': 0,
+	  'max': 9900,
+	  'step': 100,
+	  'width': 250,
+	  'skin': "tron",
+	  'fgColor': "black",
+	  'thickness': '.1',
+	  'angleArc': 250,
+	  'angleOffset': -125,
+		'draw': function () {
+	         $(this.i).val(this.cv + 'kW') //Puts a percent after values
+		},
+	  'change' : function (v) {
 	  	document.getElementById('costfigure').innerHTML = "Cost Per Year: $" + v;
 		}
 	});
 	</script>
+	</div>
+	<iframe width="640" height="360" class= "video" src="//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="section" id="sixthPage">
 	<div style="display: inline-block; margin-right: 30px; font-size: 11px; width: 167px"><iframe src="http://www.paystolivegreen.com/widget_src/small_kwh_calculator.php?theme=my_theme&amp;size=3" style="width: 167px; height: 234px;" frameborder="0" scrolling="no"></iframe></div>

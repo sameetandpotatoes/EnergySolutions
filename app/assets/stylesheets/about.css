@@ -6,24 +6,22 @@
 	max-width: 300px;
 	display: inline-block;
 	width: 25%;
-	  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 .src_image:hover{
-	/*zoom: 2; /* IE */
+	transform:scale(1.5);
+	-ms-transform:scale(1.5); /* IE 9 */
+	-moz-transform:scale(1.5); /* Firefox */
+	-webkit-transform:scale(1.5); /* Safari and Chrome */
+	-o-transform:scale(1.5); /* Opera */
 }
-.safari{
-	-webkit-transform: scale(2); Safari And Chrome
--webkit-transform-origin: 0 0;
-}
-.firefox{
-	-moz-transform: scale(2);
-	-moz-transform-origin: 0 0;
-}
-.opera{
-	-o-transform: scale(2); Opera
--o-transform-origin: 0 0;
+@media all and (max-width: 650px){
+	.src_image{
+		display: block;
+		padding: 30px;
+	}
 }

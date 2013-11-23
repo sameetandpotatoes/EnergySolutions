@@ -47,7 +47,6 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-sliders-rails (0.0.1)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -129,7 +128,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-easing-rails
   jquery-rails
-  jquery-sliders-rails
   newrelic_rpm
   pg
   pg_search

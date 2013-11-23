@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 gem 'rails', '4.0.0'
 gem 'jquery-easing-rails'
 gem 'pg'
-# gem "geocoder"
-gem 'jquery-sliders-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
