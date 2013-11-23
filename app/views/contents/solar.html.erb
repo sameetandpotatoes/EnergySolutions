@@ -136,14 +136,14 @@
 			</p>
 			</div>
 	</div>
-	<span class="costfigure"></span>
-	<input type="text" data-slider-min="0" data-slider-max="2000" data-slider-step="10" data-slider-value="940" data-slider-orientation="horizontal" data-slider-selection="after" class="solar">
-	<input type="text" id="bar">
+	<span id="costfigure">Cost Per Year:</span>
+	<input type="text" class="dial" data-min="0" data-max="10000" data-step="100" data-width="150" data-angleOffset="180" data-fgColor="black" data-skin="tron" data-thickness=".1" value="35">
 	<script>
-    $('.solar').slider().on('slide', function(ev){
-    	var span = document.getElementById('.costfigure');
-			$('#bar').val(ev.value * 0.14);
-		});
+	$(".dial").knob({
+	  'release' : function (v) {
+	  	document.getElementById('costfigure').innerHTML = "Cost Per Year: $" + v;
+		}
+	});
 	</script>
 </div>
 <div class="section" id="sixthPage">

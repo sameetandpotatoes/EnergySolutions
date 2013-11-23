@@ -16,15 +16,66 @@ footer{
 	width: 100%;
 	color: white;
 }
-#carousel{
-	width: 100%;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
+.imagecarousel {
+	position: relative;
+	overflow: auto;
+	/*color: rgba(255, 255, 255, 0.6);*/
+	color: black;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-.carousel-control{
-	z-index: 1;
-	position: absolute;
+.imagecarousel li {
+	list-style: none;
+}
+.imagecarousel ul{
+	padding-left: 0;
+}
+.imagecarousel h1{
+	color: black;
+	font-size: 40px;
+	line-height: 52px;
+	font-family: 'bree-web', 'Bree';
+	font-weight: 300;
+}
+.caption{
+	position: relative;
+	bottom: 150px;
+	opacity: 1.0;
+}
+.imagecarousel ul li {
+ 	float: left;
+	box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
+	display: block;
+	min-height: 350px;
+	padding: 160px 0 110px;
+	opacity: 0.5;
+}
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  text-align: center;
+}
+.dots li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  text-indent: -999em;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: .4;
+  -webkit-transition: background .5s, opacity .5s;
+  -moz-transition: background .5s, opacity .5s;
+  transition: background .5s, opacity .5s;
+}
+.dots li.active {
+  background: #fff;
+  opacity: 1;
 }
 .home{
 	margin-top: -10px;

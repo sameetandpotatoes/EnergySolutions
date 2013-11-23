@@ -12,24 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap.min.js
 //= require nprogress.js
 //= require bootstrap-slider.js
+//= require unslider.js
+//= require knob.js
 
 $(document).ready(function()
 {
 	imageHoverFix();
-	NProgress.configure({ showSpinner: false });
+	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
-	//Carousel Scripts
-	$('#carousel').carousel({
-		interval: 5000,
-		pause: "false"
+
+	$('.imagecarousel').unslider({
+		fluid: true,
+		dots: true,
+		keys: true,
+		speed: 500
 	});
-	homePageCheck();
-	$(window).resize(function(){
-		homePageCheck();
-	})
 	//End Carousel Scripts
 
 	//Open links in new window
@@ -70,8 +69,7 @@ $(document).ready(function()
 		$('.home').css('opacity', '0.4');
 		NProgress.start();
 		NProgress.set(0.5);
-		NProgress.set(0.9);
-		$('.carousel').carousel('pause');
+		NProgress.set(0.99);
 		var YOUR_KEY = "63bec244efb3cba1a6518814444c0595afca5a68035482dd36d5e68f6d4fa5e7";
 		var theURL = "http://api.ipinfodb.com/v3/ip-city/?key=" + YOUR_KEY + "&format=json&callback=?";
 		$.ajax({
@@ -89,7 +87,6 @@ $(document).ready(function()
 			}
 		});
 		setTimeout(function() {
-				$('.home').css('opacity', '1.0');
 				NProgress.done();
 				window.location.href = "/view?state="+myLoc.regionName+"city="+myLoc.cityName+"?zip="+myLoc.zipCode+"?lat="+myLoc.latitude+"?long="+myLoc.longitude;
 			}, 4000);
@@ -104,7 +101,7 @@ $(document).ready(function()
 
 	if (nonEnergyLinks())
 		$('.menu').css("display", "none");
-})
+});
 function isScrolledIntoView(elem)
 {
     var docViewTop = $(window).scrollTop();
@@ -119,23 +116,6 @@ function isScrolledIntoView(elem)
 function nonEnergyLinks()
 {
 	return window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/";
-}
-function homePageCheck()
-{
-	$('.carouselimg').css("width", $(window).width());
-	var height = $(window).height() - $('header').height() - $('#cssmenu').height() + 11;
-	if ($(window).height() < 150)
-	{
-		height = $(document).height() + $('header').height();
-	}
-	$('.carouselimg').css("height", height);
-	if (window.location.pathname == "/" && $(window).height() > 400)
-		$('body').css("overflow", "hidden");
-	else
-	{
-		$('body').css("overflow-x", "hidden");
-		$('body').css("overflow-y", "auto");
-	}
 }
 function imageHoverFix()
 {
@@ -161,10 +141,10 @@ function imageHoverFix()
 	// 	$('.src_image:hover').css("-o-transform", "0 0 ");
 	// }
 }
- navigator.sayswho= (function(){
-  var N= navigator.appName, ua= navigator.userAgent, tem;
-  var M= ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
-  if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
-  M= M? [M[1], M[2]]: [N, navigator.appVersion,'-?'];
-  return M;
- })();
+navigator.sayswho= (function(){
+var N= navigator.appName, ua= navigator.userAgent, tem;
+var M= ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+M= M? [M[1], M[2]]: [N, navigator.appVersion,'-?'];
+return M;
+})();

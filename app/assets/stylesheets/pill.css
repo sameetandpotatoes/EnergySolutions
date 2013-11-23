@@ -1,13 +1,30 @@
-/* Pill style */
-#scrollUp {
-	background-image: url("/assets/top.png") no-repeat;
+#BackToTop {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    left: 45px;
+    top: 5%;
 }
-#top{
-	display: none;
-	position: fixed;
-	left: 45px;
-	top: 5%;
-	z-index: 999;
+#BackToTop a {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 700;
+    height: 50px;
+    left: 0;
+    line-height: 44px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: rotate(-90deg);
+    width: 50px;
+    animation: all 150ms ease-in-out 0s;
+}
+#BackToTop:hover a{
+    animation: 0.3s linear 0s normal none infinite nod;
+    background: none repeat scroll 0 0 #3C9ADA;
 }
 @media all and (max-width: 970px) {
 	#top{

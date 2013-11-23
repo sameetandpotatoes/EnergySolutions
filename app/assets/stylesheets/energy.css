@@ -131,6 +131,11 @@ th {
 	float: left;
 	vertical-align: middle;
 }
+#costfigure{
+	font-size: 30px;
+	font-weight: 300;
+	display: block;
+}
 @media all and (max-width: 970px) {
 	.image{
 		display: none;

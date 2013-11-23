@@ -1,40 +1,23 @@
-<div id="myCarousel">
-<div id="carousel" class="carousel slide">
-	<ol class="carousel-indicators">
-	  <li data-target="#carousel" data-slide-to="0" class="active"></li>
-	  <li data-target="#carousel" data-slide-to="1"></li>
-	  <li data-target="#carousel" data-slide-to="2"></li>
-	  <li data-target="#carousel" data-slide-to="3"></li>
-	</ol>
-	<div class="carousel-inner">
-		<div class="active item">
-			<div class="homepagetext">
-				<h1 class="homepageheader">Renewable Energy</h1>
-				<p class="homepagedescription">The future is in our hands.</p>
+<div class="imagecarousel has-dots">
+	<ul>
+		<li style='background-image: url("/assets/solar-18694222104b6ced788b349cd63f53cc.jpg")'>
+			<div class="caption">
+				<h1>Renewable Energy.</h1>
+				<p>The future is in our hands.</p>
 			</div>
-			<%= image_tag("solar.jpg", :class => "carouselimg")%>
-		</div>
-		<div class="item">
-			<div class="homepagetext">
-				<h1 class="homepageheader">Renewable Energy</h1>
-				<p class="homepagedescription">Energy is beautiful.</p>
-			</div>
-			<%= image_tag("tidal.jpg", :class => "carouselimg")%>
-		</div>
-		<div class="item">
-			<div class="homepagetext">
-				<h1 class="homepageheader">Renewable Energy</h1>
-				<p class="homepagedescription">Clean. Safe. Efficient.</p>
-			</div>
-			<%= image_tag("wind.jpg", :class => "carouselimg")%>
-		</div>
-		<div class="item">
-			<div class="homepagetext">
-				<h1 class="homepageheader">Renewable Energy</h1>
-				<p class="homepagedescription">The world needs it.</p>
-			</div>
-			<%= image_tag("geothermal.jpg", :class => "carouselimg")%>
-		</div>
-	</div>
+		</li>
+		<li style='background-image: url("/assets/wind-eaac506eb1ae1d11c572e1bec4b04ca2.jpg");'>
+			<h1>Renewable Energy.</h1>
+			<p>Energy is beautiful.</p>
+		</li>
+		<li style='background-image: url("/assets/geothermal-58b3e2d8eeb063847de79d733f7611e0.jpg");'>
+			<h1>Renewable Energy.</h1>
+			<p>Clean. Safe. Efficient.</p>
+		</li>
+		<li style='background-image: url("/assets/tidal-a3f52aa5941986716af5a9ac8ee86bcd.jpg");'>
+			<h1>Renewable Energy.</h1>
+			<p>The world needs it.</p>
+		</li>
+	</ul>
 </div>
-</div>
+
