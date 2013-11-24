@@ -20,12 +20,14 @@
 $(document).ready(function()
 {
 	$('.home').css("display", "none");
+	$('#special').css("display", "none");
 	$('#content').css("display", "none");
 	$('.footer').css("display", "none");
 });
 $(window).load(function(){
 	$('#loading').css("display","none");
 	$('.home').fadeIn(1500);
+	$('#special').fadeIn(1500);
 	$('#content').fadeIn(1500);
 	$('.footer').fadeIn(1500);
 

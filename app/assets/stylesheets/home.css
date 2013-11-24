@@ -8,11 +8,11 @@ header{
 footer{
 	font-family: 'Lato';
 	background-color: #232323;
-	bottom: 0;
-	padding: 10px;
+	bottom: 5;
+	padding: 15px;
 	clear: both;
 	height: 15px;
-	position: relative;
+	position: absolute;
 	width: 100%;
 	color: white;
 }
