@@ -1,4 +1,48 @@
 <p style="display: none;" class="state"><%=@state%></p>
+<h1 class="locheader">Sun Hours near <%= @city.titlecase %>, <%= @state %>
+<div id="sunhours">
+	<%=@wind%>
+	<script>
+	var xmlHttp
+	function showCITY(str)
+	{
+	xmlHttp=GetXmlHttpObject()
+	if (xmlHttp==null)
+	{
+		alert ("Browser does not support HTTP Request")
+		return
+	}
+	validater url="getcity.php"
+	url=url+"?q="+str
+	url=url+"&sid="+Math.random()
+	xmlHttp.open("GET",url,true)
+	xmlHttp.send(null)
+	}
+	function GetXmlHttpObject()
+	{
+	var xmlHttp=null;
+	try
+	{
+	// Firefox, Opera 8.0+, Safari
+	xmlHttp=new XMLHttpRequest();
+	}
+	catch (e)
+	{
+	// Internet Explorer
+	try
+	{
+	xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+	}
+	catch (e)
+	{
+	xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	}
+	return xmlHttp;
+	}
+
+	</script>
+</div>
 <h1 class="locheader">Grants near <%= @city.titlecase %>, <%= @state %></h1>
 <div id="grants">
 </div>
@@ -14,11 +58,9 @@
 		  var headline = $(res.responseText).find('#incentivelist').html();
 		  var div = document.getElementById('grants');
 		  div.innerHTML = headline;
-		  div.css("display", "none");
-		  div.fadeIn(1500);
-		  $(".copy a").each(function(){
+		  $("#grants ul li a").each(function(){
 		  	var _href = $(this).attr("href");
-		  	$(this).attr("href", "https://www.dsireusa.org/incentives/"+_href);
+		  	$(this).attr("href", "http://www.dsireusa.org/incentives/"+_href);
 		  	$(this).attr("target", "_blank");
 		  });
 		}

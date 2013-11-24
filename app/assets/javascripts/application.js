@@ -25,11 +25,11 @@ $(document).ready(function()
 	$('.footer').css("display", "none");
 });
 $(window).load(function(){
-	$('#loading').css("display","none");
-	$('.home').fadeIn(1500);
-	$('#special').fadeIn(1500);
-	$('#content').fadeIn(1500);
-	$('.footer').fadeIn(1500);
+	$('#loading').fadeOut(1500);
+	$('.home').fadeIn(3000);
+	$('#special').fadeIn(3000);
+	$('#content').fadeIn(3000);
+	$('.footer').fadeIn(3000);
 
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
@@ -97,7 +97,7 @@ $(window).load(function(){
 		setTimeout(function() {
 				NProgress.done();
 				window.location.href = "/view?state="+myLoc.regionName+"&city="+myLoc.cityName+"&zip="+myLoc.zipCode+"&lat="+myLoc.latitude+"&long="+myLoc.longitude;
-			}, 4000);
+			}, 1000);
 	});
 	if (nonEnergyLinks())
 		$('.menu').css("display", "none");

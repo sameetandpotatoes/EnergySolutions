@@ -55,4 +55,8 @@ module ApplicationHelper
 		}
 		hash[state]
 	end
+	def wind(state)
+		badstates = ["Florida","Georgia","Alabama","Mississippi","Louisiana","Arkansas","Tennessee","North Carolina","South Carolina","Nevada","Kentucky"]
+		badstates.include?(state)
+	end
 end
