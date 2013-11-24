@@ -1,7 +1,7 @@
 .team:after {
     clear: both;
     content: "";
-    display: 'table';
+    display: table;
 }
 .contact{
 	border-radius: 50%;
@@ -9,7 +9,6 @@
 	height: auto !important;
 	width: 200px;
 	text-align: center;
-	max-width: auto;
 	min-width: 200px;
 }
 .team article{
