@@ -51,13 +51,6 @@ $(window).load(function(){
     }
   });
   //End links script
-  $("body").keydown(function(e) {
-  if(e.keyCode == 37) { // left
-
-  }
-  else if(e.keyCode == 39) { // right
-	}
-	});
   //Pagination Script
 	$(".smoothScroll").on("click", function(e) {
 	  var $target, target;
@@ -106,28 +99,9 @@ $(window).load(function(){
 				window.location.href = "/view?state="+myLoc.regionName+"&city="+myLoc.cityName+"&zip="+myLoc.zipCode+"&lat="+myLoc.latitude+"&long="+myLoc.longitude;
 			}, 4000);
 	});
-	//End Location Script
-	$(document).scroll(function()
-	{
-		if (isScrolledIntoView('#secondPage'))
-		{
-		}
-	});
-
 	if (nonEnergyLinks())
 		$('.menu').css("display", "none");
 });
-function isScrolledIntoView(elem)
-{
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-
-}
 function nonEnergyLinks()
 {
 	return window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/";
