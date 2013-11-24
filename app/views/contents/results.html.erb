@@ -1,4 +1,5 @@
-<p style="display: hidden" class="state"><%=@state%></p>
+<p style="display: none;" class="state"><%=@state%></p>
+<h1>Grants near <%= @city.titlecase %>, <%= @state %></h1>
 <div id="grants">
 </div>
 <script>
@@ -13,10 +14,16 @@
 		  var headline = $(res.responseText).find('#incentivelist').html();
 		  var div = document.getElementById('grants');
 		  div.innerHTML = headline;
+		  $("#incentivelist ul li a").each(function(){
+		  	var _href = $(this).attr("href");
+		  	$(this).attr("href", "http://www.dsireusa.org/incentives/"+_href);
+		  	$(this).attr("target", "_blank");
+		  });
 		}
 		});
 	});
 </script>
+<h1>Interactive Renewable Energy Map</h1>
 <div class="applet">
 	<iframe id="energymap" src="http://renewables-map.nrdcapps.org/?">
 	</iframe>

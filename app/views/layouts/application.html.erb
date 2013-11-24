@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html public>
 <html>
 <head>
   <title>Energy Solutions</title>
@@ -42,7 +42,7 @@
 			<%= yield %>
 		</div>
 	<% else %>
-		<% if (current_page?(:controller => "contents", :action => "contact") or current_page?(:controller => "contents", :action => "about") or current_page?(:controller => "contents", :action => "results"))%>
+		<% if (current_page?(:controller => "contents", :action => "contact") or current_page?(:controller => "contents", :action => "about") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "compare"))%>
 			<div class="home">
 				<%= yield %>
 			</div>

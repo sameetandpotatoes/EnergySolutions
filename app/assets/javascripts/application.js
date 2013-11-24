@@ -24,10 +24,9 @@ $(document).ready(function()
 	$('.home').fadeIn(1500);
 	$('#content').css("display", "none");
 	$('#content').fadeIn(1500);
-	imageHoverFix();
+
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
-
 	$('.imagecarousel').unslider({
 		fluid: true,
 		dots: true,
@@ -73,7 +72,6 @@ $(document).ready(function()
 		var myLoc;
 		$('.home').css('opacity', '0.4');
 		NProgress.start();
-		NProgress.set(0.5);
 		NProgress.set(0.99);
 		var YOUR_KEY = "63bec244efb3cba1a6518814444c0595afca5a68035482dd36d5e68f6d4fa5e7";
 		var theURL = "http://api.ipinfodb.com/v3/ip-city/?key=" + YOUR_KEY + "&format=json&callback=?";
@@ -122,34 +120,3 @@ function nonEnergyLinks()
 {
 	return window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/";
 }
-function imageHoverFix()
-{
-	var image = $('.src_image:hover');
-	// if(navigator.sayswho.indexOf("Firefox") >= 0)
-	// {
-	// 	alert("vero here");
-	// 	image.addClass("firefox");
-	// 	$('.src_image:hover').css("-moz-transform", "scale(2)");
-	// 	$('.src_image:hover').css("-moz-transform-origin", "0 0 ");
-	// }
-	// else if(navigator.sayswho.contains("Safari") or (navigator.sayswho.contains("Chrome"))
-	// {
-	// 	alert("here");
-	// 	image.addClass("safari");
-	// 	$('.src_image:hover').css("-webkit-transform", "scale(2)");
-	// 	$('.src_image:hover').css("-webkit-transform", "0 0 ");
-	// }
-	// else if(navigator.sayswho.contains("Opera"))
-	// {
-	// 	image.addClass("opera");
-	// 	$('.src_image:hover').css("-o-transform", "scale(2)");
-	// 	$('.src_image:hover').css("-o-transform", "0 0 ");
-	// }
-}
-navigator.sayswho= (function(){
-var N= navigator.appName, ua= navigator.userAgent, tem;
-var M= ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
-if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
-M= M? [M[1], M[2]]: [N, navigator.appVersion,'-?'];
-return M;
-})();

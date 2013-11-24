@@ -1,5 +1,5 @@
 <div class="section" id="first">
-	<h1>Solar Energy</h1>
+	<h1>Solar PV Energy (Photovoltaic)</h1>
 </div>
 <div class="section" id="firstPage" style="background-color: #F1EEE5;">
 	<div class="intro"><h1 class="header">What Is It</h1>
@@ -124,17 +124,11 @@
 	</div>
 </div>
 <div class="section" id="fifthPage" style="background-image: url('/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png');">
-	<div class="intro"><h1 class="header">Cost of Installation</h1>
+	<div class="intro">
+	<h1 class="header">Cost of Installation</h1>
 			<%= image_tag("solar_infographic.png", :class=>"displayimage")%>
-			<!-- <div class="cost">
-			<a target="_blank" href="http://www.solar-estimate.org/oemestimator?oemid=671"><img src="http://www.solar-estimate.org/images/solar-wind-estimator.gif" border="0"  alt="My Solar estimate estimator solar wind calculator." oncontextmenu="alert('Copying Prohibited by Law - this is a Trademark of www.solar-estimate.org'); return false;"></a><!-- END www.solar-estimate.org CODE
-			</div>
-			<div>
-				<p>
-					This Solar & Wind Calculator will compute the size and cost to install an energy system for your home or building. Solar & wind calculator technology options include solar electric (PV), solar water heating, pool or spa heating, space heating & cooling, and wind turbines. The solar & wind calculator's financial analysis is based upon energy bill savings you can expect and the net system cost, after tax credits and other incentives are applied. The solar & wind calculator results are based upon many assumptions and the limited data you will enter. An actual site assessment by a trained professional solar & wind Contractor will be needed to determine the actual costs and benefits of installing a system.
-			</p>
-			</div> -->
 	<span id="costfigure">Cost Per Year: $0</span>
+	<p>Based on the average price of $0.31 per kW</p>
 	<input type="text" class="dial">
 	<script>
 	$(".dial").knob({
@@ -142,16 +136,15 @@
 	  'max': 9900,
 	  'step': 100,
 	  'width': 250,
-	  'skin': "tron",
 	  'fgColor': "black",
 	  'thickness': '.1',
 	  'angleArc': 250,
 	  'angleOffset': -125,
 		'draw': function () {
-	         $(this.i).val(this.cv + 'kW') //Puts a percent after values
+	         $(this.i).val(this.cv + 'kW')
 		},
 	  'change' : function (v) {
-	  	document.getElementById('costfigure').innerHTML = "Cost Per Year: $" + v;
+	  	document.getElementById('costfigure').innerHTML = "Cost Per Year: $" + v*((0.18 + 0.43)/2);
 		}
 	});
 	</script>
