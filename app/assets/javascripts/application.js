@@ -51,7 +51,13 @@ $(window).load(function(){
     }
   });
   //End links script
+  $("body").keydown(function(e) {
+  if(e.keyCode == 37) { // left
 
+  }
+  else if(e.keyCode == 39) { // right
+	}
+	});
   //Pagination Script
 	$(".smoothScroll").on("click", function(e) {
 	  var $target, target;

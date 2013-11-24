@@ -11,10 +11,15 @@ footer{
 	bottom: 5;
 	padding: 15px;
 	clear: both;
-	height: 15px;
-	position: absolute;
+	height: 25px;
+	position: relative;
 	width: 100%;
 	color: white;
+}
+.bpalogo{
+	vertical-align: middle;
+	float: left;
+	margin-top: -10px;
 }
 .imagecarousel {
 	position: relative;

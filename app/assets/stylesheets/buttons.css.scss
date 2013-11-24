@@ -38,7 +38,7 @@
 .green{
 	font: 12px/100% Arial, Helvetica, sans-serif;
 	background: -moz-linear-gradient(center top , #7DB72F, #4E7D0E) repeat scroll 0 0 transparent;
-	background: -ms-linear-gradient(center top , #7DB72F, #4E7D0E);
+	background-image: -ms-linear-gradient(top left , #7DB72F, #4E7D0E);
 	background: -webkit-gradient(linear, left top, left bottom, from(#7DB72F), to(#4E7D0E));
 	border: 1px solid #538312;
 	color: #E8F0DE;
