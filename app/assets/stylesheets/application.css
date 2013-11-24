@@ -14,12 +14,15 @@
 body{
 	background-image: url("/assets/beige_paper-069e200b6220364a03288328e39ef2ac.png");
 	overflow-x: hidden;
+	margin: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 p{
 	font-family: 'Lato';
-}
-a:focus, *:focus {
-    noFocusLine: expression(this.onFocus=this.blur());
 }
 #content{
 	margin: 60px 0px 0px 160px;
@@ -37,7 +40,6 @@ footer{
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
 }
 @media all and (max-width: 970px) {
 	#content{

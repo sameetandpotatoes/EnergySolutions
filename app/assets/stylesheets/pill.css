@@ -14,13 +14,13 @@
     font-weight: 700;
     height: 50px;
     left: 0;
-    line-height: 44px;
+    line-height: 46px;
     position: absolute;
     text-align: center;
+    width: 50px;
     top: 0;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
-    width: 50px;
     animation: all 150ms ease-in-out 0s;
 }
 #BackToTop:hover span{

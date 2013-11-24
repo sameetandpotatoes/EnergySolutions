@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require nprogress.js
-//= require bootstrap-slider.js
 //= require unslider.js
 //= require knob.js
 //= require xdomainajax.js
