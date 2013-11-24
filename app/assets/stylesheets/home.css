@@ -158,32 +158,25 @@ h6{
 	position: absolute;
 	top: 50%;
 }
+.w3{
+	border:0;
+	width:88px;
+	height:31px;
+	margin-right:20px;
+	vertical-align: middle;
+	float: right;
+}
 @media all and (max-width: 700px) {
-	.specialbutton{
-		width: 25% !important;
-		padding-left: 0;
-		padding-right: 0;
+	.special{
+		width: 35% !important;
+		left: 0;
+		top: 120%;
 	}
-	.carousel-indicators{
+	.bpalogo, .w3, .searchbox{
 		display: none;
-	}
-	.searchbox{
-		display: none;
-	}
-	.homepageheader{
-		font-size: 20px;
-	}
-	.homepagedescription{
-		font-size: 15px;
-	}
-	.homepagetext{
-		top: 100px;
 	}
 	header{
 		font-size: 20px;
 		padding-top: 15px;
-	}
-	.home{
-		margin-top: -20px;
 	}
 }

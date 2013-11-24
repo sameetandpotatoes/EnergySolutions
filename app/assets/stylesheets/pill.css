@@ -19,6 +19,7 @@
     text-align: center;
     width: 50px;
     top: 0;
+    display: none;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     animation: all 150ms ease-in-out 0s;

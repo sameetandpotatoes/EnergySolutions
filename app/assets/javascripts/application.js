@@ -25,12 +25,11 @@ $(document).ready(function()
 	$('.footer').css("display", "none");
 });
 $(window).load(function(){
-	$('#loading').fadeOut(1500);
+	$('#loading').fadeOut(1000);
 	$('.home').fadeIn(3000);
 	$('#special').fadeIn(3000);
-	$('#content').fadeIn(3000);
-	$('.footer').fadeIn(3000);
-
+	$('#content').delay(800).fadeIn(3000);
+	$('.footer').delay(1000).fadeIn(3000);
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
 	$('.imagecarousel').unslider({
