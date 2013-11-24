@@ -1,0 +1,13 @@
+.categorytype {
+    color: #C9383E;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.copybold {
+    color: #000000;
+    font-weight: bold;
+}
+#grants{
+	margin-left: 50px;
+}

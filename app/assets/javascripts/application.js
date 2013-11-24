@@ -21,9 +21,14 @@
 $(document).ready(function()
 {
 	$('.home').css("display", "none");
-	$('.home').fadeIn(1500);
 	$('#content').css("display", "none");
+	$('.footer').css("display", "none");
+});
+$(window).load(function(){
+	$('#loading').css("display","none");
+	$('.home').fadeIn(1500);
 	$('#content').fadeIn(1500);
+	$('.footer').fadeIn(1500);
 
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });

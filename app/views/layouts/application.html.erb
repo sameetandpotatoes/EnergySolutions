@@ -1,5 +1,5 @@
 <!-- <!DOCTYPE html public> -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC>
 <html>
 <head>
   <title>Energy Solutions</title>
@@ -35,6 +35,9 @@
 	   <li class='last'><a href='/contact/'><span>Contact</span></a></li>
 	</ul>
 	</div>
+	<div id="loading">
+		<%= link_to image_tag("ajax-loader.gif") %>
+	</div>
 	<% if (current_page?(root_path)) %>
 		<div class="special button">
 				<p>Get Started</p>
@@ -55,7 +58,7 @@
 		<% end %>
 	<% end %>
 	<% if !(current_page?(root_path)) %>
-		<footer>Copyright © Energy Solutions 2013. All Rights Reserved.</footer>
+		<footer class="footer">Copyright © Energy Solutions 2013. All Rights Reserved.</footer>
 	<% end %>
 </body>
 </html>

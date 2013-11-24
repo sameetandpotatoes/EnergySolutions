@@ -145,6 +145,14 @@ h6{
 .searchbutton{
 	display: inline;
 }
+#loading{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+}
 @media all and (max-width: 700px) {
 	.specialbutton{
 		width: 25% !important;
