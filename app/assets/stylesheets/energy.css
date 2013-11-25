@@ -1,7 +1,8 @@
-h2{
+.text h2{
 	border-bottom: 2px solid #1E90FF;
 	font-family: 'Oldenburg';
 	padding-bottom: 10px;
+	font-size: 20px;
 }
 .section h1{
 	font-family: 'Helvetica Neue';
@@ -12,6 +13,7 @@ h2{
 }
 .text p{
 	line-height: 1.4;
+	font-size: 18px;
 }
 .header{
 	text-align: center;
@@ -80,9 +82,7 @@ th {
 .inline{
 	display: inline;
 	vertical-align: middle;
-	font-size: 130%;
 	font-weight: bold;
-	min-width: 200px;
 }
 .menu{
 	position: fixed;
@@ -131,13 +131,13 @@ th {
 	display: inline-table;
 	min-height: 30px;
 	overflow: hidden;
-	width: 250px;
+	width: 300px;
+	font-size: 14px;
 	word-wrap: break-word;
 	text-align: left;
 }
 .detailtext{
 	padding-left: 10px;
-	font-size: 110%;
 }
 .cost{
 	padding-bottom: 20px;
@@ -195,6 +195,14 @@ th {
 		padding: 30px 25px;
 	}
 }
+/*@media all and (max-width: 800px){
+	.image{
+		display: none;
+	}
+	.word-wrap{
+		width: inherit;
+	}
+}*/
 @media all and (max-width: 650px){
 	table, td, tr{
 			display: block;
