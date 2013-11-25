@@ -34,6 +34,7 @@
 }
 .button:hover{
 	opacity: 0.85;
+	filter:alpha(opacity=85);
 }
 .green{
 	font: 12px/100% Arial, Helvetica, sans-serif;
