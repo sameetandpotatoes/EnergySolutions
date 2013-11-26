@@ -57,9 +57,6 @@ td:nth-child(2n+1) {
 	border-right: 5px solid #000000;
 	padding-left: 0px;
 }
-td:nth-child(2){
-	padding-left: 30px;
-}
 .image{
 	vertical-align: middle;
 }
@@ -70,7 +67,6 @@ table{
 	border-spacing: 0px;
 }
 td {
-	padding-left: 20px;
 	padding-top: 15px;
 	text-align: center;
 }
@@ -83,6 +79,7 @@ th {
 	display: inline;
 	vertical-align: middle;
 	font-weight: bold;
+	font-size: 19px;
 }
 .menu{
 	position: fixed;
@@ -131,13 +128,14 @@ th {
 	display: inline-table;
 	min-height: 30px;
 	overflow: hidden;
-	width: 300px;
+	max-width: 280px;
 	font-size: 14px;
 	word-wrap: break-word;
 	text-align: left;
 }
 .detailtext{
 	padding-left: 10px;
+	font-size: 17px;
 }
 .cost{
 	padding-bottom: 20px;
