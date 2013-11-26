@@ -14,7 +14,9 @@
 body{
 	background-image: url("/assets/beige_paper-069e200b6220364a03288328e39ef2ac.png");
 	overflow-x: hidden;
-	margin: 0 0 0 0px;
+	margin:0;
+   padding:0;
+   height:100%;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -28,7 +30,7 @@ p{
 	font-family: 'Lato';
 }
 #content{
-	margin: 60px 0px 0px 160px;
+	padding: 60px 0px 25px 160px;
 }
 footer{
 	text-align: center;

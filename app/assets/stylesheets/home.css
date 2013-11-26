@@ -1,19 +1,16 @@
 header, .link{
 	background-color: #232323;
 	padding: 15px 0px 15px 15px;
-	margin: 0;
 	color: white;
 	font: 30px 'Lato';
 }
 footer{
 	font-family: 'Lato';
 	background-color: #232323;
-	bottom: 0;
-	margin: 0;
 	padding: 15px;
-	clear: both;
 	height: 25px;
 	position: relative;
+	bottom: 0;
 	width: 100%;
 	color: white;
 }
@@ -25,7 +22,6 @@ footer{
 .imagecarousel {
 	position: relative;
 	overflow: auto;
-	/*color: rgba(255, 255, 255, 0.6);*/
 	color: black;
 	font-size: 18px;
 	line-height: 24px;
@@ -175,9 +171,9 @@ h6{
 	.special{
 		width: 35% !important;
 		left: 0;
-		top: 90%;
+		top: 50%;
 	}
-	.bpalogo, .w3, .searchbox{
+	.bpalogo, .w3, .searchbox, .footer{
 		display: none;
 	}
 	header, .link{

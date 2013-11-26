@@ -15,8 +15,8 @@
 //= require nprogress.js
 //= require unslider.js
 //= require knob.js
+//= require viewport.min.js
 //= require xdomainajax.js
-
 $(document).ready(function()
 {
 	$('.home').css("display", "none");
@@ -29,7 +29,7 @@ $(window).load(function(){
 	$('.home').fadeIn(3000);
 	$('#special').fadeIn(3000);
 	$('#content').delay(800).fadeIn(3000);
-	$('.footer').delay(1000).fadeIn(3000);
+	$('.footer').delay(800).fadeIn(3000);
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
 	$('.imagecarousel').unslider({
@@ -99,9 +99,20 @@ $(window).load(function(){
 			}, 1000);
 	});
 	if (nonEnergyLinks())
+	{
 		$('.menu').css("display", "none");
+	}
+	if (home())
+	{
+		$('footer').css("position", "relative");
+	}
 });
 function nonEnergyLinks()
 {
 	return window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/";
 }
+function home()
+{
+	return window.location.pathname =="/";
+}
+;
