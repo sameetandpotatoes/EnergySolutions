@@ -108,7 +108,7 @@ th {
 	background-color: #4BBFC3;
 }
 #fourthPage{
-	/*background-color: #7BAABE;*/
+	background-color: #7BAABE;
 	/*background-color: #D0482B;*/
 }
 #fifthPage{
@@ -193,14 +193,6 @@ th {
 		padding: 30px 25px;
 	}
 }
-/*@media all and (max-width: 800px){
-	.image{
-		display: none;
-	}
-	.word-wrap{
-		width: inherit;
-	}
-}*/
 @media all and (max-width: 650px){
 	table, td, tr{
 			display: block;
