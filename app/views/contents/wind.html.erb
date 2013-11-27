@@ -1,3 +1,7 @@
+<% content_for :head do %>
+	<title>Energy Solutions | Wind</title>
+	<meta name="description" content="A wind turbine is a device that converts kinetic energy from the wind into electrical power." />
+<% end %>
 <div class="section" id="first">
 	<h1>Wind Energy</h1>
 </div>
@@ -119,17 +123,17 @@
 	<h1 class="header">Cost of Installation</h1>
 	<div class="costplugin">
 	<span id="cost" class="costheader">Cost Per Year: $0</span>
-	<p>Based on the average price of $0.16 per kW</p>
+	<p>Based on the average price of $0.04 per kW</p>
 	<input type="text" class="dial">
 	</div>
 	<div class="costfacts">
 		<span class="costheader" style="text-align: center;">Average Cost Facts - Wind</span>
-		<p></p>
+		<p>After topping out at nearly $70/megawatt-hour in 2009, the average levelized long-term price from wind power sales agreements signed in 2011/2012 – many of which were for projects built in 2012 – fell to around $40/megawatt-hour nationwide.</p>
 	</div>
 	<script>
 	$(".dial").knob({
-	  'min': 0,
-	  'max': 4990,
+	  'min': 1000,
+	  'max': 15000,
 	  'step': 10,
 	  'width': 250,
 	  'fgColor': "black",
@@ -140,7 +144,7 @@
 	         $(this.i).val(this.cv + 'kW')
 		},
 	  'change' : function (v) {
-	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*((0.09+0.22)/2)).toFixed(2);
+	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.04)).toFixed(2);
 		}
 	});
 	</script>

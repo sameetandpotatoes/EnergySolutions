@@ -1,3 +1,7 @@
+<% content_for :head do %>
+	<title>Energy Solutions | Biomass</title>
+	<meta name="description" content="Biomass is a collective term for all plant and animal material. A number of different forms of biomass can be burned or digested to produce energy." />
+<% end %>
 <div class="section" id="first">
 	<h1>Biomass</h1>
 </div>
@@ -20,7 +24,7 @@
 						<p class="inline">Renewable</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 As you convert this year’s crop to fuel, you are growing another one for next years fuel. Renewing takes just as long time as it takes to grow or gather, and that can be as little as months in some cases.
+							 A new crop of potential energy grows as you are reaping the rewards of the first one.
 							</p>
 						</div>
 					</div>
@@ -31,7 +35,7 @@
 						<p class="inline">Expensive</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 Extraction of biomasses can be expensive. In some areas biomass projects may not be worth the price and is therefore never finished. This is also true for the harvesting and storing of the different types of biomass.
+							 Harvesting and storing biomass may be too expensive for the process to be worthwhile.
 							</p>
 						</div>
 					</div>
@@ -44,7 +48,7 @@
 						<p class="inline">Clean</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 Biomass is a part of the carbon cycle. Carbon from the atmosphere is absorbed into plants during photosynthesis and when the plant decays or is burnt that carbon goes back into the atmosphere. Because it is a cycle, the next crop of plants absorb that carbon over again, so there is a balance between the amount of carbon that the biomass fuel release into the atmosphere and the amount that they extract from it. This is why biomass fuels do not contribute to global warming.
+							 Since it’s part of the carbon cycle, photosynthesis takes care of any excess pollutants. No pollutants = No global warming
 							</p>
 						</div>
 					</div>
@@ -55,7 +59,7 @@
 						<p class="inline">Space</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 Big areas are needed for all the different processes required to harness energy from biomass. The areas that are needed for storing can be large.
+							 Harnessing and storing the energy requires large spaces that may be impractical for some locations.
 							</p>
 						</div>
 					</div>
@@ -68,7 +72,7 @@
 						<p class="inline">Cost-Effective</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 Energy harnessed from biomass is inexpensive compared to coal and oil. Typically they cost about a third less than fossil fuels doing the same job. This means you can spend a third less every year on heating your home and after 10 or 15 years that adds up for some considerable savings.
+							 Biomass costs ⅓ less than energy from fossil fuels, so with time these savings will add up.
 							</p>
 						</div>
 					</div>
@@ -83,7 +87,7 @@
 						<p class="inline">Abundant</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 Biomass is available in large quantities all over the world. Large pipelines across country borders and oceans are therefore most likely not necessary.
+							 Biomass is already available all over the world, so it’s convenient for almost everybody.
 							</p>
 						</div>
 					</div>
@@ -129,8 +133,8 @@
 	</div>
 	<script>
 	$(".dial").knob({
-	  'min': 0,
-	  'max': 4990,
+	  'min': 1000,
+	  'max': 15000,
 	  'step': 10,
 	  'width': 250,
 	  'fgColor': "black",
@@ -142,7 +146,6 @@
 		},
 	  'change' : function (v) {
 	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.11)).toFixed(2);
-	  	// document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v * $('.costinput').val()).toFixed(2);
 		}
 	});
 	</script>
