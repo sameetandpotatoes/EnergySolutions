@@ -102,10 +102,11 @@ th {
 	/*#1BABB7*/
 }
 #secondPage{
-	background-color: #6AB29F;
+	/*background-color: #6AB29F;*/
+	background-color: #F0F2F4;
 }
 #thirdPage{
-	background-color: #4BBFC3;
+	background-color: #D5D7DD;
 }
 #fourthPage{
 	background-color: #7BAABE;
@@ -135,7 +136,7 @@ th {
 }
 .detailtext{
 	padding-left: 10px;
-	font-size: 17px;
+	font-size: 19px;
 }
 .cost{
 	padding-bottom: 20px;

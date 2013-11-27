@@ -151,7 +151,7 @@ $(window).load(function(){
 });
 function nonEnergyLinks()
 {
-	return window.location.pathname == "/contact/" || window.location.pathname =="/about/" || window.location.pathname == "/compare/";
+	return window.location.pathname == "/contact/" || window.location.pathname =="/about/";
 }
 function home()
 {

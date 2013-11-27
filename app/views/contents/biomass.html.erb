@@ -119,15 +119,13 @@
 	<h1 class="header">Cost for Installation</h1>
 	<div class="costplugin">
 	<span id="cost" class="costheader">Cost Per Year: $0</span>
-	<p class="costtext">Based on the average price of</p>
-	<span class="currencyinput">$<input type="number" name="currency" value="0.11" class="costinput" onchange="handleChange(this)"></span>
-	<p class="costtext">per kW</p>
+	<p class="costtext">Based on the average price of $0.08 per kWh</p>
 	<input type="text" class="dial">
 	</div>
 	<div class="costfacts">
 		<span class="costheader" style="text-align: center;">Average Cost Facts - Biomass Energy</span>
 		<p>The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.</p>
-		<p>In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.8 to $0.15 per kilowatt hour (kWh).</p>
+		<p>In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.08 to $0.15 per kilowatt hour (kWh).</p>
 	</div>
 	<script>
 	$(".dial").knob({
@@ -143,16 +141,10 @@
 	         $(this.i).val(this.cv + 'kW')
 		},
 	  'change' : function (v) {
-	  	// document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.11)).toFixed(2);
-	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v * $('.costinput').val()).toFixed(2);
+	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.11)).toFixed(2);
+	  	// document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v * $('.costinput').val()).toFixed(2);
 		}
 	});
-	function handleChange(input)
-	{
-		if (input.value < 0.01) input.value = 0.01;
-		if (input.value > 0.99) input.value = 0.99;
-		$('.dial').trigger('change');
-	}
 	</script>
 </div>
 <%= render "scrolltotop" %>
