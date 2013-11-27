@@ -161,6 +161,10 @@ th {
 .costplugin{
 	display: inline;
 }
+.mobile{
+	display: none;
+	padding-left: 20px;
+}
 .costfacts{
 	display: inline;
 	float: right;
@@ -211,4 +215,10 @@ th {
 	table, td, tr{
 			display: block;
 		}
+		iframe{
+			display: none;
+		}
+	.mobile{
+		display: block;
+	}
 }
