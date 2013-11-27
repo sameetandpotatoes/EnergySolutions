@@ -200,7 +200,7 @@
 
             // wraps all elements in a div
             this.$div = $('<div style="'
-                        + (this.o.inline ? 'display:inline;' : '')
+                        + (this.o.inline)
                         + '"></div>');
 
             this.$.wrap(this.$div).before(this.$c);

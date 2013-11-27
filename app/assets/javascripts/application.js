@@ -25,6 +25,7 @@ $(document).ready(function()
 	$('.footer').css("display", "none");
 });
 $(window).load(function(){
+	footerFix();
 	$('#loading').fadeOut(1000);
 	$('.home').fadeIn(3000);
 	$('#special').fadeIn(3000);
@@ -71,6 +72,48 @@ $(window).load(function(){
 			$('#top').fadeOut("fast");
 	});
 	//End Scroll To Top Script
+	$(window).resize(function(){
+		footerFix();
+	});
+	$(document).scroll(function() {
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        // find the section next to the current scroll top
+        sections = $(this).find('section'),
+        topSection = null,
+        minDist = Infinity;
+
+    sections.each(function() {
+      var top = $(this).offset().top,
+          bottom = top + $(this).innerHeight(),
+          relativeDistance = Math.min(
+            Math.abs(top - scrollTop),
+            Math.abs(bottom - scrollTop)
+          );
+      if (relativeDistance < minDist) {
+        minDist = relativeDistance;
+        topSection = this;
+      }
+    });
+
+    // var prevTopSection = $("section.top")[0];
+    // if (prevTopSection != topSection) {
+    //   // only now we have to switch
+
+    //   // unhighlight previous top
+    //   var prevTopIndex = $.inArray(prevTopSection, sections);
+    //   $('#section_header_' + prevTopIndex)
+    //     .removeClass('top');
+    //   $(prevTopSection).removeClass('top');
+
+    //   // highlight new top
+    //   var topIndex = $.inArray(topSection, sections);
+    //   $('#section_header_' + topIndex)
+    //     .addClass('top');
+    //   $(topSection).addClass('top');
+    // }
+  });
+
 	//Location Script
 	$('.special').click(function(){
 		var myLoc;
@@ -102,7 +145,7 @@ $(window).load(function(){
 	{
 		$('.menu').css("display", "none");
 	}
-	if (home())
+	if (home() || !nonEnergyLinks())
 	{
 		$('footer').css("position", "relative");
 	}
@@ -114,5 +157,16 @@ function nonEnergyLinks()
 function home()
 {
 	return window.location.pathname =="/";
+}
+function footerFix()
+{
+	if($(document).height() > $(window).height())
+		{
+			//scrollbar
+			$('.footer').css("position", "relative");
+		}
+		else{
+			$('.footer').css("position", "absolute");
+		}
 }
 ;

@@ -158,16 +158,25 @@ th {
 	vertical-align: middle;
 	width: 155px;
 }
+.currencyinput{
+	display: inline-block;
+}
 .costplugin{
-	display: inline;
+	display: inline-block;
+}
+.costtext{
+	display: inline-block;
+}
+.costinput{
+	display: inline-block;
+	width: 40px;
 }
 .mobile{
 	display: none;
 	padding-left: 20px;
 }
 .costfacts{
-	display: inline;
-	float: right;
+	display: inline-block;
 	list-style-type: square;
 	margin-right: 5%;
 	max-width: 60%;

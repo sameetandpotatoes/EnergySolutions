@@ -119,7 +119,9 @@
 	<h1 class="header">Cost for Installation</h1>
 	<div class="costplugin">
 	<span id="cost" class="costheader">Cost Per Year: $0</span>
-	<p>Based on the average price of $0.11 per kW</p>
+	<p class="costtext">Based on the average price of</p>
+	<span class="currencyinput">$<input type="number" name="currency" class="costinput" onchange="handleChange(this)"></span>
+	<p class="costtext">per kW</p>
 	<input type="text" class="dial">
 	</div>
 	<div class="costfacts">
@@ -141,9 +143,16 @@
 	         $(this.i).val(this.cv + 'kW')
 		},
 	  'change' : function (v) {
-	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.11)).toFixed(2);
+	  	// document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.11)).toFixed(2);
+	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v * $('.costinput').val()).toFixed(2);
 		}
 	});
+	function handleChange(input)
+	{
+		if (input.value < 0.01) input.value = 0.01;
+		if (input.value > 0.99) input.value = 0.99;
+		$('.dial').trigger('change');
+	}
 	</script>
 </div>
 <%= render "scrolltotop" %>
