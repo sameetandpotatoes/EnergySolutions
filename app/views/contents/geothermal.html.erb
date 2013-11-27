@@ -140,6 +140,38 @@
 	</div>
 </div>
 <div class="section" id="fourthPage">
+	<h1 class="header">Videos</h1>
 	<iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/_gfb9Mrn3rw?rel=0" allowfullscreen></iframe>
+</div>
+<div class="section" id="fifthPage">
+	<h1 class="header">Cost of Installation</h1>
+	<div class="costplugin">
+	<span id="cost" class="costheader">Cost Per Year: $0</span>
+	<p>Based on the average price of $0.31 per kW</p>
+	<input type="text" class="dial">
+	</div>
+	<div class="costfacts">
+		<span class="costheader" style="text-align: center;">Average Cost Facts - Geothermal Energy</span>
+		<p></p>
+	</div>
+	<script>
+	$(".dial").knob({
+	  'min': 0,
+	  'max': 5000,
+	  'step': 10,
+	  'width': 250,
+	  'fgColor': "black",
+	  'thickness': '.1',
+	  'angleArc': 250,
+	  'angleOffset': -125,
+		'draw': function () {
+	         $(this.i).val(this.cv + 'kW')
+		},
+	  'change' : function (v) {
+	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
+		}
+	});
+	</script>
+	</div>
 </div>
 <%= render "scrolltotop" %>

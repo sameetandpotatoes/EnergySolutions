@@ -9,7 +9,7 @@
 	height: auto !important;
 	width: 200px;
 	text-align: center;
-	min-width: 200px;
+	max-width: 200px;
 }
 .team article{
 	display: inline;
@@ -17,13 +17,14 @@
 	margin-top: 1%;
 	text-align: center;
 	width: 25%;
-	padding-right: 10px;
-	margin-left: 5%;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+}
+.john{
+	max-height: 230px;
 }
 figcaption{
 	font-weight: bold;

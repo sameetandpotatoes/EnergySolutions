@@ -116,9 +116,16 @@
 </div>
 <div class="section" id="fifthPage">
 	<h1 class="header">Cost for Installation</h1>
-	<span id="costfigure">Cost Per Year: $0</span>
+	<div class="costplugin">
+	<span id="cost" class="costheader">Cost Per Year: $0</span>
 	<p>Based on the average price of $0.11 per kW</p>
 	<input type="text" class="dial">
+	</div>
+	<div class="costfacts">
+		<span class="costheader" style="text-align: center;">Average Cost Facts - Biomass Energy</span>
+		<p>The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.</p>
+		<p>In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.8 to $0.15 per kilowatt hour (kWh).</p>
+	</div>
 	<script>
 	$(".dial").knob({
 	  'min': 0,
@@ -133,7 +140,7 @@
 	         $(this.i).val(this.cv + 'kW')
 		},
 	  'change' : function (v) {
-	  	document.getElementById('costfigure').innerHTML = "Cost Per Year: $" + v*(0.11);
+	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.11)).toFixed(2);
 		}
 	});
 	</script>

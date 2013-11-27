@@ -142,7 +142,7 @@ th {
 	float: left;
 	vertical-align: middle;
 }
-#costfigure{
+.costheader{
 	font-size: 30px;
 	font-weight: 300;
 	display: block;
@@ -158,12 +158,26 @@ th {
 	vertical-align: middle;
 	width: 155px;
 }
+.costplugin{
+	display: inline;
+}
+.costfacts{
+	display: inline;
+	float: right;
+	list-style-type: square;
+	margin-right: 5%;
+	max-width: 60%;
+}
+.costfacts span{
+	min-height: 10%;
+}
 @media all and (max-width: 970px) {
-	.image{
+	.image, .menu, .costplugin{
 		display: none;
 	}
-	.menu{
-		display: none;
+	.costfacts{
+		float: none;
+		padding-left: 10%;
 	}
 	.inline{
 		display: inline-block;

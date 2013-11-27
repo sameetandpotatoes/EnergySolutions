@@ -130,10 +130,16 @@
 <div class="section" id="fifthPage" style="background-image: url('/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png');">
 	<div class="intro">
 	<h1 class="header">Cost of Installation</h1>
-			<%= image_tag("solar_infographic.png", :class=>"displayimage")%>
-	<span id="costfigure">Cost Per Year: $0</span>
+	<%= image_tag("solar_infographic.png", :class=>"displayimage")%>
+	<div class="costplugin">
+	<span id="cost" class="costheader">Cost Per Year: $0</span>
 	<p>Based on the average price of $0.31 per kW</p>
 	<input type="text" class="dial">
+	</div>
+	<div class="costfacts">
+		<span class="costheader" style="text-align: center;">Average Cost Facts - Solar PV</span>
+		<p></p>
+	</div>
 	<script>
 	$(".dial").knob({
 	  'min': 0,
@@ -148,7 +154,7 @@
 	         $(this.i).val(this.cv + 'kW')
 		},
 	  'change' : function (v) {
-	  	document.getElementById('costfigure').innerHTML = "Cost Per Year: $" + v*((0.18 + 0.43)/2);
+	  	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
 		}
 	});
 	</script>
