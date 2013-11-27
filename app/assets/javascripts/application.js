@@ -95,7 +95,6 @@ $(window).load(function(){
         topSection = this;
       }
     });
-
     // var prevTopSection = $("section.top")[0];
     // if (prevTopSection != topSection) {
     //   // only now we have to switch

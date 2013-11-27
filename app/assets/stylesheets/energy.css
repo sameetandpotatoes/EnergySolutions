@@ -170,6 +170,7 @@ th {
 .costinput{
 	display: inline-block;
 	width: 40px;
+	font-family: 'Lato';
 }
 .mobile{
 	display: none;
