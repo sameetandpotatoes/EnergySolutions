@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://energy-solutions.herokuapp.com/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/biomass/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/water/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/wind/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/solar/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/geothermal/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/compare/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/about/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/contact/</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/biomass</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/water</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/wind</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/solar</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/geothermal</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/compare</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/about</loc>
+</url>
+<url>
+  <loc>http://energy-solutions.herokuapp.com/contact</loc>
+</url>
+</urlset>
