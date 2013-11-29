@@ -38,7 +38,8 @@ $(window).load(function(){
 	$('.imagecarousel').unslider({
 		fluid: true,
 		dots: true,
-		speed: 500
+		keys: true,
+		pause: false
 	});
 	//End Carousel Scripts
 

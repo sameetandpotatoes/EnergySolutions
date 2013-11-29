@@ -78,6 +78,7 @@
 .windinfo{
 	display: inline-block;
 	width: 49%;
+	vertical-align: top;
 }
 .word-wrap{
 	display: inline-table;
@@ -146,6 +147,9 @@
 .costfacts p{
 	text-indent: 25px;
 	font-size: 18px;
+}
+.video{
+
 }
 @media all and (max-width: 980px) {
 	#con{
