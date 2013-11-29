@@ -87,12 +87,11 @@ $(window).load(function(){
   	else{
 	  	var top = $(window).scrollTop();
 	  	for(var i = 0;  i < coordinateArr.length; i++){
-	  		if(top > coordinateArr[coordinateArr.length - 1] - 50){
+	  		if(top > coordinateArr[coordinateArr.length - 1] - 30){
 	  			$('#nav li.active').removeClass('active');
 	  			$(links[links.length -1]).addClass('active');
 	  		}
-
-	  		if(top > coordinateArr[i] - 50 && top < coordinateArr[i+1] + 50){
+	  		if(top > coordinateArr[i] - 30 && top < coordinateArr[i+1] + 30){
 	  			$('#nav li.active').removeClass('active');
 	  			$(links[i]).addClass('active');
 	  		};

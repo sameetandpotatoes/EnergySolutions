@@ -30,7 +30,6 @@
 }
 @media all and (max-width: 970px) {
     #BackToTop{
-        left: 10px;
         height: 25px;
         width: 25px;
     }
