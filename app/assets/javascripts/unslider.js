@@ -59,6 +59,7 @@
 			//  Set the relative widths
 			ul.css({position: 'relative', left: 0, width: (len * 100) + '%'});
 			li.css({'float': 'left', width: (_.max[0]) + 'px'});
+			li.css({'background-size': '100%'});
 
 			//  Autoslide
 			setTimeout(function() {
