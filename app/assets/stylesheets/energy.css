@@ -17,69 +17,30 @@
 }
 .header{
 	text-align: center;
-	padding: 20px;
+	padding-top: 40px;
 	font-family: 'Helvetica Neue';
-}
-.section{
-	padding-bottom: 50px;
-}
-#menu li {
-	display:block;
-	margin-bottom: 10px;
-	background: none repeat scroll 0 0 #a8a8a8;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	text-align: center;
-	font-family: 'Lato';
-}
-#menu li.active{
-	background: none repeat scroll 0 0 #7d7d7d;
-}
-#menu li a{
-	text-decoration:none;
-	color: #000;
-}
-#menu li.active a:hover, a.active{
-	color: #000;
-}
-#menu li:hover{
-	background: none repeat scroll 0 0 #7d7d7d;
-}
-#menu li a,
-#menu li.active a{
-	padding: 9px 18px;
-	display:block;
-}
-#menu li.active a{
-	color: #fff;
-}
-td:nth-child(2n+1) {
-	border-right: 5px solid #000000;
-	padding-left: 0px;
 }
 .image{
 	vertical-align: middle;
 }
-table{
-	width: 100%;
-	max-width: 100%;
-	border-collapse: collapse;
-	border-spacing: 0px;
-}
-td {
-	padding-top: 15px;
-	text-align: center;
-}
-th {
-	border-bottom: 5px solid #000000;
-	font-size: 150%;
-	font-family: 'Helvetica Neue';
-}
 .inline{
-	display: inline;
+	display: inline-block;
 	vertical-align: middle;
 	font-weight: bold;
+	min-width: 150px;
 	font-size: 19px;
+	padding-left: 5px;
+}
+.procons{
+	display: block;
+	padding-left: 40px;
+}
+#pro{
+	display: inline-block;
+}
+#con{
+	display: inline-block;
+	float: right;
 }
 .menu{
 	position: fixed;
@@ -87,30 +48,23 @@ th {
 	left: -30px;
 	max-width: 150px;
 }
-#getlocation
-{
-	float: left;
-}
 .section{
-	margin: -75px 0px 75px -30px;
-	padding: 30px 10px;
+	margin-left: -30px;
+	padding: 50px 20px 100px 20px;
 }
 #firstPage{
-	/*#1BBC9B;*/
 	background-color: white;
-	/*#D5D7DD*/
-	/*#1BABB7*/
+	padding-top: 90px;
 }
 #secondPage{
-	/*background-color: #6AB29F;*/
-	background-color: #F0F2F4;
+	/*background-color: #F0F2F4;*/
+	background-color: #d3f2f0;
 }
 #thirdPage{
 	background-color: #D5D7DD;
 }
 #fourthPage{
 	background-color: #7BAABE;
-	/*background-color: #D0482B;*/
 }
 #fifthPage{
 	background-color: #1BABB7;
@@ -121,9 +75,9 @@ th {
 	margin-left: auto;
 	margin-right: auto;
 }
-#first{
-	text-align: center;
-	width: 100%;
+.windinfo{
+	display: inline-block;
+	width: 49%;
 }
 .word-wrap{
 	display: inline-table;
@@ -173,6 +127,13 @@ th {
 	width: 40px;
 	font-family: 'Lato';
 }
+.title{
+	color: #FFFFFF;
+	left: 50%;
+	position: absolute;
+	top: 0;
+	font-family: 'Lato';
+}
 .mobile{
 	display: none;
 	padding-left: 20px;
@@ -190,45 +151,24 @@ th {
 	font-size: 18px;
 }
 @media all and (max-width: 970px) {
-	.image, .menu, .costplugin{
+	#con{
+		float: none;
+	}
+	.menu, .costplugin{
 		display: none;
 	}
 	.costfacts{
 		float: none;
 		padding-left: 10%;
 	}
-	.inline{
-		display: inline-block;
-		text-align: center;
-		width: 100%;
-	}
 	.detailtext{
 		width: 100%;
-	}
-	th{
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	td:nth-child(2n+1){
-		border: none;
-		color: green;
-	}
-	td:nth-child(2){
-		padding: 0px;
-		color: #EB4C42;
-	}
-	body{
-		font-size: 90%;
 	}
 	.section{
 		padding: 30px 25px;
 	}
 }
 @media all and (max-width: 650px){
-	table, td, tr{
-			display: block;
-		}
 		iframe{
 			display: none;
 		}

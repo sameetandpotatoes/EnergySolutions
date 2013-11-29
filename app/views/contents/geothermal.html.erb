@@ -2,25 +2,17 @@
 	<title>Energy Solutions | Geothermal</title>
 	<meta name="description" content="Geothermal energy is the heat from the Earth. It's clean and sustainable. Resources of geothermal energy range from the shallow ground to hot water." />
 <% end %>
-<div class="section" id="first">
-	<h1>Geothermal Energy</h1>
-</div>
 <div class="section" id="firstPage">
-	<div class="intro"><h1 class="header">Infographic</h1>
+	<div class="intro">
 		<%= image_tag("geothermal_infographic.png", :class => "displayimage") %>
 	</div>
 </div>
 <div class="section active" id="secondPage">
 	<div class="procon"><h1 class="header">Advantages and Disadvantages</h1>
-		<table>
-			<tr>
-				<th>Pros</th>
-				<th>Cons</th>
-			</tr>
-			<tr>
-				<td>
+		<div id="pro">
+			<h1>Pro</h1>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">Operating Cost</p>
 						<div class="word-wrap">
 							<p class="detailtext">
@@ -28,23 +20,8 @@
 							</p>
 						</div>
 					</div>
-				</td>
-				<td>
-					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Initial Cost</p>
-						<div class="word-wrap">
-						<p class="detailtext">
-						  Installation of a heat pump and interior ductwork can nearly be double that of traditional furnace systems.
-						</p>
-						</div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">Environment's safe</p>
 						<div class="word-wrap">
 							<p class="detailtext">
@@ -52,23 +29,8 @@
 							</p>
 						</div>
 					</div>
-				</td>
-				<td>
-					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Space</p>
-						<div class="word-wrap">
-							<p class="detailtext">
-							 A geothermal heat pump is usually installed in the home's interior. However, the trenches or geothermal bore holes for the piping can require several hundred feet of open space.
-							</p>
-						</div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">Reliability</p>
 						<div class="word-wrap">
 							<p class="detailtext">
@@ -76,12 +38,8 @@
 							</p>
 						</div>
 					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">Easy Retrofitting</p>
 						<div class="word-wrap">
 							<p class="detailtext">
@@ -89,24 +47,16 @@
 							</p>
 						</div>
 					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
 					<p class="inline">Completely Emission Free</p>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					</div>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
 					<p class="inline">No Carbon Released</p>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					</div>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">No Fuel Needed</p>
 						<div class="word-wrap">
 							<p class="detailtext">
@@ -114,10 +64,28 @@
 							</p>
 						</div>
 					</div>
-				</td>
-			</tr>
-		</table>
-	</div>
+				</div>
+				<div id="con">
+					<h1>Con</h1>
+					<div class="procons">
+					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+						<p class="inline">Initial Cost</p>
+						<div class="word-wrap">
+						<p class="detailtext">
+						  Installation of a heat pump and interior ductwork can nearly be double that of traditional furnace systems.
+						</p>
+						</div>
+					</div>
+					<div class="procons">
+					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+						<p class="inline">Space</p>
+						<div class="word-wrap">
+							<p class="detailtext">
+							 A geothermal heat pump is usually installed in the home's interior. However, the trenches or geothermal bore holes for the piping can require several hundred feet of open space.
+							</p>
+						</div>
+					</div>
+			</div>
 </div>
 <div class="section" id="thirdPage">
 	<div class="text"><h1 class="header">Grants</h1>

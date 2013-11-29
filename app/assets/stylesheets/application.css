@@ -29,8 +29,11 @@ img{
 p{
 	font-family: 'Lato';
 }
+a {
+    transition: all 0.2s ease-in-out 0s;
+}
 #content{
-	padding: 60px 0px 25px 160px;
+	padding-left: 30px;
 }
 footer{
 	text-align: center;
@@ -47,8 +50,4 @@ footer{
 	-ms-user-select: none;
 }
 @media all and (max-width: 970px) {
-	#content{
-		margin: 60px 0px 0px 0px;
-		padding: 0px;
-	}
 }

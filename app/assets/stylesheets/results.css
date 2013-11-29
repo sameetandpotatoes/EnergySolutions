@@ -1,26 +1,41 @@
 #energymap{
 	display: block; margin-left: auto; margin-right: auto;
 }
-.locheader{
-	text-align: center;
+.header-results{
+	font-size: 22px;
+	text-align: left;
 	font-family: 'Droid Sans';
-	padding-top: 100px;
+	padding-top: 20px;
+	padding-left: 30px;
+}
+.results-energy{
+	display: block;
+	text-align: left;
+	text-indent: 20px;
+	padding-left: 30px;
+}
+.results-inline{
+	display: inline-block;
+	font-weight: normal;
+	font-size: 19px;
+	font-family: 'Lato';
+}
+.source-text{
+	font-size: 12px;
+	padding-left: 30px;
+}
+#grants{
+	padding-left: 30px;
 }
 #grants ul li a{
 	color: inherit;
 }
 .copy{
 	list-style-type: square;
-	font-family: 'Droid Sans';
+	font-family: 'Lato';
+	font-size: 18px;
 	padding-bottom: 10px;
 }
 .copybold{
 	font-family: 'Lato';
-}
-#incentivelist{
-   white-space: pre-wrap;      /* CSS3 */
-   white-space: -moz-pre-wrap; /* Firefox */
-   white-space: -pre-wrap;     /* Opera <7 */
-   white-space: -o-pre-wrap;   /* Opera 7 */
-   word-wrap: break-word;      /* IE */
 }

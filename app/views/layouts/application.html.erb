@@ -7,8 +7,8 @@
   <meta content = "yes" name = "apple-mobile-web-app-capable"/>
 	<meta content = "initial-scale=1" name = "viewport"/>
 	<meta content = "black" name = "apple-mobile-web-app-status-bar-style"/>
-	<meta name="keywords" content="energy, solutions, water, hydropower, geothermal, solar, pv, photovoltaic, wind, biomass, location"
-  <link href='http://fonts.googleapis.com/css?family=Oldenburg|Lato|Bree+Serif|Droid+Sans' rel='stylesheet' type='text/css'>
+	<meta name="keywords" content="energy, solutions, water, hydropower, geothermal, solar, pv, photovoltaic, wind, biomass, location"/>
+  <link href='http://fonts.googleapis.com/css?family=Lato|Bree+Serif|Droid+Sans|Oldenburg' rel='stylesheet' type='text/css'>
 	<% if content_for?(:head) %>
 		<%= yield(:head) %>
 	<% end %>
@@ -47,7 +47,7 @@
 	</div>
 	<% if (current_page?(root_path)) %>
 		<div id="special" class="special button">
-				<p>Get Started</p>
+				<p>Energy In Your Area</p>
 		</div>
 		<div class="home">
 			<%= yield %>
@@ -58,8 +58,8 @@
 				<%= yield %>
 			</div>
 		<% else %>
+			<%= render "menu" %>
 			<div id="content">
-				<%= render "menu" %>
 				<%= yield %>
 			</div>
 		<% end %>

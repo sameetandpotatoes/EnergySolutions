@@ -4,7 +4,8 @@
     width: 50px;
     position: fixed;
     left: 40px;
-    bottom: 10%;
+    top: 5%;
+    z-index: 900;
 }
 #BackToTop span {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);

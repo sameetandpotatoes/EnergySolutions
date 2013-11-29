@@ -2,7 +2,8 @@
 	background-color: #232323;
 	padding: 15px 0px 15px 15px;
 	color: white;
-	font: 30px 'Lato';
+	font: 30px 'Droid Sans';
+	width: 100%;
 }
 .footer{
 	font-family: 'Lato';
@@ -21,12 +22,10 @@
 }
 .imagecarousel {
 	position: relative;
-	overflow: auto;
-	width: 100%;
-	color: black;
+	overflow: hidden;
+	/*width: 100%;*/
 	font-size: 18px;
 	line-height: 24px;
-	text-align: center;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .imagecarousel li {
@@ -39,34 +38,61 @@
 	color: black;
 	font-size: 40px;
 	line-height: 52px;
+	margin-bottom: -10px;
 	font-family: 'Bree Serif';
-	font-weight: 300;
 }
 .imagecarousel p{
 	font-family: 'Droid Sans';
 	font-size: 25px;
 }
 .caption{
-	position: relative;
-	bottom: 150px;
-	opacity: 1.0;
+	position: absolute;
+	top: 0px;
+	padding-left: 20px;
 }
 .imagecarousel ul li {
  	float: left;
 	box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
 	display: block;
-	min-height: 350px;
-	padding: 160px 0 110px;
+	min-height: 600px;
+	/*width: 12.5%;*/
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	/*background-size: 100% 100%;*/
+}
+.imagecarousel ul li:nth-child(1){
+	background-image: url("/assets/geothermal-58b3e2d8eeb063847de79d733f7611e0.jpg");
+}
+.imagecarousel ul li:nth-child(2){
+	background-image: url("/assets/solar-46b6cfecb2169a3d14552f90196a56fb.jpg");
+}
+.imagecarousel ul li:nth-child(3){
+	background-image: url("/assets/solar-18694222104b6ced788b349cd63f53cc.jpg");
+}
+.imagecarousel ul li:nth-child(4){
+	background-image: url("/assets/carouselwind-b65f12d50decd31d2553a4655f531d46.png");
+}
+.imagecarousel ul li:nth-child(5){
+	background-image: url("/assets/wind-eaac506eb1ae1d11c572e1bec4b04ca2.jpg");
+}
+.imagecarousel ul li:nth-child(6){
+	background-image: url("/assets/wind-ee6159e5689bd3475afc83cefc876069.jpg");
+}
+.imagecarousel ul li:nth-child(7){
+	background-image: url("/assets/carouselhydro-2f7e52001d73cff917b98a17253e09ee.jpg");
+}
+.carouselimg{
 	opacity: 0.5;
 }
 .dots {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 50px;
+  left: 0px;
+  right: 0px;
+  bottom: 20px;
+  margin: 0 auto;
   text-align: center;
 }
-.dots li {
+.imagecarousel .dots li {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -85,10 +111,11 @@
   opacity: 1;
 }
 .home{
-	margin-top: -30px;
+	margin-top: -20px;
 	padding: 0;
 	display: inline-table;
 	width: 100%;
+	overflow: auto;
 }
 h6{
 	font-size: 120%;
@@ -97,25 +124,6 @@ h6{
 .headerlink{
 	color: inherit;
 	text-decoration: underline;
-}
-.homepagetext{
-	position: absolute;
-	z-index: 998;
-	color: black;
-	text-align: center;
-	width: 100%;
-	font-family: 'Lato';
-}
-.homepagedescription{
-	font-size: 30px;
-	font-weight: normal;
-}
-.homepageheader{
-	font-size: 45px;
-	font-weight: bold;
-}
-.carouselimg{
-	opacity: 0.40;
 }
 #loading{
 	left: 50%;
@@ -132,21 +140,21 @@ h6{
 }
 @media all and (max-width: 700px) {
 	.special{
-		width: 40% !important;
-		position: relative;
+		width: 50% !important;
+		left: 20%;
 	}
 	.bpalogo, .w3, .footer{
 		display: none;
 	}
 	header, .link{
-		padding: 15px 0 15px 5px;
-		font-size: 20px;
+		padding: 5px 0 5px 5px;
+		font-size: 15px;
 	}
 	#loading{
 		top: 40%;
 		left: 40%;
 	}
 	.home{
-		margin-top: -90px;
+		margin-top: -15px;
 	}
 }

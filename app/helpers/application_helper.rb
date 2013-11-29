@@ -55,8 +55,20 @@ module ApplicationHelper
 		}
 		hash[state]
 	end
-	def wind(state)
-		badstates = ["Florida","Georgia","Alabama","Mississippi","Louisiana","Arkansas","Tennessee","North Carolina","South Carolina","Nevada","Kentucky"]
-		badstates.include?(state)
+	def goodForWind(state)
+		good_states=["Texas","Iowa","California","Illinois","Minnesota","Montana","North Dakota","South Dakota","Wyoming","Nebraska","Kansas","Oklahoma","Missouri","New Mexico"]
+		good_states.include?(state)
+	end
+	def goodForSolar(state)
+		good_states=["California","Nevada","Utah","Arizona","Colorado","New Mexico","Texas","Oklahoma","Kansas","Oregon","Idaho","Wyoming", "Florida","Georgia","South Carolina","Maryland","New Jersey","Alabama"]
+		good_states.include?(state)
+	end
+	def goodForBiomass(state)
+		good_states=["California","Washington","Oregon","Minnesota","Iowa","Nebraska","Kansas","Texas","Arkansas","Louisiana","Mississippi","Georgia","Illinois","Indiana","Ohio"]
+		good_states.include?(state)
+	end
+	def goodForGeo(state)
+		good_states=["Oregon","Idaho","Wyoming","Colorado","New Mexico","Arizona","California","Nevada","Utah"]
+		good_states.include?(state)
 	end
 end

@@ -17,26 +17,27 @@
 //= require knob.js
 //= require viewport.min.js
 //= require xdomainajax.js
+
 $(document).ready(function()
 {
 	$('.home').css("display", "none");
-	$('#special').css("display", "none");
+	$('.special').css("display", "none");
 	$('#content').css("display", "none");
 	$('.footer').css("display", "none");
 });
 $(window).load(function(){
+	$('#loading').fadeOut(500);
+	$('.home').fadeIn(700);
+	$('#special').fadeIn(700);
+	$('#content').fadeIn(700);
+	$('.footer').fadeIn(700);
 	footerFix();
-	$('#loading').fadeOut(1000);
-	$('.home').fadeIn(3000);
-	$('#special').fadeIn(3000);
-	$('#content').delay(800).fadeIn(3000);
-	$('.footer').delay(800).fadeIn(3000);
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
+
 	$('.imagecarousel').unslider({
 		fluid: true,
 		dots: true,
-		keys: true,
 		speed: 500
 	});
 	//End Carousel Scripts
@@ -51,17 +52,66 @@ $(window).load(function(){
     }
   });
   //End links script
-  //Pagination Script
-	$(".smoothScroll").on("click", function(e) {
+  var links = $('#nav li');
+	var sections = $('.section');
+	var clicked = false;
+
+  $(".smoothScroll").on("click", function(e) {
 	  var $target, target;
 	  e.preventDefault();
 	  target = this.hash;
 	  $target = $(target);
 	  return $("html, body").stop().animate({
 	    scrollTop: $target.offset().top
-	  }, 1000, "swing");
+	  }, 700, "swing");
 	});
-	//End Pagination Script
+
+	links.click(function() {
+		clicked = true;
+		$('#nav li.active').removeClass('active');
+		$(this).addClass('active');
+		$('div.slider').stop().animate({width:($('#nav li.active').offset().left + $('#nav li.active').width()/2 - $('div.slider-holder').offset().left)-50},{duration: 700, queue: false,complete:function(){
+			clicked = false;
+		}})
+	});
+
+	var coordinateArr = [];
+  for(var i = 0; i < sections.length; i++){
+  	coordinateArr.push($(sections[i]).offset().top);
+  };
+
+  $(window).scroll(function(){
+  	if (clicked == true){
+  		return;
+  	}
+  	else{
+	  	var top = $(window).scrollTop();
+	  	for(var i = 0;  i < coordinateArr.length; i++){
+	  		if(top > coordinateArr[coordinateArr.length - 1] - 50){
+	  			$('#nav li.active').removeClass('active');
+	  			$(links[links.length -1]).addClass('active');
+	  		}
+
+	  		if(top > coordinateArr[i] - 50 && top < coordinateArr[i+1] + 50){
+	  			$('#nav li.active').removeClass('active');
+	  			$(links[i]).addClass('active');
+	  		};
+	  	};
+	  	$('div.slider').stop().animate({width:($('#nav li.active').offset().left + $('#nav li.active').width()/2 - $('div.slider-holder').offset().left)-50},{duration: 700, queue: false, complete:function(){
+				clicked = false;
+			}})
+  	}
+  });
+
+	$(document).keydown(function(e) {
+		if (!e) evt = window.event;
+		if (e.keyCode == 39) {
+			$('li.active').next().find('>a').trigger('click');
+		}
+		if (e.keyCode == 37) {
+			$('li.active').prev().find('>a').trigger('click');
+		}
+	})
 
 	//Scroll To Top Script
 	$(window).scroll(function(){
@@ -70,48 +120,23 @@ $(window).load(function(){
 			$('#top').fadeIn("slow");
 		else
 			$('#top').fadeOut("fast");
+		if (y > 60)
+		{
+			$('.nav-holder').css("position", "fixed");
+			$('.nav-holder').css("top", "0");
+		}
+		else
+		{
+			$('.nav-holder').css("position", "absolute");
+			$('.nav-holder').css("top", "60px");
+		}
 	});
+
+
 	//End Scroll To Top Script
 	$(window).resize(function(){
 		footerFix();
 	});
-	$(document).scroll(function() {
-    var $this = $(this),
-        scrollTop = $this.scrollTop(),
-        // find the section next to the current scroll top
-        sections = $(this).find('section'),
-        topSection = null,
-        minDist = Infinity;
-
-    sections.each(function() {
-      var top = $(this).offset().top,
-          bottom = top + $(this).innerHeight(),
-          relativeDistance = Math.min(
-            Math.abs(top - scrollTop),
-            Math.abs(bottom - scrollTop)
-          );
-      if (relativeDistance < minDist) {
-        minDist = relativeDistance;
-        topSection = this;
-      }
-    });
-    // var prevTopSection = $("section.top")[0];
-    // if (prevTopSection != topSection) {
-    //   // only now we have to switch
-
-    //   // unhighlight previous top
-    //   var prevTopIndex = $.inArray(prevTopSection, sections);
-    //   $('#section_header_' + prevTopIndex)
-    //     .removeClass('top');
-    //   $(prevTopSection).removeClass('top');
-
-    //   // highlight new top
-    //   var topIndex = $.inArray(topSection, sections);
-    //   $('#section_header_' + topIndex)
-    //     .addClass('top');
-    //   $(topSection).addClass('top');
-    // }
-  });
 
 	//Location Script
 	$('.special').click(function(){
@@ -140,32 +165,21 @@ $(window).load(function(){
 				window.location.href = "/view?state="+myLoc.regionName+"&city="+myLoc.cityName+"&zip="+myLoc.zipCode+"&lat="+myLoc.latitude+"&long="+myLoc.longitude;
 			}, 1000);
 	});
-	if (nonEnergyLinks())
-	{
-		$('.menu').css("display", "none");
-	}
-	if (home() || !nonEnergyLinks())
-	{
-		$('footer').css("position", "relative");
-	}
 });
-function nonEnergyLinks()
-{
+function nonEnergyLinks(){
 	return window.location.pathname == "/contact/" || window.location.pathname =="/about/";
 }
-function home()
-{
+
+function home(){
 	return window.location.pathname =="/";
 }
-function footerFix()
-{
-	if($(document).height() > $(window).height())
-		{
-			//scrollbar
-			$('.footer').css("position", "relative");
-		}
-		else{
-			$('.footer').css("position", "absolute");
-		}
-}
-;
+
+function footerFix(){
+	if($(document).height() > $(window).height()){
+		//scrollbar
+		$('.footer').css("position", "relative");
+	}
+	else{
+		$('.footer').css("position", "absolute");
+	}
+};

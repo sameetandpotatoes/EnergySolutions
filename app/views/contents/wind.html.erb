@@ -2,94 +2,73 @@
 	<title>Energy Solutions | Wind</title>
 	<meta name="description" content="A wind turbine is a device that converts kinetic energy from the wind into electrical power." />
 <% end %>
-<div class="section" id="first">
-	<h1>Wind Energy</h1>
-</div>
 <div class="section" id="firstPage" style="background-color: #93D6CF;">
-	<div class="intro"><h1 class="header">Infographic</h1>
-			<%= image_tag("wind_infographic_1.png", :class => "displayimage") %>
-			<%= image_tag("wind_infographic_2.png", :class => "displayimage") %>
-			<%= image_tag("wind_infographic_3.png", :class => "displayimage") %>
-			<%= image_tag("wind_infographic_4.png", :class => "displayimage") %>
-			<%= image_tag("wind_infographic_5.png", :class => "displayimage") %>
-			<%= image_tag("wind_infographic_6.png", :class => "displayimage") %>
+	<div class="intro">
+			<%= image_tag("wind_infographic_1.png", :class => "windinfo") %>
+			<%= image_tag("wind_infographic_2.png", :class => "windinfo") %>
+			<%= image_tag("wind_infographic_3.png", :class => "windinfo") %>
+			<%= image_tag("wind_infographic_4.png", :class => "windinfo") %>
+			<%= image_tag("wind_infographic_5.png", :class => "windinfo") %>
+			<%= image_tag("wind_infographic_6.png", :class => "windinfo") %>
 	</div>
 </div>
 <div class="section active" id="secondPage">
 	<div class="procon"><h1 class="header">Advantages and Disadvantages</h1>
-		<table>
-			<tr>
-				<th>Pros</th>
-				<th>Cons</th>
-			</tr>
-			<tr>
-				<td>
-					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Clean</p>
-						<div class="word-wrap">
-							<p class="detailtext">
-							 Harnessing it does not produce any harmful by-products.
-							</p>
-						</div>
-					</div>
-				</td>
-				<td>
-					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Initial Cost</p>
-						<div class="word-wrap">
-							<p class="detailtext">
-							 Upfront costs can be high.
-							</p>
-						</div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Free, 100% Renewable</p>
-					</div>
-				</td>
-				<td>
-					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Need Land</p>
-						<div class="word-wrap">
-							<p class="detailtext">
-							 A turbine can take up a lot of land.
-							</p>
-						</div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Tax Incentives</p>
-						<div class="word-wrap">
-							<p class="detailtext">
-							 The power company pays you back if you produce extra electricity.
-							</p>
-						</div>
-					</div>
-				</td>
-				<td>
-					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Easily Damaged</p>
-						<div class="word-wrap">
-							<p class="detailtext">
-								Turbines can be damaged in lightning storms. Additionally, wind turbines have been known to kill birds and other airborne animals.
-							</p>
-						</div>
-					</div>
-				</td>
-			</tr>
-		</table>
+		<div id="pro">
+			<h1>Pros</h1>
+				<div class="procons">
+				<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
+				<p class="inline">Clean</p>
+				<div class="word-wrap">
+				<p class="detailtext">
+				Harnessing it does not produce any harmful by-products.
+				</p>
+				</div>
+				</div>
+				<div class="procons">
+				<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
+				<p class="inline">Free, 100% Renewable</p>
+				</div>
+				<div class="procons">
+				<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
+				<p class="inline">Tax Incentives</p>
+				<div class="word-wrap">
+				<p class="detailtext">
+				The power company pays you back if you produce extra electricity.
+				</p>
+				</div>
+				</div>
+		</div>
+		<div id="con">
+			<h1>Cons</h1>
+				<div class="procons">
+				<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+				<p class="inline">Initial Cost</p>
+				<div class="word-wrap">
+				<p class="detailtext">
+				Upfront costs can be high.
+				</p>
+				</div>
+				</div>
+				<div class="procons">
+				<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+				<p class="inline">Need Land</p>
+				<div class="word-wrap">
+				<p class="detailtext">
+				A turbine can take up a lot of land.
+				</p>
+				</div>
+				</div>
+				<div class="procons">
+				<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+				<p class="inline">Easily Damaged</p>
+				<div class="word-wrap">
+				<p class="detailtext">
+				Turbines can be damaged in lightning storms. Additionally, wind turbines have been known to kill birds and other airborne animals.
+				</p>
+				</div>
+				</div>
+		</div>
 	</div>
 </div>
 <div class="section" id="thirdPage">
@@ -128,7 +107,7 @@
 	</div>
 	<div class="costfacts">
 		<span class="costheader" style="text-align: center;">Average Cost Facts - Wind</span>
-		<p>After topping out at nearly $70/megawatt-hour in 2009, the average levelized long-term price from wind power sales agreements signed in 2011/2012 – many of which were for projects built in 2012 – fell to around $40/megawatt-hour nationwide.</p>
+		<p>After topping out at nearly $0.07/kilowatt-hour in 2009, the average levelized long-term price from wind power sales agreements signed in 2011/2012 – many of which were for projects built in 2012 – fell to around $0.04/kilowatt-hour nationwide.</p>
 	</div>
 	<script>
 	$(".dial").knob({

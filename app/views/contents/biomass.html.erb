@@ -2,25 +2,16 @@
 	<title>Energy Solutions | Biomass</title>
 	<meta name="description" content="Biomass is a collective term for all plant and animal material. A number of different forms of biomass can be burned or digested to produce energy." />
 <% end %>
-<div class="section" id="first">
-	<h1>Biomass</h1>
-</div>
+<!-- <h1 class="title">Biomass</h1> -->
 <div class="section" id="firstPage">
-	<div class="intro"><h1 class="header">Infographic</h1>
-			<%= image_tag("biomass-infographic.png" , :class => "displayimage") %>
-	</div>
+	<%= image_tag("biomass-infographic.png" , :class => "displayimage") %>
 </div>
-<div class="section active" id="secondPage">
+<div class="section" id="secondPage">
 	<div class="procon"><h1 class="header">Advantages and Disadvantages</h1>
-		<table>
-			<tr>
-				<th>Pros</th>
-				<th>Cons</th>
-			</tr>
-			<tr>
-				<td>
+				<div id="pro">
+					<h1>Pros</h1>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">Renewable</p>
 						<div class="word-wrap">
 							<p class="detailtext">
@@ -28,23 +19,8 @@
 							</p>
 						</div>
 					</div>
-				</td>
-				<td>
-					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Expensive</p>
-						<div class="word-wrap">
-							<p class="detailtext">
-							 Harvesting and storing biomass may be too expensive for the process to be worthwhile.
-							</p>
-						</div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">Clean</p>
 						<div class="word-wrap">
 							<p class="detailtext">
@@ -52,23 +28,8 @@
 							</p>
 						</div>
 					</div>
-				</td>
-				<td>
-					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
-						<p class="inline">Space</p>
-						<div class="word-wrap">
-							<p class="detailtext">
-							 Harnessing and storing the energy requires large spaces that may be impractical for some locations.
-							</p>
-						</div>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">Cost-Effective</p>
 						<div class="word-wrap">
 							<p class="detailtext">
@@ -76,26 +37,37 @@
 							</p>
 						</div>
 					</div>
-				</td>
-				<td>
-				</td>
-			</tr>
-			<tr>
-				<td>
+					<div class="procons">
 					<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
-					<div style="display: inline-table;">
 						<p class="inline">Abundant</p>
 						<div class="word-wrap">
 							<p class="detailtext">
-							 Biomass is already available all over the world, so it’s convenient for almost everybody.
+							 Biomass is already available all over the world, so its convenient for almost everybody.
 							</p>
 						</div>
 					</div>
-				</td>
-				<td>
-				</td>
-			</tr>
-		</table>
+				</div>
+				<div id="con" style="height: 50%;">
+					<h1>Cons</h1>
+					<div class="procons">
+					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+						<p class="inline">Expensive</p>
+						<div class="word-wrap">
+							<p class="detailtext">
+							 Harvesting and storing biomass may be too expensive for the process to be worthwhile.
+							</p>
+						</div>
+					</div>
+					<div class="procons">
+					<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+						<p class="inline">Space</p>
+						<div class="word-wrap">
+							<p class="detailtext">
+							 Harnessing and storing the energy requires large spaces that may be impractical for some locations.
+							</p>
+						</div>
+					</div>
+				</div>
 	</div>
 </div>
 <div class="section" id="thirdPage">
@@ -130,6 +102,15 @@
 		<span class="costheader" style="text-align: center;">Average Cost Facts - Biomass Energy</span>
 		<p>The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.</p>
 		<p>In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.08 to $0.15 per kilowatt hour (kWh).</p>
+		<p>The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.</p>
+		<p>In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.08 to $0.15 per kilowatt hour (kWh).</p>
+		<p>The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.</p>
+		<p>In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.08 to $0.15 per kilowatt hour (kWh).</p>
+		<p>The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.</p>
+		<p>In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.08 to $0.15 per kilowatt hour (kWh).</p>
+		<p>The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.</p>
+		<p>In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.08 to $0.15 per kilowatt hour (kWh).</p>
+
 	</div>
 	<script>
 	$(".dial").knob({

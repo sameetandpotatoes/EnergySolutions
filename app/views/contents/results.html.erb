@@ -2,52 +2,48 @@
 	<title>Energy Solutions | Results</title>
 <% end %>
 <p style="display: none;" class="state"><%=@state%></p>
-<h1 class="locheader">Renewable Energy Statistics for <%= @city.titlecase %>, <%= @state %>
-<div id="sunhours">
-	<%=@wind%>
-	<script>
-	var xmlHttp
-	function showCITY(str)
-	{
-	xmlHttp=GetXmlHttpObject()
-	if (xmlHttp==null)
-	{
-		alert ("Browser does not support HTTP Request")
-		return
-	}
-	validater url="getcity.php"
-	url=url+"?q="+str
-	url=url+"&sid="+Math.random()
-	xmlHttp.open("GET",url,true)
-	xmlHttp.send(null)
-	}
-	function GetXmlHttpObject()
-	{
-	var xmlHttp=null;
-	try
-	{
-	// Firefox, Opera 8.0+, Safari
-	xmlHttp=new XMLHttpRequest();
-	}
-	catch (e)
-	{
-	// Internet Explorer
-	try
-	{
-	xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
-	}
-	catch (e)
-	{
-	xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	}
-	return xmlHttp;
-	}
-
-	</script>
+<div>
+	<h1 class="header-results">Renewable Energy Sources Available in <%= @city.titlecase%>, <%=@state%></h1>
+	<div class="results-energy">
+	<% if (@wind) %>
+		<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
+		<p class="results-inline"> Wind Energy is a good fit for your location. </p>
+	<% else %>
+		<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+		<p class="results-inline"> Wind Energy will not work well in your location. </p>
+	<% end %>
+	</div>
+	<div class="results-energy">
+	<% if (@solar) %>
+	<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
+	<p class="results-inline"> Solar Energy is a good fit for your location. </p>
+	<% else %>
+	<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+	<p class="results-inline"> Solar Energy will not work well in your location. </p>
+	<% end %>
+	</div>
+	<div class="results-energy">
+	<% if (@geo) %>
+	<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
+	<p class="results-inline"> Geothermal Energy is a good fit for your location. </p>
+	<% else %>
+	<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+	<p class="results-inline"> Geothermal Energy will not work well in your location. </p>
+	<% end %>
+	</div>
+	<div class="results-energy">
+	<% if (@biomass) %>
+	<%= image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")%>
+	<p class="results-inline"> Biomass Energy is a good fit for your location. </p>
+	<% else %>
+	<%= image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")%>
+	<p class="results-inline"> Biomass Energy will not work well in your location. </p>
+	<% end %>
+	</div>
 </div>
-<h1 class="locheader">Grants near <%= @city.titlecase %>, <%= @state %></h1>
-<div id="grants">Information provided by dsireusa.org
+<h1 class="header-results">Grants near <%= @city.titlecase %>, <%= @state %></h1>
+<!-- <p class="source-text">Information provided by <a href="http://dsireusa.org">dsireusa.org</p> -->
+<div id="grants">
 </div>
 <script>
 	$(document).ready(function(){

@@ -1,6 +1,0 @@
-<% if @contents.empty? %>
-	<p>No results found for: <%=#{@query}"%> </p>
-<% elsif !@query.empty? %>
-	<p>Your search results for: <%=#{@query}"%> </p>
-<%@sorted =@contents.sort_by { |c| c.updated_at } %>
-<%@sorted.reverse!%>

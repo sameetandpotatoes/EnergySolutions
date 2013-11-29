@@ -21,8 +21,14 @@ class ContentsController < ApplicationController
 		@city = params[:city]
 		@lat = params[:lat]
 		@long = params[:long]
-		# @wind= wind(@state.to_s)
 		@state = @state.titlecase
+
+		#Determining best energy sources
+		@wind= goodForWind(@state.to_s)
+		@solar= goodForSolar(@state.to_s)
+		@biomass= goodForBiomass(@state.to_s)
+		@geo= goodForGeo(@state.to_s)
+
 		@state = us_states(@state.to_s)
 		@state = @state.strip
 	end

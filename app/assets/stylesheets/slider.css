@@ -1,0 +1,79 @@
+.nav-holder {
+    /*background-color: #3fbf70;*/
+    background-color: #1A7A6A;
+    border-top: 5px solid #001F37;
+    height: 99px;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    z-index: 100;
+    opacity: 0.85;
+}
+.nav-holder ul#nav {
+    list-style: none outside none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 18px 0 8px;
+    text-align: center;
+    width: 780px;
+}
+.nav-holder ul#nav li {
+    display: inline-block;
+    margin: 0 30px;
+}
+.nav-holder ul#nav li a {
+    color: #95AFBF;
+    display: table-cell;
+    font-family: 'Lato';
+    font-size: 13px;
+    font-weight: normal;
+    height: 36px;
+    line-height: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.nav-holder ul#nav li a:hover {
+    color: #FFFFFF;
+}
+.nav-holder ul#nav .active a {
+    color: #FFFFFF;
+}
+.nav-holder ul#nav .active a span {
+    color: #FFFFFF;
+}
+.nav-holder .slider-holder {
+    margin: 0 auto;
+    width: 800px;
+}
+.nav-holder .slider-holder:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.nav-holder .slider-block {
+    background: none repeat scroll 0 0 #001F37;
+    border-radius: 5px;
+    height: 10px;
+    margin: 0 auto;
+    padding: 0;
+    width: 680px;
+}
+.nav-holder .slider-block .pin {
+    background: none repeat scroll 0 0 #F7F8F8;
+    border-radius: 50%;
+    height: 16px;
+    position: absolute;
+    right: 0px;
+    top: -3px;
+    width: 16px;
+}
+.nav-holder .slider-block .slider {
+    background: none repeat scroll 0 0 #95AFBF;
+    border-radius: 5px;
+    height: 10px;
+    overflow: visible !important;
+    position: relative;
+    width: 120px;
+}
