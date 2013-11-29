@@ -175,7 +175,7 @@ function home(){
 }
 
 function footerFix(){
-	if($(document).height() > $(window).height()){
+	if($(document).height() > $(window).height() || home()){
 		//scrollbar
 		$('.footer').css("position", "relative");
 	}

@@ -22,7 +22,7 @@
 }
 .imagecarousel {
 	position: relative;
-	overflow: hidden;
+	overflow: auto;
 	/*width: 100%;*/
 	font-size: 18px;
 	line-height: 24px;
@@ -32,7 +32,7 @@
 	list-style: none;
 }
 .imagecarousel ul{
-	padding-left: 0;
+	padding: 0;
 }
 .imagecarousel h1{
 	color: black;
@@ -55,13 +55,12 @@
 	box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
 	display: block;
 	min-height: 600px;
-	/*width: 12.5%;*/
 	background-repeat: no-repeat;
 	opacity: 0.5;
-	/*background-size: 100% 100%;*/
 }
 .imagecarousel ul li:nth-child(1){
-	background-image: url("/assets/geothermal-58b3e2d8eeb063847de79d733f7611e0.jpg");
+	background-image: url("/assets/geothermal-075276b7c15388514315dcd1af293b2f.png");
+	/*background-position: 50px 30px;*/
 }
 .imagecarousel ul li:nth-child(2){
 	background-image: url("/assets/solar-46b6cfecb2169a3d14552f90196a56fb.jpg");
