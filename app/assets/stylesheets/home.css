@@ -4,15 +4,17 @@
 	color: white;
 	font: 30px 'Droid Sans';
 	width: 100%;
+	overflow: hidden;
 }
 .footer{
 	font-family: 'Lato';
 	background-color: #232323;
 	padding: 15px;
 	height: 25px;
-	position: absolute;
-	bottom: 0;
+	position: relative;
+	bottom: 0px;
 	width: 100%;
+	overflow: hidden;
 	color: white;
 }
 .bpalogo{
@@ -48,13 +50,13 @@
 .caption{
 	position: absolute;
 	top: 0px;
-	padding-left: 20px;
+	padding-left: 30px;
 }
 .imagecarousel ul li {
  	float: left;
 	box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
 	display: block;
-	min-height: 600px;
+	min-height: 800px;
 	background-repeat: no-repeat;
 	opacity: 0.5;
 }

@@ -31,7 +31,6 @@ $(window).load(function(){
 	$('#special').fadeIn(700);
 	$('#content').fadeIn(700);
 	$('.footer').fadeIn(700);
-	footerFix();
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
 
@@ -135,7 +134,7 @@ $(window).load(function(){
 
 	//End Scroll To Top Script
 	$(window).resize(function(){
-		footerFix();
+		carouselFix();
 	});
 
 	//Location Script
@@ -173,13 +172,7 @@ function nonEnergyLinks(){
 function home(){
 	return window.location.pathname =="/";
 }
-
-function footerFix(){
-	if($(document).height() > $(window).height() || home()){
-		//scrollbar
-		$('.footer').css("position", "relative");
-	}
-	else{
-		$('.footer').css("position", "absolute");
-	}
-};
+function carouselFix(){
+	$('.imagecarousel ul li').css("width",$(window).width());
+	$('.imagecarousel ul li').css("min-height",$(window).height() - $('#header').height());
+}
