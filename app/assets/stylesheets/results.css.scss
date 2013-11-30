@@ -26,13 +26,16 @@
 	padding-left: 30px;
 	margin-top: 0px;
 }
-#grants{
-	padding-left: 30px;
+.grantsinfo{
+	padding: 0px 30px;
 }
-#grants ul li a{
+#grants ul li a, #moregrants ul li a{
 	color: inherit;
 }
-.copy{
+#moregrants p:nth-child(1){
+	display: none;
+}
+.copy, #moregrants ul li{
 	list-style-type: square;
 	font-family: 'Lato';
 	font-size: 18px;

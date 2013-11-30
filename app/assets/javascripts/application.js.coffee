@@ -34,10 +34,10 @@ $(document).ready ->
 
 $(window).load ->
   $("#loading").fadeOut 500
-  $(".home").fadeIn 1000
-  $("#special").fadeIn 1000
-  $("#content").fadeIn 1000
-  $(".footer").fadeIn 1000
+  $(".home").fadeIn 1500
+  $("#special").fadeIn 1500
+  $("#content").fadeIn 1500
+  $(".footer").fadeIn 1500
   carouselFix()
   NProgress.configure showSpinner: true
   NProgress.configure
