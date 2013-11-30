@@ -14,9 +14,9 @@ class ContentsController < ApplicationController
 	end
 	def biofuel
 	end
-	def about
+	def sources
 	end
-	def contact
+	def about
 	end
 	def results
 		@state = params[:state]

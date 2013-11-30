@@ -19,7 +19,7 @@
 #= require xdomainajax.js
 
 nonEnergyLinks = ->
-  window.location.pathname is "/contact/" or window.location.pathname is "/about/"
+  window.location.pathname is "/sources/" or window.location.pathname is "/about/"
 home = ->
   window.location.pathname is "/"
 carouselFix = ->
