@@ -75,7 +75,7 @@ $(window).load ->
     $("#nav li.active").removeClass "active"
     $(this).addClass "active"
     $("div.slider").stop().animate
-      width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 50
+      width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 55
     ,
       duration: 700
       queue: false
@@ -100,12 +100,12 @@ $(window).load ->
         if top >= coordinateArr[coordinateArr.length - 1] - 30
           $("#nav li.active").removeClass "active"
           $(links[links.length - 1]).addClass "active"
-        if top >= coordinateArr[i] - 30 and top <= coordinateArr[i + 1] + 30
+        if top >= coordinateArr[i] - 20 and top <= coordinateArr[i + 1] - 20
           $("#nav li.active").removeClass "active"
           $(links[i]).addClass "active"
         i++
       $("div.slider").stop().animate
-        width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 50
+        width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 55
       ,
         duration: 700
         queue: false
