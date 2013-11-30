@@ -27,10 +27,10 @@ $(document).ready(function()
 });
 $(window).load(function(){
 	$('#loading').fadeOut(500);
-	$('.home').fadeIn(700);
-	$('#special').fadeIn(700);
-	$('#content').fadeIn(700);
-	$('.footer').fadeIn(700);
+	$('.home').fadeIn(1000);
+	$('#special').fadeIn(1000);
+	$('#content').fadeIn(1000);
+	$('.footer').fadeIn(1000);
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
 
@@ -174,5 +174,5 @@ function home(){
 }
 function carouselFix(){
 	$('.imagecarousel ul li').css("width",$(window).width());
-	$('.imagecarousel ul li').css("min-height",$(window).height() - $('#header').height());
+	$('.imagecarousel ul li').css("min-height",$(window).height());
 }
