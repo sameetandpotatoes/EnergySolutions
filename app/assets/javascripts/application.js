@@ -31,6 +31,7 @@ $(window).load(function(){
 	$('#special').fadeIn(1000);
 	$('#content').fadeIn(1000);
 	$('.footer').fadeIn(1000);
+	carouselFix();
 	NProgress.configure({ showSpinner: true });
 	NProgress.configure({ ease: 'ease', speed: 1000 });
 
