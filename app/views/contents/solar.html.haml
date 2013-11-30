@@ -1,0 +1,97 @@
+- content_for :head do
+  %title Energy Solutions | Solar PV
+  %meta{content: "Photovoltaic devices generate electricity directly from sunlight via an electronic process that occurs naturally in certain types of materials.", name: "description"}/
+#firstPage.section{style: "background-color: #F1EEE5;"}
+  .intro
+    = image_tag("solar_infographic2.png", :class=>"displayimage", :style=>"width: 95%;")
+#secondPage.section
+  .procon
+    %h1.header Advantages and Disadvantages
+    #pro
+      %h1 Pros
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Quiet
+        .word-wrap
+          %p.detailtext
+            No moving parts = no noise
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline No Pollution
+        .word-wrap
+          %p.detailtext
+            The only pollution produced as a result of solar panels is the manufacturing of these devices in factories, transportation of the goods, and installation.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Less Service
+        .word-wrap
+          %p.detailtext
+            The majority of today`s solar power systems do not require much maintenance. Residential solar panels usually only require cleaning a couple of times a year. Serious solar manufacturers ship 20 or 25 year warranties with their solar panels.
+    #con
+      %h1 Cons
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Initial Cost
+        .word-wrap
+          %p.detailtext
+            Currently, prices of highly efficient solar cells can be above $1000, and some households may need more than one.
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Daylight Only
+        .word-wrap
+          %p.detailtext
+            This means for around half of each day, solar panels are not producing energy for your home. Access to sunlight is limited to certain times.
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Pollution
+        .word-wrap
+          %p.detailtext
+            Since pollution levels affect a solar cell's efficiency, this would be a major disadvantage for businesses that install solar panels in heavily polluted areas, such as cities.
+#thirdPage.section
+  .text
+    %h1.header Grants
+    %h2 USDA REAP Grants
+    %p
+      The Department of Agriculture provides homeowners in rural areas with grants to buy and install solar energy systems. The grants can cover up to 25 percent of a project's total cost and are limited to $500,000 for solar energy systems. To qualify, you must own the home and be a farmer or a rancher in a rural area.
+    %h2 Green Retrofit Grants
+    %p
+      HUD's Office of Affordable Housing Preservation pays eligible homeowners to install and maintain alternative energy technology such as solar energy systems. The program has total funding of $250 million and is sponsored by the Housing Recovery Act. You must spend grant funds within two years of receiving the money.
+    %h2 Federal Grant Program
+    %p
+      The Department of Energy's Tribal Energy Program helps homeowners in tribal lands reach energy sufficiency through the use of renewable energy such as solar energy. The program helps you pay for the education, training, evaluation and development of solar energy resources.
+    %h2 Residential Renewable Energy Credit
+    %p
+      The federal government allows you to claim a tax credit of up to 30 percent of your costs toward solar electric systems. To qualify, fuel cells must have a minimum of 0.5 kW, an electricity generation efficiency of at least 30 percent, and at least 50 percent of the home's heating energy must come from solar energy.
+#fourthPage.section
+  %h1.header Videos
+  %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0", width: "640"}
+  %p.mobile This video is not available on your screen
+#fifthPage.section{style: "background-image: url('/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png');"}
+  .intro
+    %h1.header Cost of Installation
+    = image_tag("solar_infographic.png", :class=>"displayimage")
+    .costplugin
+      %span#cost.costheader Cost Per Year: $0
+      %p Based on the average price of $0.31 per kW
+      %input.dial{type: "text"}/
+    .costfacts
+      %span.costheader{style: "text-align: center;"} Average Cost Facts - Solar PV
+      / <p>The United States consumes an average of 11,698 kWh per year.</p>
+    :javascript
+      $(".dial").knob({
+        'min': 1000,
+        'max': 15000,
+        'step': 100,
+        'width': 250,
+        'fgColor': "black",
+        'thickness': '.1',
+        'angleArc': 250,
+        'angleOffset': -125,
+      	'draw': function () {
+               $(this.i).val(this.cv + 'kW')
+      	},
+        'change' : function (v) {
+        	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
+      	}
+      });
+= render "scrolltotop"

@@ -12,6 +12,8 @@ class ContentsController < ApplicationController
 	end
 	def geothermal
 	end
+	def biofuel
+	end
 	def about
 	end
 	def contact

@@ -1,0 +1,96 @@
+- content_for :head do
+  %title Energy Solutions | Hydropower
+  %meta{content: "Hydro-power or water power is power derived from the energy of falling water and running water, which may be harnessed for useful purposes.", name: "description"}/
+#firstPage.section{style: "background-color: #EDF3F4;"}
+  .intro
+    = image_tag("hydroelectric power.jpg", :class => "displayimage", :style => "width: 60%")
+#secondPage.section.active
+  .procon
+    %h1.header Advantages and Disadvantages
+    #pro
+      %h1 Pros
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Reliable and Stable
+        .word-wrap
+          %p.detailtext
+            In times when demand is not that high it is easy to stop hydroelectric power plants to produce electricity, and "plug it in" once again in times when demand increases as water can be easily saved for future use.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline High Efficiency
+        .word-wrap
+          %p.detailtext
+            Today's hydroelectric power plants have an efficiency of approximately 90%, meaning that only a small amount of energy gets wasted in the process of generating electricity.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Low maintenance costs
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Economic Benefits
+        .word-wrap
+          %p.detailtext
+            The lake that forms behind the dam can be also used for irrigation, recreational tourism in form of water sports, fishing, swimming, boating, as well as some other recreational benefits.
+    #con
+      %h1 Cons
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Noisy
+        .word-wrap
+          %p.detailtext
+            The reliance on turbines causes water power to be noisier than solar energy.
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Risky
+        .word-wrap
+          %p.detailtext
+            Large dams can not only disrupt the natural flow of rivers but can also cause earthquakes, erosion, landslides and serious geological damage. Sometimes, it can even lead to major flooding.
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Expensive
+        .word-wrap
+          %p.detailtext
+            Developers must wait for at least few decades before being able to gain their initial investment.
+#thirdPage.section
+  .text
+    %h1.header Grants
+    %h2 Green Retrofit Grants
+    %p
+      HUD's Office of Affordable Housing Preservation pays eligible homeowners to install and maintain alternative energy technology such as solar energy systems. The program has total funding of $250 million and is sponsored by the Housing Recovery Act. You must spend grant funds within two years of receiving the money.
+    %h2 Federal Grant Program
+    %p
+      The Department of Energy's Tribal Energy Program helps homeowners in tribal lands reach energy sufficiency through the use of renewable energy such as solar energy. The program helps you pay for the education, training, evaluation and development of solar energy resources.
+    %h2 Residential Renewable Energy Credit
+    %p
+      The federal government allows you to claim a tax credit of up to 30 percent of your costs toward solar electric systems. To qualify, fuel cells must have a minimum of 0.5 kW, an electricity generation efficiency of at least 30 percent, and at least 50 percent of the home's heating energy must come from solar energy.
+#fourthPage.section
+  %h1.header Videos
+  %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/edEhvmNlYqk?rel=0", width: "640"}
+  %p.mobile This video is not available on your screen
+#fifthPage.section
+  %h1.header Cost of Installation
+  .costplugin
+    %span#cost.costheader Cost Per Year: $0
+    %p Based on the average price of $0.03 per kW
+    %input.dial{type: "text"}/
+  .costfacts
+    %span.costheader{style: "text-align: center;"} Average Cost Facts - Hydropower
+    %p According to a recent analysis by Navigant Consulting, Inc. that compared the levelized cost of power from a number of electricity sources, hydropower was the most affordable at $.02/kWh (kilowatt hour). Hydropower’s levelized cost – which accounts for an energy-generating system’s lifetime costs such as initial investment, operations, maintenance and cost of fuel – even beats that of coal-fired power plants according to the study.
+    %p The average cost of electricity from a hydro plant larger than 10 megawatts is 3 to 5 U.S. cents per kilowatt-hour.
+  :javascript
+    $(".dial").knob({
+      'min': 0,
+      'max': 4990,
+      'step': 10,
+      'width': 250,
+      'fgColor': "black",
+      'thickness': '.1',
+      'angleArc': 250,
+      'angleOffset': -125,
+    	'draw': function () {
+             $(this.i).val(this.cv + 'kW')
+    	},
+      'change' : function (v) {
+      	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.09)).toFixed(2);
+    	}
+    });
+= render "scrolltotop"

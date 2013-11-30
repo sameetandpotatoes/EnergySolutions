@@ -38,6 +38,8 @@ GEM
     coffee-script-source (1.6.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    haml (4.0.4)
+      tilt
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.2)
@@ -127,6 +129,7 @@ PLATFORMS
 DEPENDENCIES
   asset_packager (~> 0.2.0)
   coffee-rails (~> 4.0.0)
+  haml
   jbuilder (~> 1.2)
   jquery-easing-rails
   jquery-rails

@@ -1,0 +1,88 @@
+- content_for :head do
+  %title Energy Solutions | Biogas
+  %meta{content: "", name: "description"}/
+#firstPage.section
+  .intro
+    = image_tag("biofuel.jpg", :class => "displayimage")
+#secondPage.section.active
+  .procon
+    %h1.header Advantages and Disadvantages
+    #pro
+      %h1 Pro
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Easy To Start
+        .word-wrap
+          %p.detailtext
+            Biofuels are easy for people to transition to without special apparatus. Just fill your existing car, truck, or home oil tank with it.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline No Global Warming
+        .word-wrap
+          %p.detailtext
+            Ethanol and biodiesel only emit back to the environment the carbon dioxide that their source plants absorbed in the first place.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Cheap Feedstocks
+        .word-wrap
+          %p.detailtext
+            The production process can turn used oils, greases and fats into a useable fueling product. These include used cooking oil and greases, which can be obtained inexpensively or free as some have no other uses.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Biodegradable
+        .word-wrap
+          %p.detailtext
+            Biodiesel is non-toxic and biodegradeable. Any spillage in the production or tranportation process will have a far smaller environmental impact as compared to a petroleum spills. Large biodiesel spills may still need some form of treatment.
+    #con
+      %h1 Con
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Reduced Efficiency
+        .word-wrap
+          %p.detailtext
+            Many producers have been unable to produce biodiesel that meets ASTM 6751 quality due primarily to their inability to remove all impurities and water during the washing and refining processes. The EPA found that the use of B20 can reduce fuel efficiency by 1 to 2%.
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Expensive
+        .word-wrap
+          %p.detailtext
+            B100, and other diesel/biodiesel blends, are more expensive to consumers than #2 diesel. This is the result of the rapidly rising feedstock prices and production problems of producers.
+  #thirdPage.section
+    .text
+      %h1.header Grants
+      %h2 Advanced Biofuel Production Grants and Loan Guarantees
+      %p
+        The Biorefinery Assistance Program (Section 9003) provides loan guarantees for the development, construction, and retrofitting of commercial-scale biorefineries that produce advanced biofuels. Grants for demonstration scale biorefineries are also available. Advanced biofuel is defined as fuel derived from renewable biomass other than corn kernel starch. Eligible applicants include, but are not limited to, individuals, state or local governments, farm cooperatives, national laboratories, institutions of higher education, and rural electric cooperatives. The maximum loan guarantee is $250 million and the maximum grant funding is 50% of project costs. Funding for this program is subject to congressional appropriations through fiscal year 2013. For more information, see the
+        %a{href: "http://www.rurdev.usda.gov/BCP_Biorefinery.html"}Biorefinery Assistance Program website.
+        (Reference Public Law 112-240 and 7 U.S. Code 8103)
+  #fourthPage.section
+    %h1.header Videos
+    %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/_gfb9Mrn3rw?rel=0", width: "640"}
+    %p.mobile This video is not available on your screen resolution.
+  #fifthPage.section
+    %h1.header Cost of Installation
+    .costplugin
+      %span#cost.costheader Cost Per Year: $0
+      %p Based on the average price of $0.31 per kW
+      %input.dial{type: "text"}/
+    .costfacts
+      %span.costheader{style: "text-align: center;"} Average Cost Facts - Biofuel
+      %p
+    :javascript
+      $(".dial").knob({
+        'min': 0,
+        'max': 5000,
+        'step': 10,
+        'width': 250,
+        'fgColor': "black",
+        'thickness': '.1',
+        'angleArc': 250,
+        'angleOffset': -125,
+      	'draw': function () {
+               $(this.i).val(this.cv + 'kW')
+      	},
+        'change' : function (v) {
+        	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
+      	}
+      });
+= render "scrolltotop"

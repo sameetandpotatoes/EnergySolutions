@@ -1,0 +1,99 @@
+- content_for :head do
+  %title Energy Solutions | Wind
+  %meta{content: "A wind turbine is a device that converts kinetic energy from the wind into electrical power.", name: "description"}/
+#firstPage.section{style: "background-color: #93D6CF;"}
+  .intro
+    = image_tag("wind_infographic_1.png", :class => "tiled windinfo")
+    = image_tag("wind_infographic_2.png", :class => "tiled windinfo")
+    = image_tag("wind_infographic_3.png", :class => "tiled windinfo")
+    = image_tag("wind_infographic_4.png", :class => "tiled windinfo")
+    = image_tag("wind_infographic_5.png", :class => "tiled windinfo")
+    = image_tag("wind_infographic_6.png", :class => "tiled windinfo")
+#secondPage.section.active
+  .procon
+    %h1.header Advantages and Disadvantages
+    #pro
+      %h1 Pros
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Clean
+        .word-wrap
+          %p.detailtext
+            Harnessing it does not produce any harmful by-products.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Free, 100% Renewable
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Tax Incentives
+        .word-wrap
+          %p.detailtext
+            The power company pays you back if you produce extra electricity.
+    #con
+      %h1 Cons
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Initial Cost
+        .word-wrap
+          %p.detailtext
+            Upfront costs can be high.
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Need Land
+        .word-wrap
+          %p.detailtext
+            A turbine can take up a lot of land.
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Easily Damaged
+        .word-wrap
+          %p.detailtext
+            Turbines can be damaged in lightning storms. Additionally, wind turbines have been known to kill birds and other airborne animals.
+#thirdPage.section
+  .text
+    %h1.header Grants
+    %h2 Assisted Housing Stability and Energy and Green Retrofit
+    %p
+      The Housing and Urban Development Department offers a total of $250 million through its Assisted Housing Stability and Energy and Green Retrofit. The grant allows eligible homeowners to invest in energy and green retrofit projects such as wind and solar energy units.
+    %h2 USDA Rural Energy for America Program
+    %p
+      The U.S. Department of Agriculture (USDA) helps farmers, ranchers and homeowners in rural areas (population under 20,000) with grants to buy and install solar, wind and other renewable energy systems. The grants can be used to pay up to 25 percent of a project's cost, up to a maximum of $500,000.
+    %h2 Utility Grant Programs
+    %p
+      Local utility providers also provide grants to homeowners who are willing to invest in solar and wind power generating units. Small wind turbines and solar panels can be used by homes and farms in areas where it is not possible or cost-effective to run power lines. For instance, the Sacramento Municipal Utility District's Residential Loan Program grants 100 percent financing to customers who install solar water-heating systems. The NorthWestern Energy utility in Montana, on the other hand, provides users with the Utility Grant Program. This grant provides incentives of $3 and $2 per watt for solar and energy installations, respectively.
+    %h2 State Renewable Energy Grants
+    %p
+      State governments also provide solar and wind energy grants to eligible homeowners. For instance the State Grant Program of Colorado provides homeowners with funds to finance solar, wind and other renewable energy projects. Projects must start within three months of the grant approval date and have a maximum estimated project duration of eight months.
+#fourthPage.section
+  .intro
+    %h1.header Videos
+    %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/lmy23TdhA9E?rel=0", width: "640"}
+    %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/jT8yswXdxFk?rel=0", width: "640"}
+    %p.mobile These videos are not available on your screen
+#fifthPage.section
+  %h1.header Cost of Installation
+  .costplugin
+    %span#cost.costheader Cost Per Year: $0
+    %p Based on the average price of $0.04 per kW
+    %input.dial{type: "text"}/
+  .costfacts
+    %span.costheader{style: "text-align: center;"} Average Cost Facts - Wind
+    %p After topping out at nearly $0.07/kilowatt-hour in 2009, the average levelized long-term price from wind power sales agreements signed in 2011/2012 – many of which were for projects built in 2012 – fell to around $0.04/kilowatt-hour nationwide.
+  :javascript
+    $(".dial").knob({
+      'min': 1000,
+      'max': 15000,
+      'step': 10,
+      'width': 250,
+      'fgColor': "black",
+      'thickness': '.1',
+      'angleArc': 250,
+      'angleOffset': -125,
+    	'draw': function () {
+             $(this.i).val(this.cv + 'kW')
+    	},
+      'change' : function (v) {
+      	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.04)).toFixed(2);
+    	}
+    });
+= render "scrolltotop"

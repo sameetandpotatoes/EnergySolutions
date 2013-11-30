@@ -1,0 +1,58 @@
+- content_for :head do
+  %title Energy Solutions | Results
+%p.state{style: "display: none;"}= @state
+%div
+  %h1.header-results
+    Renewable Energy Sources Available in #{@city.titlecase}, #{@state}
+  .results-energy
+    - if (@wind)
+      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Wind Energy is a good fit for your location.
+    - else
+      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Wind Energy will not work well in your location.
+  .results-energy
+    - if (@solar)
+      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Solar Energy is a good fit for your location.
+    - else
+      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Solar Energy will not work well in your location.
+  .results-energy
+    - if (@geo)
+      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Geothermal Energy is a good fit for your location.
+    - else
+      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Geothermal Energy will not work well in your location.
+  .results-energy
+    - if (@biomass)
+      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Biomass Energy is a good fit for your location.
+    - else
+      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Biomass Energy will not work well in your location.
+%h1.header-results
+  Grants near #{@city.titlecase}, #{@state}
+%p.source-text Information provided by dsireusa.org
+#grants
+:javascript
+  $(document).ready(function(){
+  	var state=$('.state').text();
+  	$("#grants").load("http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state="+state);
+  	$.ajax({
+  	url: 'http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state='+state,
+  	type: 'GET',
+  	success: function(res)
+  	{
+  	  var headline = $(res.responseText).find('#incentivelist').html();
+  	  var div = document.getElementById('grants');
+  	  div.innerHTML = headline;
+  	  $("#grants ul li a").each(function(){
+  	  	var _href = $(this).attr("href");
+  	  	$(this).attr("href", "http://www.dsireusa.org/incentives/"+_href);
+  	  	$(this).attr("target", "_blank");
+  	  });
+  	}
+  	});
+  });

@@ -1,0 +1,93 @@
+- content_for :head do
+  %title Energy Solutions | Biomass
+  %meta{content: "Biomass is a collective term for all plant and animal material. A number of different forms of biomass can be burned or digested to produce energy.", name: "description"}/
+#firstPage.section{style: "background-color: #95C94D;"}
+  .intro
+    = image_tag("biomass infographic.jpg", :class => "displayimage", :style => "width: 60%")
+#secondPage.section
+  .procon
+    %h1.header Advantages and Disadvantages
+    #pro
+      %h1 Pros
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Renewable
+        .word-wrap
+          %p.detailtext
+            A new crop of potential energy grows as you are reaping the rewards of the first one.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Clean
+        .word-wrap
+          %p.detailtext
+            Since it’s part of the carbon cycle, photosynthesis takes care of any excess pollutants. No pollutants = No global warming
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Cost-Effective
+        .word-wrap
+          %p.detailtext
+            Biomass costs ⅓ less than energy from fossil fuels, so with time these savings will add up.
+      .procons
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Abundant
+        .word-wrap
+          %p.detailtext
+            Biomass is already available all over the world, so its convenient for almost everybody.
+    #con{style: "height: 50%;"}
+      %h1 Cons
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Expensive
+        .word-wrap
+          %p.detailtext
+            Harvesting and storing biomass may be too expensive for the process to be worthwhile.
+      .procons
+        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.inline Space
+        .word-wrap
+          %p.detailtext
+            Harnessing and storing the energy requires large spaces that may be impractical for some locations.
+#thirdPage.section
+  .text
+    %h1.header Grants
+    %h2 Biomass Research and Development Initiative
+    %p
+      The U.S. Department of Agriculture (USDA) funds biomass research, in part, through competitive grant programs. The Biomass Research and Development Initiative (BRDI) is a major source of grant funding for biomass research. Funds awarded under this program may be used for biomass research costs and the development of new biomass technologies, methods or capabilities. The grant program is a part of the federal government's numerous initiatives to develop more local sources of energy, including the use of American forest or farm products to meet our energy needs. Eligible entities for funding under this grant program include federal, state and local governments, private businesses, non-profits and research institutions.
+    %h2 Cooperative Forestry Research Program
+    %p
+      The USDA also funds biomass projects through its Cooperative Forestry Research Program. Unlike the BRDI, this program is not specifically directed at biomass research. Instead, the Cooperative Forestry Research program funds a number of programs related to developing innovative ways to use forest products, including timber biomass. These funds are primarily awarded to state agencies, which then secure projects based on their local needs and priorities. The USDA also consults with local forestry institutions---such as state universities---before awarding grants. These institutions are the primary targets of grant awards in this particular program.
+    %h2 Community Wood Energy Program
+    %p
+      The Community Wood Energy Program is a USDA biomass grant that helps potential biomass energy consumers expand or purchase a community biomass system. These systems might include a heating system shared by multiple homes and apartments or an electric generation system that is powered by wood biomass. In addition to grant funding, technical assistance is also available from the USDA through this program to help with the installation and development of a local wood energy system. Applicants must be able to match the award with non-federal funds for at least 50 percent of the total project costs. Eligible applicants include state, local and tribal agencies.
+#fourthPage.section
+  %h1.header Videos
+  %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/fpHFZvxUvZ8?rel=0", width: "640"}
+  %p.mobile This video is not available on your screen
+#fifthPage.section
+  %h1.header Cost for Installation
+  .costplugin
+    %span#cost.costheader Cost Per Year: $0
+    %p.costtext Based on the average price of $0.08 per kWh
+    %input.dial{type: "text"}/
+  .costfacts
+    %span.costheader{style: "text-align: center;"} Average Cost Facts - Biomass Energy
+    %p The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.
+    %p In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.08 to $0.15 per kilowatt hour (kWh).
+  :javascript
+    $(".dial").knob({
+      'min': 1000,
+      'max': 15000,
+      'step': 10,
+      'width': 250,
+      'fgColor': "black",
+      'thickness': '.1',
+      'angleArc': 250,
+      'angleOffset': -125,
+    	'draw': function () {
+             $(this.i).val(this.cv + 'kW')
+    	},
+      'change' : function (v) {
+      	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.11)).toFixed(2);
+    	}
+    });
+= render "scrolltotop"

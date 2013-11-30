@@ -7,6 +7,7 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'haml'
 gem 'jbuilder', '~> 1.2'
 gem 'pg_search'
 gem "asset_packager", "~> 0.2.0"
