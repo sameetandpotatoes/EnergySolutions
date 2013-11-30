@@ -60,7 +60,6 @@
 	min-height: 800px;
 	background-repeat: no-repeat;
 	opacity: 0.5;
-	-webkit-filter: blur(10px); -moz-filter: blur(10px); -o-filter: blur(10px); -ms-filter: blur(10px); filter: blur(10px);
 }
 .imagecarousel ul li:nth-child(1){
 	background-image: url("/assets/geothermal-075276b7c15388514315dcd1af293b2f.png");
