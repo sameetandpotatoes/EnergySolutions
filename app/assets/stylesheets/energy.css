@@ -17,7 +17,11 @@
 .header{
 	text-align: center;
 	padding-top: 20px;
+	margin-bottom: 0px;
 	font-family: 'Helvetica Neue';
+}
+.video{
+	margin-top: 30px;
 }
 .image{
 	vertical-align: middle;
@@ -78,10 +82,15 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-.windinfo{
+.tiled{
 	display: inline-block;
-	width: 49%;
 	vertical-align: top;
+}
+.windinfo{
+	width: 49%;
+}
+.geoinfo{
+	width: 49%;
 }
 .word-wrap{
 	display: inline-table;

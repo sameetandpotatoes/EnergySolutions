@@ -44,73 +44,74 @@ $(window).load(function(){
 
 	//Open links in new window
 	$("a").click(function() {
-    link_host = this.href.split("/")[2];
-    document_host = document.location.href.split("/")[2];
-    if (link_host != document_host) {
-      window.open(this.href);
-      return false;
-    }
-  });
-  //End links script
-  var links = $('#nav li');
+		link_host = this.href.split("/")[2];
+		document_host = document.location.href.split("/")[2];
+		if (link_host != document_host) {
+			window.open(this.href);
+			return false;
+		}
+	});
+	//End links script
+
+	var links = $('#nav li');
 	var sections = $('.section');
 	var clicked = false;
 
-  $(".smoothScroll").on("click", function(e) {
-	  var $target, target;
-	  e.preventDefault();
-	  target = this.hash;
-	  $target = $(target);
-	  return $("html, body").stop().animate({
-	    scrollTop: $target.offset().top
-	  }, 700, "swing");
+	$(".smoothScroll").on("click", function(e) {
+		 var $target, target;
+		 e.preventDefault();
+		 target = this.hash;
+		 $target = $(target);
+		 return $("html, body").stop().animate({
+		 scrollTop: $target.offset().top
+		 }, 700, "swing");
 	});
 
-	links.click(function() {
-		clicked = true;
-		$('#nav li.active').removeClass('active');
-		$(this).addClass('active');
-		$('div.slider').stop().animate({width:($('#nav li.active').offset().left + $('#nav li.active').width()/2 - $('div.slider-holder').offset().left)-50},{duration: 700, queue: false,complete:function(){
-			clicked = false;
-		}})
+		links.click(function() {
+						clicked = true;
+						$('#nav li.active').removeClass('active');
+						$(this).addClass('active');
+						$('div.slider').stop().animate({width:($('#nav li.active').offset().left + $('#nav li.active').width()/2 - $('div.slider-holder').offset().left)-50},{duration: 700, queue: false,complete:function(){
+										clicked = false;
+						}})
+		});
+
+		var coordinateArr = [];
+	for(var i = 0; i < sections.length; i++){
+			coordinateArr.push($(sections[i]).offset().top);
+	};
+
+	$(window).scroll(function(){
+			if (clicked == true){
+							return;
+			}
+			else{
+						 var top = $(window).scrollTop();
+						 for(var i = 0; i < coordinateArr.length; i++){
+										 if(top >= coordinateArr[coordinateArr.length - 1] - 30){
+														 $('#nav li.active').removeClass('active');
+														 $(links[links.length -1]).addClass('active');
+										 }
+										 if(top >= coordinateArr[i] - 30 && top <= coordinateArr[i+1] + 30){
+														 $('#nav li.active').removeClass('active');
+														 $(links[i]).addClass('active');
+										 };
+						 };
+						 $('div.slider').stop().animate({width:($('#nav li.active').offset().left + $('#nav li.active').width()/2 - $('div.slider-holder').offset().left)-50},{duration: 700, queue: false, complete:function(){
+														clicked = false;
+										}})
+			}
 	});
 
-	var coordinateArr = [];
-  for(var i = 0; i < sections.length; i++){
-  	coordinateArr.push($(sections[i]).offset().top);
-  };
-
-  $(window).scroll(function(){
-  	if (clicked == true){
-  		return;
-  	}
-  	else{
-	  	var top = $(window).scrollTop();
-	  	for(var i = 0;  i < coordinateArr.length; i++){
-	  		if(top >= coordinateArr[coordinateArr.length - 1] - 30){
-	  			$('#nav li.active').removeClass('active');
-	  			$(links[links.length -1]).addClass('active');
-	  		}
-	  		if(top >= coordinateArr[i] - 30 && top <= coordinateArr[i+1] + 30){
-	  			$('#nav li.active').removeClass('active');
-	  			$(links[i]).addClass('active');
-	  		};
-	  	};
-	  	$('div.slider').stop().animate({width:($('#nav li.active').offset().left + $('#nav li.active').width()/2 - $('div.slider-holder').offset().left)-50},{duration: 700, queue: false, complete:function(){
-				clicked = false;
-			}})
-  	}
-  });
-
-	$(document).keydown(function(e) {
-		if (!e) evt = window.event;
-		if (e.keyCode == 39) {
-			$('li.active').next().find('>a').trigger('click');
-		}
-		if (e.keyCode == 37) {
-			$('li.active').prev().find('>a').trigger('click');
-		}
-	})
+		$(document).keydown(function(e) {
+						if (!e) evt = window.event;
+						if (e.keyCode == 39) {
+										$('li.active').next().find('>a').trigger('click');
+						}
+						if (e.keyCode == 37) {
+										$('li.active').prev().find('>a').trigger('click');
+						}
+		})
 
 	//Scroll To Top Script
 	$(window).scroll(function(){
