@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'pg_search'
-gem 'textacular', '~> 3.0', require: 'textacular/rails'
+gem "asset_packager", "~> 0.2.0"
 gem 'newrelic_rpm'
 group :doc do
   gem 'sdoc', require: false
