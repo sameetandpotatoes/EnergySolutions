@@ -69,27 +69,27 @@
 #fifthPage.section{style: "background-image: url('/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png');"}
   %h1.header Cost of Installation
   = image_tag("solar_infographic.png", :class=>"displayimage")
-  .costplugin
-    %span#cost.costheader Cost Per Year: $0
-    %p Based on the average price of $0.31 per kW
-    %input.dial{type: "text"}/
-  :javascript
-    $(".dial").knob({
-      'min': 1000,
-      'max': 15000,
-      'step': 100,
-      'width': 250,
-      'fgColor': "black",
-      'thickness': '.1',
-      'angleArc': 250,
-      'angleOffset': -125,
-    	'draw': function () {
-             $(this.i).val(this.cv + 'kW')
-    	},
-      'change' : function (v) {
-      	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
-    	}
-    });
+  / .costplugin
+  /   %span#cost.costheader Cost Per Year: $0
+  /   %p Based on the average price of $0.31 per kW
+  /   %input.dial{type: "text"}/
+  / :javascript
+  /   $(".dial").knob({
+  /     'min': 1000,
+  /     'max': 15000,
+  /     'step': 100,
+  /     'width': 250,
+  /     'fgColor': "black",
+  /     'thickness': '.1',
+  /     'angleArc': 250,
+  /     'angleOffset': -125,
+  /   	'draw': function () {
+  /            $(this.i).val(this.cv + 'kW')
+  /   	},
+  /     'change' : function (v) {
+  /     	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
+  /   	}
+  /   });
   %h1 Cost of Inverter ($1000/kilowatt)
   %p Cost of Inverter = $1000/kilowatt * Total Maximum Power Level from Alliances (kw)
   %h1 Cost of Solar Panels
@@ -111,6 +111,24 @@
       %td Simple Payback (years)
       %td Payment at 6% Mortgage
       %td Change Monthly Cash Flow
+    %tr
+      %td Solar Domestic Hot Water for Radiant Heating
+      %td $22,500
+      %td $18,750
+      %td $110
+      %td 7.0%
+      %td 14.2
+      %td $112
+      %td $2
+    %tr
+      %td Solar Domestic Hot Water No Space Heating
+      %td $9,000
+      %td $6,300
+      %td $32
+      %td 6.1%
+      %td 16.4
+      %td $38
+      %td $6
     %tr
       %td Solar Photovoltaic Electric Array 6 kW
       %td $48,000

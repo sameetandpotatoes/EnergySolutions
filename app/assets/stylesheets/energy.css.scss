@@ -30,7 +30,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	font-weight: bold;
-	min-width: 150px;
+	min-width: 160px;
 	font-size: 19px;
 	padding-left: 5px;
 }
@@ -43,11 +43,12 @@
 }
 #pro{
 	display: inline-block;
+	margin-left: 10px;
 }
 #con{
 	display: inline-block;
 	float: right;
-	margin-right: 30px;
+	margin-right: 50px;
 }
 .menu{
 	position: fixed;
