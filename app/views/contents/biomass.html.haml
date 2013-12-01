@@ -66,13 +66,9 @@
 #fifthPage.section
   %h1.header Cost for Installation
   .costplugin
-    %span#cost.costheader Cost Per Year: $0
+    %span#cost.costheader Energy Bill Per Year: $0
     %p.costtext Based on the average price of $0.08 per kWh
     %input.dial{type: "text"}/
-  .costfacts
-    %span.costheader{style: "text-align: center;"} Average Cost Facts - Biomass Energy
-    %p The LCOE of biomass-fired power plants range from $0.06 to $0.29 per kWh based on capital costs and feedstock costs.
-    %p In the United States, direct combustion is the most common method of producing heat from biomass. Small-scale biomass electric plants have installed costs of $3,000 to $4,000 per kW, and a levelized cost of energy of $0.08 to $0.15 per kilowatt hour (kWh).
   :javascript
     $(".dial").knob({
       'min': 1000,
@@ -87,7 +83,50 @@
              $(this.i).val(this.cv + 'kW')
     	},
       'change' : function (v) {
-      	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.11)).toFixed(2);
+      	document.getElementById('cost').innerHTML = "Energy Bill Per Year: $" + (v*(0.11)).toFixed(2);
     	}
     });
+  /Biomass Boiler
+  /Thermal buffer
+  /Fuel Storage
+  /Emissions
+  /Chimney
+  %h1.cost-header Biomass Installation Approximation
+  %p.cost-text The biomass boiler size calculator will give you an idea into the size of boiler you will need. Please note that the figures are approximate and we would always recommend that you request an on-site assessment before deciding on the right solution for you.
+  %table.averagecost#biomasstable
+    %tr
+      %td
+      %td Size 1
+      %td Size 2
+      %td Size 3
+    %tr
+      %td Floor Area (m^2)
+      %td 800
+      %td 2500
+      %td 5000
+    %tr
+      %td Boiler Size
+      %td 70 kW
+      %td 200 kW
+      %td 400 kW
+    %tr
+      %td Capital Cost
+      %td $68000
+      %td $163200
+      %td $272000
+    %tr
+      %td Oil Cost
+      %td $12517.44
+      %td $35762.56
+      %td $71526.48
+    %tr
+      %td Pellet Cost
+      %td $7140
+      %td $20400
+      %td $40800
+    %tr
+      %td Renewable Heat Incentive per Year
+      %td $11754.48
+      %td $33583.84
+      %td $51000
 = render "scrolltotop"

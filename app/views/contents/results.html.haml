@@ -60,7 +60,7 @@
 :javascript
   $(document).ready(function(){
     var state=$('.state').text();
-    $("#grants").load("http://www.afdc.energy.gov/laws/state_summary/"+state);
+    $("#moregrants").load("http://www.afdc.energy.gov/laws/state_summary/"+state);
     $.ajax({
     url: 'http://www.afdc.energy.gov/laws/state_summary/'+state,
     type: 'GET',
@@ -71,7 +71,7 @@
       div.innerHTML = headline;
       $(".summary_table ul li a").each(function(){
         var _href = $(this).attr("href");
-        $(this).attr("href", "http://www.afdc.energy.gov"+_href);
+        $(this).attr("href", "http://www.afdc.energy.gov/"+_href);
         $(this).attr("target", "_blank");
       });
     }

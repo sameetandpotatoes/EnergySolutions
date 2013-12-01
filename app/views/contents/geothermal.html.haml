@@ -61,52 +61,88 @@
         .word-wrap
           %p.detailtext
             A geothermal heat pump is usually installed in the home's interior. However, the trenches or geothermal bore holes for the piping can require several hundred feet of open space.
-  #thirdPage.section
-    .text
-      %h1.header Grants
-      %h2 Residential Energy Efficient Property Credit (Section 1122)
-      %p
-        This nonrefundable energy tax credit will help individual taxpayers pay for qualified residential alternative energy equipment, such as solar hot water heaters, geothermal heat pumps and wind turbines. The new law removes some of the previously imposed maximum amounts and allows for a credit equal to 30 percent of the cost of qualified property.
-      %h2 New Clean Renewable Energy Bonds (Section 1111)
-      %p
-        The new law increases the amount of funds available to issue new clean renewable energy bonds from the one-time national limit of $800 million to $2.4 billion. These qualified tax credit bonds can be issued to finance certain types of facilities that generate electricity from renewable sources (for example, wind and solar).
-      %h2 Extension of Renewable Energy Production Tax Credit (Section 1101)
-      %p
-        The new law generally extends the “eligibility dates” of a tax credit for facilities producing electricity from wind, closed-loop biomass, open-loop biomass, geothermal energy, municipal solid waste, qualified hydropower and marine and hydrokinetic renewable energy. The new law extends the "placed in service date" for wind facilities to Dec. 31, 2012. For the other facilities, the placed-in-service date was extended from December 31, 2010 (December 31, 2011 in the case of marine and hydrokinetic renewable energy facilities) to Dec. 31, 2013.
-      %h2 Geothermal Energy Tax Rebate
-      %p
-        Those who install a geothermal heat pump can qualify for a significant rebate from the Internal Revenue Service (IRS) through their tax return. This funding does not provide for the entire cost of the geothermal system, though. Taxpayers may only claim up to 30 percent of the value of a geothermal heat pump--including installation costs. The tax credit is only available for geothermal heat pumps, and can only be applied to systems that are Energy Star certified. Geothermal heat pumps funded under this credit can serve both heating and cooling purposes: geothermal systems use the earth's ability to absorb and retain heat to help stabilize room temperatures. Additionally, this tax credit can be applied to geothermal heat pumps at a residence other than your main home.
-      %h2 Emergency Economic Stabilization Act - 2008
-      %p
-        The 2008 Emergency Economic Stabilization Act may cover up to 30 percent of the costs of the heating system, provided that the system meets geothermal energy requirements established by the federal Energy Star program. The homeowner must provide evidence of the cost of installation cost and the date on which installation was completed. The grant is awarded in the form of a tax incentive for the year in which you applied for the incentive.
-  #fourthPage.section
-    %h1.header Videos
-    %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/_gfb9Mrn3rw?rel=0", width: "640"}
-    %p.mobile This video is not available on your screen
-  #fifthPage.section
-    %h1.header Cost of Installation
-    .costplugin
-      %span#cost.costheader Cost Per Year: $0
-      %p Based on the average price of $0.31 per kW
-      %input.dial{type: "text"}/
-    .costfacts
-      %span.costheader{style: "text-align: center;"} Average Cost Facts - Geothermal Energy
-      %p
-    :javascript
-      $(".dial").knob({
-        'min': 0,
-        'max': 5000,
-        'step': 10,
-        'width': 250,
-        'fgColor': "black",
-        'thickness': '.1',
-        'angleArc': 250,
-        'angleOffset': -125,
-      	'draw': function () {
-               $(this.i).val(this.cv + 'kW')
-      	},
-        'change' : function (v) {
-        	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
-      	}
-      });
+#thirdPage.section
+  .text
+    %h1.header Grants
+    %h2 Residential Energy Efficient Property Credit (Section 1122)
+    %p
+      This nonrefundable energy tax credit will help individual taxpayers pay for qualified residential alternative energy equipment, such as solar hot water heaters, geothermal heat pumps and wind turbines. The new law removes some of the previously imposed maximum amounts and allows for a credit equal to 30 percent of the cost of qualified property.
+    %h2 New Clean Renewable Energy Bonds (Section 1111)
+    %p
+      The new law increases the amount of funds available to issue new clean renewable energy bonds from the one-time national limit of $800 million to $2.4 billion. These qualified tax credit bonds can be issued to finance certain types of facilities that generate electricity from renewable sources (for example, wind and solar).
+    %h2 Extension of Renewable Energy Production Tax Credit (Section 1101)
+    %p
+      The new law generally extends the “eligibility dates” of a tax credit for facilities producing electricity from wind, closed-loop biomass, open-loop biomass, geothermal energy, municipal solid waste, qualified hydropower and marine and hydrokinetic renewable energy. The new law extends the "placed in service date" for wind facilities to Dec. 31, 2012. For the other facilities, the placed-in-service date was extended from December 31, 2010 (December 31, 2011 in the case of marine and hydrokinetic renewable energy facilities) to Dec. 31, 2013.
+    %h2 Geothermal Energy Tax Rebate
+    %p
+      Those who install a geothermal heat pump can qualify for a significant rebate from the Internal Revenue Service (IRS) through their tax return. This funding does not provide for the entire cost of the geothermal system, though. Taxpayers may only claim up to 30 percent of the value of a geothermal heat pump--including installation costs. The tax credit is only available for geothermal heat pumps, and can only be applied to systems that are Energy Star certified. Geothermal heat pumps funded under this credit can serve both heating and cooling purposes: geothermal systems use the earth's ability to absorb and retain heat to help stabilize room temperatures. Additionally, this tax credit can be applied to geothermal heat pumps at a residence other than your main home.
+    %h2 Emergency Economic Stabilization Act - 2008
+    %p
+      The 2008 Emergency Economic Stabilization Act may cover up to 30 percent of the costs of the heating system, provided that the system meets geothermal energy requirements established by the federal Energy Star program. The homeowner must provide evidence of the cost of installation cost and the date on which installation was completed. The grant is awarded in the form of a tax incentive for the year in which you applied for the incentive.
+#fourthPage.section
+  %h1.header Videos
+  %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/_gfb9Mrn3rw?rel=0", width: "640"}
+  %p.mobile This video is not available on your screen
+#fifthPage.section
+  %h1.header Cost of Installation
+  .costplugin
+    %span#cost.costheader Cost Per Year: $0
+    %p Based on the average price of $0.31 per kW
+    %input.dial{type: "text"}/
+  :javascript
+    $(".dial").knob({
+      'min': 1000,
+      'max': 15000,
+      'step': 100,
+      'width': 250,
+      'fgColor': "black",
+      'thickness': '.1',
+      'angleArc': 250,
+      'angleOffset': -125,
+      'draw': function () {
+        $(this.i).val(this.cv + 'kW')
+      },
+      'change' : function (v) {
+        document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
+      }
+    });
+  %h1.cost-header Average Installation System Cost for a 2500 square foot home
+  %p.cost-text Please note that the figures are approximate and we would always recommend that you request an on-site assessment before deciding on the right solution for you.
+  %table.averagecost
+    %tr
+      %td
+      %td Installed Parts and Labor
+      %td Net Cost with Tax Incentives
+      %td Estimated Monthly Savings
+      %td Simple ROI
+      %td Simple Payback (years)
+      %td Payment at 6% Mortgage
+      %td Change Monthly Cash Flow
+    %tr
+      %td Geothermal/Horiz Loop 5 ton & Solar Heating
+      %td $47,500
+      %td $33,250
+      %td $200
+      %td 7.2%
+      %td 13.9
+      %td $199
+      %td $1
+    %tr
+      %td Geothermal/H Loop 5 ton Heat/Cool Radiant
+      %td $29,500
+      %td $20,650
+      %td $120
+      %td 7.0%
+      %td 14.3
+      %td $124
+      %td $4
+    %tr
+      %td Geothermal/Vertical Loop – 6 ton Heat/Cool Air
+      %td $34,000
+      %td $23,800
+      %td $130
+      %td 6.6%
+      %td 15.3
+      %td $143
+      %td $13
 = render "scrolltotop"

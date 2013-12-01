@@ -76,9 +76,6 @@
     %span#cost.costheader Cost Per Year: $0
     %p Based on the average price of $0.04 per kW
     %input.dial{type: "text"}/
-  .costfacts
-    %span.costheader{style: "text-align: center;"} Average Cost Facts - Wind
-    %p After topping out at nearly $0.07/kilowatt-hour in 2009, the average levelized long-term price from wind power sales agreements signed in 2011/2012 – many of which were for projects built in 2012 – fell to around $0.04/kilowatt-hour nationwide.
   :javascript
     $(".dial").knob({
       'min': 1000,
@@ -96,4 +93,34 @@
       	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.04)).toFixed(2);
     	}
     });
+  %h1.cost-header Average Installation System Cost for a 2500 square foot home
+  %p.cost-text Please note that the figures are approximate and we would always recommend that you request an on-site assessment before deciding on the right solution for you.
+  %table.averagecost
+    %tr
+      %td
+      %td Installed Parts and Labor
+      %td Net Cost with Tax Incentives
+      %td Estimated Monthly Savings
+      %td Simple ROI
+      %td Simple Payback (years)
+      %td Payment at 6% Mortgage
+      %td Change Monthly Cash Flow
+    %tr
+      %td 10kW Wind Turbine 120 Ft Guyed Tower
+      %td $57,000
+      %td $39,900
+      %td $200
+      %td 6.0%
+      %td 16.6
+      %td $239
+      %td $39
+    %tr
+      %td 1.7kW Wind Turbine 35 Feet Tower
+      %td $13,000
+      %td $9,100
+      %td $35
+      %td 4.6%
+      %td 21.7
+      %td $55
+      %td $20
 = render "scrolltotop"

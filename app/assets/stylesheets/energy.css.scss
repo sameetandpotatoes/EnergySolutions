@@ -106,6 +106,10 @@
 	font-size: 19px;
 	margin-top: 0px;
 }
+.costtable tr td:first-child{
+	background-color: gray;
+	color: white;
+}
 .cost{
 	padding-bottom: 20px;
 	float: left;
@@ -136,10 +140,17 @@
 .costtext{
 	display: inline-block;
 }
+.cost-header{
+	text-align: center;
+	font-size: 20px;
+}
 .costinput{
 	display: inline-block;
 	width: 40px;
 	font-family: 'Lato';
+}
+#biomasstable td{
+	padding: 10px;
 }
 .title{
 	color: #FFFFFF;
@@ -152,17 +163,17 @@
 	display: none;
 	padding-left: 20px;
 }
-.costfacts{
-	display: inline-block;
-	margin-left: 5%;
-	max-width: 65%;
-}
-.costfacts p{
-	text-indent: 25px;
+.averagecost tr:first-child, .averagecost tr td:first-child{
+	text-align: center;
+	font-weight: bold;
 	font-size: 18px;
 }
+.averagecost tr{
+	text-align: center;
+	border: 1px solid black;
+}
 .video{
-
+	z-index: 10;
 }
 @media all and (max-width: 980px) {
 	#con{
@@ -183,10 +194,15 @@
 	}
 }
 @media all and (max-width: 650px){
-		iframe{
+	iframe{
 			display: none;
-		}
+	}
 	.mobile{
 		display: block;
+	}
+	.averagecost tr:first-child,.averagecost tr td:first-child{
+	text-align: center;
+	font-weight: bold;
+	font-size: 10px;
 	}
 }
