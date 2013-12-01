@@ -89,6 +89,14 @@ $(window).load ->
   while i < sections.length
     coordinateArr.push $(sections[i]).offset().top
     i++
+  $(document).resize ->
+  	i = 0
+  	coordinateArr = []
+  	while i < sections.length
+    	coordinateArr.push $(sections[i]).offset().top
+    	i++
+    top = $(window).scrollTop();
+
   $(window).scroll ->
     if clicked is true
       return
@@ -151,10 +159,10 @@ $(window).load ->
         myLoc = data
 
       error: (XMLHttpRequest, textStatus, errorThrown) ->
-        myLoc = "We are unable to determine your location at this time"
+        myLoc = "We are unable to determine your location at this time."
 
     setTimeout (->
       NProgress.done()
       window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude
-    ), 1000
+    ), 500
 
