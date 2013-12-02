@@ -58,35 +58,42 @@
 	box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
 	display: block;
 	min-height: 800px;
-	background-repeat: no-repeat;
 	opacity: 0.5;
+	z-index: -1;
 }
 .imagecarousel ul li:nth-child(1){
-	background-image: url("/assets/geothermal-075276b7c15388514315dcd1af293b2f.png");
+	background: url("/assets/geothermal-075276b7c15388514315dcd1af293b2f.png") no-repeat center center;
 }
 .imagecarousel ul li:nth-child(2){
-	background-image: url("/assets/solar-46b6cfecb2169a3d14552f90196a56fb.jpg");
+	background: url("/assets/solar-46b6cfecb2169a3d14552f90196a56fb.jpg") no-repeat center center;
 }
 .imagecarousel ul li:nth-child(3){
-	background-image: url("/assets/solar-588b14f01de3029cf161325a427415b5.jpg");
+	background: url("/assets/solar-588b14f01de3029cf161325a427415b5.jpg") no-repeat center center;
 }
 .imagecarousel ul li:nth-child(4){
-	background-image: url("/assets/carouselwind-2b6e053bfbb20a5390c0f3df349444d0.jpg");
+	background: url("/assets/carouselwind-2b6e053bfbb20a5390c0f3df349444d0.jpg") no-repeat center center;
 }
 .imagecarousel ul li:nth-child(5){
-	background-image: url("/assets/wind-adf42dcd750ba3b7a6508b99890b247b.jpg");
+	background: url("/assets/wind-adf42dcd750ba3b7a6508b99890b247b.jpg") no-repeat center center;
 }
 .imagecarousel ul li:nth-child(6){
-	background-image: url("/assets/wind-ee6159e5689bd3475afc83cefc876069.jpg");
+	background: url("/assets/wind-ee6159e5689bd3475afc83cefc876069.jpg") no-repeat center center;
 }
 .imagecarousel ul li:nth-child(7){
-	background-image: url("/assets/solarpanels-84a5f0e1c22b63f08f42c13cff323d08.jpg");
+	background: url("/assets/solarpanels-84a5f0e1c22b63f08f42c13cff323d08.jpg") no-repeat center center;
 }
 .imagecarousel ul li:nth-child(8){
-	background-image: url("/assets/carouselhydro-4b48400ed37f87fd57390933a874ced5.jpg");
+	background: url("/assets/carouselhydro-4b48400ed37f87fd57390933a874ced5.jpg") no-repeat center center;
 }
-.carouselimg{
-	opacity: 0.5;
+.imagecarousel ul li:before{
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	// filter: url(#blur);
+	// filter: blur(3px);
+	// filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 }
 .dots {
   position: absolute;
