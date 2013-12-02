@@ -56,10 +56,8 @@
  	float: left;
 	box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
 	display: block;
-	background-position: cover;
 	min-height: 800px;
 	opacity: 0.5;
-	z-index: -1;
 }
 .imagecarousel ul li:nth-child(1){
 	background: url("/assets/geothermal-37031cf4b4867c757adce9a3dd93192b.jpg") no-repeat center center;
@@ -84,16 +82,6 @@
 }
 .imagecarousel ul li:nth-child(8){
 	background: url("/assets/carouselhydroblurred-4b48400ed37f87fd57390933a874ced5.jpg") no-repeat center center;
-}
-.imagecarousel ul li{
-	filter: blur(5px);
-	-webkit-filter: blur(5px);
-	moz-filter: blur(5px);
-	-o-filter: blur(5px);
-	-ms-filter: blur(5px);
-	// filter: url(#blur);
-	// filter: blur(3px);
-	// filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 }
 .dots {
   position: absolute;
