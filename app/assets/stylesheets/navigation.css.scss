@@ -45,7 +45,7 @@
   -o-transition: color .15s;
   transition: color .15s;
 }
-#cssmenu > ul > li > a:hover {
+#cssmenu > ul > li > a:hover, #cssmenu > ul > li > a:focus {
   color: #ffffff;
 }
 #cssmenu > ul > li > ul {
@@ -70,7 +70,7 @@
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 }
-#cssmenu > ul > li:hover > ul {
+#cssmenu > ul > li:hover > ul, #cssmenu > ul > li:focus > ul {
   opacity: 1;
   top: 65px;
   visibility: visible;
@@ -101,7 +101,7 @@
   -o-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
-#cssmenu ul ul a:hover {
+#cssmenu ul ul a:hover, #cssmenu ul ul a:focus {
   background-color: #f0f0f0;
 }
 #cssmenu ul ul ul {
@@ -125,12 +125,12 @@
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 }
-#cssmenu ul ul > li:hover > ul {
+#cssmenu ul ul > li:hover > ul, #cssmenu ul ul > li:focus > ul {
   opacity: 1;
   left: 190px;
   visibility: visible;
 }
-#cssmenu ul ul a:hover {
+#cssmenu ul ul a:hover, #cssmenu ul ul a:focus {
   background-color: #cc2c24;
   color: #f0f0f0;
 }
