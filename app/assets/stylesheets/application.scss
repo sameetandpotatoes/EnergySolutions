@@ -35,6 +35,9 @@ a {
 #content{
 	padding-left: 30px;
 }
+.home, #content, .special, .footer{
+	display: none;
+}
 footer{
 	text-align: center;
 }
