@@ -6,6 +6,11 @@
 	width: 100%;
 	overflow: hidden;
 }
+.welcome{
+	font-size: 48px;
+	margin-top: 20px;
+	letter-spacing: 3px;
+}
 .footer{
 	font-family: 'Lato';
 	background-color: #232323;
@@ -57,16 +62,16 @@
 	box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
 	display: block;
 	min-height: 800px;
-	opacity: 0.5;
+	opacity: 0.65;
 }
 .imagecarousel ul li:nth-child(1){
-	background: url("/assets/geothermal-37031cf4b4867c757adce9a3dd93192b.jpg") no-repeat center center;
+	background: url("/assets/geothermal-37031cf4b4867c757adce9a3dd93192b.jpg") no-repeat center bottom;
 }
 .imagecarousel ul li:nth-child(2){
-	background: url("/assets/solarblurred-dee3849b75382d9c6b48d45b4b6e06c6.jpg") no-repeat center center;
+	background: url("/assets/solarblurred-dee3849b75382d9c6b48d45b4b6e06c6.jpg") no-repeat center top;
 }
 .imagecarousel ul li:nth-child(3){
-	background: url("/assets/solar-678232b8565dbf6af30df30149351706.jpg") no-repeat center center;
+	background: url("/assets/solar-678232b8565dbf6af30df30149351706.jpg") no-repeat center top;
 }
 .imagecarousel ul li:nth-child(4){
 	background: url("/assets/carouselwindblurred-114117c14ae4813895f8ec52cd4bb81b.jpg") no-repeat center center;

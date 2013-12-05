@@ -20,8 +20,12 @@
     position: absolute;
     text-align: center;
     width: 50px;
-    transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    transform: rotate(-90deg);
     animation: all 150ms ease-in-out 0s;
 }
 #BackToTop:hover span{
