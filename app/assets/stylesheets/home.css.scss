@@ -27,6 +27,7 @@
 	overflow: auto;
 	font-size: 18px;
 	line-height: 24px;
+	margin-bottom: -10px;
 }
 .imagecarousel li {
 	list-style: none;
@@ -48,7 +49,7 @@
 }
 .caption{
 	position: absolute;
-	top: 0px;
+	top: 43%;
 	padding-left: 30px;
 }
 .imagecarousel ul li {
