@@ -28,14 +28,12 @@ carouselFix = ->
 
 $(document).ready ->
   $(".home").css "display", "none"
-  $(".special").css "display", "none"
   $("#content").css "display", "none"
   $(".footer").css "display", "none"
 
 $(window).load ->
   $("#loading").fadeOut 500
   $(".home").fadeIn 1500
-  $("#special").fadeIn 1500
   $("#content").fadeIn 1500
   $(".footer").fadeIn 1500
   carouselFix()
@@ -45,7 +43,7 @@ $(window).load ->
     speed: 1000
 
   $(".imagecarousel").unslider
-    fluid: true
+    fluid: false
     dots: true
     keys: true
     pause: false

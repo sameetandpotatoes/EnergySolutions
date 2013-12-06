@@ -9,8 +9,15 @@
 .welcome{
 	font-family: 'Oswald';
 	font-size: 48px;
-	margin-top: 20px;
-	letter-spacing: 3px;
+	overflow: hidden;
+	margin-top: 50px;
+	max-height: 400px;
+	text-align: center;
+}
+.txt-welcome{
+	font-family: 'Lato';
+	font-size: 20px;
+	text-align: left;
 }
 .footer{
 	font-family: 'Lato';
@@ -31,9 +38,12 @@
 .imagecarousel {
 	position: relative;
 	overflow: auto;
-	font-size: 18px;
-	line-height: 24px;
-	margin-bottom: -10px;
+	// margin-top: 50px;
+	// margin-left: 20px;
+	margin: 50px 20px;
+	float: left;
+	width: 50%;
+	max-height: 450px;
 }
 .imagecarousel li {
 	list-style: none;
@@ -41,60 +51,34 @@
 .imagecarousel ul{
 	padding: 0;
 }
-.imagecarousel h1{
-	color: black;
-	font-size: 40px;
-	line-height: 52px;
-	margin-bottom: -10px;
-	font-family: 'Bree Serif';
+.imagecarousel ul li {
+ 	float: left;
 }
-.imagecarousel p{
+.imagecarousel ul li p{
 	font-family: 'Droid Sans';
 	font-size: 25px;
 	color: white;
-}
-.caption{
-	position: absolute;
-	top: 43%;
-	padding-left: 30px;
-}
-.imagecarousel ul li {
- 	float: left;
-	box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
-	display: block;
-	min-height: 800px;
-	opacity: 0.65;
+	margin-left: 15px;
+	margin-top: 10px;
+	letter-spacing: 3px;
 }
 .imagecarousel ul li:nth-child(1){
-	background: url("/assets/geothermal-37031cf4b4867c757adce9a3dd93192b.jpg") no-repeat center bottom;
+	background: url("/assets/carousel1-bde69131906ae59f9be2c0f9f5b069be.jpg");
 }
 .imagecarousel ul li:nth-child(2){
-	background: url("/assets/solarblurred-dee3849b75382d9c6b48d45b4b6e06c6.jpg") no-repeat center top;
+	background: url("/assets/carousel2-fc6ad4a254c290c46c23b522da761d61.jpg");
 }
 .imagecarousel ul li:nth-child(3){
-	background: url("/assets/solar-678232b8565dbf6af30df30149351706.jpg") no-repeat center top;
+	background: url("/assets/carousel3-2bcfbeed2552a17cfd7a36ba0137b89b.jpg");
 }
 .imagecarousel ul li:nth-child(4){
-	background: url("/assets/carouselwindblurred-114117c14ae4813895f8ec52cd4bb81b.jpg") no-repeat center center;
-}
-.imagecarousel ul li:nth-child(5){
-	background: url("/assets/windblurred-498ed4048cf67f06168e43560f7f9c3d.jpg") no-repeat center center;
-}
-.imagecarousel ul li:nth-child(6){
-	background: url("/assets/wind-a3418564cf258a2a07015e5b05727f61.jpg") no-repeat center center;
-}
-.imagecarousel ul li:nth-child(7){
-	background: url("/assets/solarpanelsblurred-96c22e5da8bb864d002bec5214fd4a68.jpg") no-repeat center center;
-}
-.imagecarousel ul li:nth-child(8){
-	background: url("/assets/carouselhydroblurred-4b48400ed37f87fd57390933a874ced5.jpg") no-repeat center center;
+	background: url("/assets/carousel4-5f1a513cc1e180d540a4769bcf6479f8.jpg");
 }
 .dots {
   position: absolute;
   left: 0px;
   right: 0px;
   bottom: 20px;
-  margin: 0 auto;
   text-align: center;
 }
 .imagecarousel .dots li {

@@ -18,6 +18,9 @@ class ContentsController < ApplicationController
 	end
 	def about
 	end
+	def otherhome
+
+	end
 	def results
 		@state = params[:state]
 		@city = params[:city]
