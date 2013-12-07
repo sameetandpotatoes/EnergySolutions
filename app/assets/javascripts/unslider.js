@@ -90,6 +90,11 @@
 			if(this.opts.fluid) {
 				var resize = function() {
 					_.el.css('width', Math.min(Math.round((_.el.outerWidth() / _.el.parent().outerWidth()) * 100), 100) + '%');
+					//Added this myself
+					this.items.css('width', (100 / this.items.length) + '%');
+					this.el.css({
+						height: this.items.first().outerHeight()
+					});
 				};
 
 				resize();

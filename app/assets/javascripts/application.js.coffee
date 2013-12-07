@@ -43,7 +43,7 @@ $(window).load ->
     speed: 1000
 
   $(".imagecarousel").unslider
-    fluid: false
+    fluid: true
     dots: true
     keys: true
     pause: false

@@ -38,8 +38,6 @@
 .imagecarousel {
 	position: relative;
 	overflow: auto;
-	// margin-top: 50px;
-	// margin-left: 20px;
 	margin: 50px 20px;
 	float: left;
 	width: 50%;
@@ -128,10 +126,6 @@ h6{
 	float: right;
 }
 @media all and (max-width: 700px) {
-	.special{
-		width: 50% !important;
-		left: 20%;
-	}
 	.bpalogo, .w3, .footer{
 		display: none;
 	}
@@ -140,6 +134,7 @@ h6{
 	}
 	.footer{
 		font-size: 8px;
+		height: 10px;
 	}
 	#loading{
 		top: 40%;
@@ -147,5 +142,16 @@ h6{
 	}
 	.home{
 		margin-top: -15px;
+	}
+	.imagecarousel{
+		display: none;
+	}
+	.welcome, .txt-welcome{
+		padding: 20px;
+	}
+	.special{
+		width: 50% !important;
+		margin-bottom: 20px;
+		margin-left: auto;
 	}
 }
