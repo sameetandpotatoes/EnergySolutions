@@ -48,7 +48,6 @@
 #con{
 	display: inline-block;
 	float: right;
-	margin-right: 50px;
 }
 .menu{
 	position: fixed;
@@ -201,6 +200,9 @@
 	}
 	.mobile{
 		display: block;
+	}
+	.displayimage{
+		width: 100%;
 	}
 }
 @media all and (max-width: 900px){
