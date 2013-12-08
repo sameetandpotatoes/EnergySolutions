@@ -61,6 +61,7 @@ window.Scrolling = {
 		$("li.active").next().find(">a").trigger "click"  if e.keyCode is 39
 		$("li.active").prev().find(">a").trigger "click"  if e.keyCode is 37
 		this.clicked = false
+		true
 
 	fadeIn: ->
 		y = $(window).scrollTop()

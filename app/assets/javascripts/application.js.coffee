@@ -59,8 +59,7 @@ $(window).load ->
   $(window).resize ->
     carouselFix()
 
-  $(".special").click ->
-    console.log "Hello"
+  $('.special').click ->
     myLoc = undefined
     $(".home").css "opacity", "0.4"
     NProgress.start()
