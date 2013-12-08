@@ -59,27 +59,3 @@ $(window).load ->
   $(window).resize ->
     carouselFix()
 
-  $('.special').click ->
-    myLoc = undefined
-    $(".home").css "opacity", "0.4"
-    NProgress.start()
-    NProgress.set 0.99
-    YOUR_KEY = "63bec244efb3cba1a6518814444c0595afca5a68035482dd36d5e68f6d4fa5e7"
-    theURL = "http://api.ipinfodb.com/v3/ip-city/?key=" + YOUR_KEY + "&format=json&callback=?"
-    $.ajax
-      type: "POST"
-      url: theURL
-      contentType: "application/json; charset=utf-8"
-      dataType: "json"
-      method: "GET"
-      success: (data) ->
-        myLoc = data
-
-      error: (XMLHttpRequest, textStatus, errorThrown) ->
-        myLoc = "We are unable to determine your location at this time."
-
-    setTimeout (->
-      NProgress.done()
-      window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude
-    ), 500
-
