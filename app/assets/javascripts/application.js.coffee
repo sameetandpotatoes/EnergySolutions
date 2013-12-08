@@ -17,6 +17,7 @@
 #= require knob.js
 #= require viewport.min.js
 #= require xdomainajax.js
+#= require scroll
 
 nonEnergyLinks = ->
   window.location.pathname is "/sources/" or window.location.pathname is "/about/"
@@ -54,88 +55,6 @@ $(window).load ->
     unless link_host is document_host
       window.open @href
       false
-
-  links = $("#nav li")
-  sections = $(".section")
-  clicked = false
-  $(".smoothScroll").on "click", (e) ->
-    $target = undefined
-    target = undefined
-    e.preventDefault()
-    target = @hash
-    $target = $(target)
-    $("html, body").stop().animate
-      scrollTop: $target.offset().top
-    , 700, "swing"
-
-  links.click ->
-    clicked = true
-    $("#nav li.active").removeClass "active"
-    $(this).addClass "active"
-    $("div.slider").stop().animate
-      width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 55
-    ,
-      duration: 700
-      queue: false
-      complete: ->
-        clicked = false
-
-
-  coordinateArr = []
-  i = 0
-
-  while i < sections.length
-    coordinateArr.push $(sections[i]).offset().top
-    i++
-  $(document).resize ->
-  	i = 0
-  	coordinateArr = []
-  	while i < sections.length
-    	coordinateArr.push $(sections[i]).offset().top
-    	i++
-    top = $(window).scrollTop();
-
-  $(window).scroll ->
-    if clicked is true
-      return
-    else
-      top = $(window).scrollTop()
-      i = 0
-
-      while i < coordinateArr.length
-        if top >= coordinateArr[coordinateArr.length - 1] - 30
-          $("#nav li.active").removeClass "active"
-          $(links[links.length - 1]).addClass "active"
-        if top >= coordinateArr[i] - 20 and top <= coordinateArr[i + 1] - 20
-          $("#nav li.active").removeClass "active"
-          $(links[i]).addClass "active"
-        i++
-      $("div.slider").stop().animate
-        width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 55
-      ,
-        duration: 700
-        queue: false
-        complete: ->
-          clicked = false
-
-
-  $(document).keydown (e) ->
-    evt = window.event  unless e
-    $("li.active").next().find(">a").trigger "click"  if e.keyCode is 39
-    $("li.active").prev().find(">a").trigger "click"  if e.keyCode is 37
-
-  $(window).scroll ->
-    y = $(window).scrollTop()
-    if y > 500
-      $("#top").fadeIn "slow"
-    else
-      $("#top").fadeOut "fast"
-    if y > 60
-      $(".nav-holder").css "position", "fixed"
-      $(".nav-holder").css "top", "0"
-    else
-      $(".nav-holder").css "position", "absolute"
-      $(".nav-holder").css "top", "60px"
 
   $(window).resize ->
     carouselFix()
