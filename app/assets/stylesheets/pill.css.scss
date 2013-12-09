@@ -32,6 +32,11 @@
     animation: 0.3s linear 0s normal none infinite nod;
     background: none repeat scroll 0 0 #3C9ADA;
 }
+#top a{
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
 @media all and (max-width: 970px) {
     #BackToTop{
        left: 15px;
