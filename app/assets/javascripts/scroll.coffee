@@ -12,13 +12,16 @@ window.Scrolling = {
 		for section in this.sections
 			this.coordinateArr.push $(section).offset().top
 
+	scrollTo: (top) ->
+		$("html, body").stop().animate
+			scrollTop: top
+		, 700, "swing"
+
 	smoothScroll: (e) ->
 		e.preventDefault()
 		hash = $($(e.currentTarget).children()[0]).prop("hash")
 		target = document.getElementById hash.slice(1)
-		$("html, body").stop().animate
-			scrollTop: $(target).offset().top
-		, 700, "swing"
+		Scrolling.scrollTo $(target).offset().top
 
 	click: (e) ->
 		this.clicked = true
@@ -41,6 +44,9 @@ window.Scrolling = {
 		coordinateArr = Scrolling.coordinateArr
 		top = $(window).scrollTop()
 		for i in [0..coordinateArr.length-1]
+			if top is 0
+				$("#nav li.active").removeClass "active"
+				$(links[0]).addClass "active"
 			if top >= coordinateArr[coordinateArr.length - 1] - 30
 				$("#nav li.active").removeClass "active"
 				$(links[links.length - 1]).addClass "active"
@@ -65,9 +71,9 @@ window.Scrolling = {
 
 	fadeIn: ->
 		y = $(window).scrollTop()
-		if y > 500
+		if y > 500 && $('#top').css('display') is "none" && this.clicked is false
 			$("#top").fadeIn "slow"
-		else
+		else if y <= 500 && $('#top').css('display') is "block"
 			$("#top").fadeOut "fast"
 		if y > 60
 			$(".nav-holder").css "position", "fixed"
@@ -94,3 +100,9 @@ $ ->
 		$(window).scroll ->
 			Scrolling.slider()
 			Scrolling.fadeIn()
+
+		$('span a.smoothScroll').on "click", (e) ->
+			Scrolling.clicked = true
+			$("html, body").stop().animate
+			  scrollTop: 0, 700, "swing"
+			Scrolling.clicked = false
