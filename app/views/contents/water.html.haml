@@ -68,6 +68,8 @@
 #fourthPage.section
   %h1.header Videos
   %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/edEhvmNlYqk?rel=0", width: "640"}
+  .video-description
+    %p The video demonstrates a tour of some of the parts and how hydropower works. Two natural springs provide water which fall at about 500 vertical feet through a mile of pipe and develops 220 psi.
   %p.mobile This video is not available on your screen
 #fifthPage.section
   %h1.header Cost of Installation
@@ -78,7 +80,7 @@
   :javascript
     $(".dial").knob({
       'min': 0,
-      'max': 4990,
+      'max': 5000,
       'step': 10,
       'width': 250,
       'fgColor': "black",

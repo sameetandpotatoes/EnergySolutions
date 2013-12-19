@@ -70,7 +70,7 @@ window.Scrolling = {
 		true
 
 	fadeIn: ->
-		y = $(window).scrollTop()
+		y = $(window).scrollTop();
 		if y > 500 && $('#top').css('display') is "none" && this.clicked is false
 			$("#top").fadeIn "slow"
 		else if y <= 500 && $('#top').css('display') is "block"

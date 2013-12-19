@@ -54,16 +54,13 @@
         %li.last
           %a{href: "/sources/"}
             %span Sources
-        / %li.last
-        /   %a{href: "/about/"}
-        /     %span About Us
     #loading
       = link_to image_tag("ajax-loader.gif")
     - if (current_page?(root_path))
       .home
         = yield
     - else
-      - if (current_page?(:controller => "contents", :action => "about") or current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "compare") or current_page?(:controller => "contents", :action => "otherhome"))
+      - if (current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "compare") or current_page?(:controller => "contents", :action => "otherhome"))
         .home
           = yield
       - else

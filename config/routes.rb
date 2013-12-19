@@ -7,7 +7,6 @@ HomeOwner::Application.routes.draw do
   get 'solar', to: 'contents#solar'
   get 'geothermal', to: 'contents#geothermal'
   get 'biofuel', to: 'contents#biofuel'
-  get 'about', to: 'contents#about'
   get 'sources', to: 'contents#sources'
   get 'compare', to: 'contents#compare'
   get 'search' => 'contents#search'

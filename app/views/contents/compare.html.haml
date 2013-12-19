@@ -5,7 +5,14 @@
   %h1.header Interactive Renewable Energy Map
   .applet
     %iframe#energymap{height: "800", src: "http://renewables-map.nrdcapps.org/?", width: "700"}
-  %h1.header{style: "margin-top:50px;"} Cost vs. Risk
-  = image_tag("costandrisk.jpg", :class => "displayimage costrisk")
+  /%h1.header{style: "margin-top:50px;"} Cost vs. Risk
+  =# image_tag("costandrisk.jpg", :class => "displayimage costrisk")
   %h1.header All Sources
-  = image_tag("all.jpg", :class => "displayimage", :style=> "width: 100%")
+  #map
+    = image_tag("all.jpg", :class => "displayimage", :style=> "width: 100%")
+    %map.navmap
+      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Geo"}
+      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Biofuel"}
+      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Wind"}
+      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Solar"}
+      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Water"}

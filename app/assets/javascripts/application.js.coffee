@@ -26,7 +26,7 @@ home = ->
 carouselFix = ->
   $(".imagecarousel ul li").css "width", $(window).width()
   $(".imagecarousel ul li").css "min-height", $(window).height() - 70
-
+  $(".home").css "height", $(document).height() - 101
 $(document).ready ->
   $(".home").css "display", "none"
   $("#content").css "display", "none"
@@ -37,6 +37,7 @@ $(window).load ->
   $(".home").fadeIn 1500
   $("#content").fadeIn 1500
   $(".footer").fadeIn 1500
+  $('.results').css "display", "block"
   carouselFix()
   NProgress.configure showSpinner: true
   NProgress.configure
@@ -55,6 +56,19 @@ $(window).load ->
     unless link_host is document_host
       window.open @href
       false
+
+  $("#cssmenu ul:first").click ->
+    $("ul:first", this).toggle()
+
+  $(".navmap area").each ->
+    # Assigning an action to the mouseover event
+    $(this).mouseover (e) ->
+      country_id = $(this).attr("id").replace("area_", "")
+      $("#" + country_id).css "display", "block"
+    # Assigning an action to the mouseout event
+    $(this).mouseout (e) ->
+      country_id = $(this).attr("id").replace("area_", "")
+      $("#" + country_id).css "display", "none"
 
   $(window).resize ->
     carouselFix()

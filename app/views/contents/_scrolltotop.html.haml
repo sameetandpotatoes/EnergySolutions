@@ -1,15 +1,3 @@
 #BackToTop
   %span#top
     %a.smoothScroll{href: "#header"} »
-/ :javascript
-/   $(".smoothScroll").on("click", function(e) {
-/     var $target, target;
-/     $target = void 0;
-/     target = void 0;
-/     e.preventDefault();
-/     target = this.hash;
-/     $target = $(target);
-/     return $("html, body").stop().animate({
-/       scrollTop: $target.offset().top
-/     }, 700, "swing");
-/   });
