@@ -1,50 +1,32 @@
 - content_for :head do
   %title Energy Solutions | Home
   %meta{content: "Energy Solutions home page. Resource for homeowners to consult for energy solutions that are practical in their geographical area.", name: "description"}/
-.imagecarousel.has-dots
-  %ul
-    %li
-      %p Wind
-    %li
-      %p Solar
-    %li
-      %p Geothermal
-    %li
-      %p Biofuel
-    %li
-      %p Biomass
-    %li
-      %p Hydropower
 .welcome
-  Welcome Homeowners
-  %p.txt-welcome Homeowners, browse through our most relevant information on all of the possible renewable energy solutions or view the most suitable energy sources in your current location.
-#special.special.button
-  %p Find Energy Near You
-:javascript
-  $(".special").click(function() {
-    var YOUR_KEY, myLoc, theURL;
-    myLoc = void 0;
-    $(".home").css("opacity", "0.4");
-    NProgress.start();
-    NProgress.set(0.99);
-    YOUR_KEY = "63bec244efb3cba1a6518814444c0595afca5a68035482dd36d5e68f6d4fa5e7";
-    theURL = "http://api.ipinfodb.com/v3/ip-city/?key=" + YOUR_KEY + "&format=json&callback=?";
-    $.ajax({
-      type: "POST",
-      url: theURL,
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      method: "GET",
-      success: function(data) {
-        return myLoc = data;
-      },
-      error: function(XMLHttpRequest, textStatus, errorThrown) {
-        return myLoc = "We are unable to determine your location at this time.";
-      }
-    });
-    return setTimeout((function() {
-      NProgress.done();
-      return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
-    }), 500);
-  });
-
+  %h1 Energy Saving for Homeowners
+  .intro-text
+    %i{:class => "fa fa-leaf fa-lg icon"}
+    %p.intro-inline Energy Solutions
+    %p.intro-word-wrap Homeowners, browse through our most relevant information on all of the possible renewable energy solutions.
+  .intro-text
+    %i{:class => "fa fa-sun-o fa-lg icon"}
+    %p.intro-inline The Future Is Here
+    %p.intro-word-wrap View the most suitable energy sources in your current location by getting started below.
+  .intro-text
+    %i{:class => "fa fa-bolt fa-lg icon"}
+    %p.intro-inline The Future Is Here
+    %p.intro-word-wrap View the most suitable energy sources in your current location by getting started below.
+  .imagecarousel.has-dots
+    %ul
+      %li
+        %p Wind
+      %li
+        %p Solar
+      %li
+        %p Geothermal
+      %li
+        %p Biofuel
+      %li
+        %p Biomass
+      %li
+        %p Hydropower
+=render "location"

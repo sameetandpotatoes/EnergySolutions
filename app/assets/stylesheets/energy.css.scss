@@ -1,11 +1,25 @@
 .text h2{
 	border-bottom: 2px solid #1E90FF;
-	font-family: 'Oldenburg';
+	font-family: 'Lato';
 	padding-bottom: 10px;
 	font-size: 20px;
 }
+.icon{
+	float: left;
+	padding: 5px 15px;
+}
+.intro-inline{
+	font-weight: bold;
+	font-size: 20px;
+	text-align: left;
+	margin-left: 15px;
+}
+.intro-word-wrap{
+	margin-left: 60px;
+	text-align: left;
+}
 .section h1{
-	font-family: 'Oswald';
+	font-family: 'Lato';
 }
 .text{
 	padding: 0px 20px;
@@ -24,6 +38,8 @@
 	margin-top: 30px;
 	display: inline-block;
 	width: 50%;
+	min-height: 400px;
+	max-height: 600px;
 }
 .video-description{
 	display: inline;
@@ -52,7 +68,6 @@
 }
 #pro{
 	display: inline-block;
-	margin-left: 10px;
 }
 #con{
 	display: inline-block;
@@ -69,7 +84,7 @@
 	padding: 50px 20px 100px 20px;
 }
 #firstPage{
-	background-color: white;
+	// background-color: white;
 	padding-top: 90px;
 }
 #secondPage{
@@ -159,7 +174,7 @@
 	font-family: 'Lato';
 }
 #biomasstable td{
-	padding: 10px;
+	padding: 5px;
 }
 .title{
 	color: #FFFFFF;
@@ -172,22 +187,37 @@
 	display: none;
 	padding-left: 20px;
 }
-.averagecost tr:first-child, .averagecost tr td:first-child{
-	text-align: center;
-	font-weight: bold;
-	font-size: 18px;
+#geo-table{
+	tr td:first-child{
+		max-width: 130px;
+	}
+	tr:first-child td{
+		max-width: 90px;
+	}
+}
+.averagecost{
 	font-family: 'Lato';
+	tr{
+		text-align: center;
+		border: 1px solid black;
+	}
+	tr:first-child td, tr td:first-child{
+		text-align: center;
+		font-weight: bold;
+		font-size: 19px;
+		font-family: 'Lato';
+		max-width: 50px;
+	}
+	td{
+		font-size: 17px;
+	}
 }
-.averagecost tr{
-	text-align: center;
-	border: 1px solid black;
-}
-@media all and (max-width: 980px) {
+@media all and (max-width: 1000px) {
+	#firstPage{
+		padding: 0px;
+	}
 	#con{
 		float: none;
-	}
-	.menu, .costplugin, .video, .video-description{
-		display: none;
 	}
 	.costfacts{
 		float: none;
@@ -199,25 +229,44 @@
 	.section{
 		padding: 30px 25px;
 	}
+	.procon{
+		margin: 0px;
+	}
+	#cssmenu{
+		margin-top: -21px;
+	}
 }
 @media all and (max-width: 650px){
-	iframe{
-			display: none;
-	}
 	.mobile{
 		display: block;
 	}
 	.displayimage{
 		width: 100%;
+		padding: 0px;
+		margin: 0px;
+	}
+	.averagecost tr:first-child, .averagecost tr td:first-child{
+		text-align: center;
+		font-weight: bold;
+		font-size: 13px;
+		font-family: 'Lato';
+		max-width: 50px;
 	}
 }
 @media all and (max-width: 900px){
-	.averagecost tr:first-child,.averagecost tr td:first-child{
-		text-align: center;
-		font-weight: bold;
-		font-size: 10px;
+	.word-wrap{
+		max-width: 90%;
 	}
-	td{
-		font-size: 10px;
+}
+@media all and (max-width: 700px){
+	.video{
+		width: 100%;
+		height: 400px;
+	}
+	.video-description{
+		float: none;
+		p{
+		width: 100%;
+		}
 	}
 }

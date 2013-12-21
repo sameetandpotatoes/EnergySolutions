@@ -67,33 +67,11 @@
 #fourthPage.section
   .intro
     %h1.header Videos
-    %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/lmy23TdhA9E?rel=0", width: "640"}
-    %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/jT8yswXdxFk?rel=0", width: "640"}
-    %p.mobile These videos are not available on your screen
+    %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/lmy23TdhA9E?rel=0"}
+    %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/jT8yswXdxFk?rel=0"}
 #fifthPage.section
   %h1.header Cost of Installation
-  .costplugin
-    %span#cost.costheader Cost Per Year: $0
-    %p Based on the average price of $0.04 per kW
-    %input.dial{type: "text"}/
-  :javascript
-    $(".dial").knob({
-      'min': 1000,
-      'max': 15000,
-      'step': 10,
-      'width': 250,
-      'fgColor': "black",
-      'thickness': '.1',
-      'angleArc': 250,
-      'angleOffset': -125,
-    	'draw': function () {
-             $(this.i).val(this.cv + 'kW')
-    	},
-      'change' : function (v) {
-      	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.04)).toFixed(2);
-    	}
-    });
-  %h1.cost-header Cost for 2500 Square Foot Home
+  %h1.cost-header Average Installation System Cost - 2500 Square Foot Home
   %p.cost-text Please note that the figures are approximate and we would always recommend that you request an on-site assessment before deciding on the right solution for you.
   %table.averagecost
     %tr

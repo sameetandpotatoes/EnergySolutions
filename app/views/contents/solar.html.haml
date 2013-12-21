@@ -67,51 +67,20 @@
   %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/QDNjArnRL5I?rel=0", width: "640"}
   .video-description
     %p This video provides an extensive demo of how solar powers work to generate electricity for your home.
-  %p.mobile This video is not available on your screen
 #fifthPage.section{style: "background-image: url('/assets/hexagon-5ffcf63051c5913e735f3ee120c50213.png');"}
   %h1.header Cost of Installation
   = image_tag("solar_infographic.png", :class=>"displayimage")
-  / .costplugin
-  /   %span#cost.costheader Cost Per Year: $0
-  /   %p Based on the average price of $0.31 per kW
-  /   %input.dial{type: "text"}/
-  / :javascript
-  /   $(".dial").knob({
-  /     'min': 1000,
-  /     'max': 15000,
-  /     'step': 100,
-  /     'width': 250,
-  /     'fgColor': "black",
-  /     'thickness': '.1',
-  /     'angleArc': 250,
-  /     'angleOffset': -125,
-  /   	'draw': function () {
-  /            $(this.i).val(this.cv + 'kW')
-  /   	},
-  /     'change' : function (v) {
-  /     	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
-  /   	}
-  /   });
-  %h1 Cost of Inverter ($1000/kilowatt)
-  %p Cost of Inverter = $1000/kilowatt * Total Maximum Power Level from Alliances (kw)
-  %h1 Cost of Solar Panels
-  %p Cost of Solar Panels = (Energy Used / Sun Hours) * Average Upfront Cost of Solar Panels ($8000/kilowatt)
-  %h1 Cost of Batteries
-  %p Cost of batteries = 2 * Energy Used * Cost of batteries ($100/kilowatt-hour)
-  %h1 Total Upfront Cost
-  %p Cost of Inverter + Cost of Solar Panels + Cost of Batteries
-  %a{href: "http://www.nmsea.org/Curriculum/7_12/Cost/calculate_solar_cost.htm#Cost%20of%20inverter%20as%20function%20of%20peak%20power%20required"}See the mathematical calculations here.
-  %h1.cost-header Average Installation System Cost for a 2500 square foot home
+  %h1.cost-header Average Installation System Cost - 2500 Square Foot Home
   %p.cost-text Please note that the figures are approximate and we would always recommend that you request an on-site assessment before deciding on the right solution for you.
   %table.averagecost
     %tr
       %td
-      %td Installed Parts and Labor
+      %td Installed Parts
       %td Net Cost with Tax Incentives
-      %td Estimated Monthly Savings
+      %td Monthly Savings
       %td Simple ROI
-      %td Simple Payback (years)
-      %td Payment at 6% Mortgage
+      %td Payback (years)
+      %td Payment (6% Mortgage)
       %td Change Monthly Cash Flow
     %tr
       %td Solar Domestic Hot Water for Radiant Heating

@@ -14,7 +14,6 @@
 #= require jquery_ujs
 #= require nprogress.js
 #= require unslider.js
-#= require knob.js
 #= require viewport.min.js
 #= require xdomainajax.js
 #= require scroll

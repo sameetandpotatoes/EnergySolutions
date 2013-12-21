@@ -5,7 +5,6 @@
   .intro
     = image_tag("geo 1.jpg", :class => "tiled geoinfo")
     = image_tag("geo 2.jpg", :class => "tiled geoinfo")
-    =# image_tag("geodiagram.jpg", :class => "displayimage")
 #secondPage.section.active
   .procon
     %h1.header Advantages and Disadvantages
@@ -84,44 +83,22 @@
   %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/_gfb9Mrn3rw?rel=0", width: "640"}
   .video-description
     %p The video previews the installation of geothermal energy in a home in New Jersey.
-  %p.mobile This video is not available on your screen
 #fifthPage.section
   %h1.header Cost of Installation
-  .costplugin
-    %span#cost.costheader Cost Per Year: $0
-    %p Based on the average price of $0.31 per kW
-    %input.dial{type: "text"}/
-  :javascript
-    $(".dial").knob({
-      'min': 1000,
-      'max': 15000,
-      'step': 100,
-      'width': 250,
-      'fgColor': "black",
-      'thickness': '.1',
-      'angleArc': 250,
-      'angleOffset': -125,
-      'draw': function () {
-        $(this.i).val(this.cv + 'kW')
-      },
-      'change' : function (v) {
-        document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
-      }
-    });
   %h1.cost-header Cost for 2500 Square Foot Home
   %p.cost-text Please note that the figures are approximate and we would always recommend that you request an on-site assessment before deciding on the right solution for you.
-  %table.averagecost
+  %table.averagecost#geo-table
     %tr
       %td
       %td Installed Parts
       %td Net Cost with Tax Breaks
       %td Monthly Savings
-      %td Simple ROI
-      %td Simple Payback (years)
-      %td Payment at 6% Mortgage
+      %td ROI
+      %td Payback (years)
+      %td Payment (6% Mortgage)
       %td Monthly Cash Flow
     %tr
-      %td Horiz Loop – 5 ton & Solar Heating
+      %td Horizontal Loop / 5 ton / Solar Heating
       %td $47,500
       %td $33,250
       %td $200
@@ -130,7 +107,7 @@
       %td $199
       %td $1
     %tr
-      %td Horiz Loop – 5 ton Heat/Cool Radiant
+      %td Horizontal Loop / 5 ton Heat & Cool Radiant
       %td $29,500
       %td $20,650
       %td $120
@@ -139,7 +116,7 @@
       %td $124
       %td $4
     %tr
-      %td Vertical Loop – 6 ton Heat/Cool Air
+      %td Vertical Loop / 6 ton Heat & Cool Air
       %td $34,000
       %td $23,800
       %td $130
