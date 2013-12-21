@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'pg_search'
 gem "asset_packager", "~> 0.2.0"
 gem 'newrelic_rpm'
+gem 'sitemap_generator'
 group :doc do
   gem 'sdoc', require: false
 end

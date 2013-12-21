@@ -1,15 +1,14 @@
 HomeOwner::Application.routes.draw do
-  root 'contents#home'
-  get 'otherhome', to: 'contents#otherhome'
-  get 'biomass', to: 'contents#biomass'
-  get 'water', to: 'contents#water'
-  get 'wind', to: 'contents#wind'
-  get 'solar', to: 'contents#solar'
-  get 'geothermal', to: 'contents#geothermal'
-  get 'biofuel', to: 'contents#biofuel'
+  root 'contents#home', as: 'home'
+  get 'biomass', to: 'contents#biomass', as: 'biomass'
+  get 'water', to: 'contents#water', as: 'water'
+  get 'wind', to: 'contents#wind', as: 'wind'
+  get 'solar', to: 'contents#solar', as: 'solar'
+  get 'geothermal', to: 'contents#geothermal', as: 'geothermal'
+  get 'biofuel', to: 'contents#biofuel', as: 'biofuel'
+  get 'sources', to: 'contents#sources', as: 'sources'
+  get 'compare', to: 'contents#compare', as: 'compare'
+  get 'view' => 'contents#results', :via => :post, as: 'results'
+
   get '/robots.txt' => 'contents#robots'
-  get 'sources', to: 'contents#sources'
-  get 'compare', to: 'contents#compare'
-  get 'search' => 'contents#search'
-  get 'view' => 'contents#results', :via => :post
 end
