@@ -6,7 +6,8 @@
 }
 .icon{
 	float: left;
-	padding: 5px 15px;
+	padding: 5px;
+	min-width: 60px;
 }
 .intro-inline{
 	font-weight: bold;
@@ -15,7 +16,7 @@
 	margin-left: 15px;
 }
 .intro-word-wrap{
-	margin-left: 60px;
+	margin-left: 90px;
 	text-align: left;
 }
 .section h1{
