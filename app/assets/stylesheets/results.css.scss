@@ -50,3 +50,11 @@
 .copybold{
 	font-family: 'Lato';
 }
+@media all and (max-width: 650px){
+	.results-inline{
+		display: inline;
+	}
+	.results-energy{
+		padding-bottom: 30px;
+	}
+}

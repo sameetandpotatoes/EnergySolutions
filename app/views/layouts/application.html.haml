@@ -24,7 +24,7 @@
       ga('send', 'pageview');
   %body
     %header#header
-      %a.link{href: "/"} Energy Solutions
+      %a.link{href: "/"} Pure Energy
     #cssmenu
       %ul
         %li.has-sub
@@ -42,19 +42,19 @@
                 %span Geothermal
             %li
               %a{href: "/water/"}
-                %span Hydroelectric
+                %span Hydropower
             %li
               %a{href: "/solar/"}
-                %span Solar Photovoltaic
+                %span Solar PV
             %li
               %a{href: "/wind/"}
-                %span Wind
-            %li.last
+                %span Wind Turbines
+            %li.last#compare
               %a{href: "/compare/"}
                 %span Compare All
         %li.last
           %a{href: "/sources/"}
-            %span Sources
+            %span References
     #loading
       = link_to image_tag("ajax-loader.gif")
     - if (current_page?(root_path))
@@ -69,7 +69,7 @@
         #content
           = yield
     %footer.footer
-      Copyright © Energy Solutions 2013. All Rights Reserved.
+      Copyright © Pure Energy 2013-2014. All Rights Reserved.
       \#{image_tag("BPA.jpg", :class=>"bpalogo", :width=>"100", :height => "50")}
       %a{href: "http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pure-energy.org%2F"}
         %img.w3{alt: "Valid HTML/CSS!", src: "http://jigsaw.w3.org/css-validator/images/vcss"}/

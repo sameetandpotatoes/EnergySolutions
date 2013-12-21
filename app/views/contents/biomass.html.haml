@@ -66,27 +66,6 @@
     %p The video provides abundant information on the benefits and prime locations regarding the installation of biomass in your home.
 #fifthPage.section
   %h1.header Cost for Installation
-  .costplugin
-    %span#cost.costheader Energy Bill Per Year: $0
-    %p.costtext Based on the average price of $0.08 per kWh
-    %input.dial{type: "text"}/
-  :javascript
-    $(".dial").knob({
-      'min': 0,
-      'max': 15000,
-      'step': 10,
-      'width': 250,
-      'fgColor': "black",
-      'thickness': '.1',
-      'angleArc': 250,
-      'angleOffset': -125,
-    	'draw': function () {
-             $(this.i).val(this.cv + 'kW')
-    	},
-      'change' : function (v) {
-      	document.getElementById('cost').innerHTML = "Energy Bill Per Year: $" + (v*(0.11)).toFixed(2);
-    	}
-    });
   /Biomass Boiler
   /Thermal buffer
   /Fuel Storage

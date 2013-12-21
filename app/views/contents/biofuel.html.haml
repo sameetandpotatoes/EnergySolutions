@@ -62,25 +62,4 @@
     %p This video walks through the steps of making biodiesel at home, allowing you to drive your car at $0.75 per gallon.
 #fifthPage.section
   %h1.header Cost of Installation
-  .costplugin
-    %span#cost.costheader Cost Per Year: $0
-    %p Based on the average price of $0.31 per kW
-    %input.dial{type: "text"}/
-  :javascript
-    $(".dial").knob({
-      'min': 0,
-      'max': 5000,
-      'step': 10,
-      'width': 250,
-      'fgColor': "black",
-      'thickness': '.1',
-      'angleArc': 250,
-      'angleOffset': -125,
-    	'draw': function () {
-             $(this.i).val(this.cv + 'kW')
-    	},
-      'change' : function (v) {
-      	document.getElementById('cost').innerHTML = "Cost Per Year: $" + (v*(0.18 + 0.43)/2).toFixed(2);
-    	}
-    });
 = render "scrolltotop"

@@ -140,17 +140,24 @@
   }
   #cssmenu ul li a {
     font-size: 8px;
-    margin: 0;
   }
   #cssmenu > ul > li{
     margin-left: 0px;
     margin-top: -10px;
   }
+  #cssmenu > ul > li > a{
+    padding: 15px 10px;
+  }
   #cssmenu ul li a span{
     font-size: 12px;
   }
   #cssmenu{
-    margin-top: -15px;
+    position: relative;
+    top: -50px;
+    float: right;
+  }
+  #compare{
+    display: none;
   }
 }
 
