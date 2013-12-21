@@ -18,7 +18,7 @@ class ContentsController < ApplicationController
 	end
 	def about
 	end
-	def otherhome
+	def robots
 
 	end
 	def results
