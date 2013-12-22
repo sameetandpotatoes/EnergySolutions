@@ -1,12 +1,10 @@
 - content_for :head do
-  %title Energy Solutions | Compare
+  %title Pure Energy | Compare
   %meta{content: "Renewable energy map, cost versus risk analysis of each renewable energy source. A brief overview of the cost and use of each renewable energy resource for homeowners.", name: "description"}/
 #first
   %h1.header Interactive Renewable Energy Map
   .applet
     %iframe#energymap{height: "800", src: "http://renewables-map.nrdcapps.org/?", width: "700"}
-  /%h1.header{style: "margin-top:50px;"} Cost vs. Risk
-  =# image_tag("costandrisk.jpg", :class => "displayimage costrisk")
   %h1.header All Sources
   #map
     = image_tag("all.jpg", :class => "displayimage", :style=> "width: 100%")
