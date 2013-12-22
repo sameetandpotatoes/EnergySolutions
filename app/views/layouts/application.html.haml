@@ -57,7 +57,7 @@
             %span References
     #loading
       = link_to image_tag("ajax-loader.gif")
-    - if (current_page?(root_path))
+    - if (current_page?(home_path))
       .home
         = yield
     - else
