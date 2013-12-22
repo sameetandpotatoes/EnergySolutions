@@ -3,7 +3,7 @@
   %meta{content: "Hydro-power or water power is power derived from the energy of falling water and running water, which may be harnessed for useful purposes.", name: "description"}/
 #firstPage.section{style: "background-color: #EDF3F4;"}
   .intro
-    = image_tag("hydroelectric power.jpg", :class => "displayimage", :style => "width: 60%")
+    = image_tag("hydroelectric power.jpg", :class => "displayimage")
 #secondPage.section.active
   .procon
     %h1.header Advantages and Disadvantages
@@ -71,6 +71,7 @@
   .video-description
     %p The video demonstrates a tour of some of the parts and how hydropower works. Two natural springs provide water which fall at about 500 vertical feet through a mile of pipe and develops 220 psi.
   %p.mobile This video is not available on your screen
-#fifthPage.section
+#fifthPage.section{:style => "padding: 50px 10px 150px 10px; background-color: white;"}
   %h1.header Cost of Installation
+  = image_tag "water-cost.png", :class => "displayimage"
 = render "scrolltotop"

@@ -20,7 +20,7 @@
         %p.inline No Global Warming
         .word-wrap
           %p.detailtext
-            Ethanol and biodiesel only emit back to the environment the carbon dioxide that their source plants absorbed in the first place.
+            Ethanol and biodiesel only emit back to the environment the carbon dioxide that their source plants absorbed in the first place. Also, less air pollutants and less greenhouse gas emissions.
       .procons
         = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
         %p.inline Cheap Feedstocks
@@ -60,6 +60,8 @@
   %iframe.video{src: "//www.youtube-nocookie.com/embed/pL-M2IzYGuU?rel=0",allowfullscreen: ""}
   .video-description
     %p This video walks through the steps of making biodiesel at home, allowing you to drive your car at $0.75 per gallon.
-#fifthPage.section
+#fifthPage.section{:style => "padding: 50px 10px 150px 10px; background-color: white;"}
   %h1.header Cost of Installation
+  = image_tag "biofuel-cost.png", :class => "displayimage"
+  = image_tag "biodiesel-cost.png", :class => "displayimage"
 = render "scrolltotop"
