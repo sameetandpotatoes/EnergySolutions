@@ -7,10 +7,10 @@
     %iframe#energymap{height: "800", src: "http://renewables-map.nrdcapps.org/?", width: "700"}
   %h1.header All Sources
   #map
-    = image_tag("all.jpg", :class => "displayimage", :style=> "width: 100%")
-    %map.navmap
-      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Geo"}
-      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Biofuel"}
-      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Wind"}
-      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Solar"}
-      %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Water"}
+    = image_tag("all.jpg", :class => "displayimage", :style=> "width: 100%", :usemap => "#energymap")
+    %map.navmap{:name => "energymap"}
+      %area{:shape => "rect", :coords => "20,200,400,450", :href => "/assets/Hydro-Summary-aedb80be103143965e23c9b9a9089f0a.png", :alt => "Water"}
+      / %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Biofuel"}
+      / %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Wind"}
+      / %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Solar"}
+      / %area{:shape => "rect", :coords => "0,0,500,600", :href => "http://www.google.com", :alt => "Water"}

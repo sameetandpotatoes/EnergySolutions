@@ -61,7 +61,7 @@
       .home
         = yield
     - else
-      - if (current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "compare") or current_page?(:controller => "contents", :action => "otherhome"))
+      - if (current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "compare"))
         .home
           = yield
       - else
