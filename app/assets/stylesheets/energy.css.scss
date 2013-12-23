@@ -200,7 +200,12 @@
 	font-family: 'Lato';
 	tr{
 		text-align: center;
-		border: 1px solid black;
+		border-top-width: 2px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 2px;
+    border-style: solid;
+    border-color: #082F70;
 	}
 	tr:first-child td, tr td:first-child{
 		text-align: center;
@@ -213,6 +218,9 @@
 		font-size: 17px;
 		padding: 10px;
 	}
+}
+.hidden{
+	display: none;
 }
 @media all and (max-width: 1000px) {
 	#firstPage{

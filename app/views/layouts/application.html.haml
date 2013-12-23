@@ -52,16 +52,19 @@
             %li.last#compare
               %a{href: "/compare/"}
                 %span Compare All
-        %li.last
+        %li
           %a{href: "/sources/"}
             %span References
+        %li.last
+          %a{href: "/about/"}
+            %span About
     #loading
       = link_to image_tag("ajax-loader.gif")
     - if (current_page?(home_path))
       .home
         = yield
     - else
-      - if (current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "compare"))
+      - if (current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "compare") or current_page?(:controller => "contents", :action => "about"))
         .home
           = yield
       - else

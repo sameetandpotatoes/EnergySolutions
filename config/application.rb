@@ -21,5 +21,6 @@ module HomeOwner
     config.assets.enabled = true
     config.assets.js_compressor = :uglifier
     config.assets.css_compressor = :sass
+    config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
   end
 end

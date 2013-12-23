@@ -9,6 +9,6 @@ HomeOwner::Application.routes.draw do
   get 'sources', to: 'contents#sources', as: 'sources'
   get 'compare', to: 'contents#compare', as: 'compare'
   get 'view' => 'contents#results', :via => :post, as: 'results'
-
+  get 'about', to: 'contents#about'
   get '/robots.txt' => 'contents#robots'
 end

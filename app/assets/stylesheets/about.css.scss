@@ -3,6 +3,9 @@
     content: "";
     display: table;
 }
+.averagecost tr:first-child td{
+	max-width: 150px !important;
+}
 .contact{
 	border-radius: 50%;
 	display: inline;

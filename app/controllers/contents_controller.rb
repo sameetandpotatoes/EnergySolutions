@@ -1,5 +1,6 @@
 class ContentsController < ApplicationController
 	include ApplicationHelper
+	caches_page :biomass, :water, :wind, :solar, :geothermal, :biofuel, :about, :home
 	def home
 	end
 	def biomass
@@ -15,8 +16,6 @@ class ContentsController < ApplicationController
 	def biofuel
 	end
 	def sources
-	end
-	def about
 	end
 	def robots
 		robots = File.read(Rails.root + "config/robots.#{Rails.env}.txt")
