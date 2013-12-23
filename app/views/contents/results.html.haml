@@ -33,6 +33,13 @@
     - else
       = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
       %p.results-inline Biomass Energy will not work well in your location.
+  .results-energy
+    - if (@water)
+      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Hydropower Energy is a good fit for your location.
+    - else
+      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
+      %p.results-inline Hydropower Energy will not work well in your location.
 %script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCSLTNWsGK06_1V4Nf-O1AlOR5X0iSuxY8&sensor=false", type: "text/javascript"}
 :javascript
   var map;
@@ -88,9 +95,9 @@
       var headline = $(res.responseText).find('.summary_table').html();
       var div = document.getElementById('moregrants');
       div.innerHTML = headline;
-      $(".summary_table ul li a").each(function(){
+      $("#moregrants a").each(function(){
         var _href = $(this).attr("href");
-        $(this).attr("href", "http://www.afdc.energy.gov/"+_href);
+        $(this).attr("href", "http://www.afdc.energy.gov"+_href);
         $(this).attr("target", "_blank");
       });
     }

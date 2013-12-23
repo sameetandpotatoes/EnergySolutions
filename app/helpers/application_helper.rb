@@ -71,4 +71,8 @@ module ApplicationHelper
 		good_states=["Oregon","Idaho","Wyoming","Colorado","New Mexico","Arizona","California","Nevada","Utah"]
 		good_states.include?(state)
 	end
+	def goodForWater(state)
+		good_states=["Wisconsin","Illinois","Indiana","Kentucky","Ohio","Pennyslvania","New York","Louisiana"]
+		good_states.include?(state)
+	end
 end
