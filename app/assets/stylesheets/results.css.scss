@@ -73,14 +73,26 @@
 .copybold{
 	font-family: 'Lato';
 }
+@media all and (max-width: 1024px){
+	#map-canvas{
+		width: 95% !important;
+		display: block;
+		position: relative;
+		margin: 0 auto;
+	}
+	.results{
+		min-height: 0px;
+	}
+}
 @media all and (max-width: 650px){
 	.results{
 		margin-top: -30px;
 	}
 	.results-inline{
 		display: inline;
+		padding-left: 5px;
 	}
-	.results-energy{
-		padding-bottom: 30px;
+	#map-canvas{
+		display: none;
 	}
 }

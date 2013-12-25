@@ -1,8 +1,11 @@
 :javascript
   var map;
   function initialize() {
+    var zoomLevel = 4;
+    if ($(window).width() < 1000)
+      zoomLevel = 2;
     var mapOptions = {
-      zoom: 4,
+      zoom: zoomLevel,
       draggable: false,
       center: new google.maps.LatLng(39.8282,-98.5795)
     };
