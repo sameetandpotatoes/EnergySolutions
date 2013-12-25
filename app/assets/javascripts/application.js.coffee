@@ -17,7 +17,7 @@
 #= require viewport.min.js
 #= require xdomainajax.js
 #= require scroll
-
+#= require maps.js
 nonEnergyLinks = ->
   window.location.pathname is "/sources/" or window.location.pathname is "/about/"
 home = ->
@@ -58,16 +58,6 @@ $(window).load ->
 
   $("#cssmenu ul:first").click ->
     $("ul:first", this).toggle()
-
-  $(".navmap area").each ->
-    # Assigning an action to the mouseover event
-    $(this).mouseover (e) ->
-      # country_id = $(this).attr("id").replace("area_", "")
-      # $("#" + country_id).css "display", "block"
-    # Assigning an action to the mouseout event
-    $(this).mouseout (e) ->
-      # country_id = $(this).attr("id").replace("area_", "")
-      # $("#" + country_id).css "display", "none"
 
   $(window).resize ->
     carouselFix()

@@ -1,0 +1,58 @@
+:javascript
+  var map;
+  function initialize() {
+    var mapOptions = {
+      zoom: 4,
+      draggable: false,
+      center: new google.maps.LatLng(39.8282,-98.5795)
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+    createCircle("purple",map, new google.maps.LatLng(document.getElementById("lat").innerHTML, document.getElementById("long").innerHTML), 75000);
+
+    var sources = $('#energy').first().data("id");
+    sources = sources.substring(1, sources.length -1);
+    array = sources.split(",");
+    for(var index in (sources.split(","))){
+      pair = array[index];
+      var energy = pair.split("=>")[0];
+      energy = energy.substring(1,energy.length);
+      if (index > 0){ energy = energy.substring(1,energy.length);}
+      var conditional = pair.split("=>")[1];
+      if (conditional == "true"){
+        if (energy == "Wind"){
+          createCircle("gray", map, new google.maps.LatLng(40, -114), 999999);
+          createCircle("gray", map, new google.maps.LatLng(40, -74), 700000);
+        }
+        else if (energy == "Solar"){
+          createCircle("#FF0000", map, new google.maps.LatLng(36.5, -112), 910000);
+          createCircle("#FF0000", map, new google.maps.LatLng(30.5, -85), 600000);
+          createCircle("#FF0000", map, new google.maps.LatLng(45.9, -89.5), 500000);
+        }
+        else if (energy == "Biomass"){
+          createCircle("green", map, new google.maps.LatLng(45, -70.6), 400000);
+          createCircle("green", map, new google.maps.LatLng(45, -120.6), 400000);
+        }
+        else if (energy == "Geothermal"){
+          createCircle("orange", map, new google.maps.LatLng(38, -114), 900000);
+        }
+        else if (energy == "Hydropower"){
+          createCircle("blue", map, new google.maps.LatLng(40.7, -116.5), 800000);
+          createCircle("blue", map, new google.maps.LatLng(39.7, -76.6), 900000);
+        }
+      }
+    }
+  }
+  function createCircle(color, map, center, radius){
+    new google.maps.Circle({
+      strokeColor: color,
+      strokeOpacity: 0.9,
+      strokeWeight: 3,
+      fillColor: color,
+      fillOpacity: 0.1,
+      map: map,
+      center: center,
+      radius: radius
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);

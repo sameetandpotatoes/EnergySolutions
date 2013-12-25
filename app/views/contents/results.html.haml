@@ -2,61 +2,32 @@
   %title Pure Energy | Results
   %meta{content: "Pure Energy results page that shows homeowners to view grants in their current state.", name: "description"}/
 %p.state{style: "display: none;"}= @state
-%div.results
-  %h1.header-results
-    Renewable Energy Sources Available in #{@city.titlecase}, #{@state}
-  .results-energy
-    - if (@wind)
-      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Wind Energy is a good fit for your location.
-    - else
-      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Wind Energy will not work well in your location.
-  .results-energy
-    - if (@solar)
-      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Solar Energy is a good fit for your location.
-    - else
-      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Solar Energy will not work well in your location.
-  .results-energy
-    - if (@geo)
-      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Geothermal Energy is a good fit for your location.
-    - else
-      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Geothermal Energy will not work well in your location.
-  .results-energy
-    - if (@biomass)
-      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Biomass Energy is a good fit for your location.
-    - else
-      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Biomass Energy will not work well in your location.
-  .results-energy
-    - if (@water)
-      = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Hydropower Energy is a good fit for your location.
-    - else
-      = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-      %p.results-inline Hydropower Energy will not work well in your location.
-%script{src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCSLTNWsGK06_1V4Nf-O1AlOR5X0iSuxY8&sensor=false", type: "text/javascript"}
+%p#lat{style: "display: none;"}= @lat
+%p#long{style: "display: none;"}= @long
+%p#energy{style: "display: none;", 'data-id' => "#{@energy}"}
 :javascript
-  var map;
-  function initialize() {
-      var latlng = new google.maps.LatLng(57.0442, 9.9116);
-      var settings = {
-          zoom: 15,
-          center: latlng,
-          mapTypeControl: true,
-          mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-          navigationControl: true,
-          navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      map = new google.maps.Map(document.getElementById("map_canvas"), settings);
-  };
-  google.maps.event.addDomListener(window, 'load', initialize);
+  $(document).ready(function(){
+    var energies = document.getElementsByClassName("energy-type");
+    var energytext = document.getElementsByClassName("energy");
+    for (var index in energies){
+      var text = energies[index].innerHTML;
+      if (text != null){
+        $(energies[index]).addClass(text.toLowerCase());
+        $(energytext[index]).addClass(text.toLowerCase());
+      }
+    }
+  });
+.results
+  %h1.header-results
+    Renewable Energy Sources Available in
+    %span #{@city.titlecase}, #{@state}
+  - @energy.each do |k,v|
+    .results-energy
+      - if (v)
+        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
+        %p.results-inline.energy-type#first #{k}
+        %p.results-inline.energy Energy
+= render "map"
 #map-canvas
 %h1.header-results
   Grants near #{@city.titlecase}, #{@state}

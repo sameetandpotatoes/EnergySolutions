@@ -34,6 +34,7 @@ class ContentsController < ApplicationController
 		@biomass= goodForBiomass(@state.to_s)
 		@geo= goodForGeo(@state.to_s)
 		@water= goodForWater(@state.to_s)
+		@energy = {Wind: @wind, Solar: @solar, Biomass: @biomass, Geothermal: @geo, Hydropower: @water}
 		@state = us_states(@state.to_s)
 		@state = @state.strip
 	end
