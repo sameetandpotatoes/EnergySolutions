@@ -78,9 +78,11 @@ window.Scrolling = {
 		if y > 60
 			$(".nav-holder").css "position", "fixed"
 			$(".nav-holder").css "top", "0"
+			$("#BackToTop").css "top", "10px"
 		else
 			$(".nav-holder").css "position", "absolute"
 			$(".nav-holder").css "top", "60px"
+			$("#BackToTop").css "top", "70px"
 
 }
 

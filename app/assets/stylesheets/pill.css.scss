@@ -4,7 +4,7 @@
     width: 48px;
     position: fixed;
     left: 40px;
-    top: 2%;
+    top: 70px;
     z-index: 900;
 }
 #BackToTop > span {
@@ -24,8 +24,6 @@
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
-    // filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-    // transform: rotate(-90deg);
     animation: all 150ms ease-in-out 0s;
 }
 #BackToTop:hover > span{
