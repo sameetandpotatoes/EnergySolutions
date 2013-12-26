@@ -32,7 +32,7 @@ window.Scrolling = {
 		this.clicked = false
 
 	slider: ->
-		if this.clicked is false
+		if this.clicked is true
 			clearTimeout $.data(window, 'scrollTimer')
 			$.data window, 'scrollTimer', setTimeout(->
 				Scrolling.activateLink()
