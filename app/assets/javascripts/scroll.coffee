@@ -74,7 +74,7 @@ window.Scrolling = {
 		if y > 500 && $('#top').css('display') is "none" && this.clicked is false
 			$("#top").fadeIn "slow"
 		else if y <= 500 && $('#top').css('display') is "block"
-			$("#top").fadeOut "fast"
+			$("#top").fadeOut "slow"
 		if y > 60
 			$(".nav-holder").css "position", "fixed"
 			$(".nav-holder").css "top", "0"
