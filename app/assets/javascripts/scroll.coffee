@@ -32,7 +32,7 @@ window.Scrolling = {
 		this.clicked = false
 
 	slider: ->
-		if this.clicked is true
+		if this.clicked is false
 			clearTimeout $.data(window, 'scrollTimer')
 			$.data window, 'scrollTimer', setTimeout(->
 				Scrolling.activateLink()
@@ -56,7 +56,7 @@ window.Scrolling = {
 
 	animateSlider: ->
 		$("div.slider").stop().animate
-			width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 55
+			width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 49
 			duration: 300
 			queue: false
 			complete: ->
