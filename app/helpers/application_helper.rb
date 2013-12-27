@@ -56,23 +56,34 @@ module ApplicationHelper
 		hash[state]
 	end
 	def goodForWind(state)
-		good_states=["Iowa","California","Illinois","Minnesota","Montana","North Dakota","South Dakota","Wyoming","Nebraska","Kansas","Oklahoma","Missouri","New Mexico","Alaska"]
-		good_states.include?(state)
+		good_states=["Iowa","Illinois","Texas","Washington","Indiana",
+                 "Minnesota","New York","Oklahoma","Oregon",
+                 "California","North Dakota","Pennsylvania",
+                 "Colorado","Kansas","Wyoming"]
+  	good_states.include?(state)
 	end
 	def goodForSolar(state)
-		good_states=["Michigan","Texas","California","Colorado","Tennessee","Wisconsin","Minnesota","Florida","Pennsylvania","Oregon","Utah","Washington","Arizona"]
+		good_states=["California","Arizona","New Jersey","Nevada", "New Mexico",
+                 "North Carolina","Massachusetts","Hawaii", "New York",
+                 "Maryland","Colorado","Texas","Delaware","Florida"]
 		good_states.include?(state)
 	end
 	def goodForBiomass(state)
-		good_states=["California","Washington","Oregon","Minnesota","Iowa","Nebraska","Kansas","Texas","Arkansas","Louisiana","Mississippi","Georgia","Illinois","Indiana","Ohio"]
+		good_states=["California","Washington","Oregon","Minnesota",
+                 "Iowa","Nebraska","Kansas","Texas","Arkansas",
+                 "Louisiana","Mississippi","Georgia","Illinois",
+                 "Indiana","Ohio" ,"Maine"]
 		good_states.include?(state)
 	end
 	def goodForGeo(state)
-		good_states=["Oregon","Idaho","Wyoming","Colorado","New Mexico","Arizona","California","Nevada","Utah"]
+		good_states=["Oregon","Idaho","Wyoming","Colorado",
+                 "New Mexico","Arizona","California","Nevada","Utah"]
 		good_states.include?(state)
 	end
 	def goodForWater(state)
-		good_states=["Washington","Oregon","California","Colorado","Nevada","Maine","New York","North Carolina","South Carolina","Virginia","Pennsylvania","Connecticut"]
+		good_states=["Washington","Oregon","California","Colorado",
+                 "Nevada","Maine","New York","North Carolina",
+                 "South Carolina","Virginia","Pennsylvania","Connecticut"]
 		good_states.include?(state)
 	end
 end

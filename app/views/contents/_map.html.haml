@@ -10,7 +10,7 @@
       center: new google.maps.LatLng(39.8282,-98.5795)
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-    createCircle("purple",map, new google.maps.LatLng(document.getElementById("lat").innerHTML, document.getElementById("long").innerHTML), 75000);
+    createCircle("purple",map, new google.maps.LatLng(document.getElementById("lat").innerHTML, document.getElementById("long").innerHTML), 10000);
 
     var sources = $('#energy').first().data("id");
     sources = sources.substring(1, sources.length -1);
@@ -23,8 +23,14 @@
       var conditional = pair.split("=>")[1];
       if (conditional == "true"){
         if (energy == "Wind"){
-          createCircle("gray", map, new google.maps.LatLng(40, -114), 999999);
-          createCircle("gray", map, new google.maps.LatLng(40, -74), 700000);
+          createCircle("gray", map, new google.maps.LatLng(45, -120), 300000);
+          createCircle("gray", map, new google.maps.LatLng(42, -77), 300000);
+          createCircle("gray", map, new google.maps.LatLng(41, -90), 300000);
+          createCircle("gray", map, new google.maps.LatLng(36, -99.9), 400000);
+          createCircle("gray", map, new google.maps.LatLng(48, -100), 200000);
+          createCircle("gray", map, new google.maps.LatLng(47, -95), 200000);
+          createCircle("gray", map, new google.maps.LatLng(38, -120), 300000);
+          createCircle("gray", map, new google.maps.LatLng(42.6, -107), 250000);
         }
         else if (energy == "Solar"){
           createCircle("#FF0000", map, new google.maps.LatLng(36.5, -112), 910000);
@@ -34,6 +40,16 @@
         else if (energy == "Biomass"){
           createCircle("green", map, new google.maps.LatLng(45, -70.6), 400000);
           createCircle("green", map, new google.maps.LatLng(45, -120.6), 400000);
+          createCircle("green", map, new google.maps.LatLng(38, -120.6), 400000);
+          createCircle("green", map, new google.maps.LatLng(38, -120.6), 400000);
+          createCircle("green", map, new google.maps.LatLng(32, -90.6), 300000);
+          createCircle("green", map, new google.maps.LatLng(41, -99), 220000);
+          createCircle("green", map, new google.maps.LatLng(38, -98.5), 220000);
+          createCircle("green", map, new google.maps.LatLng(46, -95), 200000);
+          createCircle("green", map, new google.maps.LatLng(42, -93), 150000);
+          createCircle("green", map, new google.maps.LatLng(41, -90), 200000);
+          createCircle("green", map, new google.maps.LatLng(40, -86), 200000);
+          createCircle("green", map, new google.maps.LatLng(40.5, -83), 200000);
         }
         else if (energy == "Geothermal"){
           createCircle("orange", map, new google.maps.LatLng(38, -114), 900000);
@@ -46,10 +62,13 @@
     }
   }
   function createCircle(color, map, center, radius){
+    var stroke = 3;
+    if (color == "purple")
+      stroke = 10;
     new google.maps.Circle({
       strokeColor: color,
       strokeOpacity: 0.9,
-      strokeWeight: 3,
+      strokeWeight: stroke,
       fillColor: color,
       fillOpacity: 0.1,
       map: map,
