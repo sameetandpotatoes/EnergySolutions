@@ -32,6 +32,7 @@
     text-decoration: none;
     text-transform: uppercase;
     vertical-align: middle;
+    padding-bottom: 15px;
 }
 .nav-holder ul#nav li a:hover {
     color: #FFFFFF;
@@ -43,7 +44,7 @@
     color: #FFFFFF;
 }
 .nav-holder .slider-holder {
-    margin: 0 auto;
+    margin: -20px auto 0;
     width: 800px;
 }
 .nav-holder .slider-holder:after {
