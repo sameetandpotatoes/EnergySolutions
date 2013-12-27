@@ -200,7 +200,7 @@
 	font-family: 'Lato';
 	tr{
 		text-align: center;
-		border-top-width: 2px;
+		border-top-width: 5px;
     border-right-width: 5px;
     border-bottom-width: 5px;
     border-left-width: 2px;
@@ -213,6 +213,9 @@
 		font-size: 19px;
 		font-family: 'Lato';
 		max-width: 50px;
+		border-right-width: 5px;
+		border-color: #082F70;
+		border-style: solid;
 	}
 	td{
 		font-size: 17px;
