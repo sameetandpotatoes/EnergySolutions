@@ -1,20 +1,22 @@
 $scale: 1.3;
 
 .sources{
-	max-width: 80%;
-	margin-left: 10%;
+	max-width: 90%;
+	margin-left: 5%;
 }
 .src_image{
-	max-width: 300px;
 	display: inline-block;
-	padding: 10px 30px;
+	padding: 10px 50px;
 	vertical-align: middle;
-	width: 25%;
+	width: 24%;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+}
+.src_image > img{
+	width: 270px;
 }
 .src_image:hover{
 	transform:scale($scale);
@@ -26,7 +28,7 @@ $scale: 1.3;
 @media all and (max-width: 900px){
 	.src_image{
 		display: block;
-		padding: 30px;
+		padding: 10px;
 	}
 	.sources{
 		margin-left: 0px;
