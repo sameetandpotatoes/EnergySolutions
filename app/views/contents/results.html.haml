@@ -9,7 +9,7 @@
   $(document).ready(function(){
     var energies = document.getElementsByClassName("energy-type");
     var energytext = document.getElementsByClassName("energy");
-    for (var index in energies){
+    for (var index = 0; index < energies.length; index++){
       var text = energies[index].innerHTML;
       if (text != null){
         $(energies[index]).addClass(text.toLowerCase());
