@@ -12,3 +12,4 @@ HomeOwner::Application.routes.draw do
   get 'about', to: 'contents#about'
   get '/robots.txt' => 'contents#robots'
 end
+

@@ -26,6 +26,14 @@ carouselFix = ->
   $(".imagecarousel ul li").css "width", $(window).width()
   $(".imagecarousel ul li").css "min-height", $(window).height() - 70
   $(".home").css "height", $(document).height() - 101
+contentFix = ->
+  children = $("#content").children()
+  index = 0
+  while index < children.length
+    child = children[index]
+    index++
+    $(child).css "min-height", $(window).height()
+
 $(document).ready ->
   $(".home").css "display", "none"
   $("#content").css "display", "none"
@@ -38,6 +46,7 @@ $(window).load ->
   $(".footer").fadeIn 1500
   $('.results').css "display", "block"
   carouselFix()
+  contentFix()
   NProgress.configure showSpinner: true
   NProgress.configure
     ease: "ease"
@@ -61,4 +70,4 @@ $(window).load ->
 
   $(window).resize ->
     carouselFix()
-
+    contentFix()
