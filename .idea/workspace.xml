@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acd7e23a-0daa-4162-ae90-67b3f2bf8cf6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/water-cost.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contents/biofuel.html.haml" afterPath="$PROJECT_DIR$/app/views/contents/biofuel.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contents/sources.html.haml" afterPath="$PROJECT_DIR$/app/views/contents/sources.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contents/water.html.haml" afterPath="$PROJECT_DIR$/app/views/contents/water.html.haml" />
-    </list>
+    <list default="true" id="acd7e23a-0daa-4162-ae90-67b3f2bf8cf6" name="Default" comment="" />
     <ignored path="HomeOwner.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
