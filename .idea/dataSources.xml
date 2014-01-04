@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3302948448">
+    <data-source source="LOCAL" name="Rails HomeOwner: development" uuid="178be754-c025-4408-b473-7a70d6ec3393">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:ssapra</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
