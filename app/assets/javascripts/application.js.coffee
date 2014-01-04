@@ -25,7 +25,7 @@ home = ->
 carouselFix = ->
   $(".imagecarousel ul li").css "width", $(window).width()
   $(".imagecarousel ul li").css "min-height", $(window).height() - 70
-  $(".home").css "height", $(document).height() - 101
+  $(".home").css "height", $(window).height() - 101
 contentFix = ->
   children = $("#content").children()
   index = 0
@@ -33,7 +33,6 @@ contentFix = ->
     child = children[index]
     index++
     $(child).css "min-height", $(window).height()
-
 $(document).ready ->
   $(".home").css "display", "none"
   $("#content").css "display", "none"
