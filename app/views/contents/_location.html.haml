@@ -12,6 +12,7 @@
     $.ajax({
       type: "POST",
       url: theURL,
+      timeout: 300,
       contentType: "application/json; charset=utf-8",
       dataType: "json",
       method: "GET",
@@ -19,12 +20,14 @@
         return myLoc = data;
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {
-        alert("We are unable to determine your location at this time.");
+        if (textStatus=="timeout") {
+            call();
+        }
       }
     });
     return setTimeout((function() {
       NProgress.done();
       return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
-    }), 500);
+    }), 300);
   });
 

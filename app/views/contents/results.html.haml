@@ -13,6 +13,7 @@
       var text = energies[index].innerHTML;
       if (text != null){
         $(energies[index]).addClass(text.toLowerCase());
+        $(energies[index]).attr("href","/" + text.toLowerCase());
         $(energytext[index]).addClass(text.toLowerCase());
       }
     }
@@ -25,8 +26,8 @@
     .results-energy
       - if (v)
         = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.results-inline.energy-type#first #{k}
-        %p.results-inline.energy Energy
+        %a.results-inline.energy-type#first #{k}
+        %a.results-inline.energy Energy
 = render "map"
 #map-canvas
 %h1.header-results

@@ -49,7 +49,7 @@ $(window).load ->
   NProgress.configure showSpinner: true
   NProgress.configure
     ease: "ease"
-    speed: 1000
+    speed: 2
 
   $(".imagecarousel").unslider
     fluid: true
