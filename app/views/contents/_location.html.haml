@@ -17,17 +17,10 @@
       dataType: "json",
       method: "GET",
       success: function(data) {
-        return myLoc = data;
+        myLoc = data;
+        NProgress.done();
+        return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
       },
-      error: function(XMLHttpRequest, textStatus, errorThrown) {
-        if (textStatus=="timeout") {
-            call();
-        }
-      }
     });
-    return setTimeout((function() {
-      NProgress.done();
-      return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
-    }), 300);
   });
 
