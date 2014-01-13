@@ -25,9 +25,9 @@ window.Scrolling = {
 
 	click: (e) ->
 		this.clicked = true
+		this.smoothScroll e
 		$("#nav li.active").removeClass "active"
 		$(e.currentTarget).addClass "active"
-		this.smoothScroll e
 		this.animateSlider()
 		this.clicked = false
 
@@ -37,7 +37,7 @@ window.Scrolling = {
 			$.data window, 'scrollTimer', setTimeout(->
 				Scrolling.activateLink()
 				Scrolling.animateSlider()
-			, 50)
+			, 100)
 
 	activateLink: ->
 		links = Scrolling.links
@@ -55,7 +55,7 @@ window.Scrolling = {
 				$(links[i]).addClass "active"
 
 	animateSlider: ->
-		$("div.slider").animate
+		$("div.slider").stop().animate
 			width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 49
 			duration: 300
 			queue: false
