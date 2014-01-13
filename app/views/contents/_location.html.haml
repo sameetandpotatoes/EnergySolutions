@@ -1,26 +1,26 @@
 #special.special.button
-  %p Find Energy Near You
+	%p Find Energy Near You
 :javascript
-  $(".special").click(function() {
-    var YOUR_KEY, myLoc, theURL;
-    myLoc = void 0;
-    $(".home").css("opacity", "0.4");
-    NProgress.start();
-    NProgress.set(0.99);
-    YOUR_KEY = "63bec244efb3cba1a6518814444c0595afca5a68035482dd36d5e68f6d4fa5e7";
-    theURL = "http://api.ipinfodb.com/v3/ip-city/?key=" + YOUR_KEY + "&format=json&callback=?";
-    $.ajax({
-      type: "POST",
-      url: theURL,
-      timeout: 300,
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      method: "GET",
-      success: function(data) {
-        myLoc = data;
-        NProgress.done();
-        return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
-      },
-    });
-  });
+	$(".special").click(function() {
+		var YOUR_KEY, myLoc, theURL;
+		myLoc = 0;
+		$(".home").css("opacity", "0.5");
+		NProgress.start();
+		NProgress.set(0.99);
+		YOUR_KEY = "63bec244efb3cba1a6518814444c0595afca5a68035482dd36d5e68f6d4fa5e7";
+		theURL = "http://api.ipinfodb.com/v3/ip-city/?key=" + YOUR_KEY + "&format=json&callback=?";
+		$.ajax({
+			type: "POST",
+			url: theURL,
+			async:false,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			method: "GET",
+			success: function(data) {
+				myLoc = data;
+				NProgress.done();
+				return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
+			},
+		});
+	});
 

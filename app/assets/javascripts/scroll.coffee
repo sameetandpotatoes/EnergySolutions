@@ -55,7 +55,7 @@ window.Scrolling = {
 				$(links[i]).addClass "active"
 
 	animateSlider: ->
-		$("div.slider").stop().animate
+		$("div.slider").animate
 			width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 49
 			duration: 300
 			queue: false
