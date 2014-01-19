@@ -49,17 +49,13 @@ $(window).load ->
       $('.content').animate ->
         left: '113px'
       , 5000, ->
-        $(this).removeClass "slideRight"
+        $('.content').removeClass "slideRight"
     else
       $('.content').animate ->
         left: '0px'
       , 5000, ->
-        $(this).addClass "slideRight"
+        $('.content').addClass "slideRight"
     # $('.content').toggleClass "slideRight" , 5000
-
-
-
-  $('#mobilemenu li').click (e) ->
 
   carouselFix()
   contentFix()
