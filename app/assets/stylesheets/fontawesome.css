@@ -18,6 +18,8 @@
   font-style: normal;
   font-weight: normal;
   line-height: 1;
+  min-width: 12px;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

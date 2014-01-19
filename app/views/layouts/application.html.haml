@@ -30,29 +30,35 @@
       #mobilemenu
         %ul
           %li
-            %a{href: "/biomass/"}
+            %a{href: "/"}
+              %i.fa.fa-home
+              %span{:style => "display: inline"} Home
+          %li
+            %a.noicon{href: "/biomass/"}
               %span Biomass
           %li
-            %a{href: "/biofuel/"}
+            %a.noicon{href: "/biofuel/"}
               %span Biofuel
           %li
-            %a{href: "/geothermal/"}
+            %a.noicon{href: "/geothermal/"}
               %span Geothermal
           %li
-            %a{href: "/water/"}
+            %a.noicon{href: "/water/"}
               %span Hydropower
           %li
-            %a{href: "/solar/"}
+            %a.noicon{href: "/solar/"}
               %span Solar PV
           %li
-            %a{href: "/wind/"}
-              %span Wind Turbines
+            %a.noicon{href: "/wind/"}
+              %span Wind
           %li
             %a{href: "/sources/"}
-              %span References
+              %i.fa.fa-globe
+              %span{:style => "display: inline"} References
           %li
             %a{href: "/about/"}
-              %span About
+              %i.fa.fa-info
+              %span{:style => "display: inline"} About
       #cssmenu
         %ul
           %li.has-sub
