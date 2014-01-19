@@ -45,7 +45,20 @@ $(window).load ->
   $(".footer").fadeIn 1500
   $('.results').css "display", "block"
   $('header > i').click ->
-    $('.content').toggleClass "slideRight" , 1000
+    if $('.content').hasClass "slideRight"
+      $('.content').animate ->
+        left: '113px'
+      , 5000, ->
+        $(this).removeClass "slideRight"
+    else
+      $('.content').animate ->
+        left: '0px'
+      , 5000, ->
+        $(this).addClass "slideRight"
+    # $('.content').toggleClass "slideRight" , 5000
+
+
+
   $('#mobilemenu li').click (e) ->
 
   carouselFix()
