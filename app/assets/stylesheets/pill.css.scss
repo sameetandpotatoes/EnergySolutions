@@ -4,8 +4,8 @@
     width: 48px;
     position: fixed;
     left: 40px;
-    top: 70px;
-    z-index: 900;
+    top: 100px;
+    z-index: 100;
 }
 #BackToTop > span {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
@@ -38,7 +38,6 @@
 @media all and (max-width: 970px) {
     #BackToTop{
       left: 15px;
-      top: 3%;
     }
     #BackToTop, #BackToTop > span{
       height: 48px;

@@ -44,6 +44,10 @@ $(window).load ->
   $("#content").fadeIn 1500
   $(".footer").fadeIn 1500
   $('.results').css "display", "block"
+  $('header > i').click ->
+    $('.content').toggleClass "slideRight" , 1000
+  $('#mobilemenu li').click (e) ->
+
   carouselFix()
   contentFix()
   NProgress.configure showSpinner: true
@@ -66,6 +70,7 @@ $(window).load ->
 
   $("#cssmenu ul:first").click ->
     $("ul:first", this).toggle()
+
 
   $(window).resize ->
     carouselFix()

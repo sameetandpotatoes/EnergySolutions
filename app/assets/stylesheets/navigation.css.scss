@@ -34,7 +34,7 @@
   margin-left: 15px;
   position: relative;
 }
-#cssmenu > ul > li > a {
+#cssmenu > ul > li > a, #cssmenu > ul > li > p{
   color: #a0a0a0;
   font-family: Verdana, 'Lucida Grande';
   font-size: 15px;
@@ -44,6 +44,10 @@
   -moz-transition: color .15s;
   -o-transition: color .15s;
   transition: color .15s;
+}
+#cssmenu > ul > li > p{
+  padding: 0px 20px;
+  line-height: 40px;
 }
 #cssmenu > ul > li > a:hover, #cssmenu > ul > li > a:focus {
   color: #ffffff;
@@ -75,7 +79,7 @@
   top: 65px;
   visibility: visible;
 }
-#cssmenu > ul > li > ul:before, #cssmenu > ul > li > ul:target{
+#cssmenu > ul > li > ul:before{
   content: '';
   display: block;
   border-color: transparent transparent #fafafa transparent;
@@ -135,26 +139,15 @@
   color: #f0f0f0;
 }
 @media all and (max-width: 700px){
-  #cssmenu{
-    padding-left: 0px;
+  #cssmenu, header > a{
+    display: none;
   }
-  #cssmenu ul li a {
-    font-size: 8px;
-  }
-  #cssmenu > ul > li{
-    margin-left: 0px;
-    margin-top: -10px;
-  }
-  #cssmenu > ul > li > a{
-    padding: 15px 10px;
-  }
-  #cssmenu ul li a span{
-    font-size: 10px;
-  }
-  #cssmenu{
-    position: relative;
-    top: -45px;
-    float: right;
+  header > i{
+    display: block !important;
+    padding-left: 20px;
+    &:hover{
+      cursor: pointer;
+    }
   }
   #compare{
     display: none;
