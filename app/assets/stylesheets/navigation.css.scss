@@ -138,8 +138,44 @@
   background-color: #cc2c24;
   color: #f0f0f0;
 }
-// @media (max-width: 1024px), handheld{
 @media only screen and (max-width: 1024px){
+  #mobilemenu{
+  display: block;
+  left: -114px;
+  width: 114px;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  height: 100%;
+  background-color: #238C47;
+  ul{
+    list-style-type: none;
+    margin: 0 auto 0 0;
+    padding: 0;
+  }
+  li{
+    min-height: 20px;
+    &:hover{
+      background-color: #007929;
+      cursor: pointer;
+    }
+    font-family: 'Lato';
+    font-size: 14px;
+    a,span{
+      text-decoration: none;
+      padding: 0.65em 0em 0em 0.4em;
+      width: 95%;
+      display: block;
+    }
+  }
+  .noicon{
+    padding: 0.65em 0em 0em 1.5em;
+    width: 82%;
+  }
+}
+.slideRight{
+  left: 113px;
+}
   #cssmenu, header > a{
     display: none;
   }
