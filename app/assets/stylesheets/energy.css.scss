@@ -248,7 +248,7 @@
 		margin-top: -21px;
 	}
 }
-@media all and (max-width: 650px){
+@media only screen and (max-width: 700px){
 	.mobile{
 		display: block;
 	}
@@ -278,12 +278,12 @@
 		padding: 0px;
 	}
 }
-@media all and (max-width: 900px){
+@media only screen and (max-width: 900px){
 	.word-wrap{
 		max-width: 90%;
 	}
 }
-@media all and (max-width: 700px){
+@media only screen and (max-width: 700px){
 	.video{
 		width: 100%;
 		height: 400px;

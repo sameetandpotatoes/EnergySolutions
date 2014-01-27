@@ -77,6 +77,11 @@
     position: relative;
     width: 120px;
 }
+@media only screen and (max-width: 1024px){
+    .nav-holder{
+        top: 46px;
+    }
+}
 @media all and (max-width: 650px) {
     .nav-holder{
         display: none;

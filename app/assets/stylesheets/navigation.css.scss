@@ -138,7 +138,8 @@
   background-color: #cc2c24;
   color: #f0f0f0;
 }
-@media all and (max-width: 700px){
+// @media (max-width: 1024px), handheld{
+@media only screen and (max-width: 1024px){
   #cssmenu, header > a{
     display: none;
   }

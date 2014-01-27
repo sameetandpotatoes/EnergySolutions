@@ -46,16 +46,15 @@ $(window).load ->
   $('.results').css "display", "block"
   $('header > i').click ->
     if $('.content').hasClass "slideRight"
-      $('.content').animate ->
-        left: '113px'
-      , 5000, ->
-        $('.content').removeClass "slideRight"
+      $(".content").animate
+        left: "113px"
+      , 300
+      $('.content').removeClass "slideRight"
     else
-      $('.content').animate ->
-        left: '0px'
-      , 5000, ->
-        $('.content').addClass "slideRight"
-    # $('.content').toggleClass "slideRight" , 5000
+      $(".content").animate
+        left: "0"
+      , 300
+      $('.content').addClass "slideRight"
 
   carouselFix()
   contentFix()
