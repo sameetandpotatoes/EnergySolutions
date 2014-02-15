@@ -47,7 +47,7 @@ $(window).load ->
   $('header > i').click ->
     if $('.content').hasClass "slideRight"
       $(".content").animate
-        left: "113px"
+        left: "200px"
       , 300
       $('.content').removeClass "slideRight"
     else
