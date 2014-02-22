@@ -42,7 +42,7 @@
 *.log
 *.sql
 *.sqlite
-
+/config/application.yml
 # OS generated files #
 ######################
 .DS_Store
