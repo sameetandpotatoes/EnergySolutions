@@ -6,14 +6,16 @@
 	width: 100%;
 	overflow: hidden;
 }
-.welcome{
+#welcome-header{
+	font-size: 30px;
 	font-family: 'Lato';
+	text-align: center;
+}
+.welcome{
 	margin-top: 50px;
+	margin-left: 30px;
 	// max-height: 400px;
 	text-align: center;
-	h1{
-		font-size: 30px;
-	}
 }
 .intro-text{
 	width: 40%;
@@ -100,9 +102,9 @@ h6{
 	text-decoration: underline;
 }
 #loading{
-	left: 50%;
+	left: 49%;
 	position: absolute;
-	top: 50%;
+	top: 49%;
 }
 .w3{
 	border:0;
