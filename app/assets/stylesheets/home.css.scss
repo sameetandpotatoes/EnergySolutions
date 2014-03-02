@@ -62,6 +62,15 @@
 	margin-top: 10px;
 	letter-spacing: 3px;
 }
+.imagecarousel ul li a{
+	width: inherit;
+	height: inherit;
+	padding: 500px;
+	display: block;
+	&:hover{
+		cursor: pointer;
+	}
+}
 .dots {
   position: absolute;
   left: 0px;
