@@ -59,13 +59,17 @@
 .grantsinfo{
 	padding: 0px 30px;
 }
-#grants ul li a, #moregrants ul li a{
+.grantsinfo ul li a{
 	color: inherit;
 }
-#moregrants p:nth-child(1){
+#stateincentives p:nth-child(1){
 	display: none;
 }
-.copy, #moregrants ul li{
+#stateincentives > li, #laws > li{
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.copy, .grantsinfo li, .grantsinfo a{
 	list-style-type: square;
 	font-family: 'Lato';
 	font-size: 18px;
