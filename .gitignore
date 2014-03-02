@@ -43,6 +43,7 @@
 *.sql
 *.sqlite
 /config/application.yml
+/config/cloudinary.yml
 # OS generated files #
 ######################
 .DS_Store

@@ -1,9 +1,16 @@
 - content_for :head do
-  %title Pure Energy | Water
+  %title Pure Energy | Hydroelectric
   %meta{content: "Hydro-power or water power is power derived from the energy of falling water and running water, which may be harnessed for useful purposes.", name: "description"}/
-#firstPage.section{style: "background-color: #EDF3F4;"}
+#firstPage.section#hydro_gradient
   .intro
-    = image_tag("hydroelectric power.jpg", :class => "displayimage")
+    = image_tag("hydro-0.png", :class => "tiled windinfo")
+    = image_tag("hydro-1.png", :class => "tiled windinfo")
+    = image_tag("hydro-2.png", :class => "tiled windinfo")
+    = image_tag("hydro-3.png", :class => "tiled windinfo")
+    = image_tag("hydro-4.png", :class => "tiled windinfo")
+    = image_tag("hydro-5.png", :class => "tiled windinfo")
+    = image_tag("hydro-6.png", :class => "tiled windinfo");
+    = image_tag("hydro-7.png", :class => "tiled windinfo", :style => "vertical-align: bottom");
 #secondPage.section.active
   .procon
     %h1.header Advantages and Disadvantages
@@ -23,7 +30,7 @@
             A 90% efficiency rate means that almost all of the energy produced can be harnessed for your needs.
       .procons
         = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Low maintenance costs
+        %p.inline Low maintenance
         .word-wrap
           %p.detailtext
             Generating hydropower costs ⅓ of the amount needed to use fossil fuels.

@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: ENV["CLOUD_NAME"]
-  api_key: ENV["API_KEY"]
-  api_secret: ENV["API_SECRET"]
+  cloud_name: hi6lobuav
+  api_key: '461983898464665'
+  api_secret: jD2XqEsZLeC-H_qmRgmueCq4tLk
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: ENV["CLOUD_NAME"]
-  api_key: ENV["API_KEY"]
-  api_secret: ENV["API_SECRET"]
+  cloud_name: hi6lobuav
+  api_key: '461983898464665'
+  api_secret: jD2XqEsZLeC-H_qmRgmueCq4tLk
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: ENV["CLOUD_NAME"]
-  api_key: ENV["API_KEY"]
-  api_secret: ENV["API_SECRET"]
+  cloud_name: hi6lobuav
+  api_key: '461983898464665'
+  api_secret: jD2XqEsZLeC-H_qmRgmueCq4tLk
   enhance_image_tag: true
   static_image_support: false

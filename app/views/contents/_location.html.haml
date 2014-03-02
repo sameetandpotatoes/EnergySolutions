@@ -19,8 +19,7 @@
 			success: function(data) {
 				myLoc = data;
 				NProgress.done();
-				return window.location.href = "/view?state=" + "Illinois" + "&city=" + "Oak%20Brook" + "&zip=" + "60564" + "&lat=" + "40.1548" + "&long=" + "-89.244";
-				// return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
+				return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
 			},
 		});
 	});
