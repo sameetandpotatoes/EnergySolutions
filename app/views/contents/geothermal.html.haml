@@ -1,65 +1,67 @@
 - content_for :head do
   %title Pure Energy | Geothermal
   %meta{content: "Geothermal energy uses heat from the Earth. It's a clean and sustainable renewable energy resource. Geothermal energy ranges from the shallow ground to hot water.", name: "description"}/
-#firstPage.section
+#firstPage.section{style: "background-color: #1D1D1F"}
   .intro
-    = image_tag("geo 1.jpg", :class => "tiled geoinfo")
-    = image_tag("geo 2.jpg", :class => "tiled geoinfo")
+    = image_tag("geo-1.png", :class => "tiled geoinfo")
+    = image_tag("geo-5.png", :class => "tiled geoinfo")
+    = image_tag("geo-3.png", :class => "tiled geoinfo")
+    = image_tag("geo-6.png", :class => "tiled geoinfo", :style => "vertical-align: bottom")
+    =# image_tag("geo-6.png")
+    =# image_tag("geo1.png", :class => "tiled geoinfo")
+    =# image_tag("geo2.png", :class => "tiled geoinfo")
 #secondPage.section.active
-  .procon
-    %h1.header Advantages and Disadvantages
-    #pro
-      %h1 Pros
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Operating Cost
-        .word-wrap
-          %p.detailtext
-            The cost of a geothermal heat pump tends to be lower than that of a conventional heating system by $400-1,400 per year. Despite costing a little more initially, geothermal heating ends up paying back in around five years.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Environment's safe
-        .word-wrap
-          %p.detailtext
-            Geothermal heat pumps have less of a negative effect on the environment. Open loop systems reduce emissions by up to 40% while making little environmental impact otherwise.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Reliability
-        .word-wrap
-          %p.detailtext
-            When located away from harsh elements, geothermal heat pumps can last from 20 to 50 years.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Easy Retrofitting
-        .word-wrap
-          %p.detailtext
-            Geothermal heat pumps and geothermal systems are easy to integrate with older systems without the hassle of complicated technical problems or replacement of parts.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Emission Free
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline No Carbon Released
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline No Fuel Needed
-        .word-wrap
-          %p.detailtext
-            No mining of fossil fuels = No need to transport anything for energy purposes.
-    #con
-      %h1 Cons
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Initial Cost
-        .word-wrap
-          %p.detailtext
-            Installation of a heat pump and interior configuration can nearly be double that of traditional furnace systems.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Space
-        .word-wrap
-          %p.detailtext
-            A geothermal heat pump is usually installed in the home's interior. However, the trenches or geothermal bore holes for the piping can require several hundred feet of open space.
+  %h1.header Advantages and Disadvantages
+  #pro
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Operating Cost
+        .col-content.equal-height
+          %p Despite costing a little more initially, geothermal heating ends up paying back in around five years.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Less Emissions
+        .col-content.equal-height
+          %p Geothermal heat pumps have less of a negative effect on the environment. Open loop systems reduce emissions by up to 40%.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 Reliability
+        .col-content.equal-height
+          %p Geothermal heat pumps can last from 20 to 50 years.
+    .f-col-wrapper
+      .col.f-col4
+        .icon-wrap
+          %h3 Easy Retrofitting
+        .col-content.equal-height
+          %p Geothermal systems are easy to integrate with older systems without complicated technical problems.
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Emission Free
+        .col-content.equal-height
+          %p Emission Free, No Carbon Released, No Fuel Needed = No need to transport anything for energy purposes.
+  #con
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Initial Cost
+        .col-content.equal-height
+          %p Installation of a heat pump and interior configuration can nearly be double that of traditional furnace systems.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Space Needed
+        .col-content.equal-height
+          %p The trenches or geothermal bore holes for the piping can require several hundred feet of open space.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Energy Intensive
+        .col-content.equal-height
+          %p No mining of fossil fuels = No need to transport anything for energy purposes.
 #thirdPage.section
   .text
     %h1.header Grants
@@ -82,13 +84,13 @@
   %h1.header Videos
   %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/_gfb9Mrn3rw?rel=0", width: "640"}
   .video-description
-    %p The video previews the installation of geothermal energy in a home in New Jersey.
+    %p The video previews the installation of geothermal energy in a home in New Jersey. Be sure to check out Part 2 of this video.
   %iframe.video{width: "640", height: "360", src: "//www.youtube-nocookie.com/embed/d85FgaFin2A?rel=0", allowfullscreen: ""}
   .video-description
-    %p This video shows a residential and commercial instance of geothermal energy in action.
+    %p This video shows a residential and commercial instance of geothermal energy in action. The narrator of the video also explains how a geothermal heat pump is like a refrigerator, and how homeowners can heat their home with just 3 degrees.
   %iframe.video{width: "640", height: "360", src: "//www.youtube-nocookie.com/embed/U8olw_nG1zo?rel=0", allowfullscreen: ""}
   .video-description
-    %p Here, see a geothermal heat pump system supplying a radiant floor heating and cooling system.
+    %p Here, see a geothermal heat pump system supplying a radiant floor heating and cooling system. The video reveals the set up process, with images of valves and the overall finished installation.
 #fifthPage.section
   %h1.header Cost of Installation
   %h1.cost-header Cost for 2500 Square Foot Home

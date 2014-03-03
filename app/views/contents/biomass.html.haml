@@ -1,52 +1,55 @@
 - content_for :head do
   %title Pure Energy | Biomass
   %meta{content: "Biomass is a collective term for renewable, clean energy from plant and animal material.", name: "description"}/
-#firstPage.section{style: "background-color: #95C94D;"}
+#firstPage.section{style: "background-color: #74C042;"}
   .intro
     = image_tag("biomass infographic.jpg", :class => "displayimage", :style => "width: 60%")
 #secondPage.section
-  .procon
-    %h1.header Advantages and Disadvantages
-    #pro
-      %h1 Pros
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Renewable
-        .word-wrap
-          %p.detailtext
-            A new crop of potential energy grows as you are reaping the rewards of the first one.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Clean
-        .word-wrap
-          %p.detailtext
-            Since it’s part of the carbon cycle, photosynthesis takes care of any excess pollutants. No pollutants = No global warming
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Cost-Effective
-        .word-wrap
-          %p.detailtext
-            Biomass costs ⅓ less than energy from fossil fuels, so with time these savings will add up.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Abundant
-        .word-wrap
-          %p.detailtext
-            Biomass is already available all over the world, so its convenient for almost everybody.
-    #con{style: "height: 50%;"}
-      %h1 Cons
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Expensive
-        .word-wrap
-          %p.detailtext
-            Harvesting and storing biomass may be too expensive for the process to be worthwhile.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Space
-        .word-wrap
-          %p.detailtext
-            Harnessing and storing the energy requires large spaces that may be impractical for some locations.
+  %h1.header Advantages and Disadvantages
+  #pro
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Renewable
+        .col-content.equal-height
+          %p A new crop of potential energy grows as you are reaping the rewards of the first one.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Clean
+        .col-content.equal-height
+          %p Photosynthesis, part of the carbon cycle, eliminates excess pollutants, so no global warming.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 Cost-Effective
+        .col-content.equal-height
+          %p Biomass costs ⅓ less than energy from fossil fuels, so with time these savings will add up.
+    .f-col-wrapper
+      .col.f-col4
+        .icon-wrap
+          %h3 Abundant
+        .col-content.equal-height
+          %p Biomass is already available all over the world, so its convenient for almost everybody.
+  #con
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Expensive
+        .col-content.equal-height
+          %p Harvesting and storing biomass may be too expensive for the process to be worthwhile.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Space Needed
+        .col-content.equal-height
+          %p Harnessing the energy requires large spaces that may be impractical for some locations.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Energy Intensive
+        .col-content.equal-height
+          %p The overall process is energy intensive, with little net gain.
 #thirdPage.section
   .text
     %h1.header Grants
@@ -63,7 +66,7 @@
   %h1.header Videos
   %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/fpHFZvxUvZ8?rel=0", width: "640"}
   .video-description
-    %p The video provides abundant information on the benefits and prime locations regarding the installation of biomass in your home.
+    %p The video provides abundant information on the benefits and prime locations regarding the installation of biomass in your home. It showcases how biomass systems can be suitable for smaller-scale community projects.
   %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/KskRq2eFCxk?rel=0", width: "640"}
   .video-description
     %p This video shows a typical Biomass Direct outdoor wood furnace self-install package for heating your domestic hot water and home using your existing forced air duct work.

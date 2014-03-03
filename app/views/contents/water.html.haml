@@ -1,7 +1,7 @@
 - content_for :head do
   %title Pure Energy | Hydroelectric
   %meta{content: "Hydro-power or water power is power derived from the energy of falling water and running water, which may be harnessed for useful purposes.", name: "description"}/
-#firstPage.section#hydro_gradient
+#firstPage.section.hydro_gradient
   .intro
     = image_tag("hydro-0.png", :class => "tiled windinfo")
     = image_tag("hydro-1.png", :class => "tiled windinfo")
@@ -12,54 +12,51 @@
     = image_tag("hydro-6.png", :class => "tiled windinfo");
     = image_tag("hydro-7.png", :class => "tiled windinfo", :style => "vertical-align: bottom");
 #secondPage.section.active
-  .procon
-    %h1.header Advantages and Disadvantages
-    #pro
-      %h1 Pros
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Reliable and Flexible
-        .word-wrap
-          %p.detailtext
-            It can be turned on when it’s needed and turned off when it’s not. It’s always ready to go.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline High Efficiency
-        .word-wrap
-          %p.detailtext
-            A 90% efficiency rate means that almost all of the energy produced can be harnessed for your needs.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Low maintenance
-        .word-wrap
-          %p.detailtext
-            Generating hydropower costs ⅓ of the amount needed to use fossil fuels.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Community Benefits
-        .word-wrap
-          %p.detailtext
-            Water provides countless opportunities: irrigation, swimming, boating, and even duck-watching!
-    #con
-      %h1 Cons
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Noisy
-        .word-wrap
-          %p.detailtext
-            Water turbines can be annoying to the surrounding neighborhoods.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Risky
-        .word-wrap
-          %p.detailtext
-            Large dams may not only disrupt the natural flow of rivers but can also cause earthquakes, erosion, landslides, and major flooding.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Expensive
-        .word-wrap
-          %p.detailtext
-            It may take a few decades before the cost of building a large hydroelectric plant is paid off.
+  %h1.header Advantages and Disadvantages
+  #pro
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Flexible
+        .col-content.equal-height
+          %p It can be turned on when it’s needed and turned off when it’s not. It’s always ready to go.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 High Efficiency
+        .col-content.equal-height
+          %p A 90% efficiency rate means that almost all of the energy produced can be harnessed for your needs.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 No Maintenance
+        .col-content.equal-height
+          %p Generating hydropower costs ⅓ of the amount needed to use fossil fuels.
+    .f-col-wrapper
+      .col.f-col4
+        .icon-wrap
+          %h3 Community
+        .col-content.equal-height
+          %p Water provides countless opportunities: irrigation, swimming, boating, and even duck-watching!
+  #con
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Noisy
+        .col-content.equal-height
+          %p Water turbines can be annoying to the surrounding neighborhoods.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Risky
+        .col-content.equal-height
+          %p Large dams may not only disrupt the natural flow of rivers but can also cause earthquakes, erosion, landslides, and major flooding.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 Pollution
+        .col-content.equal-height
+          %p It may take a few decades before the cost of building a large hydroelectric plant is paid off.
 #thirdPage.section
   .text
     %h1.header Grants
@@ -80,7 +77,7 @@
   %iframe.video{allowfullscreen: "", height: "360", src: "//www.youtube-nocookie.com/embed/gbowRUuP9Kk?rel=0", width: "640"}
   .video-description
     %p The micro hydro generator system demonstrated in the video produces 12 amps or 30 volts at 170 rpm. The generator requires little maintenance.
-#fifthPage.section{:style => "background-color: #E2E2E2;"}
+#fifthPage.section{:style => "background-color: #E2E3E8;"}
   %h1.header Cost of Installation
-  = image_tag "watercost-1.png", :class => "displayimage"
-  = image_tag "watercost-2.png", :class => "displayimage"
+  = image_tag "watercost-1.png", :class => "displayimage", :style => "width: 95%"
+  = image_tag "watercost-2.png", :class => "displayimage", :style => "width: 95%"

@@ -5,48 +5,45 @@
   .intro
     = image_tag("solar_infographic2.png", :class=>"displayimage", :style=>"width: 75%;")
 #secondPage.section
-  .procon
-    %h1.header Advantages and Disadvantages
-    #pro
-      %h1 Pros
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Quiet
-        .word-wrap
-          %p.detailtext
-            No moving parts = No noise
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline No Pollution
-        .word-wrap
-          %p.detailtext
-            Very little pollution is produced in the process of transporting and installing a solar panel.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Less Service
-        .word-wrap
-          %p.detailtext
-            The majority of today`s solar power systems do not require much maintenance. Residential solar panels usually only require cleaning a couple of times a year. Serious solar manufacturers ship 20 to 25 year warranties with their solar panels.
-    #con
-      %h1 Cons
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Initial Cost
-        .word-wrap
-          %p.detailtext
-            Currently, prices of highly efficient solar cells can be above $1000. Some households may need more than one, so the cost is definitely something to consider.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Daylight Only
-        .word-wrap
-          %p.detailtext
-            This means that for around half of each day, solar panels are not producing energy for your home. Access to sunlight is limited to certain times.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Pollution
-        .word-wrap
-          %p.detailtext
-            Since pollution levels affect a solar cell's efficiency, this would be a major disadvantage for businesses that install solar panels in heavily polluted areas such as cities.
+  %h1.header Advantages and Disadvantages
+  #pro
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Quiet
+        .col-content.equal-height
+          %p No moving parts = no noise
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 No Pollution
+        .col-content.equal-height
+          %p Very little pollution is produced in the process of transporting and installing a solar panel.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 Less Service
+        .col-content.equal-height
+          %p Geothermal heat pumps can last from 20 to 50 years.
+  #con
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Initial Cost
+        .col-content.equal-height
+          %p Currently, prices of highly efficient solar cells can be above $1000. Some households may need more than one, so the cost is definitely something to consider.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Daylight Only
+        .col-content.equal-height
+          %p This means that for around half of each day, solar panels are not producing energy for your home. Access to sunlight is limited to certain times.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 Pollution
+        .col-content.equal-height
+          %p Since pollution levels affect a solar cell's efficiency, this would negatively affect businesses that install solar panels in heavily polluted areas.
 #thirdPage.section
   .text
     %h1.header Grants

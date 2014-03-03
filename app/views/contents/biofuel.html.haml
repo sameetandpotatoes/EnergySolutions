@@ -9,48 +9,51 @@
     = image_tag("biofuel-4.png", :class => "tiled windinfo")
     = image_tag("biofuel-5.png", :class => "tiled windinfo")
 #secondPage.section.active
-  .procon
-    %h1.header Advantages and Disadvantages
-    #pro
-      %h1 Pro
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Easy To Start
-        .word-wrap
-          %p.detailtext
-            Switching to biofuel is an easy transition that does not require a special apparatus. Just fill up your existing car, truck, or home oil tank.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline No Global Warming
-        .word-wrap
-          %p.detailtext
-            Ethanol and biodiesel emit back to the environment only the carbon dioxide that their source plants absorbed in the first place. Also, less air pollutants and greenhouse gas will be released into the environment.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Cheap Feedstocks
-        .word-wrap
-          %p.detailtext
-            The production process can convert used oils, greases, and fats into a useable fueling product. Used cooking oil and greases can be obtained inexpensively or free because they often have no other uses.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Biodegradable
-        .word-wrap
-          %p.detailtext
-            Biodiesel is non-toxic and biodegradeable. Any spillage in the production or tranportation process will have a far smaller environmental impact compared to a petroleum spill.
-    #con
-      %h1 Con
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Reduced Efficiency
-        .word-wrap
-          %p.detailtext
-            Many producers have been unable to create biodiesel that meets ASTM 6751 quality due primarily to their inability to remove all impurities and water during the washing and refining processes. The EPA found that the use of B20 can reduce fuel efficiency by 1-2%.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Expensive
-        .word-wrap
-          %p.detailtext
-            B100 and other diesel/biodiesel blends are more expensive to consumers than #2 diesel. This is a result of the rapidly rising feedstock   and conversion problems of producers.
+  %h1.header Advantages and Disadvantages
+  #pro
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Easy To Start
+        .col-content.equal-height
+          %p Switching to biofuel is an easy transition that does not require a special apparatus. Just fill up your existing car, truck, or home oil tank.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Less Gases
+        .col-content.equal-height
+          %p Ethanol emits the carbon dioxide that their source plants absorbed in the first place. Also, less greenhouse gases will be released into the environment.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 Cheap Oils
+        .col-content.equal-height
+          %p The production process can convert used oils, which can be easily obtained due to its limited purpose, into a useable fueling product.
+    .f-col-wrapper
+      .col.f-col4
+        .icon-wrap
+          %h3 Biodegradable
+        .col-content.equal-height
+          %p Any spillage in the production/transportation process will have a smaller environmental impact compared to a petroleum spill.
+  #con
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Less Efficient
+        .col-content.equal-height
+          %p The EPA found that the use of B20 can reduce fuel efficiency by 1-2%.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Expensive
+        .col-content.equal-height
+          %p B100 and other biodiesel blends are more expensive to consumers than #2 diesel. This is a result of the rapidly rising feedstock.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Regional Suitability
+        .col-content.equal-height
+          %p Certain crops will grow better in specific regions, while other regions may not support a certain crop at all.
 #thirdPage.section
   .text
     %h1.header Grants
@@ -69,10 +72,10 @@
     %p Follow along as a local FFA chapter produces biofuel with a SweetHome BioFuels BA 100.
   %iframe.video{src: "//www.youtube-nocookie.com/embed/kdYCFzp048I?rel=0",allowfullscreen: ""}
   .video-description
-    %p The guys at Blue Ridge Biofuels show homeowners how easy it is to switch to biodiesel for home heating.
+    %p The guys at Blue Ridge Biofuels show homeowners how easy it is to switch to biodiesel for home heating. The video also shows instances of homeowners using biodiesel from oil from restaurants in their own homes.
 #fifthPage.section{:style => "background-color: #058639;"}
   %h1.header{:style => "color: white; margin-bottom: 25px;"} Cost of Installation
+  = image_tag "biofuel-graph-1.jpg", :class => "tiled windinfo"
   = image_tag "biofuel-graph-2.jpg", :class => "tiled windinfo"
   = image_tag "biofuel-graph-3.jpg", :class => "tiled windinfo"
   = image_tag "biofuel-graph-4.jpg", :class => "tiled windinfo"
-  = image_tag "biofuel-graph-5.jpg", :class => "tiled windinfo"

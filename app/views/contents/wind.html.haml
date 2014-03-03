@@ -10,45 +10,45 @@
     = image_tag("wind_infographic_5.jpg", :class => "tiled windinfo")
     = image_tag("wind_infographic_6.jpg", :class => "tiled windinfo")
 #secondPage.section.active
-  .procon
-    %h1.header Advantages and Disadvantages
-    #pro
-      %h1 Pros
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Clean
-        .word-wrap
-          %p.detailtext
-            Harnessing wind does not create any harmful by-products.
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Free, 100% Renewable
-      .procons
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Tax Incentives
-        .word-wrap
-          %p.detailtext
-            The power company provides compensation if extra electricity is produced.
-    #con
-      %h1 Cons
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Initial Cost
-        .word-wrap
-          %p.detailtext
-            Upfront costs can be high.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Need Land
-        .word-wrap
-          %p.detailtext
-            A turbine can take up a lot of land.
-      .procons
-        = image_tag("x.png", :width=>"25", :height=> "40", :class=>"image")
-        %p.inline Easily Damaged
-        .word-wrap
-          %p.detailtext
-            Turbines can be damaged in lightning storms. Additionally, wind turbines have been known to kill birds and other airborne animals.
+  %h1.header Advantages and Disadvantages
+  #pro
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Clean
+        .col-content.equal-height
+          %p Harnessing wind does not create any harmful by-products.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Renewable
+        .col-content.equal-height
+          %p Just like the title says. 100% Renewable.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 Tax Incentives
+        .col-content.equal-height
+          %p The power company provides compensation if extra electricity is produced.
+  #con
+    .f-col-wrapper
+      .col.f-col1
+        .icon-wrap
+          %h3 Initial Cost
+        .col-content.equal-height
+          %p Upfront costs can be high.
+    .f-col-wrapper
+      .col.f-col2
+        .icon-wrap
+          %h3 Need Land
+        .col-content.equal-height
+          %p A turbine can take up a lot of land.
+    .f-col-wrapper
+      .col.f-col3
+        .icon-wrap
+          %h3 Easily Damaged
+        .col-content.equal-height
+          %p Turbines can be damaged in lightning storms. Additionally, wind turbines have been known to kill birds and other airborne animals.
 #thirdPage.section
   .text
     %h1.header Grants

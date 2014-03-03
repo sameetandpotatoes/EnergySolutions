@@ -8,6 +8,7 @@ HomeOwner::Application.routes.draw do
   get 'biofuel', to: 'contents#biofuel', as: 'biofuel'
   get 'sources', to: 'contents#sources', as: 'sources'
   get 'compare', to: 'contents#compare', as: 'compare'
+  get 'all', to: 'contents#all', as: 'all'
   get 'view' => 'contents#results', :via => :post, as: 'results'
   get 'about', to: 'contents#about'
   get '/robots.txt' => 'contents#robots'

@@ -1,14 +1,23 @@
 $scale: 1.15;
 
 .sources{
-	max-width: 90%;
-	margin-left: 5%;
+	height: auto;
+  text-align: justify;
+  min-width: 600px;
+}
+.sources:after{
+	content: '';
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+.sources div{
+	width: 270px;
+  display: inline-block;
+  padding: 10px 50px;
 }
 .src_image{
 	display: inline-block;
-	padding: 10px 50px;
 	vertical-align: middle;
-	width: 24%;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
@@ -25,12 +34,11 @@ $scale: 1.15;
 	-webkit-transform:scale($scale); /* Safari and Chrome */
 	-o-transform:scale($scale); /* Opera */
 }
-@media all and (max-width: 900px){
-	.src_image{
-		display: block;
-		padding: 10px;
-	}
+@media all and (max-width: 500px){
 	.sources{
-		margin-left: 0px;
+		padding: 0;
+		min-width: 0;
+		text-align: center;
+		margin-left: -20px;
 	}
 }

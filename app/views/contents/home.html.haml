@@ -1,20 +1,20 @@
 - content_for :head do
   %title Pure Energy | Home
   %meta{content: "Pure Energy home page for BPA. Resource for homeowners to consult for renewable, clean, and nearby energy solutions that are practical in their geographical area.", name: "description"}/
-%h1#welcome-header Energy Saving for Homeowners
+%h1#welcome-header Energy Solutions for Homeowners
 .welcome
   .intro-text
     %i{:class => "fa fa-leaf fa-3x fa-fw icon"}
     %p.intro-inline Renewable Energy
-    %p.intro-word-wrap Homeowners, browse through our information on biofuel, biomass, geothermal, water, solar, and wind energy.
+    %p.intro-word-wrap Browse through our information on biofuel, biomass, geothermal, hydroelectric, solar, and wind energy. View infographics, advantages and disadvantages, grants, videos, and estimated costs in an easy-to-read, modern design.
   .intro-text
     %i{:class => "fa fa-sun-o fa-3x fa-fw icon"}
     %p.intro-inline Energy Near You
-    %p.intro-word-wrap View the most suitable energy sources in your current location by clicking the button below.
+    %p.intro-word-wrap View suitable energy sources in your current location with "Energy near You". It also shows you state incentives and regulations in your state.
   .intro-text
     %i{:class => "fa fa-bolt fa-3x fa-fw icon"}
     %p.intro-inline The Future Is Here - For Cheaper
-    %p.intro-word-wrap Find federal and state-specific grants for these types of renewable energy.
+    %p.intro-word-wrap Find federal and state-specific grants for these types of renewable energy to help in offsetting the net cost for installation of a renewable energy source.
   .imagecarousel.has-dots
     %ul
       %li{:style => "background: url(#{image_path('carousel1.jpg')});"}
@@ -32,4 +32,5 @@
       %li{:style => "background: url(#{image_path('carousel5.jpg')});"}
         %p Biomass
         %a{:href => "/biomass"}
-=render "location"
+#special.special.button
+  %p Find Energy Near You

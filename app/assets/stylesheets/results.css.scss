@@ -5,7 +5,7 @@
 }
 .header-results{
 	font-size: 22px;
-	text-align: left;
+	text-align: center;
 	font-family: 'Droid Sans';
 	padding: 20px 30px 0;
 	margin-bottom: 0px;
@@ -14,6 +14,7 @@
 	display: none;
 	display: inline-block !important;
 	min-height: 500px;
+	min-width: 550px;
 	margin-top: 30px;
 }
 .results-energy{
@@ -53,8 +54,9 @@
 	height: 500px;
 	position: absolute;
 	width: 50%;
+	margin-top: 30px;
+	right: 50px;
 	display: inline-block;
-	margin-top: 60px;
 }
 .grantsinfo{
 	padding: 0px 30px;
@@ -78,12 +80,13 @@
 .copybold{
 	font-family: 'Lato';
 }
-@media all and (max-width: 1024px){
+@media all and (max-width: 1200px){
 	#map-canvas{
 		width: 95% !important;
 		display: block;
 		position: relative;
 		margin: 0 auto;
+		right: 0px;
 	}
 	.results{
 		min-height: 0px;
@@ -93,6 +96,9 @@
 	.results-inline{
 		display: inline;
 		padding-left: 5px;
+	}
+	.home{
+		display: inline;
 	}
 	#map-canvas{
 		display: none;

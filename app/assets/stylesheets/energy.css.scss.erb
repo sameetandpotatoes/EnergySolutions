@@ -1,3 +1,63 @@
+//Pros/Cons
+.col {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #CCCCCC;
+    border: 1px solid #B8B7B9;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    width: 290px;
+    font-family: 'Lato';
+    h3{
+    	font-family: 'Lato';
+    	font-weight: bold;
+    	color: white;
+    	font-size: 23px;
+    }
+}
+#pro, #con {
+  height: auto;
+  text-align: justify;
+  min-width: 400px;
+  padding: 0 30px;
+}
+.f-col-wrapper{
+	width: 290px;
+	height: 300px;
+	display: inline-block;
+	clear: both;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+#pro:after, #con:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+.col .icon-wrap {
+    border-radius: 6px 6px 0 0;
+    display: block;
+    padding: 24px 10px 40px;
+}
+#pro .col .icon-wrap{
+	background: url(<%= asset_path 'f-box-bg.png' %>) no-repeat scroll center bottom #8DC63F;
+	background-size: 100%;
+}
+#con .col .icon-wrap{
+	background: url(<%= asset_path 'f-box-bg.png' %>) no-repeat scroll center bottom #C82829;
+	background-size: 100%;
+}
+.col-content {
+    min-height: 93px;
+    padding: 0 10px;
+    height: 123px;
+    font-size: 18px;
+}
+#pro{
+	margin-top: 30px;
+}
+//End
 .text h2{
 	border-bottom: 2px solid #1E90FF;
 	font-family: 'Lato';
@@ -16,7 +76,7 @@
 	margin-left: 15px;
 }
 .intro-word-wrap{
-	margin-left: 90px;
+	margin-left: 80px;
 	text-align: left;
 }
 .section h1{
@@ -37,17 +97,18 @@
 	font-family: 'Oswald';
 }
 .video{
-	display: table;
+	margin-top: 30px;
+	display: inline-block;
 	width: 50%;
 	min-height: 400px;
 	max-height: 600px;
-	margin: 30px auto;
 }
 .video-description{
-	font-size: 22px;
-	p{
-		padding: 0 30px;
-	}
+	display: inline;
+	float: right;
+	vertical-align: top;
+	font-size: 30px;
+	width: 45%;
 }
 .image{
 	vertical-align: middle;
@@ -142,7 +203,7 @@
 	display: block;
 	font-family: 'Droid Sans';
 }
-#hydro_gradient{
+.hydro_gradient{
 	margin-top: 20px;
 	background: -webkit-linear-gradient(#F0F1F3, #D3EBF7);
 	background: -o-linear-gradient(#F0F1F3, #D3EBF7);
@@ -226,9 +287,6 @@
 	.section{
 		padding: 30px 25px;
 	}
-	.procon{
-		margin: 0px;
-	}
 	#cssmenu{
 		margin-top: -21px;
 	}
@@ -238,7 +296,7 @@
 		display: block;
 	}
 	.displayimage{
-		width: 100%;
+		width: 100% !important;
 		padding: 0px;
 		margin: 0 auto;
 	}
@@ -271,6 +329,21 @@
 		p{
 		width: 100%;
 		}
+	}
+}
+@media only screen and (max-width: 500px){
+	.f-col-wrapper, .col{
+		width: 100%;
+	}
+	#pro, #con{
+		padding: 0;
+		min-width: 0;
+	}
+	.f-col-wrapper{
+		height: 240px;
+	}
+	.col.icon-wrap{
+		padding: 15px 10px;
 	}
 }
 @media only screen and (max-width: 900px){

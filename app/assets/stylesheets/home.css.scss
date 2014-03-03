@@ -12,9 +12,8 @@
 	text-align: center;
 }
 .welcome{
-	margin-top: 50px;
-	margin-left: 30px;
-	// max-height: 400px;
+	margin-top: 35px;
+	margin-left: 15px;
 	text-align: center;
 }
 .intro-text{
@@ -24,7 +23,7 @@
 	font-family: 'Lato';
 	background-color: #232323;
 	padding: 15px;
-	height: 30px;
+	height: 25px;
 	position: relative;
 	bottom: 0px;
 	width: 100%;
@@ -33,7 +32,6 @@
 }
 .bpalogo{
 	vertical-align: middle;
-	float: left;
 	margin-top: -10px;
 }
 .imagecarousel {
@@ -124,7 +122,7 @@ h6{
 	float: right;
 }
 @media only screen and (max-width: 700px){
-	.bpalogo, .w3, .footer{
+	.w3, .footer{
 		display: none !important;
 	}
 	.intro-text{
@@ -145,7 +143,7 @@ h6{
 		padding: 0;
 		margin: 0;
 	}
-	.special{
+	#special{
 		margin-top: 100px;
 	}
 }

@@ -18,10 +18,10 @@
       }
     }
   });
+%h1.header-results
+  Renewable Energy Sources Available in
+  %span #{@city.titlecase}, #{@state}
 .results
-  %h1.header-results
-    Renewable Energy Sources Available in
-    %span #{@city.titlecase}, #{@state}
   - @energy.each do |k,v|
     .results-energy
       - if (v)
@@ -36,43 +36,11 @@
 #tab-container.tab-container
   %ul.etabs
     %li.tab
-      %a{href: "#financial"}Incentive List
-    %li.tab
       %a{href: "#stateincentives"}State Incentives
     %li.tab
+      %a{href: "#financial"}Incentive List
+    %li.tab
       %a{href: "#laws"}Rules, Regulations & Policies
-  #financial.grantsinfo
-  :javascript
-    $(document).ready(function(){
-    	var state=$('.state').text();
-    	$("#financial").load("http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state="+state);
-    	$.ajax({
-    	url: 'http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state='+state,
-    	type: 'GET',
-    	success: function(res)
-    	{
-    	  var headline = $(res.responseText).find('#incentivelist').html();
-        var lines = headline.split("\n");
-        var financial = "";
-        var frequency = 0;
-        for (var i = 0, len = lines.length; i < len; i++) {
-            if (lines[i].indexOf("categorytype") > -1)
-              frequency+=1;
-              if (frequency == 2)
-                break;
-            else
-              financial += lines[i];
-        }
-    	  var div = document.getElementById('financial');
-    	  div.innerHTML = financial;
-    	  $("#financial ul li a").each(function(){
-    	  	var _href = $(this).attr("href");
-    	  	$(this).attr("href", "http://www.dsireusa.org/incentives/"+_href);
-    	  	$(this).attr("target", "_blank");
-    	  });
-    	}
-    	});
-    });
   #stateincentives.grantsinfo
   :javascript
     $(document).ready(function(){
@@ -91,6 +59,38 @@
         $("#stateincentives a").each(function(){
           var _href = $(this).attr("href");
           $(this).attr("href", "http://www.afdc.energy.gov"+_href);
+          $(this).attr("target", "_blank");
+        });
+      }
+      });
+    });
+  #financial.grantsinfo
+  :javascript
+    $(document).ready(function(){
+      var state=$('.state').text();
+      $("#financial").load("http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state="+state);
+      $.ajax({
+      url: 'http://www.dsireusa.org/incentives/index.cfm?re=0&ee=0&spv=0&st=0&srp=1&state='+state,
+      type: 'GET',
+      success: function(res)
+      {
+        var headline = $(res.responseText).find('#incentivelist').html();
+        var lines = headline.split("\n");
+        var financial = "";
+        var frequency = 0;
+        for (var i = 0, len = lines.length; i < len; i++) {
+            if (lines[i].indexOf("categorytype") > -1)
+              frequency+=1;
+              if (frequency == 2)
+                break;
+            else
+              financial += lines[i];
+        }
+        var div = document.getElementById('financial');
+        div.innerHTML = financial;
+        $("#financial ul li a").each(function(){
+          var _href = $(this).attr("href");
+          $(this).attr("href", "http://www.dsireusa.org/incentives/"+_href);
           $(this).attr("target", "_blank");
         });
       }

@@ -20,6 +20,7 @@ window.Scrolling = {
 	smoothScroll: (e) ->
 		e.preventDefault()
 		hash = $($(e.currentTarget).children()[0]).prop("hash")
+		console.log hash
 		target = document.getElementById hash.slice(1)
 		Scrolling.scrollTo $(target).offset().top
 

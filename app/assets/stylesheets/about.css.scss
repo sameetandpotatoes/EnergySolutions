@@ -46,7 +46,15 @@ figure > p{
 			float: none;
 		}
 		#about{
-			width: 80% !important;
+			width: 90% !important;
+		}
+		.averagecost{
+			tr{
+				border-width: none;
+			}
+			td{
+				font-size: 15px !important;
+			}
 		}
 		#about td{
 			padding: 5px !important;

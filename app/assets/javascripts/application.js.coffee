@@ -26,7 +26,7 @@ home = ->
 carouselFix = ->
   $(".imagecarousel ul li").css "width", $(window).width()
   $(".imagecarousel ul li").css "min-height", $(window).height() - 70
-  $(".home").css "height", $(window).height() - 101
+  $(".home").css "height", $(window).height() - 121
 contentFix = ->
   children = $("#content").children()
   index = 0
@@ -34,6 +34,11 @@ contentFix = ->
     child = children[index]
     index++
     $(child).css "min-height", $(window).height()
+equalHeight = ->
+  biggestHeight = 0
+  $(".equal-height").each ->
+    biggestHeight = $(this).height() + 30  if $(this).height() > biggestHeight
+  $(".equal-height").height biggestHeight
 $(document).ready ->
   $(".home").css "display", "none"
   $("#content").css "display", "none"
@@ -59,6 +64,7 @@ $(window).load ->
 
   carouselFix()
   contentFix()
+  equalHeight()
   NProgress.configure showSpinner: true
   NProgress.configure
     ease: "ease"
@@ -70,12 +76,12 @@ $(window).load ->
     keys: true
     pause: false
 
-  $("a").click ->
-    link_host = @href.split("/")[2]
-    document_host = document.location.href.split("/")[2]
-    unless link_host is document_host
-      window.open @href
-      false
+  # $("a").click ->
+  #   link_host = @href.split("/")[2]
+  #   document_host = document.location.href.split("/")[2]
+  #   unless link_host is document_host
+  #     window.open @href
+  #     false
 
   $("#cssmenu ul:first").click ->
     $("ul:first", this).toggle()
