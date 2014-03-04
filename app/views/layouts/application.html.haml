@@ -112,6 +112,9 @@
             = yield
         - else
           = render "menu"
+          = content_for :js do
+            %script
+              = javascript_include_tag "scroll"
           #content
             = yield
       %footer.footer

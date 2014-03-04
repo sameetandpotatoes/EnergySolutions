@@ -17,7 +17,6 @@
 #= require viewport.min.js
 #= require xdomainajax.js
 #= require scroll
-#= require maps.js
 #= require jquery.easytabs.min.js
 nonEnergyLinks = ->
   window.location.pathname is "/sources/" or window.location.pathname is "/about/"
