@@ -11,4 +11,5 @@ SitemapGenerator::Sitemap.create do
   add sources_path, :priority => 0.7, :changefreq => 'daily'
   add compare_path, :priority => 0.7, :changefreq => 'daily'
   add results_path, :priority => 0.7, :changefreq => 'daily'
+  add all_path, :priority => 0.7, :changefreq => 'daily'
 end
