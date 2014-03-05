@@ -38,15 +38,23 @@ equalHeight = ->
     biggestHeight = $(this).height() + 30  if $(this).height() > biggestHeight
   $(".equal-height").height biggestHeight
 $(document).ready ->
-  $(".home").css "display", "none"
-  $("#content").css "display", "none"
-  $(".footer").css "display", "none"
-
+  $(".home").css "opacity", "0"
+  $("#content").css "opacity", "0"
+  $(".footer").css "opacity", "0"
 $(window).load ->
-  $("#loading").fadeOut 1000
-  $(".home").fadeIn 1500
-  $("#content").fadeIn 1500
-  $(".footer").fadeIn 1500
+  $ ->
+    $('#loading').animate
+      opacity: '0'
+    , 1000
+    $('.home').animate
+      opacity: '1'
+    , 1500
+    $('#content').animate
+      opacity: '1'
+    , 1500
+    $('.footer').animate
+      opacity: '1'
+    , 1500
   $('.results').css "display", "block"
   $('header > i').click ->
     if $('.content').hasClass "slideRight"

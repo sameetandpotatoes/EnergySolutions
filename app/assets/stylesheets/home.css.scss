@@ -108,10 +108,12 @@ h6{
 	color: inherit;
 	text-decoration: underline;
 }
-#loading{
-	left: 49%;
-	position: absolute;
-	top: 49%;
+#loading img{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -143.5px;
+	margin-top: -73.5px;
 }
 .w3{
 	border:0;
