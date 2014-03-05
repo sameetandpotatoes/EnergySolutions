@@ -18,14 +18,13 @@
 #= require xdomainajax.js
 #= require scroll
 #= require jquery.easytabs.min.js
-nonEnergyLinks = ->
-  window.location.pathname is "/sources/" or window.location.pathname is "/about/"
 home = ->
   window.location.pathname is "/"
-carouselFix = ->
-  $(".imagecarousel ul li").css "width", $(window).width()
-  $(".imagecarousel ul li").css "min-height", $(window).height() - 70
+homeFix = ->
   $(".home").css "height", $(window).height() - 121
+  if $(window).width > 700
+    $('.content').css "left", "0"
+    $('.content').addClass "slideRight"
 contentFix = ->
   children = $("#content").children()
   index = 0
@@ -44,7 +43,7 @@ $(document).ready ->
   $(".footer").css "display", "none"
 
 $(window).load ->
-  $("#loading").fadeOut 500
+  $("#loading").fadeOut 1000
   $(".home").fadeIn 1500
   $("#content").fadeIn 1500
   $(".footer").fadeIn 1500
@@ -61,9 +60,10 @@ $(window).load ->
       , 300
       $('.content').addClass "slideRight"
 
-  carouselFix()
+  homeFix()
   contentFix()
   equalHeight()
+
   NProgress.configure showSpinner: true
   NProgress.configure
     ease: "ease"
@@ -75,17 +75,10 @@ $(window).load ->
     keys: true
     pause: false
 
-  # $("a").click ->
-  #   link_host = @href.split("/")[2]
-  #   document_host = document.location.href.split("/")[2]
-  #   unless link_host is document_host
-  #     window.open @href
-  #     false
-
   $("#cssmenu ul:first").click ->
     $("ul:first", this).toggle()
 
 
   $(window).resize ->
-    carouselFix()
+    homeFix()
     contentFix()
