@@ -1,5 +1,6 @@
 HomeOwner::Application.routes.draw do
-  root 'contents#home', as: 'home'
+  # root 'contents#home', as: 'home'
+  root 'contents#fake'
   get 'biomass', to: 'contents#biomass', as: 'biomass'
   get 'water', to: 'contents#water', as: 'water'
   get 'wind', to: 'contents#wind', as: 'wind'
