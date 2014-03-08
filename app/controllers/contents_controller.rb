@@ -1,11 +1,11 @@
 class ContentsController < ApplicationController
 	include ApplicationHelper
-	caches_page :biomass, :water, :wind, :solar, :geothermal, :biofuel, :about, :home
+	caches_page :biomass, :hydroelectric, :wind, :solar, :geothermal, :biofuel, :about, :home
 	def home
 	end
 	def biomass
 	end
-	def water
+	def hydroelectric
 	end
 	def wind
 	end
@@ -33,7 +33,7 @@ class ContentsController < ApplicationController
 		@biomass= goodForBiomass(@state.to_s)
 		@geo= goodForGeo(@state.to_s)
 		@water= goodForWater(@state.to_s)
-		@energy = {Wind: @wind, Solar: @solar, Biomass: @biomass, Geothermal: @geo, Hydropower: @water}
+		@energy = {Wind: @wind, Solar: @solar, Biomass: @biomass, Geothermal: @geo, Hydroelectric: @water}
 		@state = us_states(@state.to_s)
 		@state = @state.strip
 	end

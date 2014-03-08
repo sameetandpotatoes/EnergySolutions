@@ -89,13 +89,15 @@
 			//  Little patch for fluid-width sliders. Screw those guys.
 			if(this.opts.fluid) {
 				var resize = function() {
-					// _.el.css('width', Math.min(Math.round((_.el.outerWidth() / _.el.parent().outerWidth()) * 100), 100) + '%');
+					_.el.css('width', Math.min(Math.round((_.el.outerWidth() / _.el.parent().outerWidth()) * 100), 100) + '%');
 					_.el.css({
-						width: $(window).width()/2
+						width: $(window).width()/2,
+						height: $(window).height()
 					});
 					var listItems = $('.imagecarousel ul li');
 					listItems.each(function(index, li){
 						$(li).css("width", $('.imagecarousel').width());
+						$(li).css("height", $('.imagecarousel').height());
 					});
 				};
 

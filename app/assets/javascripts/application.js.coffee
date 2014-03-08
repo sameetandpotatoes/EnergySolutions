@@ -16,10 +16,15 @@
 #= require unslider.js
 #= require viewport.min.js
 #= require xdomainajax.js
-#= require scroll
 #= require jquery.easytabs.min.js
 home = ->
   window.location.pathname is "/"
+imageFix = ->
+  $(".imagecarousel").css "max-height", (($(window).height() / 2) + 100)
+  listItems = $(".imagecarousel ul li")
+  listItems.each (index, li) ->
+    # $(li).css "width", $(".imagecarousel").width()
+    $(li).css "height", $(".imagecarousel").height()
 homeFix = ->
   $(".home").css "height", $(window).height() - 121
   if $(window).width > 700
@@ -45,16 +50,17 @@ $(window).load ->
   $ ->
     $('#loading').animate
       opacity: '0'
-    , 1000
+    , 2000
     $('.home').animate
       opacity: '1'
-    , 1500
+    , 2000
     $('#content').animate
       opacity: '1'
-    , 1500
+    , 2000
     $('.footer').animate
       opacity: '1'
-    , 1500
+    , 2000
+  $('#loading').css "display", "none"
   $('.results').css "display", "block"
   $('header > i').click ->
     if $('.content').hasClass "slideRight"
@@ -83,10 +89,7 @@ $(window).load ->
     keys: true
     pause: false
 
-  $("#cssmenu ul:first").click ->
-    $("ul:first", this).toggle()
-
-
   $(window).resize ->
     homeFix()
     contentFix()
+    imageFix()

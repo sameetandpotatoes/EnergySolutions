@@ -1,8 +1,7 @@
 HomeOwner::Application.routes.draw do
-  # root 'contents#home', as: 'home'
-  root 'contents#fake'
+  root 'contents#home', as: 'home'
   get 'biomass', to: 'contents#biomass', as: 'biomass'
-  get 'water', to: 'contents#water', as: 'water'
+  get 'hydroelectric', to: 'contents#hydroelectric', as: 'hydroelectric'
   get 'wind', to: 'contents#wind', as: 'wind'
   get 'solar', to: 'contents#solar', as: 'solar'
   get 'geothermal', to: 'contents#geothermal', as: 'geothermal'

@@ -39,11 +39,14 @@
 	right: 50px;
 	top: 150px;
 	overflow: auto;
-	width: 50%;
+	width: 650px;
 	max-height: 450px;
 }
 .imagecarousel li {
 	list-style: none;
+	background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 .imagecarousel ul{
 	padding: 0;
@@ -127,9 +130,6 @@ h6{
 	.w3, .footer{
 		display: none !important;
 	}
-	.intro-text{
-		width: 90%;
-	}
 	.footer{
 		font-size: 8px;
 		height: 10px;
@@ -138,14 +138,19 @@ h6{
 		top: 40%;
 		left: 40%;
 	}
-	.imagecarousel{
-		display: none;
-	}
 	.welcome, .txt-welcome{
 		padding: 0;
 		margin: 0;
 	}
 	#special{
 		margin-top: 100px;
+	}
+}
+@media only screen and (max-width: 1100px){
+	.imagecarousel{
+		display: none;
+	}
+	.intro-text{
+		width: 90%;
 	}
 }

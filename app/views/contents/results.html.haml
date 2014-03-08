@@ -31,12 +31,13 @@
   $(document).ready(function(){
     var energies = document.getElementsByClassName("energy-type");
     var energytext = document.getElementsByClassName("energy");
+    var wrapper = document.getElementsByClassName("col");
+    console.log(wrapper);
     for (var index = 0; index < energies.length; index++){
       var text = energies[index].innerHTML;
       if (text != null){
-        $(energies[index]).addClass(text.toLowerCase());
         $(energies[index]).attr("href","/" + text.toLowerCase());
-        $(energytext[index]).addClass(text.toLowerCase());
+        $(wrapper[index]).addClass(text.toLowerCase());
       }
     }
   });
@@ -47,13 +48,15 @@
   - @energy.each do |k,v|
     .results-energy
       - if (v)
-        = image_tag("check.png", :width=>"25", :height=> "40", :class=>"image")
-        %a.results-inline.energy-type#first #{k}
-        %a.results-inline.energy Energy
+        .f-col-wrapper#results-wrapper
+          .col.f-col1
+            .icon-wrap#results-icon-wrap
+              %a.results-inline.energy-type#first #{k}
+              %a.results-inline.energy Energy
 = render "map"
 #map-canvas
 %h1.header-results
-  Grants near #{@city.titlecase}, #{@state}
+  Grants Near #{@city.titlecase}, #{@state}
 %p.source-text Information provided by dsireusa.org and afdc.energy.gov
 #tab-container.tab-container
   %ul.etabs
@@ -62,7 +65,7 @@
     %li.tab
       %a{href: "#financial"}Incentive List
     %li.tab
-      %a{href: "#laws"}Rules, Regulations & Policies
+      %a{href: "#laws"}Rules, Regulations, & Policies
   #stateincentives.grantsinfo
   :javascript
     $(document).ready(function(){
