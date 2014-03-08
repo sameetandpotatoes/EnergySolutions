@@ -16,6 +16,7 @@
 #= require unslider.js
 #= require viewport.min.js
 #= require xdomainajax.js
+#= require scroll.coffee
 #= require jquery.easytabs.min.js
 home = ->
   window.location.pathname is "/"
