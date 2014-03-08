@@ -55,17 +55,18 @@ window.Scrolling = {
 				$(links[i]).addClass "active"
 
 	animateSlider: ->
-		$("div.slider").stop().animate
-			width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 49
-			duration: 300
-			queue: false
-			complete: ->
-				this.clicked = false
+		if $.find("#nav").toString() != ""
+			$("div.slider").stop().animate
+				width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 49
+				duration: 300
+				queue: false
+				complete: ->
+					this.clicked = false
 
 	keyPress: (e) ->
 		this.clicked = true
-		$("li.active").next().find(">a").trigger "click"  if e.keyCode is 39
-		$("li.active").prev().find(">a").trigger "click"  if e.keyCode is 37
+		$("li.active").next().find(">a").trigger "click"	if e.keyCode is 39
+		$("li.active").prev().find(">a").trigger "click"	if e.keyCode is 37
 		this.clicked = false
 		true
 
