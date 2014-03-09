@@ -1,0 +1,45 @@
+.sources {
+  height: auto;
+  text-align: justify;
+  min-width: 600px; }
+
+.sources:after {
+  content: '';
+  width: 100%;
+  /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block; }
+
+.sources div {
+  width: 270px;
+  display: inline-block;
+  padding: 10px 50px; }
+
+.src_image {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.src_image > img {
+  width: 270px; }
+
+.src_image:hover {
+  transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  /* IE 9 */
+  -moz-transform: scale(1.15);
+  /* Firefox */
+  -webkit-transform: scale(1.15);
+  /* Safari and Chrome */
+  -o-transform: scale(1.15);
+  /* Opera */ }
+
+@media all and (max-width: 500px) {
+  .sources {
+    padding: 0;
+    min-width: 0;
+    text-align: center;
+    margin-left: -20px; } }

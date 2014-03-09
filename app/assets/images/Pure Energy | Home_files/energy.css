@@ -1,0 +1,321 @@
+.col {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #CCCCCC;
+  border: 1px solid #B8B7B9;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  width: 290px;
+  font-family: 'Lato'; }
+  .col h3 {
+    font-family: 'Lato';
+    font-weight: bold;
+    color: white;
+    font-size: 23px; }
+
+#pro, #con {
+  height: auto;
+  text-align: justify;
+  min-width: 400px;
+  padding: 0 30px; }
+
+.f-col-wrapper {
+  width: 290px;
+  height: 300px;
+  display: inline-block;
+  clear: both;
+  display: inline-block;
+  margin-bottom: 20px; }
+
+#pro:after, #con:after {
+  content: '';
+  width: 100%;
+  display: inline-block; }
+
+.col .icon-wrap {
+  border-radius: 6px 6px 0 0;
+  display: block;
+  padding: 24px 10px 40px; }
+
+#pro .col .icon-wrap {
+  background: url(/assets/f-box-bg.png) no-repeat scroll center bottom #8dc63f;
+  background-size: 100%; }
+
+#con .col .icon-wrap {
+  background: url(/assets/f-box-bg.png) no-repeat scroll center bottom #c82829;
+  background-size: 100%; }
+
+.col-content {
+  min-height: 93px;
+  padding: 0 10px;
+  height: 123px;
+  font-size: 18px; }
+
+#pro {
+  margin-top: 30px; }
+
+.text h2 {
+  border-bottom: 2px solid #1E90FF;
+  font-family: 'Lato';
+  padding-bottom: 10px;
+  font-size: 20px; }
+
+.icon {
+  float: left;
+  padding: 5px;
+  min-width: 60px; }
+
+.intro-inline {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 15px; }
+
+.intro-word-wrap {
+  margin-left: 80px;
+  text-align: left; }
+
+.section h1 {
+  font-family: 'Lato'; }
+
+.text {
+  padding: 0px 20px; }
+
+.text p {
+  line-height: 1.4;
+  font-size: 18px;
+  padding: 0 20px; }
+
+.header {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  font-family: 'Oswald'; }
+
+.video {
+  margin-top: 30px;
+  display: inline-block;
+  width: 50%;
+  min-height: 400px;
+  max-height: 600px; }
+
+.video-description {
+  display: inline;
+  float: right;
+  vertical-align: top;
+  font-size: 30px;
+  width: 45%; }
+
+.image {
+  vertical-align: middle; }
+
+.inline {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  min-width: 180px;
+  font-size: 19px;
+  padding-left: 5px; }
+
+.procon {
+  margin-left: 20px; }
+
+.procons {
+  display: block;
+  padding-left: 10px; }
+
+.menu {
+  position: fixed;
+  top: 30%;
+  left: -30px;
+  max-width: 150px; }
+
+.section {
+  margin-left: -30px;
+  padding: 50px 20px 100px 20px; }
+  .section:nth-child(odd) {
+    background-color: white; }
+  .section:nth-child(even) {
+    background-color: #EDEDED; }
+
+#firstPage {
+  padding-top: 90px; }
+
+.displayimage {
+  width: 80%;
+  display: block;
+  margin: 0 auto; }
+
+.tiled {
+  display: inline-block;
+  vertical-align: top; }
+
+.windinfo {
+  width: 49%; }
+
+.geoinfo {
+  width: 49%; }
+
+.word-wrap {
+  display: inline-table;
+  min-height: 30px;
+  overflow: auto;
+  max-width: 80%;
+  font-size: 14px;
+  word-wrap: break-word;
+  text-align: left; }
+
+.detailtext {
+  padding-left: 10px;
+  font-size: 19px;
+  margin-top: 0px; }
+
+.costtable tr td:first-child {
+  background-color: gray;
+  color: white; }
+
+.cost {
+  padding-bottom: 20px;
+  float: left;
+  vertical-align: middle; }
+
+.costheader {
+  font-size: 30px;
+  font-weight: 300;
+  display: block;
+  font-family: 'Droid Sans'; }
+
+.hydro_gradient {
+  margin-top: 20px;
+  background: -webkit-linear-gradient(#f0f1f3, #d3ebf7);
+  background: -o-linear-gradient(#f0f1f3, #d3ebf7);
+  background: -moz-linear-gradient(#f0f1f3, #d3ebf7);
+  background: linear-gradient(#f0f1f3, #d3ebf7); }
+
+.cost-header {
+  text-align: center;
+  font-size: 20px; }
+
+.costinput {
+  display: inline-block;
+  width: 40px;
+  font-family: 'Lato'; }
+
+#biomasstable td {
+  padding: 5px; }
+
+.title {
+  color: #FFFFFF;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  font-family: 'Lato'; }
+
+.mobile {
+  display: none;
+  padding-left: 20px; }
+
+#geo-table tr td:first-child {
+  max-width: 130px; }
+#geo-table tr:first-child td {
+  max-width: 90px; }
+
+.averagecost {
+  font-family: 'Lato'; }
+  .averagecost tr {
+    text-align: center;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 2px;
+    border-style: solid;
+    border-color: #082F70; }
+  .averagecost tr td:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    font-family: 'Lato';
+    max-width: 50px;
+    border-right-width: 5px;
+    border-color: #082F70;
+    border-style: solid; }
+  .averagecost td {
+    font-size: 17px;
+    padding: 10px; }
+
+.hidden {
+  display: none; }
+
+@media all and (max-width: 1000px) {
+  #firstPage {
+    padding: 0px; }
+
+  #con {
+    float: none; }
+
+  .costfacts {
+    float: none;
+    padding-left: 10%; }
+
+  .detailtext {
+    width: 100%; }
+
+  .section {
+    padding: 30px 25px; }
+
+  #cssmenu {
+    margin-top: -21px; } }
+@media only screen and (max-width: 700px) {
+  .mobile {
+    display: block; }
+
+  .displayimage {
+    width: 100% !important;
+    padding: 0px;
+    margin: 0 auto; }
+
+  .tiled {
+    display: block; }
+
+  .windinfo, .geoinfo {
+    width: 100%; }
+
+  .averagecost tr:first-child td, .averagecost tr td:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: 'Lato';
+    max-width: 50px; }
+
+  .averagecost td {
+    font-size: 10px;
+    padding: 0px; }
+
+  .text {
+    padding: 0px; }
+
+  .video {
+    width: 100%;
+    height: 400px; }
+
+  .video-description {
+    float: none; }
+    .video-description p {
+      width: 100%; } }
+@media only screen and (max-width: 500px) {
+  .f-col-wrapper, .col {
+    width: 100%; }
+
+  #pro, #con {
+    padding: 0;
+    min-width: 0; }
+
+  .f-col-wrapper {
+    height: 290px; }
+
+  .col.icon-wrap {
+    padding: 15px 10px; } }
+@media only screen and (max-width: 900px) {
+  .word-wrap {
+    max-width: 90%; } }

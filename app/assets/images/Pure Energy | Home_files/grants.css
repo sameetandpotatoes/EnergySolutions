@@ -1,0 +1,17 @@
+.categorytype, #moregrants h3 {
+  color: #C9383E;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.5em;
+  font-weight: bold; }
+
+.copybold {
+  color: #000000;
+  font-weight: bold; }
+
+.grantsinfo, .etabs {
+  margin-left: 50px !important;
+  font-family: 'Lato'; }
+
+.etabs > li > a {
+  text-decoration: none;
+  font-size: 16px; }
