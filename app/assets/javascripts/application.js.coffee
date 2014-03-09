@@ -22,9 +22,9 @@ home = ->
   window.location.pathname is "/"
 imageFix = ->
   $(".imagecarousel").css "max-height", (($(window).height() / 2) + 100)
+  $(".imagecarousel").css "width", (($('.imagecarousel').width()) + 0.5)
   listItems = $(".imagecarousel ul li")
   listItems.each (index, li) ->
-    # $(li).css "width", $(".imagecarousel").width()
     $(li).css "height", $(".imagecarousel").height()
 homeFix = ->
   $(".home").css "height", $(window).height() - 121

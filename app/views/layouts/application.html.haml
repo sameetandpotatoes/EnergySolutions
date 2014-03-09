@@ -94,8 +94,8 @@
               %li
                 %a{href: "/wind/"}
                   %span Wind Turbines
-              %li#compare
-                %a{href: "/compare/"}
+              %li#maps
+                %a{href: "/maps/"}
                   %span Interactive Maps
               %li.last
                 %a{href: "/all/"}
@@ -106,7 +106,7 @@
           %li.last
             %a{href: "/about/"}
               %span About
-      - if (current_page?(home_path) or current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "compare") or current_page?(:controller => "contents", :action => "about") or current_page?(:controller => "contents", :action => "all"))
+      - if (current_page?(home_path) or current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "maps") or current_page?(:controller => "contents", :action => "about") or current_page?(:controller => "contents", :action => "all"))
         .home
           = yield
       - else

@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
 	include ApplicationHelper
-	caches_page :biomass, :hydroelectric, :wind, :solar, :geothermal, :biofuel, :about, :home
+	caches_page :biomass, :hydroelectric, :wind, :solar, :geothermal, :biofuel, :about, :home, :maps, :all
 	def home
 	end
 	def biomass
