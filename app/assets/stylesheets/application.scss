@@ -32,9 +32,10 @@ a {
 #content{
 	padding-left: 30px;
 }
-// .home, #content, .footer{
-// 	display: none;
-// }
+.fb_iframe_widget{
+	position: absolute !important;
+	left: 20px;
+}
 footer{
 	text-align: center;
 }
