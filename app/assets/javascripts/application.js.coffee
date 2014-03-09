@@ -51,17 +51,16 @@ $(window).load ->
   $ ->
     $('#loading').animate
       opacity: '0'
-    , 2000
-    $('.home').animate
-      opacity: '1'
-    , 2000
-    $('#content').animate
-      opacity: '1'
-    , 2000
-    $('.footer').animate
-      opacity: '1'
-    , 2000
-  $('#loading').css "display", "none"
+    , 1000, ->
+      $('.home').animate
+        opacity: '1'
+      , 2000
+      $('#content').animate
+        opacity: '1'
+      , 2000
+      $('.footer').animate
+        opacity: '1'
+      , 2000
   $('.results').css "display", "block"
   $('header > i').click ->
     if $('.content').hasClass "slideRight"
@@ -85,6 +84,7 @@ $(window).load ->
     speed: 2
 
   $(".imagecarousel").unslider
+    delay: 3000
     fluid: true
     dots: true
     keys: true

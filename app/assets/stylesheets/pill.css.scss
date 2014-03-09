@@ -37,10 +37,9 @@
 }
 @media all and (max-width: 970px) {
     #BackToTop{
-      left: 15px;
+      display: none;
     }
     #BackToTop, #BackToTop > span{
-      height: 48px;
-      width: 48px;
+      display: none;
     }
 }
