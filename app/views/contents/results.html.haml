@@ -43,17 +43,18 @@
 %h1.header-results
   Renewable Energy Sources Available in
   %span #{@city.titlecase}, #{@state}
-.results
-  - @energy.each do |k,v|
-    .results-energy
-      - if (v)
-        .f-col-wrapper#results-wrapper
-          .col.f-col1
-            .icon-wrap#results-icon-wrap
-              %a.results-inline.energy-type#first #{k}
-              %a.results-inline.energy Energy
-= render "map"
-#map-canvas
+.loc-div
+  .results
+    - @energy.each do |k,v|
+      .results-energy
+        - if (v)
+          .f-col-wrapper#results-wrapper
+            .col.f-col1
+              .icon-wrap#results-icon-wrap
+                %a.results-inline.energy-type#first #{k}
+                %a.results-inline.energy Energy
+  = render "map"
+  #map-canvas
 %h1.header-results
   Grants Near #{@city.titlecase}, #{@state}
 %p.source-text Information provided by dsireusa.org and afdc.energy.gov
