@@ -63,7 +63,6 @@ $(window).load ->
       , 2000
       $("#loading img").css "top", "-9999px"
       $("#loading img").css "left", "-9999px"
-  # $('.results').css "display", "block"
   $('header > i').click ->
     if $('.content').hasClass "slideRight"
       $(".content").animate

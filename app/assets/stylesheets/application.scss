@@ -17,6 +17,9 @@ body{
 	padding:0;
 	height:100%;
 }
+.home, #content, .footer{
+	opacity: 0;
+}
 .content{
 	position: relative;
 }
