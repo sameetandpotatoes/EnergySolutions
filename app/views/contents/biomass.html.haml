@@ -1,6 +1,5 @@
-- content_for :head do
-  %title Pure Energy | Biomass
-  %meta{content: "Biomass is a collective term for renewable, clean energy from plant and animal material.", name: "description"}/
+- @title="Pure Energy | Biomass"
+- @meta="Biomass is a collective term for renewable, clean energy from plant and animal material."
 #firstPage.section{style: "background-color: #74C042;"}
   .intro
     = image_tag("biomass infographic.jpg", :class => "displayimage", :style => "width: 60%", :alt => "Biomass Infographic")
@@ -79,34 +78,34 @@
       %td
       %td Size 1
       %td Size 2
-      %td Size 3
+      %td#mobile Size 3
     %tr
       %td Floor Area (m&sup2)
       %td 800
       %td 2500
-      %td 5000
+      %td#mobile 5000
     %tr
       %td Boiler Size
       %td 70 kW
       %td 200 kW
-      %td 400 kW
+      %td#mobile 400 kW
     %tr
       %td Capital Cost
       %td $68000
       %td $163200
-      %td $272000
+      %td#mobile $272000
     %tr
       %td Oil Cost
       %td $12517.44
       %td $35762.56
-      %td $71526.48
+      %td#mobile $71526.48
     %tr
       %td Pellet Cost
       %td $7140
       %td $20400
-      %td $40800
+      %td#mobile $40800
     %tr
       %td Renewable Heat Incentive
       %td $11754.48
       %td $33583.84
-      %td $51000.00
+      %td#mobile $51000.00

@@ -1,6 +1,5 @@
-- content_for :head do
-  %title Pure Energy | Wind
-  %meta{content: "A wind turbine is a device that converts kinetic energy from the wind into electrical power.", name: "description"}/
+- @title="Pure Energy | Wind"
+- @meta="A wind turbine is a device that converts kinetic energy from the wind into electrical power."
 #firstPage.section{style: "background-color: #93D6CF;"}
   .intro
     = image_tag("wind_infographic_1.jpg", :class => "tiled windinfo", :alt => "Wind Energy Infographic")
@@ -80,28 +79,28 @@
   %table.averagecost
     %tr
       %td
-      %td Parts
+      %td#mobile Parts
       %td Net Cost
       %td Savings
       %td ROI
       %td Payback Years
-      %td 6% Mortgage
-      %td Cash Flow
+      %td#mobile 6% Mortgage
+      %td#mobile Cash Flow
     %tr
       %td 10kW 120 Feet
-      %td $57,000
+      %td#mobile $57,000
       %td $39,900
       %td $200
       %td 6.0%
       %td 16.6
-      %td $239
-      %td $39
+      %td#mobile $239
+      %td#mobile $39
     %tr
       %td 1.7kW 35 Feet
-      %td $13,000
+      %td#mobile $13,000
       %td $9,100
       %td $35
       %td 4.6%
       %td 21.7
-      %td $55
-      %td $20
+      %td#mobile $55
+      %td#mobile $20
