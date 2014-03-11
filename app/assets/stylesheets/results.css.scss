@@ -1,3 +1,19 @@
+.etabs:before, .etabs:after {
+    border-collapse: collapse;
+    content: "";
+    display: table;
+}
+.etabs:after {
+    clear: both;
+}
+.etabs {
+    margin: 0;
+    padding: 0.2em 0.2em 0;
+    background: repeat-x scroll 50% 50% #CCCCCC;
+}
+.grantsinfo{
+		background-color: white;
+}
 #energymap{
 	display: block;
 	margin-left: auto;
