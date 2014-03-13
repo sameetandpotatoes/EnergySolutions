@@ -208,7 +208,6 @@
 	font-family: 'Lato';
 }
 #biomasstable td{
-	padding: 5px;
 }
 .title{
 	color: #FFFFFF;
@@ -231,25 +230,37 @@
 }
 .averagecost{
 	font-family: 'Lato';
-	tr{
-		text-align: center;
-    border-width: 5px 5px 5px 2px;
-    border-style: solid;
-    border-color: #082F70;
+	border: none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	background: #52be7f;
+	tr:first-child td, td {
+		box-shadow: inset 0 -1px rgba(0,0,0,0.25),
+			inset 0 1px rgba(0,0,0,0.25);
 	}
-	tr td:first-child{
+	tr:first-child td {
+		font-weight: normal;
+		-webkit-font-smoothing: antialiased;
+		padding: 0.5em;
+		color: rgba(0,0,0,0.45);
+		text-shadow: 0 0 1px rgba(0,0,0,0.1);
+		font-size: 1.5em;
 		text-align: center;
-		font-weight: bold;
-		font-size: 19px;
-		font-family: 'Lato';
-		max-width: 50px;
-		border-right-width: 5px;
-		border-color: #082F70;
-		border-style: solid;
 	}
-	td{
-		font-size: 17px;
-		padding: 10px;
+	td {
+		color: #f7f7f7;
+		padding: 0.7em 1em 0.7em 1.15em;
+		text-shadow: 0 0 1px rgba(255,255,255,0.1);
+		font-size: 1.4em;
+	}
+	tr {
+		-webkit-transition: background 0.3s, box-shadow 0.3s;
+		-moz-transition: background 0.3s, box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
+	}
+	tr:hover {
+		background: rgba(0,0,0,0.1);
 	}
 }
 .hidden{
@@ -291,16 +302,16 @@
 	.windinfo, .geoinfo{
 		width: 100%;
 	}
+	#biomasstable{
+		text-align: left;
+	}
 	.averagecost tr:first-child td, .averagecost tr td:first-child{
-		text-align: center;
-		font-weight: bold;
-		font-size: 11px;
-		font-family: 'Lato';
-		max-width: 50px;
+		font-size: 8px;
 	}
 	.averagecost td{
-		font-size: 10px;
+		font-size: 5px;
 		padding: 0px;
+		text-align: center;
 	}
 	.text{
 		padding: 0px;
@@ -316,6 +327,9 @@
 		width: 100%;
 		}
 	}
+	#mobile{
+		display: none;
+	}
 }
 @media only screen and (max-width: 500px){
 	.f-col-wrapper, .col{
@@ -330,9 +344,6 @@
 	}
 	.col.icon-wrap{
 		padding: 15px 10px;
-	}
-	#mobile{
-		display: none;
 	}
 }
 @media only screen and (max-width: 900px){

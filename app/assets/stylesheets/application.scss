@@ -78,7 +78,8 @@ header > i{
 		z-index: 1000;
 		top: 0;
 		height: 100%;
-		background-color: #238C47;
+		// background-color: #238C47;
+		background: #238980;
 		ul{
 			list-style-type: none;
 			margin: 0 auto 0 0;
@@ -87,7 +88,8 @@ header > i{
 		li{
 			min-height: 20px;
 			&:hover{
-				background-color: #007929;
+				// background-color: #007929;
+				background: rgba(0,0,0,0.19);
 				cursor: pointer;
 			}
 			font-family: 'Lato';

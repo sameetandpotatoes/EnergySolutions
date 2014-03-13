@@ -29,7 +29,6 @@
         %a.link{href: "/"} Pure Energy
         \#{link_to image_tag("logo.jpg", :class=>"bpalogo", :width=>"40", :height => "40"), :action => "home", :controller => "contents"}
         %i.fa.fa-bars
-      .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/pages/Pure-Energy/216979395176704?ref=hl", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "false"}
       #mobilemenu
         %ul
           %li
@@ -114,6 +113,7 @@
           = yield
       %footer.footer
         Copyright © Pure Energy 2013-2014. All Rights Reserved.
+        .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/pages/Pure-Energy/216979395176704?ref=hl", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "false"}
         %a{href: "http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pure-energy.org%2F", target: '_blank'}
           %img.w3{alt: "Valid HTML/CSS!", src: "http://jigsaw.w3.org/css-validator/images/vcss"}/
     #loading
