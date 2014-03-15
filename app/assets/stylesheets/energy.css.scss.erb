@@ -57,6 +57,9 @@
 #pro{
 	margin-top: 30px;
 }
+.bio{
+	padding: 0 5px;
+}
 //End
 .text h2{
 	border-bottom: 2px solid #1E90FF;
@@ -207,7 +210,11 @@
 	width: 40px;
 	font-family: 'Lato';
 }
-#biomasstable td{
+#biomasstable {
+	td{text-align: left;}
+	tr td:first-child{
+		max-width: 120px;
+	}
 }
 .title{
 	color: #FFFFFF;
@@ -253,6 +260,7 @@
 		padding: 0.7em 1em 0.7em 1.15em;
 		text-shadow: 0 0 1px rgba(255,255,255,0.1);
 		font-size: 1.4em;
+		text-align: center;
 	}
 	tr {
 		-webkit-transition: background 0.3s, box-shadow 0.3s;
