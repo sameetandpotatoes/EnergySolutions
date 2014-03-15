@@ -47,6 +47,8 @@ $(document).ready ->
   $(".home").css "opacity", "0"
   $("#content").css "opacity", "0"
   $(".footer").css "opacity", "0"
+  $('#loading img').load ->
+    $(this).css "visibility", "visible"
 $(window).load ->
   $ ->
     $('#loading').animate
