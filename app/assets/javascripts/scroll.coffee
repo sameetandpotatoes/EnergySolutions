@@ -57,7 +57,7 @@ window.Scrolling = {
 	animateSlider: ->
 		if $.find("#nav").toString() != ""
 			$("div.slider").stop().animate
-				width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 49
+				width: ($("#nav li.active").offset().left + $("#nav li.active").width() / 2 - $("div.slider-holder").offset().left) - 52.5
 				duration: 300
 				queue: false
 				complete: ->

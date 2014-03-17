@@ -62,13 +62,15 @@ header > i{
 #mobilemenu{
 	display: none;
 }
+@media only screen and (max-width: 1190px){
+	.fb_iframe_widget{
+		display: none !important;
+	}
+}
 @media only screen and (max-width: 1024px){
 	#header, .link{
 		font-size: 16px !important;
 		padding: 15px 2px !important;
-	}
-	.fb_iframe_widget{
-		display: none !important;
 	}
 	#mobilemenu{
 		display: block;
@@ -78,8 +80,7 @@ header > i{
 		z-index: 1000;
 		top: 0;
 		height: 100%;
-		// background-color: #238C47;
-		background: #238980;
+		background: #4FA374;
 		ul{
 			list-style-type: none;
 			margin: 0 auto 0 0;

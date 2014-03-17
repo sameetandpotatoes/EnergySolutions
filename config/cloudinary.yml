@@ -4,7 +4,7 @@ development:
   api_key: '461983898464665'
   api_secret: jD2XqEsZLeC-H_qmRgmueCq4tLk
   enhance_image_tag: true
-  static_image_support: false
+  static_image_support: true
 production:
   cloud_name: hi6lobuav
   api_key: '461983898464665'

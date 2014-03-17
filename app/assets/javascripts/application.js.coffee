@@ -41,7 +41,7 @@ contentFix = ->
 equalHeight = ->
   biggestHeight = 0
   $(".equal-height").each ->
-    biggestHeight = $(this).height() + 30  if $(this).height() > biggestHeight
+    biggestHeight = $(this).height() + 45  if $(this).height() > biggestHeight
   $(".equal-height").height biggestHeight
 $(document).ready ->
   $(".home").css "opacity", "0"
