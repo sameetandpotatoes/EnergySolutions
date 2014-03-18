@@ -48,21 +48,21 @@ figure > p{
 	margin: 0px;
 }
 @media all and (max-width: 800px){
-		.team article{
-			float: none;
+	.team article{
+		float: none;
+	}
+	#about{
+		width: 90% !important;
+	}
+	.averagecost{
+		tr{
+			border-width: 0px;
 		}
-		#about{
-			width: 90% !important;
+		td{
+			font-size: 15px !important;
 		}
-		.averagecost{
-			tr{
-				border-width: 0px;
-			}
-			td{
-				font-size: 15px !important;
-			}
-		}
-		#about td{
-			padding: 5px !important;
-		}
+	}
+	#about td{
+		padding: 5px !important;
+	}
 }

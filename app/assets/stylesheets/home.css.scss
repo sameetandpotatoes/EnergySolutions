@@ -19,6 +19,21 @@
 .intro-text{
 	width: 40%;
 }
+.icon{
+	float: left;
+	padding: 5px;
+	min-width: 60px;
+}
+.intro-inline{
+	font-weight: bold;
+	font-size: 20px;
+	text-align: left;
+	margin-left: 15px;
+}
+.intro-word-wrap{
+	margin-left: 80px;
+	text-align: left;
+}
 .footer{
 	font-family: 'Lato';
 	background-color: #232323;
@@ -60,7 +75,7 @@
 	color: white;
 	float: left;
 	margin-left: 15px;
-	margin-top: 10px;
+	margin-top: 25px;
 	letter-spacing: 3px;
 }
 .imagecarousel ul li a{

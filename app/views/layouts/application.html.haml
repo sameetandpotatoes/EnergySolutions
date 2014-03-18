@@ -4,7 +4,7 @@
     /[if lt IE 9]
       %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true, :async => true
     = csrf_meta_tags
     %meta{content: "yes", name: "apple-mobile-web-app-capable"}/
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
@@ -21,7 +21,7 @@
 
       ga('create', 'UA-42777932-2', 'pure-energy.org');
       ga('send', 'pageview');
-  %body{:style => "background: url(#{image_path('beige_paper.png')});"}
+  %body
     = render "facebook"
     .content.slideRight
       %header#header
@@ -33,7 +33,7 @@
           %li
             %a{href: "/"}
               %i.fa.fa-home
-              %span{:style => "display: inline"} Home
+              %span.inline Home
           %li
             %a.noicon{href: "/biofuel/"}
               %span Biofuel
@@ -55,15 +55,15 @@
           %li
             %a{href: "/sources/"}
               %i.fa.fa-globe
-              %span{:style => "display: inline"} References
+              %span.inline References
           %li
             %a{href: "/about/"}
               %i.fa.fa-info
-              %span{:style => "display: inline"} About
+              %span.inline About
           %li
             %a.special{href: "#"}
               %i.fa.fa-location-arrow
-              %span{:style => "display: inline"} Energy Near You
+              %span.inline Energy Near You
       #cssmenu
         %ul
           %li

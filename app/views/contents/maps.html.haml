@@ -4,7 +4,7 @@
 	%h1.header How Green Is Your State?
 	%iframe#energymap{width: "1100", height:"750", src:"http://www.mphonline.org/green-states/"}
 	%h1.header Renewable Energy Sources
-	%object#energymap{height: "640", width: "1000", style: "margin-top: 30px;"}
+	%object#energymap{height: "640", width: "1000"}
 		%param{name: "movie", value: "GE_Energy.swf"}/
 		%embed{height: "640", src: "#{asset_path "GE_Energy.swf" }", width: "1000"}
 	%h1.header Interactive Renewable Energy Map

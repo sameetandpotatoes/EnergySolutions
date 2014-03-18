@@ -1,3 +1,13 @@
+.displayimage {
+	padding-top: 10px;
+}
+#map{
+	img{
+		width: 100%;
+	}
+}
+
+// eTabs
 .etabs:before, .etabs:after {
     border-collapse: collapse;
     content: "";
@@ -11,6 +21,25 @@
     padding: 0.2em 0.2em 0;
     background: repeat-x scroll 50% 50% #CCCCCC;
 }
+.categorytype, #moregrants h3 {
+    color: #C9383E;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.copybold {
+    color: #000000;
+    font-weight: bold;
+}
+.grantsinfo, .etabs{
+	font-family: 'Lato';
+}
+.etabs > li > a{
+	text-decoration: none;
+	font-size: 16px;
+}
+
+// End
 .grantsinfo{
 		background-color: white;
 }
@@ -54,6 +83,10 @@
 .geothermal{background-color:rgba(255,165,0,0.2);}
 .hydroelectric{background-color:rgba(0,0,255,0.2);}
 .header-results > span{background-color: rgba(128,0,128,0.2);}
+
+#energy-map:nth-child(2){
+	margin-top: 30px;
+}
 .energy{
 	padding: 0px;
 	margin: 0px;
@@ -111,6 +144,12 @@
 }
 #results-wrapper{
 	height: 65px;
+}
+.state, #lat, #long, #energy{
+	display: none;
+}
+#noenergy{
+	width: 500px;
 }
 @media all and (max-width: 1200px){
 	#map-canvas{

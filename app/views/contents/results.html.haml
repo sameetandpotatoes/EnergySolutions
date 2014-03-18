@@ -22,10 +22,10 @@
     var loadScriptTime = (new Date).getTime();
     getScript("https://maps.gstatic.com/intl/en_us/mapfiles/api-3/15/5/main.js");
   })();
-%p.state{style: "display: none;"}= @state
-%p#lat{style: "display: none;"}= @lat
-%p#long{style: "display: none;"}= @long
-%p#energy{style: "display: none;", 'data-id' => "#{@energy}"}
+%p.state= @state
+%p#lat= @lat
+%p#long= @long
+%p#energy{'data-id' => "#{@energy}"}
 :javascript
   $(document).ready(function(){
     var energies = document.getElementsByClassName("energy-type");
@@ -47,7 +47,7 @@
     - if !@energy.has_value?(true)
       .results-energy
         .f-col-wrapper#results-wrapper
-          .col.f-col1.solar{:style => "width: 500px"}
+          .col.f-col1#noenergy
             .icon-wrap#results-icon-wrap
               %p.results-inline There are no suitable renewable energy resources in your area. However, feel free to look at the incentives in your area to switch to a renewable energy resource while saving money.
     - else

@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+@import url(http://fonts.googleapis.com/css?family=Lato|Bree+Serif|Droid+Sans|Oldenburg|Oswald);
+html, head, body{
+	overflow-x: hidden;
+}
+body{
+	overflow-x: hidden;
+	margin:0;
+	padding:0;
+	height:100%;
+	background: url(#{image_path('beige_paper.png')});
+}
+.home, #content, .footer{
+	opacity: 0;
+}
+.content{
+	position: relative;
+}
+img{
+	border: none;
+}
+p{
+	font-family: 'Lato';
+}
+a {
+	color: inherit;
+}
+#content{
+	padding-left: 30px;
+}
+.fb-like{
+	top: 20px;
+	margin-left: 250px;
+}
+.fb_iframe_widget{
+	position: absolute !important;
+}
+footer{
+	text-align: center;
+}
+.link, :link:hover{
+	text-decoration: none;
+}
+.nohighlight{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+header > i{
+  display: none !important;
+  width: 15px !important;
+}
+#mobilemenu{
+	display: none;
+}
+@media only screen and (max-width: 1190px){
+	.fb_iframe_widget{
+		display: none !important;
+	}
+}
+@media only screen and (max-width: 1024px){
+	#header, .link{
+		font-size: 16px !important;
+		padding: 15px 2px !important;
+	}
+	#mobilemenu{
+		display: block;
+		left: -200px;
+		width: 200px;
+		position: absolute;
+		z-index: 1000;
+		top: 0;
+		height: 100%;
+		background: #4FA374;
+		ul{
+			list-style-type: none;
+			margin: 0 auto 0 0;
+			padding: 0;
+		}
+		li{
+			min-height: 20px;
+			&:hover{
+				background: rgba(0,0,0,0.19);
+				cursor: pointer;
+			}
+			font-family: 'Lato';
+			font-size: 19px;
+			a,span{
+				text-decoration: none;
+				padding: 0.45em 0em 0.20em 0.4em;
+				width: 95%;
+				display: block;
+			}
+			.inline{
+				display: inline;
+				vertical-align: top;
+			}
+		}
+		.noicon{
+			padding: 0.45em 0em 0.45em 1.5em;
+			width: 82%;
+		}
+	}
+}

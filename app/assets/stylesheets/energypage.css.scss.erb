@@ -1,0 +1,385 @@
+// PROS & CONS
+.col {
+	float: left;
+	margin: 0 auto;
+	width: 290px;
+	border: 1px solid #B8B7B9;
+	border-radius: 8px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	box-shadow: 0 0 4px #CCCCCC;
+	text-align: center;
+	font-family: 'Lato';
+	h3{
+		color: white;
+		font-weight: bold;
+		font-size: 23px;
+		font-family: 'Lato';
+	}
+}
+#pro, #con {
+  padding: 0 30px;
+  min-width: 400px;
+  height: auto;
+  text-align: justify;
+}
+.f-col-wrapper{
+	display: inline-block;
+	display: inline-block;
+	clear: both;
+	margin-bottom: 20px;
+	width: 290px;
+	height: 300px;
+}
+#pro:after, #con:after {
+  display: inline-block;
+  width: 100%;
+  content: '';
+}
+.col .icon-wrap {
+	display: block;
+	padding: 24px 10px 40px;
+	border-radius: 6px 6px 0 0;
+}
+#pro .col .icon-wrap{
+	background: url(<%= asset_path 'f-box-bg.png' %>) no-repeat scroll center bottom #8DC63F;
+	background-size: 100%;
+}
+#con .col .icon-wrap{
+	background: url(<%= asset_path 'f-box-bg.png' %>) no-repeat scroll center bottom #C82829;
+	background-size: 100%;
+}
+.col-content {
+  padding: 0 10px;
+  min-height: 93px;
+  height: 123px;
+  font-size: 20px;
+}
+#pro{
+	margin-top: 30px;
+}
+.bio{
+	padding: 0 5px;
+}
+// END PROS & CONS
+
+// Text Adjustments
+.text h2{
+	padding-bottom: 5px;
+	border-bottom: 5px solid #1E90FF;
+	font-size: 22px;
+	font-family: 'Lato';
+}
+.section h1{
+	font-family: 'Lato';
+}
+.text{
+	padding: 0px 20px;
+}
+.text p{
+	padding: 0 20px;
+	font-size: 19px;
+	line-height: 1.5;
+}
+.header{
+	margin-bottom: 0px;
+	padding-top: 20px;
+	text-align: center;
+	font-family: 'Oswald';
+}
+// End
+.video{
+	display: inline-block;
+	margin-top: 30px;
+	min-height: 400px;
+	max-height: 600px;
+	width: 50%;
+}
+.video-description{
+	display: inline;
+	float: right;
+	width: 45%;
+	vertical-align: top;
+	font-size: 30px;
+}
+.image{
+	vertical-align: middle;
+}
+.inline{
+	display: inline-block;
+	padding-left: 5px;
+	min-width: 180px;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 19px;
+}
+.section{
+	margin-left: -30px;
+	padding: 50px 20px 100px 20px;
+	&:nth-child(odd){
+		background-color: white;
+	}
+	&:nth-child(even){
+		background-color: #EDEDED;
+	}
+}
+#firstPage{
+	padding-top: 90px;
+}
+.displayimage{
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+}
+.tiled{
+	display: inline-block;
+	vertical-align: top;
+}
+.windinfo{
+	width: 49%;
+}
+.geoinfo{
+	width: 49%;
+}
+.word-wrap{
+	display: inline-table;
+	overflow: auto;
+	min-height: 30px;
+	max-width: 80%;
+	text-align: left;
+	word-wrap: break-word;
+	font-size: 14px;
+}
+.detailtext{
+	margin-top: 0px;
+	padding-left: 10px;
+	font-size: 19px;
+}
+.costtable tr td:first-child{
+	background-color: gray;
+	color: white;
+}
+.cost{
+	float: left;
+	padding-bottom: 20px;
+	vertical-align: middle;
+}
+.costheader{
+	display: block;
+	text-align: center;
+	font-weight: 300;
+	font-size: 20px;
+	font-family: 'Droid Sans';
+}
+.hydro_gradient{
+	margin-top: 20px;
+	background: -webkit-linear-gradient(#F0F1F3, #D1EDF5);
+	background: -o-linear-gradient(#F0F1F3, #D1EDF5);
+	background: -moz-linear-gradient(#F0F1F3, #D1EDF5);
+	background: linear-gradient(#F0F1F3, #D1EDF5);
+	img:last-child{
+		vertical-align: bottom;
+	}
+}
+.title{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	color: #FFFFFF;
+	font-family: 'Lato';
+}
+.biofuel1{
+	background: #333333 !important;
+}
+.biofuel2{
+	background: #058639 !important;
+	h1{
+		margin-bottom: 25px;
+		color: white;
+	}
+}
+.biomass1{
+	background: #74C042 !important;
+	img{
+		width: 60%;
+	}
+}
+.geo1{
+	background: #1D1D1F !important;
+	img:last-child{
+		vertical-align: bottom;
+	}
+}
+.solar1{
+	background-color: #F1EEE5 !important;
+	img{
+		width: 80%;
+	}
+}
+.wind1{
+	background-color: #93D6CF !important;
+}
+.solar2{
+	background-image: url(#{image_path("hexagon.png")});
+	img:last-child{
+		vertical-align: bottom;
+	}
+}
+//COST SECTION
+.averagecost{
+	border: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: #52be7f;
+	font-family: 'Lato';
+	tr:first-child td, td {
+		box-shadow: inset 0 -1px rgba(0,0,0,0.25),
+			inset 0 1px rgba(0,0,0,0.25);
+	}
+	tr:first-child td {
+		padding: 0.5em;
+		color: rgba(0,0,0,0.45);
+		text-align: center;
+		text-shadow: 0 0 1px rgba(0,0,0,0.1);
+		font-weight: normal;
+		font-size: 1.5em;
+		-webkit-font-smoothing: antialiased;
+	}
+	td {
+		padding: 0.7em 1em 0.7em 1.15em;
+		color: #f7f7f7;
+		text-align: center;
+		text-shadow: 0 0 1px rgba(255,255,255,0.1);
+		font-size: 1.4em;
+	}
+	tr {
+		-webkit-transition: background 0.3s, box-shadow 0.3s;
+		-moz-transition: background 0.3s, box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
+	}
+	tr:hover {
+		background: rgba(0,0,0,0.1);
+	}
+}
+#geo-table{
+	tr td:first-child{
+		max-width: 130px;
+	}
+	tr:first-child td{
+		max-width: 90px;
+	}
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table col[class*="col-"] {
+  display: table-column;
+  float: none;
+}
+
+table td[class*="col-"],
+table th[class*="col-"] {
+  display: table-cell;
+  float: none;
+}
+.hidden{
+	display: none;
+}
+.mobile{
+	display: none;
+	padding-left: 20px;
+}
+@media all and (max-width: 1000px) {
+	#firstPage{
+		padding: 0px;
+	}
+	#con{
+		float: none;
+	}
+	.costfacts{
+		float: none;
+		padding-left: 10%;
+	}
+	.detailtext{
+		width: 100%;
+	}
+	.section{
+		padding: 30px 25px;
+	}
+	#cssmenu{
+		margin-top: -21px;
+	}
+}
+@media only screen and (max-width: 700px){
+	.mobile{
+		display: block;
+	}
+	.displayimage{
+		margin: 0 auto;
+		padding: 0px;
+		width: 100% !important;
+	}
+	.tiled{
+		display: block;
+	}
+	.windinfo, .geoinfo{
+		width: 100%;
+	}
+	#biomasstable{
+		text-align: left;
+		td{
+			padding: 0.7em 1em 0.7em 1.15em;
+		}
+	}
+	.averagecost tr:first-child td, .averagecost tr td:first-child{
+		font-size: 8px;
+	}
+	.averagecost td{
+		padding: 0px;
+		text-align: center;
+		font-size: 5px;
+	}
+	.text{
+		padding: 0px;
+	}
+	.video{
+		min-height: 250px;
+		width: 100%;
+		height: 250px;
+	}
+	.video-description{
+		float: none;
+		p{
+		width: 100%;
+		font-size: 20px;
+		}
+	}
+	#mobile{
+		display: none;
+	}
+	.text p{
+		padding: 0 10px;
+	}
+}
+@media only screen and (max-width: 500px){
+	.f-col-wrapper, .col{
+		width: 100%;
+	}
+	#pro, #con{
+		padding: 0;
+		min-width: 0;
+	}
+	.f-col-wrapper{
+		height: 290px;
+	}
+	.col.icon-wrap{
+		padding: 15px 10px;
+	}
+}
+@media only screen and (max-width: 900px){
+	.word-wrap{
+		max-width: 90%;
+	}
+}
