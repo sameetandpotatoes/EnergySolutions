@@ -10,7 +10,6 @@
 		$.ajax({
 			type: "POST",
 			url: theURL,
-			async:false,
 			contentType: "application/json; charset=utf-8",
 			dataType: "json",
 			method: "GET",
@@ -19,6 +18,13 @@
 				NProgress.done();
 				return window.location.href = "/view?state=" + myLoc.regionName + "&city=" + myLoc.cityName + "&zip=" + myLoc.zipCode + "&lat=" + myLoc.latitude + "&long=" + myLoc.longitude;
 			},
+			error: function(x, t, m){
+				if (t==="timeout"){
+					alert("We are unable to process your location at this time. Please try again later.");
+				}
+				NProgress.done();
+			},
+			timeout: 2000
 		});
 	});
 
