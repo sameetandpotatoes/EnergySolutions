@@ -38,6 +38,10 @@ contentFix = ->
     child = children[index]
     index++
     $(child).css "min-height", $(window).height()
+sidebarFix = ->
+  if ($(window).width() > 1024)
+    $('.content').css "left", "0"
+    $('.content').addClass "slideRight"
 equalHeight = ->
   biggestHeight = 0
   $(".equal-height").each ->
@@ -97,3 +101,4 @@ $(window).load ->
     homeFix()
     contentFix()
     imageFix()
+    sidebarFix()
