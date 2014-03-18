@@ -12,6 +12,9 @@
  *= require_tree .
  */
 @import url(http://fonts.googleapis.com/css?family=Lato|Bree+Serif|Droid+Sans|Oldenburg|Oswald);
+html, head, body{
+	overflow-x: hidden;
+}
 body{
 	overflow-x: hidden;
 	margin:0;
@@ -31,7 +34,7 @@ p{
 	font-family: 'Lato';
 }
 a {
-    color: inherit;
+	color: inherit;
 }
 #content{
 	padding-left: 30px;
@@ -90,7 +93,6 @@ header > i{
 		li{
 			min-height: 20px;
 			&:hover{
-				// background-color: #007929;
 				background: rgba(0,0,0,0.19);
 				cursor: pointer;
 			}
@@ -101,6 +103,10 @@ header > i{
 				padding: 0.45em 0em 0.20em 0.4em;
 				width: 95%;
 				display: block;
+			}
+			.inline{
+				display: inline;
+				vertical-align: top;
 			}
 		}
 		.noicon{
