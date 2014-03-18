@@ -52,11 +52,19 @@
           createCircle("green", map, new google.maps.LatLng(40.5, -83), 200000);
         }
         else if (energy == "Geothermal"){
-          createCircle("orange", map, new google.maps.LatLng(38, -114), 900000);
+          createCircle("orange", map, new google.maps.LatLng(52, -114), 900000);
         }
         else if (energy == "Hydroelectric"){
           createCircle("blue", map, new google.maps.LatLng(40.7, -116.5), 800000);
           createCircle("blue", map, new google.maps.LatLng(39.7, -76.6), 900000);
+        }
+        else if (energy == "Biofuel"){
+          createCircle("#02A89E", map, new google.maps.LatLng(41, -86.9), 500000);
+          createCircle("#02A89E", map, new google.maps.LatLng(33, -99.9), 500000);
+          createCircle("#02A89E", map, new google.maps.LatLng(48, -99), 300000);
+          createCircle("#02A89E", map, new google.maps.LatLng(39, -116.9), 300000);
+          createCircle("#02A89E", map, new google.maps.LatLng(41, -99), 300000);
+          createCircle("#02A89E", map, new google.maps.LatLng(38, -92), 200000);
         }
       }
     }

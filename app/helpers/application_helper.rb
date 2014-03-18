@@ -86,4 +86,10 @@ module ApplicationHelper
                  "South Carolina","Virginia","Pennsylvania","Connecticut"]
 		good_states.include?(state)
 	end
+	def goodForBiofuel(state)
+		good_states=["Iowa","Texas","Illinois","Alabama","New Jersey",
+									"Indiana", "Washington","Nevada","Missouri","North Dakota",
+									"Nebraska","Minnesota","Ohio"]
+		good_states.include?(state)
+	end
 end
