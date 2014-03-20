@@ -57,16 +57,16 @@ $(window).load ->
   $ ->
     $('#loading').animate
       opacity: '0'
-    , 1000, ->
+    , 500, ->
       $('.home').animate
         opacity: '1'
-      , 2000
+      , 1000
       $('#content').animate
         opacity: '1'
-      , 2000
+      , 1000
       $('.footer').animate
         opacity: '1'
-      , 2000
+      , 1000
       $("#loading img").css "top", "-9999px"
       $("#loading img").css "left", "-9999px"
   $('header > i').click ->
