@@ -31,6 +31,8 @@ homeFix = ->
   if $(window).width > 700
     $('.content').css "left", "0"
     $('.content').addClass "slideRight"
+  else
+    $('.home').css "height", $(window).height() - 100
 contentFix = ->
   children = $("#content").children()
   index = 0
