@@ -53,7 +53,7 @@
 		//  Pass a jQuery element as the context with .call(), and the index as a parameter: Unslider.calculate.call($('li:first'), 0)
 		this.calculate = function(index) {
 			var me = $(this),
-				width = me.outerWidth(), height = me.outerHeight();
+				width = me.outerWidth() - 1, height = me.outerHeight() + 100;
 
 			//  Add it to the sizes list
 			_.sizes[index] = [width, height];
@@ -91,7 +91,7 @@
 				var resize = function() {
 					_.el.css('width', Math.min(Math.round((_.el.outerWidth() / _.el.parent().outerWidth()) * 100), 100) + '%');
 					_.el.css({
-						width: $(window).width()/2,
+						width: ($(window).width()/2) - 1,
 						height: $(window).height()
 					});
 					var listItems = $('.imagecarousel ul li');
