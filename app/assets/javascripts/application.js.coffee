@@ -50,6 +50,7 @@ equalHeight = ->
     biggestHeight = $(this).height() + 45  if $(this).height() > biggestHeight
   $(".equal-height").height biggestHeight
 $(document).ready ->
+  $('#loading img').css "visibility", "hidden"
   $(".home").css "opacity", "0"
   $("#content").css "opacity", "0"
   $(".footer").css "opacity", "0"
@@ -93,7 +94,7 @@ $(window).load ->
     speed: 2
 
   $(".imagecarousel").unslider
-    delay: 3000
+    delay: 5000
     fluid: true
     dots: true
     keys: true

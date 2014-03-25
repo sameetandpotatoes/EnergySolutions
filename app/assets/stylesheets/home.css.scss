@@ -140,7 +140,7 @@ h6{
 	left: 50%;
 	margin-left: -143.5px;
 	margin-top: -73.5px;
-	visibility: hidden;
+	visibility: visible;
 }
 .w3{
 	border:0;
@@ -154,10 +154,6 @@ h6{
 	.footer{
 		font-size: 8px;
 		height: 10px;
-	}
-	#loading{
-		top: 40%;
-		left: 40%;
 	}
 	.welcome, .txt-welcome{
 		padding: 0;
