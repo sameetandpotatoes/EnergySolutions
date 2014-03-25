@@ -38,12 +38,20 @@ a {
 #content{
 	padding-left: 30px;
 }
-.fb-like{
-	top: 20px;
-	margin-left: 250px;
+.outside-links{
+  display: inline;
 }
 .fb_iframe_widget{
-	position: absolute !important;
+  display: block !important;
+  position: static !important;
+}
+.fb_iframe_widget span{
+    float: left;
+    margin-left: 10px;
+    margin-top: -15px;
+}
+.w3{
+  margin-top: -15px;
 }
 footer{
 	text-align: center;
@@ -71,7 +79,10 @@ header > i{
 	}
 }
 @media only screen and (max-width: 1024px){
-	#header, .link{
+  .w3, .footer{
+    display: none !important;
+  }
+  #header, .link{
 		font-size: 16px !important;
 		padding: 15px 2px !important;
 	}

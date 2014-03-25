@@ -22,17 +22,17 @@ home = ->
   window.location.pathname is "/"
 imageFix = ->
   $(".imagecarousel").css "max-height", (($(window).height() / 2) + 100)
-  $(".imagecarousel").css "width", (($('.imagecarousel').width()) + 0.5)
+  $(".imagecarousel").css "width", (($('.imagecarousel').width()))
   listItems = $(".imagecarousel ul li")
   listItems.each (index, li) ->
     $(li).css "height", $(".imagecarousel").height()
 homeFix = ->
-  $(".home").css "height", $(window).height() - 121
+  $('.home').css "height", $(window).height() - 121
   if $(window).width > 700
     $('.content').css "left", "0"
     $('.content').addClass "slideRight"
   else
-    $('.home').css "height", $(window).height() - 100
+    $('.home').css "height", $(window).height() - 121
 contentFix = ->
   children = $("#content").children()
   index = 0
