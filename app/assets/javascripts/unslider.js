@@ -1,7 +1,6 @@
 /**
  *   Unslider by @idiot
  */
-
 (function($, f) {
 	//  If there's no jQuery, Unslider can't work, so kill the operation.
 	if(!$) return f;

@@ -25,8 +25,9 @@
     = render "facebook"
     .content.slideRight
       %header#header
-        %a.link{href: "/"} Pure Energy
-        \#{link_to image_tag("logo.jpg", :class=>"bpalogo", :width=>"40", :height => "40"), :action => "home", :controller => "contents"}
+        %a.link{href: "/"}
+          Pure Energy
+          \#{image_tag("logo.jpg", :class=>"bpalogo", :width=>"40", :height => "40")}
         %i.fa.fa-bars
       #mobilemenu
         %ul
