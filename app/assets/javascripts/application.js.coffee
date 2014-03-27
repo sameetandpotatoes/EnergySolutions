@@ -56,6 +56,7 @@ $(document).ready ->
   $(".home").css "opacity", "0"
   $("#content").css "opacity", "0"
   $(".footer").css "opacity", "0"
+  $(".imagecarousel").css "opacity", "0"
   $(".nav-holder").css "opacity", "0"
   $('#loading').css "opacity", "1"
   $('#content').animate
@@ -71,6 +72,9 @@ $(window).load ->
       $('.home').animate
         opacity: '1'
       , 1000
+        $('.imagecarousel').animate
+          opacity: '1'
+          , 500
     if (energyPage)
       $('.nav-holder').animate
         opacity: '1'
