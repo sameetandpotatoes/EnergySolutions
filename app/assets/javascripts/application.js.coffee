@@ -56,7 +56,6 @@ $(document).ready ->
   $(".home").css "opacity", "0"
   $("#content").css "opacity", "0"
   $(".footer").css "opacity", "0"
-  # $(".imagecarousel").css "opacity", "0"
   $(".nav-holder").css "opacity", "0"
   $('#loading').css "opacity", "1"
   $('#content').animate
@@ -76,14 +75,11 @@ $(window).load ->
       $('.nav-holder').animate
         opacity: '1'
       , 500
-    # $('.imagecarousel').animate
-    #   opacity: '1'
-    # , 1000
     $('.footer').animate
       opacity: '1'
     , 1000
-    #   $("#loading img").css "top", "-9999px"
-    #   $("#loading img").css "left", "-9999px"
+      $("#loading img").css "top", "-9999px"
+      $("#loading img").css "left", "-9999px"
   $('header > i').click ->
     if $('.content').hasClass "slideRight"
       $(".content").animate
