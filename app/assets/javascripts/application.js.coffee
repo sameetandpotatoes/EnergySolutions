@@ -82,8 +82,8 @@ $(window).load ->
     $('.footer').animate
       opacity: '1'
     , 1000
-    $("#loading img").css "top", "-9999px"
-    $("#loading img").css "left", "-9999px"
+  $("#loading img").css "top", "-9999px"
+  $("#loading img").css "left", "-9999px"
   $('header > i').click ->
     if $('.content').hasClass "slideRight"
       $(".content").animate
