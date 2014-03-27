@@ -20,6 +20,8 @@
 #= require jquery.easytabs.min.js
 home = ->
   window.location.pathname is "/"
+energyPage = ->
+  window.location.pathname != "/" && window.location.pathname != "about" && window.location.pathname != "sources" && window.location.pathname != "all" && window.location.pathname != "maps"
 imageFix = ->
   $(".imagecarousel").css "max-height", (($(window).height() / 2) + 100)
   $(".imagecarousel").css "width", (($('.imagecarousel').width()))
@@ -50,28 +52,43 @@ equalHeight = ->
     biggestHeight = $(this).height() + 45  if $(this).height() > biggestHeight
   $(".equal-height").height biggestHeight
 $(document).ready ->
-  $('#loading img').css "visibility", "hidden"
+  # $('#loading img').css "visibility", "hidden"
   $(".home").css "opacity", "0"
   $("#content").css "opacity", "0"
   $(".footer").css "opacity", "0"
-  $('#loading img').load ->
-    $(this).css "visibility", "visible"
+  $(".imagecarousel").css "opacity", "0"
+  $(".nav-holder").css "opacity", "0"
+  # $('#loading img').load ->
+  #   $(this).css "visibility", "visible"
+  $('.home').animate
+    opacity: '1'
+  , 1000
+  $('#content').animate
+    opacity: '1'
+  , 1000
 $(window).load ->
   $ ->
-    $('#loading').animate
-      opacity: '0'
-    , 500, ->
-      $('.home').animate
+    # $('#loading').animate
+    #   opacity: '0'
+    # , 500, ->
+    #   $('.home').animate
+    #     opacity: '1'
+    #   , 1000
+    #   $('#content').animate
+    #     opacity: '1'
+    #   , 1000
+    if (energyPage)
+      $('.nav-holder').animate
         opacity: '1'
-      , 1000
-      $('#content').animate
-        opacity: '1'
-      , 1000
-      $('.footer').animate
-        opacity: '1'
-      , 1000
-      $("#loading img").css "top", "-9999px"
-      $("#loading img").css "left", "-9999px"
+      , 500
+    $('.imagecarousel').animate
+      opacity: '1'
+    , 1000
+    $('.footer').animate
+      opacity: '1'
+    , 1000
+    #   $("#loading img").css "top", "-9999px"
+    #   $("#loading img").css "left", "-9999px"
   $('header > i').click ->
     if $('.content').hasClass "slideRight"
       $(".content").animate
