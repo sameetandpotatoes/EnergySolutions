@@ -104,7 +104,10 @@
           %li.last
             %a{href: "/about/"}
               %span About
-      - if (current_page?(home_path) or current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "maps") or current_page?(:controller => "contents", :action => "about") or current_page?(:controller => "contents", :action => "all"))
+      - if (current_page?(home_path) or current_page?(:controller => "contents", :action => "sources") or current_page?(:controller => "contents", :action => "results") or current_page?(:controller => "contents", :action => "about") or current_page?(:controller => "contents", :action => "maps") or current_page?(:controller => "contents", :action => "all"))
+        - if (!(current_page?(:controller => "contents", :action => "maps") or current_page?(:controller => "contents", :action => "all")))
+          #loading
+            = image_tag("ajax-loader.gif")
         .home
           = yield
       - else

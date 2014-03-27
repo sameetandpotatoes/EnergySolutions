@@ -21,7 +21,7 @@
 home = ->
   window.location.pathname is "/"
 energyPage = ->
-  window.location.pathname != "/" && window.location.pathname != "about" && window.location.pathname != "sources" && window.location.pathname != "all" && window.location.pathname != "maps"
+  (window.location.pathname != "/") && window.location.pathname != "/about" && window.location.pathname != "/sources" && window.location.pathname != "/all" && window.location.pathname != "/maps"
 imageFix = ->
   $(".imagecarousel").css "max-height", (($(window).height() / 2) + 100)
   $(".imagecarousel").css "width", (($('.imagecarousel').width()))
@@ -52,26 +52,33 @@ equalHeight = ->
     biggestHeight = $(this).height() + 45  if $(this).height() > biggestHeight
   $(".equal-height").height biggestHeight
 $(document).ready ->
+  $('#loading').css "visibility", "hidden"
   $(".home").css "opacity", "0"
   $("#content").css "opacity", "0"
   $(".footer").css "opacity", "0"
-  $(".imagecarousel").css "opacity", "0"
+  # $(".imagecarousel").css "opacity", "0"
   $(".nav-holder").css "opacity", "0"
-  $('.home').animate
-    opacity: '1'
-  , 1000
+  $('#loading').css "opacity", "1"
   $('#content').animate
     opacity: '1'
   , 1000
 $(window).load ->
   $ ->
+    if (!!energyPage)
+      $('#loading').css "visibility", "visible"
+      $('#loading').animate
+        opacity: '0'
+      , 500
+      $('.home').animate
+        opacity: '1'
+      , 1000
     if (energyPage)
       $('.nav-holder').animate
         opacity: '1'
       , 500
-    $('.imagecarousel').animate
-      opacity: '1'
-    , 1000
+    # $('.imagecarousel').animate
+    #   opacity: '1'
+    # , 1000
     $('.footer').animate
       opacity: '1'
     , 1000
