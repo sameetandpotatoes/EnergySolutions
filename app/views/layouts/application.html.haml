@@ -117,7 +117,6 @@
           .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/pages/Pure-Energy/216979395176704?ref=hl", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "false"}
           %a{href: "http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pure-energy.org%2F", target: '_blank'}
             %img.w3{alt: "Valid HTML/CSS!", src: "http://jigsaw.w3.org/css-validator/images/vcss"}/
-    /#loading
-    =# image_tag("ajax-loader.gif")
-    = render "scrolltotop"
+    -if (!current_page?(:controller => "contents", :action => "results"))
+      = render "scrolltotop"
     = render "location"

@@ -52,14 +52,11 @@ equalHeight = ->
     biggestHeight = $(this).height() + 45  if $(this).height() > biggestHeight
   $(".equal-height").height biggestHeight
 $(document).ready ->
-  # $('#loading img').css "visibility", "hidden"
   $(".home").css "opacity", "0"
   $("#content").css "opacity", "0"
   $(".footer").css "opacity", "0"
   $(".imagecarousel").css "opacity", "0"
   $(".nav-holder").css "opacity", "0"
-  # $('#loading img').load ->
-  #   $(this).css "visibility", "visible"
   $('.home').animate
     opacity: '1'
   , 1000
@@ -68,15 +65,6 @@ $(document).ready ->
   , 1000
 $(window).load ->
   $ ->
-    # $('#loading').animate
-    #   opacity: '0'
-    # , 500, ->
-    #   $('.home').animate
-    #     opacity: '1'
-    #   , 1000
-    #   $('#content').animate
-    #     opacity: '1'
-    #   , 1000
     if (energyPage)
       $('.nav-holder').animate
         opacity: '1'
