@@ -72,9 +72,9 @@ $(window).load ->
       $('.home').animate
         opacity: '1'
       , 1000
-        $('.imagecarousel').animate
-          opacity: '1'
-          , 500
+      $('.imagecarousel').animate
+        opacity: '1'
+        , 500
     if (energyPage)
       $('.nav-holder').animate
         opacity: '1'
