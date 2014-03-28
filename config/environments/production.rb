@@ -13,4 +13,5 @@ HomeOwner::Application.configure do
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify
   config.log_formatter = ::Logger::Formatter.new
+  config.static_cache_control = "public, max-age=31536000"
 end

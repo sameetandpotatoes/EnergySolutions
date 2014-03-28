@@ -7,4 +7,5 @@ HomeOwner::Application.configure do
   config.active_support.deprecation = :log
   config.active_record.migration_error = :page_load
   config.assets.debug = true
+  config.static_cache_control = "public, max-age=31536000"
 end
