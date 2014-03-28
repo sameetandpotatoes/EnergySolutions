@@ -3,8 +3,9 @@
   %head
     /[if lt IE 9]
       %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
-      %meta{content: "#{asset_path("favicon.ico")}", itemprop: "image"}
     /[if lt IE 8]
+      %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
+    /[if lt IE 7]
       %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true

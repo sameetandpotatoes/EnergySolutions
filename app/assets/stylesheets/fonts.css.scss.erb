@@ -3,18 +3,36 @@
   font-style: normal;
   font-weight: 400;
   src: local('Bree Serif'), local('BreeSerif-Regular'), url(<%= asset_path "bree.woff" %>) format('woff');
+  src: url(<%= asset_path "bree.woff" %>);
+  src: local('(*%$@#@)'),
+    url(<%= asset_path "bree.woff" %>) format('woff'),
+    url(<%= asset_path "bree.woff" %>) format('embedded-opentype'),
+    url(<%= asset_path "bree.woff" %>) format('truetype'),
+    url(<%= asset_path "bree.woff" %>) format('svg');
 }
 @font-face {
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
   src: local('Droid Sans'), local('DroidSans'), url(<%= asset_path "droid.woff" %>) format('woff');
+  src: url(<%= asset_path "droid.woff" %>);
+  src: local('(*%$@#@)'),
+    url(<%= asset_path "droid.woff" %>) format('woff'),
+    url(<%= asset_path "droid.woff" %>) format('embedded-opentype'),
+    url(<%= asset_path "droid.woff" %>) format('truetype'),
+    url(<%= asset_path "droid.woff" %>) format('svg');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
   src: local('Lato Regular'), local('Lato-Regular'), url(<%= asset_path "lato.woff" %>) format('woff');
+  src: url(<%= asset_path "lato.woff" %>);
+  src: local('(*%$@#@)'),
+    url(<%= asset_path "lato.woff" %>) format('woff'),
+    url(<%= asset_path "lato.woff" %>) format('embedded-opentype'),
+    url(<%= asset_path "lato.woff" %>) format('truetype'),
+    url(<%= asset_path "lato.woff" %>) format('svg');
 }
 @font-face {
   font-family: 'Oldenburg';

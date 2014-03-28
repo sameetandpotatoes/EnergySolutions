@@ -2,13 +2,13 @@
 	background-color: #232323;
 	padding: 15px 0px 15px 15px;
 	color: white;
-	font: 30px 'Droid Sans';
+	font: 30px 'Droid Sans', Verdana;
 	width: 100%;
 	overflow: hidden;
 }
 #welcome-header{
 	font-size: 28px;
-	font-family: 'Lato';
+	font-family: 'Lato', Verdana;
 	text-align: center;
 }
 .welcome{
@@ -36,7 +36,7 @@
 	text-align: left;
 }
 .footer{
-	font-family: 'Lato';
+	font-family: 'Lato', Verdana;
 	background-color: #232323;
 	padding: 15px;
 	height: 25px;
@@ -78,7 +78,7 @@
 	background: rgba(0, 0, 0, 0.2); // The last item is the opacity
 }
 .imagecarousel ul li p{
-	font-family: 'Droid Sans';
+	font-family: 'Droid Sans', Verdana;
 	font-size: 25px;
 	color: white;
 	font-weight: bold;
