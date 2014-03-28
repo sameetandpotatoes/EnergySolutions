@@ -84,6 +84,11 @@ header > i{
 		display: none !important;
 	}
 }
+@media only screen and (max-width: 767px){
+  #loading{
+    display: none;
+  }
+}
 @media only screen and (max-width: 1024px){
   .w3, .footer{
     display: none !important;
