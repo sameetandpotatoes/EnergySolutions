@@ -52,6 +52,8 @@ equalHeight = ->
     biggestHeight = $(this).height() + 45  if $(this).height() > biggestHeight
   $(".equal-height").height biggestHeight
 $(document).ready ->
+  if (window.width < 768)
+    $('#loading').css "display", "none !important"
   $('#loading').css "visibility", "hidden"
   $(".home").css "opacity", "0"
   $("#content").css "opacity", "0"
