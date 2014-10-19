@@ -64,26 +64,24 @@ $(document).ready ->
   $('#content').animate
     opacity: '1'
   , 1000
-$(window).load ->
-  $ ->
-    if (!!energyPage)
-      $('#loading').css "visibility", "visible"
-      $('#loading').animate
-        opacity: '0'
-      , 500
-      $('.home').animate
-        opacity: '1'
-      , 1000
-      $('.imagecarousel').animate
-        opacity: '1'
-        , 500
-    if (energyPage)
-      $('.nav-holder').animate
-        opacity: '1'
-      , 500
-    $('.footer').animate
+  if (!!energyPage)
+    $('#loading').css "visibility", "visible"
+    $('#loading').animate
+      opacity: '0'
+    , 500
+    $('.home').animate
       opacity: '1'
     , 1000
+    $('.imagecarousel').animate
+      opacity: '1'
+      , 500
+  if (energyPage)
+    $('.nav-holder').animate
+      opacity: '1'
+    , 500
+  $('.footer').animate
+    opacity: '1'
+  , 1000
   $("#loading img").css "top", "-9999px"
   $("#loading img").css "left", "-9999px"
   $('header > i').click ->
